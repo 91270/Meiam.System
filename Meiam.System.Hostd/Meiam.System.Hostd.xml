@@ -1,0 +1,1206 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Meiam.System.Hostd</name>
+    </assembly>
+    <members>
+        <member name="T:Meiam.System.Hostd.Authorization.AuthorizationAttribute">
+            <summary>
+            登录验证过滤器
+            </summary>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.BaseController.toResponse(Meiam.System.Model.StatusCodeType)">
+            <summary>
+            返回封装
+            </summary>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.BaseController.toResponse(Meiam.System.Model.StatusCodeType,System.String)">
+            <summary>
+            返回封装
+            </summary>
+            <param name="statusCode"></param>
+            <param name="retMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.BaseController.toResponse``1(``0)">
+            <summary>
+            返回封装
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.BaseController.ResolveUserMenuTree(System.Collections.Generic.List{Meiam.System.Model.Sys_Menu},System.String)">
+            <summary>
+            生成系统菜单树
+            </summary>
+            <param name="menus"></param>
+            <param name="parentId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.BaseController.ResolveMenuTree(System.Collections.Generic.List{Meiam.System.Model.Sys_Menu},System.String)">
+            <summary>
+            生成 Vue Router
+            </summary>
+            <param name="menus"></param>
+            <param name="parentId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Meiam.System.Hostd.Controllers.Basic.CompanyController">
+            <summary>
+            公司定义
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.Basic.CompanyController._logger">
+            <summary>
+            日志管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.Basic.CompanyController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.Basic.CompanyController._companyService">
+            <summary>
+            公司定义接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.Basic.CompanyController._dataRelationService">
+            <summary>
+            数据关系接口
+            </summary>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.CompanyController.Query(Meiam.System.Model.Dto.CompanyQueryDto)">
+            <summary>
+            查询公司定义列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.CompanyController.Get(System.String)">
+            <summary>
+            根据 Id 查询公司定义
+            </summary>
+            <param name="id">编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.CompanyController.GetAll(System.Nullable{System.Boolean})">
+            <summary>
+            查询所有公司定义
+            </summary>
+            <param name="enable">是否启用（不传返回所有）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.CompanyController.Create(Meiam.System.Model.Dto.CompanyCreateDto)">
+            <summary>
+            添加公司定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.CompanyController.Update(Meiam.System.Model.Dto.CompanyUpdateDto)">
+            <summary>
+            更新公司定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.CompanyController.Delete(System.String)">
+            <summary>
+            删除公司定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Meiam.System.Hostd.Controllers.Basic.EquipmentController">
+            <summary>
+            设备定义
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.Basic.EquipmentController._logger">
+            <summary>
+            日志管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.Basic.EquipmentController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.Basic.EquipmentController._equipmentService">
+            <summary>
+            设备定义接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.Basic.EquipmentController._dataRelationService">
+            <summary>
+            数据关系接口
+            </summary>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.EquipmentController.Query(Meiam.System.Model.Dto.EquipmentQueryDto)">
+            <summary>
+            查询设备定义列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.EquipmentController.Get(System.String)">
+            <summary>
+            根据 Id 查询设备定义
+            </summary>
+            <param name="id">编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.EquipmentController.GetAll(System.Nullable{System.Boolean})">
+            <summary>
+            查询所有设备定义
+            </summary>
+            <param name="enable">是否启用（不传返回所有）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.EquipmentController.Create(Meiam.System.Model.Dto.EquipmentCreateDto)">
+            <summary>
+            添加设备定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.EquipmentController.Update(Meiam.System.Model.Dto.EquipmentUpdateDto)">
+            <summary>
+            更新设备定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.EquipmentController.Delete(System.String)">
+            <summary>
+            删除设备定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Meiam.System.Hostd.Controllers.Basic.FactoryController">
+            <summary>
+            工厂定义
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.Basic.FactoryController._logger">
+            <summary>
+            日志管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.Basic.FactoryController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.Basic.FactoryController._factoryService">
+            <summary>
+            工厂定义接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.Basic.FactoryController._dataRelationService">
+            <summary>
+            数据关系接口
+            </summary>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.FactoryController.Query(Meiam.System.Model.Dto.FactoryQueryDto)">
+            <summary>
+            查询工厂定义列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.FactoryController.Get(System.String)">
+            <summary>
+            根据 Id 查询工厂定义
+            </summary>
+            <param name="id">编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.FactoryController.GetAll(System.Nullable{System.Boolean})">
+            <summary>
+            查询所有工厂定义
+            </summary>
+            <param name="enable">是否启用（不传返回所有）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.FactoryController.Create(Meiam.System.Model.Dto.FactoryCreateDto)">
+            <summary>
+            添加工厂定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.FactoryController.Update(Meiam.System.Model.Dto.FactoryUpdateDto)">
+            <summary>
+            更新工厂定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.FactoryController.Delete(System.String)">
+            <summary>
+            删除工厂定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Meiam.System.Hostd.Controllers.Basic.ProductLineController">
+            <summary>
+            产线定义
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.Basic.ProductLineController._logger">
+            <summary>
+            日志管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.Basic.ProductLineController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.Basic.ProductLineController._lineService">
+            <summary>
+            产线定义接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.Basic.ProductLineController._dataRelationService">
+            <summary>
+            数据关系接口
+            </summary>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.ProductLineController.Query(Meiam.System.Model.Dto.ProductLineQueryDto)">
+            <summary>
+            查询产线定义列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.ProductLineController.Get(System.String)">
+            <summary>
+            根据 Id 查询产线定义
+            </summary>
+            <param name="id">编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.ProductLineController.GetAll(System.Nullable{System.Boolean})">
+            <summary>
+            查询所有产线定义
+            </summary>
+            <param name="enable">是否启用（不传返回所有）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.ProductLineController.Create(Meiam.System.Model.Dto.ProductLineCreateDto)">
+            <summary>
+            添加产线定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.ProductLineController.Update(Meiam.System.Model.Dto.ProductLineUpdateDto)">
+            <summary>
+            更新产线定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.ProductLineController.Delete(System.String)">
+            <summary>
+            删除产线定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Meiam.System.Hostd.Controllers.Basic.ProductProcessController">
+            <summary>
+            工序定义
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.Basic.ProductProcessController._logger">
+            <summary>
+            日志管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.Basic.ProductProcessController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.Basic.ProductProcessController._processService">
+            <summary>
+            工序定义接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.Basic.ProductProcessController._dataRelationService">
+            <summary>
+            数据关系接口
+            </summary>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.ProductProcessController.Query(Meiam.System.Model.Dto.ProductProcessQueryDto)">
+            <summary>
+            查询工序定义列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.ProductProcessController.Get(System.String)">
+            <summary>
+            根据 Id 查询工序定义
+            </summary>
+            <param name="id">编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.ProductProcessController.GetAll(System.Nullable{System.Boolean})">
+            <summary>
+            查询所有工序定义
+            </summary>
+            <param name="enable">是否启用（不传返回所有）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.ProductProcessController.Create(Meiam.System.Model.Dto.ProductProcessCreateDto)">
+            <summary>
+            添加工序定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.ProductProcessController.Update(Meiam.System.Model.Dto.ProductProcessUpdateDto)">
+            <summary>
+            更新工序定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.ProductProcessController.Delete(System.String)">
+            <summary>
+            删除工序定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Meiam.System.Hostd.Controllers.Basic.WorkShopController">
+            <summary>
+            车间定义
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.Basic.WorkShopController._logger">
+            <summary>
+            日志管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.Basic.WorkShopController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.Basic.WorkShopController._workShopService">
+            <summary>
+            车间定义接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.Basic.WorkShopController._dataRelationService">
+            <summary>
+            数据关系接口
+            </summary>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.WorkShopController.Query(Meiam.System.Model.Dto.WorkShopQueryDto)">
+            <summary>
+            查询车间定义列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.WorkShopController.Get(System.String)">
+            <summary>
+            根据 Id 查询车间定义
+            </summary>
+            <param name="id">编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.WorkShopController.GetAll(System.Nullable{System.Boolean})">
+            <summary>
+             查询所有车间定义
+            </summary>
+            <param name="enable">是否启用（不传返回所有）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.WorkShopController.Create(Meiam.System.Model.Dto.WorkShopCreateDto)">
+            <summary>
+            添加车间定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.WorkShopController.Update(Meiam.System.Model.Dto.WorkShopUpdateDto)">
+            <summary>
+            更新车间定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.WorkShopController.Delete(System.String)">
+            <summary>
+            删除车间定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Meiam.System.Hostd.Controllers.System.AuthController">
+            <summary>
+            用户验证
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.AuthController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.AuthController._logger">
+            <summary>
+            日志管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.AuthController._userService">
+            <summary>
+            用户服务接口
+            </summary>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.AuthController.Code">
+            <summary>
+            获取验证码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.AuthController.Login(Meiam.System.Model.Dto.LoginDto)">
+            <summary>
+            后台用户登录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.AuthController.LoginMiniProgram(Meiam.System.Model.Dto.LoginMiniProgramDto)">
+            <summary>
+            微信小程序用户登录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.AuthController.LogOut">
+            <summary>
+            用户退出
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.AuthController.GetUserInfo">
+            <summary>
+            用户信息获取
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Meiam.System.Hostd.Controllers.System.AuthorizeController">
+            <summary>
+             授权信息
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.AuthorizeController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.AuthorizeController._logger">
+            <summary>
+            日志管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.AuthorizeController._userRelationService">
+            <summary>
+            用户权限接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.AuthorizeController._dataRelationService">
+            <summary>
+            数据关系接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.AuthorizeController._companyService">
+            <summary>
+            公司定义接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.AuthorizeController._factoryService">
+            <summary>
+            工厂定义接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.AuthorizeController._workShopService">
+            <summary>
+            车间定义接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.AuthorizeController._lineService">
+            <summary>
+            产线定义接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.AuthorizeController._processService">
+            <summary>
+            工序定义接口
+            </summary>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.AuthorizeController.GetRelationTree(System.String)">
+            <summary>
+            获取数据权限树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.AuthorizeController.UpdateUserRelation(Meiam.System.Model.Dto.UpdateUserRelationDto)">
+            <summary>
+            更新用户数据权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Meiam.System.Hostd.Controllers.System.LogsController">
+            <summary>
+            日志接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.LogsController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.LogsController._logger">
+            <summary>
+            日志管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.LogsController._logsService">
+            <summary>
+            日志接口
+            </summary>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.LogsController.Query(Meiam.System.Model.Dto.LogsQueryDto)">
+            <summary>
+            查询日志列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Meiam.System.Hostd.Controllers.System.MenusController">
+            <summary>
+            菜单接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.MenusController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.MenusController._logger">
+            <summary>
+            日志管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.MenusController._menuService">
+            <summary>
+            菜单接口
+            </summary>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.MenusController.Query(Meiam.System.Model.Dto.MenusQueryDto)">
+            <summary>
+            查询菜单列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.MenusController.Get(System.String)">
+            <summary>
+            查询菜单
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.MenusController.Create(Meiam.System.Model.Dto.MenusCreateDto)">
+            <summary>
+            添加菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.MenusController.Update(Meiam.System.Model.Dto.MenusUpdateDto)">
+            <summary>
+            更新菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.MenusController.Delete(System.String)">
+            <summary>
+            删除菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.MenusController.GetUserMenus(System.Int32)">
+            <summary>
+            获取用户菜单
+            </summary>
+            <param name="system">所属系统</param>
+            <returns></returns>
+        </member>
+        <member name="T:Meiam.System.Hostd.Controllers.System.OnlineController">
+            <summary>
+            在线用户接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.OnlineController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.OnlineController._logger">
+            <summary>
+            日志管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.OnlineController._onlineService">
+            <summary>
+            在线用户接口
+            </summary>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.OnlineController.Query(Meiam.System.Model.Dto.OnlineQueryDto)">
+            <summary>
+            查询在线用户列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.OnlineController.Delete(Meiam.System.Model.Dto.OnlineDeleteDto)">
+            <summary>
+            踢出在线用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Meiam.System.Hostd.Controllers.System.OptionsController">
+            <summary>
+            字典定义
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.OptionsController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.OptionsController._logger">
+            <summary>
+            日志管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.OptionsController._optionService">
+            <summary>
+            字典定义接口
+            </summary>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.OptionsController.Query(Meiam.System.Model.Dto.OptionsQueryDto)">
+            <summary>
+            查询字典定义列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.OptionsController.Get(System.String)">
+            <summary>
+            查询字典定义
+            </summary>
+            <param name="id">编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.OptionsController.GetOption(System.String)">
+            <summary>
+            根据分组查询字典
+            </summary>
+            <param name="option">字典分组</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.OptionsController.Create(Meiam.System.Model.Dto.OptionsCreateDto)">
+            <summary>
+            添加字典定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.OptionsController.Update(Meiam.System.Model.Dto.OptionsUpdateDto)">
+            <summary>
+            更新字典定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.OptionsController.Delete(System.String)">
+            <summary>
+            删除字典定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Meiam.System.Hostd.Controllers.System.PowersController">
+            <summary>
+            权限定义
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.PowersController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.PowersController._logger">
+            <summary>
+            日志管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.PowersController._powerService">
+            <summary>
+            权限定义接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.PowersController._rolePowerService">
+            <summary>
+            角色权限接口
+            </summary>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.PowersController.Query(Meiam.System.Model.Dto.PowersQueryDto)">
+            <summary>
+            查询权限定义列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.PowersController.Get(System.String)">
+            <summary>
+            查询权限定义
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.PowersController.Create(Meiam.System.Model.Dto.PowersCreateDto)">
+            <summary>
+            添加权限定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.PowersController.Update(Meiam.System.Model.Dto.PowersUpdateDto)">
+            <summary>
+            更新权限定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.PowersController.Delete(System.String)">
+            <summary>
+            删除权限定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Meiam.System.Hostd.Controllers.System.RolePowersController">
+            <summary>
+            角色权限
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.RolePowersController._logger">
+            <summary>
+            日志管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.RolePowersController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.RolePowersController._rolePowerService">
+            <summary>
+            角色权限接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.RolePowersController._powerService">
+            <summary>
+            权限定义接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.RolePowersController._relationService">
+            <summary>
+            用户权限接口
+            </summary>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.RolePowersController.GetPowersGroup">
+            <summary>
+            按分组汇总查询权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.RolePowersController.GetRolePowers(System.String)">
+            <summary>
+            查询角色权限
+            </summary>
+            <param name="roleId">角色id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.RolePowersController.UpdateRolePowers(Meiam.System.Model.Dto.RolePowersUpdateDto)">
+            <summary>
+            更新角色权限
+            </summary>
+            <param name="parm"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Meiam.System.Hostd.Controllers.System.RolesController">
+            <summary>
+            角色定义
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.RolesController._logger">
+            <summary>
+            日志管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.RolesController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.RolesController._roleService">
+            <summary>
+            角色定义接口
+            </summary>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.RolesController.Query(Meiam.System.Model.Dto.RolesQueryDto)">
+            <summary>
+            查询角色定义列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.RolesController.Get(System.String)">
+            <summary>
+            查询角色定义
+            </summary>
+            <param name="id">编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.RolesController.Create(Meiam.System.Model.Dto.RolesCreateDto)">
+            <summary>
+            添加角色定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.RolesController.Update(Meiam.System.Model.Dto.RolesUpdateDto)">
+            <summary>
+            更新角色定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.RolesController.Delete(System.String)">
+            <summary>
+            删除角色定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Meiam.System.Hostd.Controllers.System.RoleUsersController">
+            <summary>
+            用户角色
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.RoleUsersController._logger">
+            <summary>
+            日志管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.RoleUsersController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.RoleUsersController._userRoleService">
+            <summary>
+            用户角色接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.RoleUsersController._userService">
+            <summary>
+            用户服务接口
+            </summary>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.RoleUsersController.Get(System.String)">
+            <summary>
+            查询角色用户
+            </summary>
+            <param name="roleId">角色 Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.RoleUsersController.Create(Meiam.System.Model.Dto.RoleUsersCreateDto)">
+            <summary>
+            添加角色用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.RoleUsersController.Delete(Meiam.System.Model.Dto.RoleUsersDeleteDto)">
+            <summary>
+            删除角色用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.RoleUsersController.GetExcludeUsers(System.String)">
+            <summary>
+            查询角色未添加用户列表
+            </summary>
+            <param name="roleId">角色 Id</param>
+            <returns></returns>
+        </member>
+        <member name="T:Meiam.System.Hostd.Controllers.System.TasksController">
+            <summary>
+            计划任务
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.TasksController._logger">
+            <summary>
+            日志管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.TasksController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.TasksController._tasksQzService">
+            <summary>
+            用户权限接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.TasksController._schedulerServer">
+            <summary>
+            定时服务接口
+            </summary>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.TasksController.Query(Meiam.System.Model.Dto.TasksQueryDto)">
+            <summary>
+            查询计划任务列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.TasksController.Get(System.String)">
+            <summary>
+            查询计划任务
+            </summary>
+            <param name="id">编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.TasksController.Create(Meiam.System.Model.Dto.TasksCreateDto)">
+            <summary>
+            添加任务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.TasksController.Update(Meiam.System.Model.Dto.TasksUpdateDto)">
+            <summary>
+            更新任务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.TasksController.Delete(System.String)">
+            <summary>
+            删除任务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.TasksController.Start(System.String)">
+            <summary>
+            启动任务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.TasksController.Stop(System.String)">
+            <summary>
+            停止任务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Meiam.System.Hostd.Controllers.System.UserCenterController">
+            <summary>
+            用户中心
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.UserCenterController._logger">
+            <summary>
+            日志管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.UserCenterController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.UserCenterController._usersService">
+            <summary>
+            用户服务接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.UserCenterController._relationService">
+            <summary>
+            用户权限接口
+            </summary>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.UserCenterController.UpdatePassword(Meiam.System.Model.Dto.UserCenterUpdatePasswordDto)">
+            <summary>
+            更新密码（用户自用）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.UserCenterController.Update(Meiam.System.Model.Dto.UserCenterUpdateDto)">
+            <summary>
+            更新用户信息（用户自用）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.UserCenterController.AvatarUpload(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            头像上传接口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Meiam.System.Hostd.Controllers.System.UsersController">
+            <summary>
+            用户管理
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.UsersController._logger">
+            <summary>
+            日志管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.UsersController._tokenManager">
+            <summary>
+            会话管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.UsersController._usersService">
+            <summary>
+            用户服务接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.UsersController._relationService">
+            <summary>
+            用户权限接口
+            </summary>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.UsersController.Query(Meiam.System.Model.Dto.UsersQueryDto)">
+            <summary>
+            查询用户列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.UsersController.Get(System.String)">
+            <summary>
+            查询用户
+            </summary>
+            <param name="id">编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.UsersController.Create(Meiam.System.Model.Dto.UsersCreateDto)">
+            <summary>
+            添加用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.UsersController.Update(Meiam.System.Model.Dto.UsersUpdateDto)">
+            <summary>
+            更新用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.UsersController.Delete(Meiam.System.Model.Dto.UsersDeleteDto)">
+            <summary>
+            删除用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.UsersController.Enable(Meiam.System.Model.Dto.UsersEnableDto)">
+            <summary>
+            批量禁用启用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.UsersController.ResetPassword(Meiam.System.Model.Dto.UsersResetPasswordDto)">
+            <summary>
+            重置密码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Meiam.System.Hostd.Extensions.TokenManager._memoryCache">
+            <summary>
+            缓存组件
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Extensions.TokenManager._onlineService">
+            <summary>
+            在线会话
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Extensions.TokenManager._usersService">
+            <summary>
+            用户接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Extensions.TokenManager._accessor">
+            <summary>
+            HTTP上下文
+            </summary>
+        </member>
+        <member name="M:Meiam.System.Hostd.Extensions.TokenManager.CreateSession(Meiam.System.Model.Sys_Users,Meiam.System.Model.SourceType,System.Int32)">
+            <summary>
+            创建 Session
+            </summary>
+        </member>
+        <member name="M:Meiam.System.Hostd.Extensions.TokenManager.UpdateSession(System.String)">
+            <summary>
+            更新Session
+            </summary>
+            <param name="userSession">用户Session</param>
+        </member>
+        <member name="M:Meiam.System.Hostd.Extensions.TokenManager.RefreshSession(System.String)">
+            <summary>
+            刷新用户所有Session信息
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Extensions.TokenManager.RemoveSession(System.String)">
+            <summary>
+            清除指定 Session
+            </summary>
+        </member>
+        <member name="M:Meiam.System.Hostd.Extensions.TokenManager.RemoveAllSession(System.String)">
+            <summary>
+            清除用户所有 Session
+            </summary>
+            <param name="userId"></param>
+        </member>
+        <member name="P:Meiam.System.Hostd.Extensions.TokenManager.GetSysToken">
+            <summary>
+            获取Session
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Extensions.TokenManager.GetSessionInfo">
+            <summary>
+            当前登录用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Extensions.TokenManager.IsAuthenticated">
+            <summary>
+            判断用户是否登录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Extensions.TokenManager.GetSessionItem``1(System.String)">
+            <summary>
+            获取 Session 内容
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Extensions.TokenManager.GetSessionItem``1(System.String,System.String)">
+            <summary>
+            获取 Session 内容
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="session"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Global.GlobalExceptions.WriteLog(System.String,System.Exception)">
+            <summary>
+            自定义返回格式
+            </summary>
+            <param name="throwMsg"></param>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Meiam.System.Hostd.Middleware.RequestMiddleware">
+            <summary>
+            中间件
+            记录请求和响应数据
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Middleware.RequestMiddleware.logger">
+            <summary>
+            日志接口
+            </summary>
+        </member>
+    </members>
+</doc>
