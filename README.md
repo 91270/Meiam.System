@@ -1,13 +1,15 @@
-# Meiam.System
-
-## NET Core 3.1 WebAPI + Vue 2.0 + RBAC 企业级前后端分离权限框架 (可控制数据权限)
+### Meiam.System - NET Core 3.1 WebAPI + Vue 2.0 + RBAC 企业级前后端分离权限框架 (可控制数据权限)
 
 [![.NET CORE](https://img.shields.io/badge/.NET%20Core-3.1-d.svg)](#)  [![SQLSUGAR](https://img.shields.io/badge/SQLSUGAR-5.X-d.svg)](#)  [![VUE](https://img.shields.io/badge/VUE-2.6.10-d.svg)](#)
 [![博客](https://img.shields.io/badge/Meiam's%20Home-brightgreen.svg)](https://www.592.la/)
 
 
+
+
 ## 给个星星! ⭐️
 如果你喜欢这个项目或者它帮助你, 请给 Star~（辛苦星咯）
+
+
 
 
 ## 框架介绍
@@ -34,13 +36,22 @@
 - [ ] 计划 RabbitMQ 消息列队集成
 - [ ] 计划 ImCore 及时通讯组件集成
 
+
+
+
 ## 后端功能 （.Net Core）
 
 还在陆续整理中
 
+
+
+
 ## 前段功能 （Vue）
 
 还在陆续整理中
+
+
+
 
 ## 使用文档 （相关配置）
 
