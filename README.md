@@ -1,6 +1,10 @@
 ### Meiam.System - NET Core 3.1 WebAPI + Vue 2.0 + RBAC 企业级前后端分离权限框架
 
-[![.NET CORE](https://img.shields.io/badge/.NET%20Core-3.1-d.svg)](#)  [![SQLSUGAR](https://img.shields.io/badge/SQLSUGAR-5.X-d.svg)](#)  [![VUE](https://img.shields.io/badge/VUE-2.6.10-d.svg)](#)
+[![.NET CORE](https://img.shields.io/badge/.NET%20Core-3.1-d.svg)](#)
+[![VUE](https://img.shields.io/badge/VUE-2.6.10-d.svg)](#) 
+[![SqlSugar](https://img.shields.io/badge/SqlSugar-5.0-d.svg)](#)
+[![star this repo](https://githubbadges.com/star.svg?user=91270&repo=Meiam.System&style=default)](https://github.com/91270/Meiam.System)
+[![fork this repo](https://githubbadges.com/fork.svg?user=91270&repo=Meiam.System&style=default)](https://github.com/91270/Meiam.System/fork)
 [![博客](https://img.shields.io/badge/博客-Meiam's%20Home-brightgreen.svg)](https://www.592.la/)
 
 
@@ -16,7 +20,6 @@
 
 ## 框架介绍
 
-``` bash
 
 - [x] 采用 服务 + 接口 的形式封装框架 （移除了仓库层）
 - [x] 采用 REDIS 存储会话（用户信息 / 用户权限）- 更好的支持分布式应用、用户踢出、登录登出等功能
@@ -41,7 +44,6 @@
 - [ ] 计划 RabbitMQ 消息列队集成
 - [ ] 计划 ImCore 及时通讯组件集成
 
-``` 
 
 
 &nbsp;
