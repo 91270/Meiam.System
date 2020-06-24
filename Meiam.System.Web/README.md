@@ -16,7 +16,7 @@ npm config set registry https://registry.npm.taobao.org
 # 安装依赖
 npm install
 
-# 启动服务 localhost:8013
+# 启动服务 localhost:18888
 npm run dev
 
 # 构建生产环境
