@@ -1,7 +1,7 @@
 ### Meiam.System - NET Core 3.1 WebAPI + Vue 2.0 + RBAC 企业级前后端分离权限框架
 
 [![.NET CORE](https://img.shields.io/badge/.NET%20Core-3.1-d.svg)](#)  [![SQLSUGAR](https://img.shields.io/badge/SQLSUGAR-5.X-d.svg)](#)  [![VUE](https://img.shields.io/badge/VUE-2.6.10-d.svg)](#)
-[![博客](https://img.shields.io/badge/Meiam's%20Home-brightgreen.svg)](https://www.592.la/)
+[![博客](https://img.shields.io/badge/博客-Meiam's%20Home-brightgreen.svg)](https://www.592.la/)
 
 
 
