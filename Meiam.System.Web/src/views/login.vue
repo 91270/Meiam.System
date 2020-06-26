@@ -81,9 +81,13 @@ export default {
           this.loading = true
           this.$store
             .dispatch('Login', user)
-            .then(() => {
+            .then(response => {
               this.loading = false
-              this.$router.push({ path: '/dashboard' })
+              if (response.statusCode === 200) {
+                this.$router.push({ path: '/dashboard' })
+              } else {
+                this.getCode()
+              }
             })
             .catch(() => {
               this.loading = false
