@@ -8,14 +8,10 @@
 *
 * ==============================================================================
 */
+using Meiam.System.Common.Helpers;
 using Meiam.System.Interfaces;
-using Meiam.System.Tasks.Helpers;
 using Microsoft.Extensions.Logging;
-using NLog;
 using Quartz;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Meiam.System.Tasks
@@ -58,7 +54,7 @@ namespace Meiam.System.Tasks
                 _tasksQzService.Update(model);
             }
 
-            _logger.LogDebug(LogHelpers.logWrite(executeLog));
+            _logger.LogDebug(executeLog);
 
         }
         public async Task Run(IJobExecutionContext context)

@@ -39,7 +39,7 @@ namespace Meiam.System.Model
         /// <summary>
         /// 返回时间戳
         /// </summary>
-        public string Timestamp { get; set; } = Convert.ToInt64((DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, 0)).TotalSeconds).ToString();
+        public string Timestamp { get; set; } = DateTimeOffset.Now.ToUnixTimeSeconds().ToString();
 
     }
 

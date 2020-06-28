@@ -202,6 +202,7 @@ namespace Meiam.System.Hostd.Extensions
                         Enabled = userInfo.Enabled,
                         OneSession = userInfo.OneSession,
                         Source = redisUserInfo.Source,
+                        KeepHours = redisUserInfo.KeepHours,
                         UserPower = _usersService.GetUserPowers(userInfo.UserID),
                         UserRelation = _usersService.GetUserRelation(userInfo.UserID),
                     };

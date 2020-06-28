@@ -256,14 +256,6 @@ namespace Meiam.System.Tasks
             try
             {
                 JobKey jobKey = new JobKey(tasksQz.ID, tasksQz.JobGroup);
-                if (!await _scheduler.Result.CheckExists(jobKey))
-                {
-                    return new ApiResult<string>
-                    {
-                        StatusCode = 500,
-                        Message = $"未找到计划任务:【{tasksQz.Name}】",
-                    };
-                }
                 await _scheduler.Result.DeleteJob(jobKey);
                 return new ApiResult<string>
                 {

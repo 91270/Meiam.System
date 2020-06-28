@@ -9,25 +9,22 @@
 * ==============================================================================
 */
 using Meiam.System.Common;
+using Meiam.System.Common.Helpers;
 using Meiam.System.Core;
 using Meiam.System.Interfaces;
 using Meiam.System.Model;
-using Meiam.System.Tasks.Helpers;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using NLog;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Meiam.System.Tasks.HostedService
 {
 
-	/// <summary>
-	/// 清除过期会话
-	/// </summary>
+    /// <summary>
+    /// 清除过期会话
+    /// </summary>
     public class Job1TimedService : IHostedService, IDisposable
     {
 		private Timer _timer;
@@ -61,11 +58,11 @@ namespace Meiam.System.Tasks.HostedService
 				RemoveExpiredSession(SourceType.Web, Convert.ToInt32(AppSettings.Configuration["AppSettings:WebSessionExpire"]));
 				RemoveExpiredSession(SourceType.MiniProgram, Convert.ToInt32(AppSettings.Configuration["AppSettings:MiniProgramSessionExpire"]));
 
-				_logger.LogDebug(LogHelpers.logWrite("Run RemoveExpiredSession Succeed."));
+				_logger.LogDebug("Run RemoveExpiredSession Succeed.");
 			}
 			catch (Exception ex)
 			{
-				_logger.LogDebug(LogHelpers.logWrite($"Run RemoveExpiredSession Fail.   Message : {ex.Message}."));
+				_logger.LogDebug($"Run RemoveExpiredSession Fail.   Message : {ex.Message}.");
 			}
 		}
 

@@ -8,12 +8,9 @@
 *
 * ==============================================================================
 */
-using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Meiam.System.Tasks.Helpers
+namespace Meiam.System.Common.Helpers
 {
     public class LogHelpers
     {
