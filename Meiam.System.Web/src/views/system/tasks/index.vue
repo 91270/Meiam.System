@@ -25,8 +25,8 @@
         <el-table-column type="index" :index="handleIndexCalc" label="#" align="center" />
         <el-table-column sortable prop="name" align="center" :show-overflow-tooltip="true" label="任务名称" width="150" />
         <el-table-column sortable prop="jobGroup" :show-overflow-tooltip="true" align="center" label="任务分组" width="150" />
-        <el-table-column sortable prop="assemblyName" align="center" label="程序集名称" width="150" />
-        <el-table-column sortable prop="className" align="center" label="任务类名" width="150" />
+        <el-table-column sortable prop="assemblyName" align="center" label="程序集名称" width="160" />
+        <el-table-column sortable prop="className" align="center" label="任务类名" width="160" />
         <el-table-column sortable prop="triggerType" align="center" label="触发器类型" width="120" />
         <el-table-column sortable prop="runTimes" align="center" label="执行次数" width="120" />
         <el-table-column sortable prop="cron" align="center" label="运行时间表达式" width="150" />

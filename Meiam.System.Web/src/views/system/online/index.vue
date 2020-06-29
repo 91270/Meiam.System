@@ -41,7 +41,7 @@
         <el-table-column prop="loginTime" label="登录时间" sortable align="center" width="150" />
         <el-table-column prop="sessionID" label="会话ID" align="center" />
         <el-table-column prop="ipAddress" label="IP地址" align="center" width="150" />
-        <el-table-column prop="updateTime" label="修改时间" sortable align="center" width="150" />
+        <el-table-column prop="updateTime" label="最后访问" sortable align="center" width="150" />
         <el-table-column prop="source" label="来源" :show-overflow-tooltip="true" sortable align="center" width="150" />
       </el-table>
       <pagination v-show="total > 0" :total="total" :page.sync="queryParams.pageIndex" :limit.sync="queryParams.pageSize" @pagination="getList" />

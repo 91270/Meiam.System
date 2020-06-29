@@ -59,6 +59,22 @@ namespace Meiam.System.Interfaces
         /// <returns></returns>
         int Add(List<T> parm);
 
+        /// <summary>
+        /// 添加或更新数据
+        /// </summary>
+        /// <param name="parm"><T></param>
+        /// <returns></returns>
+        T Saveable(T parm, Expression<Func<T, object>> uClumns = null, Expression<Func<T, object>> iColumns = null);
+
+        /// <summary>
+        /// 批量添加或更新数据
+        /// </summary>
+        /// <param name="parm">List<T></param>
+        /// <returns></returns>
+        List<T> Saveable(List<T> parm, Expression<Func<T, object>> uClumns = null, Expression<Func<T, object>> iColumns = null);
+
+
+
         #endregion
 
         #region 查询操作
