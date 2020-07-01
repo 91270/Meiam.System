@@ -10,9 +10,11 @@
 */
 using Meiam.System.Core;
 using Meiam.System.Model;
+using SqlSugar;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using System.Reflection.Metadata.Ecma335;
 using System.Threading.Tasks;
 
 namespace Meiam.System.Interfaces
@@ -130,6 +132,16 @@ namespace Meiam.System.Interfaces
         }
 
         /// <summary>
+        /// 根据条件合计字段
+        /// </summary>
+        /// <param name="where">条件表达式树</param>
+        /// <returns></returns>
+        public TResult Sum<TResult>(Expression<Func<T, bool>> where, Expression<Func<T, TResult>> field)
+        {
+            return Db.Queryable<T>().Where(where).Sum(field);
+        }
+
+        /// <summary>
         /// 根据主值查询单条数据
         /// </summary>
         /// <param name="pkValue">主键值</param>
@@ -198,24 +210,11 @@ namespace Meiam.System.Interfaces
         /// <returns></returns>
         public PagedInfo<T> GetPages(Expression<Func<T, bool>> where, PageParm parm)
         {
-            var source = Db.Queryable<T>().Where(where).OrderByIF(!string.IsNullOrEmpty(parm.Sort), $"{parm.OrderBy} {(parm.Sort == "descending" ? "desc" : "asc")}");
+            var source = Db.Queryable<T>().Where(where);
 
-            return source.ToPage(parm.PageIndex, parm.PageSize);
+            return source.ToPage(parm);
         }
 
-        /// <summary>
-        /// 根据条件查询分页数据
-        /// </summary>
-        /// <param name="where"></param>
-        /// <param name="parm"></param>
-        /// <param name="totalField"></param>
-        /// <returns></returns>
-        public PagedInfo<T> GetPages(Expression<Func<T, bool>> where, PageParm parm, List<ITotalField> totalField)
-        {
-            var source = Db.Queryable<T>().Where(where).OrderByIF(!string.IsNullOrEmpty(parm.Sort), $"{parm.OrderBy} {(parm.Sort == "descending" ? "desc" : "asc")}");
-
-            return source.ToPage(totalField, parm.PageIndex, parm.PageSize);
-        }
 
         /// <summary>
         /// 根据条件查询数据

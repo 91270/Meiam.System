@@ -57,10 +57,9 @@ namespace Meiam.System.Interfaces
                 UpdateID = a.UpdateID,
                 UpdateName = a.UpdateName
             })
-            .MergeTable()
-            .OrderByIF(!string.IsNullOrEmpty(parm.Sort), $"[{parm.OrderBy}] {(parm.Sort == "descending" ? "desc" : "asc")}");
+            .MergeTable();
 
-            return source.ToPage(parm.PageIndex, parm.PageSize);
+            return source.ToPage(new PageParm { PageIndex = parm.PageIndex, PageSize = parm.PageSize, OrderBy = parm.OrderBy, Sort = parm.Sort });
         }
 
         /// <summary>

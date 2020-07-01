@@ -48,21 +48,7 @@ namespace Meiam.System.Model
 
         public List<T> DataSource { get; set; }
 
-        public List<ITotalField> TotalField { get; set; }
-
-
+        public object TotalField { get; set; }
     }
 
-    public class ITotalField
-    {
-        /// <summary>
-        /// 字段
-        /// </summary>
-        public string Name { get; set; }
-
-        /// <summary>
-        /// 值
-        /// </summary>
-        public decimal value { get; set; }
-    }
 }

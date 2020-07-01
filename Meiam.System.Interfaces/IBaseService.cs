@@ -9,6 +9,7 @@
 * ==============================================================================
 */
 using Meiam.System.Model;
+using SqlSugar;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
@@ -85,7 +86,14 @@ namespace Meiam.System.Interfaces
         /// <param name="where">条件表达式树</param>
         /// <returns></returns>
         bool Any(Expression<Func<T, bool>> where);
- 
+
+        /// <summary>
+        /// 根据条件合计字段
+        /// </summary>
+        /// <param name="where">条件表达式树</param>
+        /// <returns></returns>
+        TResult Sum<TResult>(Expression<Func<T, bool>> where, Expression<Func<T, TResult>> field);
+
 
         /// <summary>
         /// 根据主值查询单条数据
@@ -140,15 +148,6 @@ namespace Meiam.System.Interfaces
         /// <param name="parm"></param>
         /// <returns></returns>
         PagedInfo<T> GetPages(Expression<Func<T, bool>> where, PageParm parm);
-
-        /// <summary>
-        /// 根据条件查询分页数据
-        /// </summary>
-        /// <param name="where"></param>
-        /// <param name="parm"></param>
-        /// <param name="totalField"></param>
-        /// <returns></returns>
-        PagedInfo<T> GetPages(Expression<Func<T, bool>> where, PageParm parm, List<ITotalField> totalField);
 
         /// <summary>
         /// 根据条件查询数据

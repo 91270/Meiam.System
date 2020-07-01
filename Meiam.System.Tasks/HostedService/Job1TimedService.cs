@@ -55,8 +55,8 @@ namespace Meiam.System.Tasks.HostedService
 		{
 			try
 			{
-				RemoveExpiredSession(SourceType.Web, Convert.ToInt32(AppSettings.Configuration["AppSettings:WebSessionExpire"]));
-				RemoveExpiredSession(SourceType.MiniProgram, Convert.ToInt32(AppSettings.Configuration["AppSettings:MiniProgramSessionExpire"]));
+				RemoveExpiredSession(SourceType.Web.ToString(), Convert.ToInt32(AppSettings.Configuration["AppSettings:WebSessionExpire"]));
+				RemoveExpiredSession(SourceType.MiniProgram.ToString(), Convert.ToInt32(AppSettings.Configuration["AppSettings:MiniProgramSessionExpire"]));
 
 				_logger.LogDebug("Run RemoveExpiredSession Succeed.");
 			}
@@ -77,10 +77,10 @@ namespace Meiam.System.Tasks.HostedService
 			_timer?.Dispose();
 		}
 
-		private void RemoveExpiredSession(SourceType source, int hours)
+		private void RemoveExpiredSession(string source, int hours)
         {
 			DateTime expireTime = DateTime.Now.AddHours(-hours);
-			var usersExpired = _onlineService.GetWhere(m => m.UpdateTime < expireTime && m.Source == source.ToString());
+			var usersExpired = _onlineService.GetWhere(m => m.UpdateTime < expireTime && m.Source == source);
 
 			foreach (var session in usersExpired)
 			{
