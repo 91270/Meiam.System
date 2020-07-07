@@ -194,7 +194,7 @@ namespace Meiam.System.Hostd.Controllers.System
         {
             var _userSession = _tokenManager.GetSessionInfo();
 
-            var menus = _menuService.GetWhere(m => string.IsNullOrEmpty(m.ViewPower) || _userSession.UserPower.Contains(m.ViewPower) && m.System == system, m => m.SortIndex);
+            var menus = _menuService.GetWhere(m => (string.IsNullOrEmpty(m.ViewPower) || _userSession.UserPower.Contains(m.ViewPower)) && m.System == system, m => m.SortIndex);
 
             return toResponse(ResolveUserMenuTree(menus));
         }
