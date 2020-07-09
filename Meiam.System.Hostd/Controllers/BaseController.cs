@@ -96,7 +96,7 @@ namespace Meiam.System.Hostd.Controllers
                 
                 if (childrenMenu.Count == 0 && menu.Component == null)
                 {
-                    break;
+                    continue;
                 }
 
                 userMenus.Add(menusVM);

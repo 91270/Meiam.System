@@ -75,7 +75,7 @@ namespace Meiam.System.Hostd.Controllers.System
             {
                 return toResponse(_roleService.GetId(id));
             }
-            return toResponse(_roleService.GetAll());
+            return toResponse(_roleService.GetAll().OrderBy(m => m.CreateTime));
         }
 
 
