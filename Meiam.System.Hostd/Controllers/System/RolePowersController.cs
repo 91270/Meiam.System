@@ -40,18 +40,18 @@ namespace Meiam.System.Hostd.Controllers.System
         private readonly ISysPowerService _powerService;
 
         /// <summary>
-        /// 用户权限接口
+        /// 用户角色接口
         /// </summary>
-        private readonly ISysUserRelationService _relationService;
+        private readonly ISysUserRoleService _userRoleService;
 
 
-        public RolePowersController(ILogger<RolePowersController> logger, TokenManager tokenManager,  ISysRolePowerService rolePowerService , ISysPowerService powerService, ISysUserRelationService relationService)
+        public RolePowersController(ILogger<RolePowersController> logger, TokenManager tokenManager,  ISysRolePowerService rolePowerService , ISysPowerService powerService, ISysUserRoleService userRoleService)
         {
             _logger = logger;
             _tokenManager = tokenManager;
             _rolePowerService = rolePowerService;
             _powerService = powerService;
-            _relationService = relationService;
+            _userRoleService = userRoleService;
         }
 
         /// <summary>
@@ -133,7 +133,7 @@ namespace Meiam.System.Hostd.Controllers.System
 
 
                 //更新登录会话记录
-                var userIds =  (_relationService.GetWhere(m => m.ObjectID == parm.RoleId)).Select(m => m.UserID);
+                var userIds =  _userRoleService.GetWhere(m => m.RoleID == parm.RoleId).Select(m => m.UserID);
 
                 foreach (var userId in userIds)
                 {

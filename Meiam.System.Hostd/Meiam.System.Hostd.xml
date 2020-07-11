@@ -793,9 +793,9 @@
             权限定义接口
             </summary>
         </member>
-        <member name="F:Meiam.System.Hostd.Controllers.System.RolePowersController._relationService">
+        <member name="F:Meiam.System.Hostd.Controllers.System.RolePowersController._userRoleService">
             <summary>
-            用户权限接口
+            用户角色接口
             </summary>
         </member>
         <member name="M:Meiam.System.Hostd.Controllers.System.RolePowersController.GetPowersGroup">
