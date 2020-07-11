@@ -140,7 +140,12 @@ namespace Meiam.System.Interfaces
                     $"                ConnectionString = AppSettings.Configuration[\"DbConnection:ConnectionString\"],\r\n" +
                     $"                DbType = DbType.SqlServer,\r\n" +
                     $"                IsAutoCloseConnection = true,\r\n" +
+                    $"                IsShardSameThread = true,\r\n" +
                     $"                InitKeyType = InitKeyType.Attribute,\r\n" +
+                    $"                ConfigureExternalServices = new ConfigureExternalServices()\r\n" +
+                    $"                {{\r\n" +
+                    $"                    DataInfoCacheService = new RedisCache()\r\n" +
+                    $"                }},\r\n" +
                     $"                MoreSettings = new ConnMoreSettings()\r\n" +
                     $"                {{\r\n" +
                     $"                    IsAutoRemoveDataCache = true\r\n" +
@@ -232,6 +237,7 @@ namespace Meiam.System.Interfaces
                     $"using System.Collections.Generic;\r\n" +
                     $"using System.Threading.Tasks;\r\n" +
                     $"using SqlSugar;\r\n" +
+                    $"using System.Linq;\r\n" +
                     $"\r\n" +
                     $"namespace {strNameSpace}\r\n" +
                     $"{{\r\n" +
@@ -301,6 +307,7 @@ namespace Meiam.System.Interfaces
                     $"using Meiam.System.Model.View;\r\n" +
                     $"using System.Collections.Generic;\r\n" +
                     $"using System.Threading.Tasks;\r\n" +
+                    $"using System.Linq;\r\n" +
                     $"\r\n" +
                     $"namespace {strNameSpace}\r\n" +
                     $"{{\r\n" +

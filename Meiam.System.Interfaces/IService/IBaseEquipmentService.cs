@@ -10,6 +10,7 @@ using Meiam.System.Model.Dto;
 using Meiam.System.Model.View;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace Meiam.System.Interfaces
 {
@@ -30,6 +31,21 @@ namespace Meiam.System.Interfaces
         /// <param name="id"></param>
         /// <returns></returns>
         EquipmentVM GetEquip(string id);
+
+        /// <summary>
+        /// 根据编码查询设备
+        /// </summary>
+        /// <param name="equipNo"></param>
+        /// <returns></returns>
+        EquipmentVM GetEquipByNo(string equipNo);
+
+        /// <summary>
+        /// 根据产线编码查询设备定义
+        /// </summary>
+        /// <param name="lineNo"></param>
+        /// <param name="enable"></param>
+        /// <returns></returns>
+        List<EquipmentVM> GetEquipByLine(string lineNo, bool? enable = null);
 
         /// <summary>
         /// 查询所有设备

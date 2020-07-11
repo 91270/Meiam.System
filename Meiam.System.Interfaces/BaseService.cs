@@ -61,7 +61,7 @@ namespace Meiam.System.Interfaces
         /// <returns></returns>
         public int Add(T parm)
         {
-            return Db.Insertable(parm).ExecuteCommand();
+            return Db.Insertable(parm).RemoveDataCache().ExecuteCommand();
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace Meiam.System.Interfaces
         /// <returns></returns>
         public int Add(List<T> parm)
         {
-            return Db.Insertable(parm).ExecuteCommand();
+            return Db.Insertable(parm).RemoveDataCache().ExecuteCommand();
         }
 
         /// <summary>
@@ -176,9 +176,9 @@ namespace Meiam.System.Interfaces
         /// 查询所有数据(无分页,请慎用)
         /// </summary>
         /// <returns></returns>
-        public List<T> GetAll()
+        public List<T> GetAll(bool useCache = false,  int cacheSecond = 3600)
         {
-            return Db.Queryable<T>().ToList();
+            return Db.Queryable<T>().WithCacheIF(useCache, cacheSecond).ToList();
         }
 
         /// <summary>
@@ -221,9 +221,9 @@ namespace Meiam.System.Interfaces
         /// </summary>
         /// <param name="where">条件表达式树</param>
         /// <returns></returns>
-        public List<T> GetWhere(Expression<Func<T, bool>> where)
+        public List<T> GetWhere(Expression<Func<T, bool>> where, bool useCache = false, int cacheSecond = 3600)
         {
-            var query = Db.Queryable<T>().Where(where);
+            var query = Db.Queryable<T>().Where(where).WithCacheIF(useCache, cacheSecond);
             return query.ToList();
         }
 
@@ -232,9 +232,9 @@ namespace Meiam.System.Interfaces
 		/// </summary>
 		/// <param name="where">条件表达式树</param>
 		/// <returns></returns>
-        public List<T> GetWhere(Expression<Func<T, bool>> where, Expression<Func<T, object>> order, string orderEnum = "Asc")
+        public List<T> GetWhere(Expression<Func<T, bool>> where, Expression<Func<T, object>> order, string orderEnum = "Asc", bool useCache = false, int cacheSecond = 3600)
         {
-            var query = Db.Queryable<T>().Where(where).OrderByIF(orderEnum == "Asc", order, SqlSugar.OrderByType.Asc).OrderByIF(orderEnum == "Desc", order, SqlSugar.OrderByType.Desc);
+            var query = Db.Queryable<T>().Where(where).OrderByIF(orderEnum == "Asc", order, OrderByType.Asc).OrderByIF(orderEnum == "Desc", order, OrderByType.Desc).WithCacheIF(useCache, cacheSecond);
             return query.ToList();
         }
 
@@ -249,7 +249,7 @@ namespace Meiam.System.Interfaces
         /// <returns></returns>
         public int Update(T parm)
         {
-            return Db.Updateable(parm).ExecuteCommand();
+            return Db.Updateable(parm).RemoveDataCache().ExecuteCommand();
         }
 
         /// <summary>
@@ -259,7 +259,7 @@ namespace Meiam.System.Interfaces
         /// <returns></returns>
         public int Update(List<T> parm)
         {
-            return Db.Updateable(parm).ExecuteCommand();
+            return Db.Updateable(parm).RemoveDataCache().ExecuteCommand();
         }
 
         /// <summary>
@@ -270,7 +270,7 @@ namespace Meiam.System.Interfaces
         /// <returns></returns>
         public int Update(Expression<Func<T, bool>> where, Expression<Func<T, T>> columns)
         {
-            return Db.Updateable<T>().SetColumns(columns).Where(where).ExecuteCommand();
+            return Db.Updateable<T>().SetColumns(columns).Where(where).RemoveDataCache().ExecuteCommand();
         }
 
         #endregion
@@ -284,7 +284,7 @@ namespace Meiam.System.Interfaces
         /// <returns></returns>
         public int Delete(object id)
         {
-            return Db.Deleteable<T>(id).ExecuteCommand();
+            return Db.Deleteable<T>(id).RemoveDataCache().ExecuteCommand();
         }
 
         /// <summary>
@@ -294,7 +294,7 @@ namespace Meiam.System.Interfaces
         /// <returns></returns>
         public int Delete(object[] ids)
         {
-            return Db.Deleteable<T>().In(ids).ExecuteCommand();
+            return Db.Deleteable<T>().In(ids).RemoveDataCache().ExecuteCommand();
         }
 
         /// <summary>
@@ -304,7 +304,7 @@ namespace Meiam.System.Interfaces
         /// <returns></returns>
         public int Delete(Expression<Func<T, bool>> where)
         {
-            return Db.Deleteable<T>().Where(where).ExecuteCommand();
+            return Db.Deleteable<T>().Where(where).RemoveDataCache().ExecuteCommand();
         }
         #endregion
 

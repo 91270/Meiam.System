@@ -123,7 +123,7 @@ namespace Meiam.System.Interfaces
         /// 查询所有数据(无分页,请慎用)
         /// </summary>
         /// <returns></returns>
-        List<T> GetAll();
+        List<T> GetAll(bool useCache = false, int cacheSecond = 3600);
 
 
         /// <summary>
@@ -154,14 +154,14 @@ namespace Meiam.System.Interfaces
         /// </summary>
         /// <param name="where">条件表达式树</param>
         /// <returns></returns>
-        List<T> GetWhere(Expression<Func<T, bool>> where);
+        List<T> GetWhere(Expression<Func<T, bool>> where, bool useCache = false, int cacheSecond = 3600);
 
         /// <summary>
         /// 根据条件查询数据
         /// </summary>
         /// <param name="where">条件表达式树</param>
         /// <returns></returns>
-        List<T> GetWhere(Expression<Func<T, bool>> where, Expression<Func<T, object>> order, string orderEnum = "Asc");
+        List<T> GetWhere(Expression<Func<T, bool>> where, Expression<Func<T, object>> order, string orderEnum = "Asc", bool useCache = false, int cacheSecond = 3600);
 
 
         #endregion

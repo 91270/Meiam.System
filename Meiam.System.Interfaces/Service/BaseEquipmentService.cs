@@ -11,6 +11,7 @@ using Meiam.System.Model.View;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using SqlSugar;
+using System.Linq;
 
 namespace Meiam.System.Interfaces
 {
@@ -112,6 +113,102 @@ namespace Meiam.System.Interfaces
             }).MergeTable();
 
             return source.First();
+        }
+
+        /// <summary>
+        /// 根据编码查询设备
+        /// </summary>
+        /// <param name="EquipNo"></param>
+        /// <returns></returns>
+        public EquipmentVM GetEquipByNo(string equipNo)
+        {
+            var source = Db.Queryable<Base_Equipment, Sys_DataRelation, Base_ProductLine, Sys_DataRelation, Base_ProductProcess, Sys_DataRelation, Base_WorkShop, Sys_DataRelation, Base_Factory>((a, b, c, d, e, f, g, h, j) => new object[] {
+                JoinType.Inner,a.ID == b.Form,
+                JoinType.Inner,b.To == c.ID,
+                JoinType.Inner,c.ID == d.Form,
+                JoinType.Inner,d.To == e.ID,
+                JoinType.Inner,e.ID == f.Form,
+                JoinType.Inner,f.To == g.ID,
+                JoinType.Inner,g.ID == h.Form,
+                JoinType.Inner,h.To == j.ID,
+            }).Where((a, b, c, d, e, f, g, h, j) => a.EquipNo == equipNo)
+            .Select((a, b, c, d, e, f, g, h, j) => new EquipmentVM
+            {
+                ID = a.ID,
+                EquipNo = a.EquipNo,
+                EquipName = a.EquipName,
+                Remark = a.Remark,
+                Enable = a.Enable,
+                LineUID = c.ID,
+                LineNo = c.LineNo,
+                LineName = c.LineName,
+                ProcessUID = e.ID,
+                ProcessNo = e.ProcessNo,
+                ProcessName = e.ProcessName,
+                WorkShopUID = g.ID,
+                WorkShopNo = g.WorkShopNo,
+                WorkShopName = g.WorkShopName,
+                FactoryUID = j.ID,
+                FactoryNo = j.FactoryNo,
+                FactoryName = j.FactoryName,
+                CreateTime = a.CreateTime,
+                UpdateTime = a.UpdateTime,
+                CreateID = a.CreateID,
+                CreateName = a.CreateName,
+                UpdateID = a.UpdateID,
+                UpdateName = a.UpdateName
+            }).MergeTable();
+
+            return source.First();
+        }
+
+        /// <summary>
+        /// 根据产线编码查询设备定义
+        /// </summary>
+        /// <param name="lineNo"></param>
+        /// <param name="enable"></param>
+        /// <returns></returns>
+        public List<EquipmentVM> GetEquipByLine(string lineNo, bool? enable = null)
+        {
+            var source = Db.Queryable<Base_Equipment, Sys_DataRelation, Base_ProductLine, Sys_DataRelation, Base_ProductProcess, Sys_DataRelation, Base_WorkShop, Sys_DataRelation, Base_Factory>((a, b, c, d, e, f, g, h, j) => new object[] {
+                JoinType.Inner,a.ID == b.Form,
+                JoinType.Inner,b.To == c.ID,
+                JoinType.Inner,c.ID == d.Form,
+                JoinType.Inner,d.To == e.ID,
+                JoinType.Inner,e.ID == f.Form,
+                JoinType.Inner,f.To == g.ID,
+                JoinType.Inner,g.ID == h.Form,
+                JoinType.Inner,h.To == j.ID,
+            }).Where((a, b, c, d, e, f, g, h, j) => c.LineNo == lineNo)
+            .WhereIF(enable != null, (a, b, c, d, e, f, g, h, j) => a.Enable == enable)
+            .Select((a, b, c, d, e, f, g, h, j) => new EquipmentVM
+            {
+                ID = a.ID,
+                EquipNo = a.EquipNo,
+                EquipName = a.EquipName,
+                Remark = a.Remark,
+                Enable = a.Enable,
+                LineUID = c.ID,
+                LineNo = c.LineNo,
+                LineName = c.LineName,
+                ProcessUID = e.ID,
+                ProcessNo = e.ProcessNo,
+                ProcessName = e.ProcessName,
+                WorkShopUID = g.ID,
+                WorkShopNo = g.WorkShopNo,
+                WorkShopName = g.WorkShopName,
+                FactoryUID = j.ID,
+                FactoryNo = j.FactoryNo,
+                FactoryName = j.FactoryName,
+                CreateTime = a.CreateTime,
+                UpdateTime = a.UpdateTime,
+                CreateID = a.CreateID,
+                CreateName = a.CreateName,
+                UpdateID = a.UpdateID,
+                UpdateName = a.UpdateName
+            });
+
+            return source.ToList();
         }
 
         /// <summary>

@@ -11,6 +11,7 @@ using Meiam.System.Model.View;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using SqlSugar;
+using System.Linq;
 
 namespace Meiam.System.Interfaces
 {
@@ -117,12 +118,43 @@ namespace Meiam.System.Interfaces
             return source.ToList();
         }
 
-       /// <summary>
-       /// 查询同工厂下是否存在相同车间编码
-       /// </summary>
-       /// <param name="workShopNo"></param>
-       /// <param name="factoryId"></param>
-       /// <returns></returns>
+        /// <summary>
+        /// 查询所有车间
+        /// </summary>
+        /// <returns></returns>
+        public List<WorkShopVM> GetAllWorkShopCache(bool useCache = false, int cacheSecond = 3600)
+        {
+            var source = Db.Queryable<Base_WorkShop, Sys_DataRelation, Base_Factory>((a, b, c) => new object[] {
+                JoinType.Inner,a.ID == b.Form,
+                JoinType.Inner,b.To == c.ID,
+            })
+            .Select((a, b, c) => new WorkShopVM
+            {
+                ID = a.ID,
+                WorkShopNo = a.WorkShopNo,
+                WorkShopName = a.WorkShopName,
+                Remark = a.Remark,
+                Enable = a.Enable,
+                FactoryUID = c.ID,
+                FactoryNo = c.FactoryNo,
+                FactoryName = c.FactoryName,
+                CreateTime = a.CreateTime,
+                UpdateTime = a.UpdateTime,
+                CreateID = a.CreateID,
+                CreateName = a.CreateName,
+                UpdateID = a.UpdateID,
+                UpdateName = a.UpdateName
+            }).WithCacheIF(useCache, cacheSecond);
+
+            return source.ToList();
+        }
+
+        /// <summary>
+        /// 查询同工厂下是否存在相同车间编码
+        /// </summary>
+        /// <param name="workShopNo"></param>
+        /// <param name="factoryId"></param>
+        /// <returns></returns>
         public bool Any(string Id , string workShopNo, string factoryUID)
         {
             return Db.Queryable<Base_WorkShop, Sys_DataRelation>((a, b) => new object[] {

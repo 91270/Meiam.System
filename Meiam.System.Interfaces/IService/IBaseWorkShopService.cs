@@ -10,6 +10,7 @@ using Meiam.System.Model.Dto;
 using Meiam.System.Model.View;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace Meiam.System.Interfaces
 {
@@ -37,6 +38,12 @@ namespace Meiam.System.Interfaces
         /// </summary>
         /// <returns></returns>
         List<WorkShopVM> GetAllWorkShop(bool? enable = null);
+
+        /// <summary>
+        /// 查询所有车间
+        /// </summary>
+        /// <returns></returns>
+        List<WorkShopVM> GetAllWorkShopCache(bool useCache = false, int cacheSecond = 3600);
 
         /// <summary>
         /// 
