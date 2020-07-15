@@ -57,9 +57,9 @@
 | 3 | 扩展库 |Meiam.System.Extensions | 外部接口引用集成
 | 4 | 服务层 |Meiam.System.Interfaces | Service 、 IServer, 基础服务类
 | 5 | 模型层 |Meiam.System.Model | Entity、Dto、ViewModel
-| 1 | 业务层 |Meiam.System.Hostd | WebAPI
-| 1 | 工具库 |Meiam.System.Tools | 代码生成器
-| 1 | 定时任务 |Meiam.System.Tasks | 任务调度中心
+| 6 | 业务层 |Meiam.System.Hostd | WebAPI
+| 7 | 工具库 |Meiam.System.Tools | 代码生成器
+| 8 | 定时任务 |Meiam.System.Tasks | 任务调度中心
 
 还在陆续整理中
 
@@ -93,7 +93,7 @@
     "Cache": "192.168.0.3:6379,password=redis,preheat=5,idleTimeout=600,defaultDatabase=13,prefix=Cache",
     "Sequence": "192.168.0.3:6379,password=redis,preheat=5,idleTimeout=600,defaultDatabase=14,prefix=Sequence:",
     "Session": "192.168.0.3:6379,password=redis,preheat=5,idleTimeout=600,defaultDatabase=15,prefix=Session:"
-  },
+  }, 
   // 跨域配置
   "Startup": {
     "ApiUrls": "http://127.0.0.1:19999",
