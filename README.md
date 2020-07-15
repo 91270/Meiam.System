@@ -50,6 +50,16 @@
 
 ## 后端功能 （.Net Core）
 
+| # | 模块功能                                            | DLL                                             | 说明
+| 1 | 基础库                                              |Meiam.System.Common                              | 存放常用类库 、加密解密单元等
+| 2 | 核心库                                              |Meiam.System.Core                                | 数据库、缓存相关类
+| 3 | 扩展库                                              |Meiam.System.Extensions                          | 外部接口引用集成
+| 4 | 服务层                                              |Meiam.System.Interfaces                          | Service 、 IServer, 基础服务类
+| 5 | 模型层                                              |Meiam.System.Model                               | Entity、Dto、ViewModel
+| 1 | 业务层                                              |Meiam.System.Hostd                               | WebAPI
+| 1 | 工具库                                              |Meiam.System.Tools                               | 代码生成器
+| 1 | 定时任务                                            |Meiam.System.Tasks                               | 任务调度中心
+
 还在陆续整理中
 
 
