@@ -66,8 +66,68 @@
 
 ## 使用文档 （相关配置）
 
-还在陆续整理中
+### 导入数据库文件 
 
+项目默认使用的是 SQLServer, 备份文件 Meiam.System.sql，当然你也可以使用MYSQL 。
 
+### 修改 `appsettings.json` 中相关配置
+
+```c#
+  // 数据库连接
+  "DbConnection": {
+    "ConnectionString": "Server=192.168.0.3;Database=MeiamSystem;UID=meiamsystem;Password=HApVpL8XhFFGz3Oy"
+  },
+  // REDIS 配置 ， 默认使用了 3 个 DB
+  "RedisServer": {
+    "Cache": "192.168.0.3:6379,password=redis,preheat=5,idleTimeout=600,defaultDatabase=13,prefix=Cache",
+    "Sequence": "192.168.0.3:6379,password=redis,preheat=5,idleTimeout=600,defaultDatabase=14,prefix=Sequence:",
+    "Session": "192.168.0.3:6379,password=redis,preheat=5,idleTimeout=600,defaultDatabase=15,prefix=Session:"
+  },
+  // 跨域配置
+  "Startup": {
+    "ApiUrls": "http://127.0.0.1:19999",
+    "CorsIPs": "http://127.0.0.1:18888",
+    "ApiName": "Meiam.System"
+  },
+  // TOKEN 过期时间配置
+  "AppSettings": {
+    "WebSessionExpire": 24,
+    "MiniProgramSessionExpire": 720
+  },
+  // 头像上传目录
+  "AvatarUpload": {
+    "AvatarDirectory": "D://wwwroot/avatars",
+    "AvatarUrl": "/"
+  }
+```
+
+### 如果要使用其他数据库，请修改  `Meiam.System.Core` `DbContext.cs`
+
+```c#
+        public DbContext()
+        {
+            Db = new SqlSugarClient(new ConnectionConfig()
+            {
+                ConnectionString = AppSettings.Configuration["DbConnection:ConnectionString"],
+                DbType = DbType.SqlServer,     <= 配置你要选用的数据库
+                IsAutoCloseConnection = true,
+                InitKeyType = InitKeyType.Attribute,
+                MoreSettings = new ConnMoreSettings()
+                {
+                    IsAutoRemoveDataCache = true
+                }
+            });
+            //调式代码 用来打印SQL 
+            Db.Aop.OnLogExecuting = (sql, pars) =>
+            {
+                Debug.WriteLine(sql);
+            };
+        }
+```
 
 &nbsp;
+
+
+## 贡献
+
+贡献的最简单的方法之一就是是参与讨论和讨论问题（issue）。你也可以通过提交的 Pull Request 代码变更作出贡献。
