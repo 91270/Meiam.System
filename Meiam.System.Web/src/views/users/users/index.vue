@@ -2,14 +2,14 @@
   <div class="app-container">
     <!-- 添加或修改菜单对话框 -->
     <div v-show="divShow === 'edit'" :title="title" class="showTable">
-      <el-tabs type="border-card" @tab-click="handleTabsClick">
-        <el-tab-pane label="用户管理" style="height:65vh">
+      <el-tabs type="border-card" @tab-click="handleTabsClick" v-model="activeName">
+        <el-tab-pane label="用户管理" style="height:65vh" name="userInfo">
           <div>
             <el-form ref="form" :model="form" label-width="80px" :rules="rules">
               <el-row>
                 <el-col :span="12">
                   <el-form-item label="用户编号" prop="userID">
-                    <el-input v-model="form.userID" maxlength="50" placeholder="请输入用户编号" />
+                    <el-input v-model="form.userID" maxlength="50" placeholder="请输入用户编号" :disabled="title === '编辑用户'" />
                   </el-form-item>
                 </el-col>
                 <el-col :span="6">
@@ -82,37 +82,37 @@
             </div>
           </div>
         </el-tab-pane>
-        <el-tab-pane label="角色管理" style="height:65vh" :disabled="title === '添加用户'">
-          <el-transfer v-model="userRole" :data="userRoleTable" />
+
+        <el-tab-pane label="权限配置" style="height:65vh" :disabled="title === '添加用户'" name="userRelation">
+          <el-table style="mb8" ref="relationTree" v-loading="loading" :data="relationTree" :height="tableHeight*0.6" row-key="id" border :tree-props="{children: 'children', hasChildren: 'hasChildren'}" :row-class-name="tableRowClassName" @select="handleRelationTreeSelect" @close="cancel" @select-all="handleRelationTreeSelectAll">
+            <el-table-column sortable type="selection" width="55" align="center" />
+            <el-table-column prop="relationName" maxlength="50" label="名称" :show-overflow-tooltip="true" />
+            <el-table-column prop="relationNo" label="编号" align="center" />
+            <el-table-column prop="relationType" label="层级" align="center" :show-overflow-tooltip="true" />
+          </el-table>
           <div>
+            <!-- <div v-if="title === '编辑用户'"><span class="demonstration">当前编辑用户 : {{form.userID}} -{{form.userName}} </span></div> -->
             <div slot="footer" class="foot">
-              <el-button type="primary" @click="submitRoleForm">确 定</el-button>
-              <el-button @click="cancel">取 消</el-button>
-            </div>
-          </div>
-        </el-tab-pane>
-        <el-tab-pane label="权限配置" style="height:65vh" :disabled="title === '添加用户'">
-          <div>
-            <el-row style="margin-bottom:6px">
-              <el-table ref="relationTree" v-loading="loading" :data="relationTree" :height="tableHeight*0.6" row-key="id" border :tree-props="{children: 'children', hasChildren: 'hasChildren'}" :row-class-name="tableRowClassName" @select="handleRelationTreeSelect" @close="cancel" @select-all="handleRelationTreeSelectAll">
-                <el-table-column sortable type="selection" width="55" align="center" />
-                <el-table-column prop="relationName" maxlength="50" label="名称" :show-overflow-tooltip="true" />
-                <el-table-column prop="relationNo" label="编号" align="center" />
-                <el-table-column prop="relationType" label="层级" align="center" :show-overflow-tooltip="true" />
-              </el-table>
-              <!-- <el-tree show-checkbox node-key="id" check-on-click-node :default-expand-all="true" :check-strictly="true" :expand-on-click-node="false" :data="relationTree" :props="defaultProps" @node-click="handleNodeClick" /> -->
-            </el-row>
-          </div>
-          <div>
-            <div slot="footer" style="text-align:right">
               <el-button type="primary" @click="submitPowerForm">确 定</el-button>
               <el-button @click="cancel">取 消</el-button>
             </div>
           </div>
         </el-tab-pane>
 
-        <el-tab-pane label="微信绑定" style="height:65vh" :disabled="title === '添加用户'">
+        <el-tab-pane label="角色管理" style="height:65vh" :disabled="title === '添加用户'" name="userRole">
+          <!-- <el-transfer v-model="userRole" :data="userRoleTable" /> -->
           <div>
+            <!-- <div v-if="title === '编辑用户'"><span class="demonstration">当前编辑用户 : {{form.userID}} -{{form.userName}} </span></div> -->
+            <div slot="footer" class="foot">
+              <el-button type="primary" @click="submitRoleForm">确 定</el-button>
+              <el-button @click="cancel">取 消</el-button>
+            </div>
+          </div>
+        </el-tab-pane>
+
+        <el-tab-pane label="微信绑定" style="height:65vh" :disabled="title === '添加用户'" name="userMPAccount">
+          <div>
+            <!-- <div v-if="title === '编辑用户'"><span class="demonstration">当前编辑用户 : {{form.userID}} -{{form.userName}} </span></div> -->
             <div slot="footer" class="foot">
               <el-button type="primary" @click="submitWexinForm">确 定</el-button>
               <el-button @click="cancel">取 消</el-button>
@@ -157,11 +157,11 @@
       <el-row>
         <el-table ref="userTable" v-loading="loading" :data="userTable.dataSource" row-key="id" stripe border :height="tableHeight*0.65" :default-sort="{prop: queryParams.orderby, order: queryParams.sort}" @sort-change="handleSortable">
           <el-table-column sortable type="selection" width="55" align="center" />
-          <el-table-column sortable prop="userID" align="center" label="用户账号" width="100" />
+          <el-table-column sortable prop="userID" align="center" label="用户账号" width="150" />
           <el-table-column sortable prop="userName" :show-overflow-tooltip="true" align="center" label="用户名称" />
           <el-table-column sortable prop="phone" align="center" label="手机号码" />
           <el-table-column sortable prop="sex" align="center" label="性别" width="80" />
-          <el-table-column prop="email" align="center" :show-overflow-tooltip="true" label="邮箱" />
+          <el-table-column sortable prop="createTime" align="center" :show-overflow-tooltip="true" label="创建时间" />
           <el-table-column sortable prop="enabled" align="center" label="是否启用" width="100">
             <template slot-scope="scope">
               <i :style="scope.row.enabled === true ?'color:green':'color:red'" :class="scope.row.enabled === true ? 'el-icon-success ':'el-icon-error'" />
@@ -219,6 +219,8 @@ export default {
     return {
       // 遮罩层
       loading: false,
+      // 默认选项卡
+      activeName: 'userInfo',
       // 表格高度
       tableHeight: window.innerHeight,
       // 单选框
@@ -236,7 +238,7 @@ export default {
         queryText: undefined,
         pageIndex: 1,
         pageSize: 10,
-        orderby: 'userID',
+        orderby: 'createTime',
         sort: 'descending'
       },
       // 用户列表
@@ -322,6 +324,7 @@ export default {
       delete this.form.password
       this.divShow = 'edit'
       this.title = '编辑用户'
+      this.activeName = 'userInfo'
     },
     /** 搜索按钮操作 */
     handleQuery() {
@@ -602,10 +605,12 @@ export default {
     },
     // 用户权限修改
     handleTabsClick(val) {
-      if (val.index === '2') {
+      if (val.index === '1') {
+        this.loading = true
         GetRelationTree(this.form.userID).then(response => {
           this.relationTree = response.data
           this.selectUserRole(this.relationTree)
+          this.loading = false
         })
       }
     },

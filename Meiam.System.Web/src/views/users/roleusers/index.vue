@@ -18,8 +18,8 @@
         </el-form>
         <el-table ref="roleUserTable" v-loading="loadingRoleUser" :data="dataRoleUserTable.filter(data => !search || data.userID.toLowerCase().includes(search.toLowerCase()) || data.userName.toLowerCase().includes(search.toLowerCase()))" row-key="userId" stripe border :height="tableHeight-180">
           <el-table-column type="selection" width="55" align="center" />
-          <el-table-column prop="userID" align="center" label="用户账号" width="80" />
-          <el-table-column prop="userName" align="center" label="用户名称" />
+          <el-table-column prop="userID" align="center" label="用户账号" width="150" />
+          <el-table-column prop="userName" align="center" label="用户名称" width="150" />
           <el-table-column prop="sex" align="center" label="性别" width="80" />
           <el-table-column prop="email" align="center" label="邮箱" />
           <el-table-column prop="enabled" align="center" label="是否启用" width="80">
@@ -43,10 +43,9 @@
         <el-col>
           <el-table ref="userTable" v-loading="loadingUser" :data="dataUserTable.filter(data => !search || data.userID.toLowerCase().includes(search.toLowerCase()) || data.userName.toLowerCase().includes(search.toLowerCase()))" row-key="userId" stripe border :height="tableHeight*0.5">
             <el-table-column type="selection" width="55" align="center" />
-            <el-table-column prop="userID" align="center" label="用户账号" width="80" />
-            <el-table-column prop="userName" align="center" label="用户名称" />
+            <el-table-column prop="userID" align="center" label="用户账号" width="150" />
+            <el-table-column prop="userName" align="center" label="用户名称" width="150" />
             <el-table-column prop="sex" align="center" label="性别" width="80" />
-            <el-table-column prop="email" align="center" label="邮箱" />
             <el-table-column prop="enabled" align="center" label="是否启用" width="80">
               <template slot-scope="scope" label="操作">
                 <i :style="scope.row.enabled === true ?'color:green':'color:red'" :class="scope.row.enabled === true ? 'el-icon-success ':'el-icon-error'" />
