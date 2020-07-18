@@ -84,7 +84,7 @@ namespace Meiam.System.Hostd.Controllers.System
         /// <param name="option">字典分组</param>
         /// <returns></returns>
         [HttpGet]
-        [Authorization(Power = "PRIV_OPTIONS_VIEW")]
+        [Authorization]
         public IActionResult GetOption(string option)
         {
             if (string.IsNullOrEmpty(option))
