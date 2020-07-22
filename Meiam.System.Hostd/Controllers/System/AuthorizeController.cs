@@ -146,11 +146,11 @@ namespace Meiam.System.Hostd.Controllers.System
                                 ParentUID = l.ID,
                                 HasRelation = userRelation.Any(u => u.ObjectID == p.ID),
                                 Remark = p.Remark
-                            }).ToList()
-                        }).ToList()
-                    }).ToList()
-                }).ToList()
-            }).ToList();
+                            }).OrderBy(m => m.RelationNo).ToList()
+                        }).OrderBy(m => m.RelationNo).ToList()
+                    }).OrderBy(m => m.RelationNo).ToList()
+                }).OrderBy(m => m.RelationNo).ToList()
+            }).OrderBy(m => m.RelationNo).ToList();
 
             return toResponse(relations);
         }

@@ -133,6 +133,14 @@ namespace Meiam.System.Interfaces
                     $"\r\n" +
                     $"        public SqlSugarClient Db;   //用来处理事务多表查询和复杂的操作\r\n" +
                     $"\r\n" +
+                    $"        public static DbContext Current\r\n" +
+                    $"        {{\r\n" +
+                    $"            get\r\n" +
+                    $"            {{\r\n" +
+                    $"                return new DbContext();\r\n" +
+                    $"            }}\r\n" +
+                    $"        }}\r\n" +
+                    $"\r\n" +
                     $"        public DbContext()\r\n" +
                     $"        {{\r\n" +
                     $"            Db = new SqlSugarClient(new ConnectionConfig()\r\n" +

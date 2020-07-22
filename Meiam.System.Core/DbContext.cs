@@ -22,6 +22,14 @@ namespace Meiam.System.Core
 
         public SqlSugarClient Db;   //用来处理事务多表查询和复杂的操作
 
+        public static DbContext Current
+        {
+            get
+            {
+                return new DbContext();
+            }
+        }
+
         public DbContext()
         {
             Db = new SqlSugarClient(new ConnectionConfig()

@@ -2,7 +2,7 @@
   <div class="app-container">
     <!-- 添加或修改菜单对话框 -->
     <div v-show="divShow === 'edit'" :title="title" class="showTable">
-      <el-tabs type="border-card" @tab-click="handleTabsClick" v-model="activeName">
+      <el-tabs v-model="activeName" type="border-card" @tab-click="handleTabsClick">
         <el-tab-pane label="用户管理" style="height:65vh" name="userInfo">
           <div>
             <el-form ref="form" :model="form" label-width="80px" :rules="rules">
@@ -84,14 +84,13 @@
         </el-tab-pane>
 
         <el-tab-pane label="权限配置" style="height:65vh" :disabled="title === '添加用户'" name="userRelation">
-          <el-table style="mb8" ref="relationTree" v-loading="loading" :data="relationTree" :height="tableHeight*0.6" row-key="id" border :tree-props="{children: 'children', hasChildren: 'hasChildren'}" :row-class-name="tableRowClassName" @select="handleRelationTreeSelect" @close="cancel" @select-all="handleRelationTreeSelectAll">
+          <el-table ref="relationTree" v-loading="loading" style="mb8" :data="relationTree" :height="tableHeight*0.6" row-key="id" border :tree-props="{children: 'children', hasChildren: 'hasChildren'}" :row-class-name="tableRowClassName" @select="handleRelationTreeSelect" @close="cancel" @select-all="handleRelationTreeSelectAll">
             <el-table-column sortable type="selection" width="55" align="center" />
             <el-table-column prop="relationName" maxlength="50" label="名称" :show-overflow-tooltip="true" />
             <el-table-column prop="relationNo" label="编号" align="center" />
             <el-table-column prop="relationType" label="层级" align="center" :show-overflow-tooltip="true" />
           </el-table>
           <div>
-            <!-- <div v-if="title === '编辑用户'"><span class="demonstration">当前编辑用户 : {{form.userID}} -{{form.userName}} </span></div> -->
             <div slot="footer" class="foot">
               <el-button type="primary" @click="submitPowerForm">确 定</el-button>
               <el-button @click="cancel">取 消</el-button>
@@ -100,9 +99,7 @@
         </el-tab-pane>
 
         <el-tab-pane label="角色管理" style="height:65vh" :disabled="title === '添加用户'" name="userRole">
-          <!-- <el-transfer v-model="userRole" :data="userRoleTable" /> -->
           <div>
-            <!-- <div v-if="title === '编辑用户'"><span class="demonstration">当前编辑用户 : {{form.userID}} -{{form.userName}} </span></div> -->
             <div slot="footer" class="foot">
               <el-button type="primary" @click="submitRoleForm">确 定</el-button>
               <el-button @click="cancel">取 消</el-button>
@@ -112,7 +109,6 @@
 
         <el-tab-pane label="微信绑定" style="height:65vh" :disabled="title === '添加用户'" name="userMPAccount">
           <div>
-            <!-- <div v-if="title === '编辑用户'"><span class="demonstration">当前编辑用户 : {{form.userID}} -{{form.userName}} </span></div> -->
             <div slot="footer" class="foot">
               <el-button type="primary" @click="submitWexinForm">确 定</el-button>
               <el-button @click="cancel">取 消</el-button>
@@ -315,6 +311,7 @@ export default {
       this.reset()
       this.divShow = 'edit'
       this.title = '添加用户'
+      this.activeName = 'userInfo'
     },
 
     /** 修改按钮操作 */
@@ -539,7 +536,7 @@ export default {
         identityCard: undefined,
         birthday: undefined,
         enabled: true,
-        oneSession: false
+        oneSession: true
       }
       this.passwordForm = {
         password: undefined,

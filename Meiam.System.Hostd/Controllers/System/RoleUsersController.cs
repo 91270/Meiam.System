@@ -137,7 +137,7 @@ namespace Meiam.System.Hostd.Controllers.System
             var userIds = _userRoleService.GetWhere(m => m.RoleID == roleId).Select(m => m.UserID);
 
             // 获取未添加用户
-            var response = _userService.GetWhere(m => !userIds.Contains(m.UserID)).OrderBy(m => m.UserID);
+            var response = _userService.GetWhere(m => !userIds.Contains(m.UserID)).OrderBy(m => m.CreateTime);
 
             return toResponse(response);
         }
