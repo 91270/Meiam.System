@@ -2,7 +2,7 @@
   <div class="login">
     <el-form ref="loginForm" :model="loginForm" :rules="loginRules" label-position="left" label-width="0px" class="login-form">
       <h3 class="title">
-        Meiam.System
+        {{title}}
       </h3>
       <el-form-item prop="username">
         <el-input v-model="loginForm.username" type="text" auto-complete="off" placeholder="账号">
@@ -34,10 +34,12 @@
 
 <script>
 import { getVerifyCode } from '@/api/login'
+import defaultSettings from '@/settings'
 export default {
   name: 'login',
   data() {
     return {
+      title: defaultSettings.title,
       codeUrl: '',
       loginForm: {
         username: '',

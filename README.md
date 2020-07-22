@@ -80,6 +80,7 @@
 ### 导入数据库文件 
 
 项目默认使用的是 SQLServer, 备份文件 Meiam.System.sql，当然你也可以使用MYSQL 。
+后台用户 9999 密码 123456
 
 ### 修改 `appsettings.json` 中相关配置
 
@@ -134,6 +135,14 @@
                 Debug.WriteLine(sql);
             };
         }
+```
+
+&nbsp;
+
+### 启动项目
+
+```bash
+dotnet Meiam.System.Hostd.dll
 ```
 
 &nbsp;
