@@ -18,6 +18,7 @@ module.exports = {
   productionSourceMap: false,
   devServer: {
     injectClient: false,
+    host: '127.0.0.1',
     port: port,
     open: false,
     overlay: {
