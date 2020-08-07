@@ -15,7 +15,7 @@ namespace Meiam.System.Hostd
         public static void Main(string[] args)
         {
 
-            var logger = NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
+            var logger = NLogBuilder.ConfigureNLog("NLog.config").GetCurrentClassLogger();
             try
             {
                 CreateHostBuilder(args).Build().Run();

@@ -35,7 +35,7 @@ namespace Meiam.System.Core
             Db = new SqlSugarClient(new ConnectionConfig()
             {
                 ConnectionString = AppSettings.Configuration["DbConnection:ConnectionString"],
-                DbType = DbType.SqlServer,
+                DbType = DbType.MySql,
                 IsAutoCloseConnection = true,
                 InitKeyType = InitKeyType.Attribute,
                 MoreSettings = new ConnMoreSettings()
