@@ -54,7 +54,7 @@ namespace Meiam.System.Hostd
             services.AddScoped<IMapper, ServiceMapper>();
             #endregion
 
-            #region Api文档说明
+            #region 说明文档
             services.AddSwaggerGen(c =>
             {
 
@@ -156,14 +156,14 @@ namespace Meiam.System.Hostd
             app.UseCors("LimitRequests");
             #endregion
 
-            #region Api文档说明
+            #region 说明文档
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
                 var ApiName = AppSettings.Configuration["Startup:ApiName"];
 
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1");
-                c.RoutePrefix = ""; //路径配置，设置为空，表示直接在根域名（localhost:8001）访问该文件,注意localhost:8001/swagger是访问不到的，去launchSettings.json把launchUrl去掉，如果你想换一个路径，直接写名字即可，比如直接写c.RoutePrefix = "doc";
+                c.SwaggerEndpoint("../swagger/v1/swagger.json", "API v1");
+                c.RoutePrefix = string.Empty; 
             });
             #endregion
 
