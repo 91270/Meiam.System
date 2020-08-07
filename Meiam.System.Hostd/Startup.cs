@@ -162,7 +162,7 @@ namespace Meiam.System.Hostd
             {
                 var ApiName = AppSettings.Configuration["Startup:ApiName"];
 
-                c.SwaggerEndpoint("../swagger/v1/swagger.json", "API v1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1");
                 c.RoutePrefix = string.Empty; 
             });
             #endregion
