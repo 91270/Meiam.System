@@ -11,6 +11,7 @@ using Meiam.System.Model;
 using System.Diagnostics;
 using System.Linq;
 using SqlSugar;
+using System;
 
 namespace Meiam.System.Core
 {
@@ -35,7 +36,7 @@ namespace Meiam.System.Core
             Db = new SqlSugarClient(new ConnectionConfig()
             {
                 ConnectionString = AppSettings.Configuration["DbConnection:ConnectionString"],
-                DbType = DbType.SqlServer,
+                DbType = (DbType)Convert.ToInt32(AppSettings.Configuration["DbConnection:DbType"]),
                 IsAutoCloseConnection = true,
                 InitKeyType = InitKeyType.Attribute,
                 MoreSettings = new ConnMoreSettings()

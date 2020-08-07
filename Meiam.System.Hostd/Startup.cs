@@ -43,7 +43,7 @@ namespace Meiam.System.Hostd
                 c.AddPolicy("LimitRequests", policy =>
                 {
                     policy
-                    .WithOrigins(AppSettings.Configuration["Startup:CorsIPs"].Split(';'))
+                    .WithOrigins(AppSettings.Configuration["Startup:AllowOrigins"].Split('|'))
                     .AllowAnyHeader()//Ensures that the policy allows any header.
                     .AllowAnyMethod();
                 });

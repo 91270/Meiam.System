@@ -146,7 +146,7 @@ namespace Meiam.System.Interfaces
                     $"            Db = new SqlSugarClient(new ConnectionConfig()\r\n" +
                     $"            {{\r\n" +
                     $"                ConnectionString = AppSettings.Configuration[\"DbConnection:ConnectionString\"],\r\n" +
-                    $"                DbType = DbType.SqlServer,\r\n" +
+                    $"                DbType = (DbType)Convert.ToInt32(AppSettings.Configuration[\"DbConnection: DbType\"]),\r\n" +
                     $"                IsAutoCloseConnection = true,\r\n" +
                     $"                IsShardSameThread = true,\r\n" +
                     $"                InitKeyType = InitKeyType.Attribute,\r\n" +
