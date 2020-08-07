@@ -11,7 +11,7 @@ Target Server Type    : SQL Server
 Target Server Version : 110000
 File Encoding         : 65001
 
-Date: 2020-08-07 14:08:30
+Date: 2020-08-07 14:53:37
 */
 
 
@@ -1536,6 +1536,366 @@ GO
 -- ----------------------------
 -- Records of Sys_Logs
 -- ----------------------------
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'02381523-C884-4F0D-947B-29664E9EAC2A', N'Quartz.Core.SchedulerSignalerImpl', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl', N'0', N'2020-08-07 14:45:22.529400', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'0500AD4A-DE8B-4B94-B5A5-B8B57DC2E8A5', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz scheduler version: 3.1.0.0', N'0', N'2020-08-07 14:44:45.174100', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'098D81A3-5091-41A4-9022-D7135EEE4852', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz Scheduler v.3.1.0.0 created.', N'0', N'2020-08-07 14:46:10.855900', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'152D7223-C2EE-42A9-98B7-74F0BCC7C4FF', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'JobFactory set to: Meiam.System.Tasks.JobFactory', N'0', N'2020-08-07 14:49:19.716800', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'16CA7711-C29E-4204-B23E-6D815ECFC4E0', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'JobFactory set to: Meiam.System.Tasks.JobFactory', N'0', N'2020-08-07 14:49:38.273700', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'18BAD090-4F2D-4F8A-BF6A-458525AC175E', N'Quartz.Core.SchedulerSignalerImpl', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl', N'0', N'2020-08-07 14:46:10.830500', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'1C3367F8-ABAD-4F89-B93E-A9A9D28DD501', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Using object serializer: Quartz.Simpl.BinaryObjectSerializer, Quartz', N'0', N'2020-08-07 14:45:37.358700', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'1E5C427D-7B1A-466B-9137-CC1FF6C23A0C', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Scheduler meta-data: Quartz Scheduler (v3.1.0.0) ''QuartzScheduler'' with instanceId ''NON_CLUSTERED''
+  Scheduler class: ''Quartz.Core.QuartzScheduler'' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool ''Quartz.Simpl.DefaultThreadPool'' - with 10 threads.
+  Using job-store ''Quartz.Simpl.RAMJobStore'' - which does not support persistence. and is not clustered.
+', N'0', N'2020-08-07 14:44:45.125200', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'1F034A31-0A79-4394-BFB2-DD9D576B5C96', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz scheduler ''QuartzScheduler'' initialized', N'0', N'2020-08-07 14:49:19.604900', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'2142AE62-EB61-4259-BF21-6AC7E97C3D3F', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'JobFactory set to: Meiam.System.Tasks.JobFactory', N'0', N'2020-08-07 14:52:11.147700', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'2421587F-D8C7-4731-935B-0734F4DCE25F', N'Quartz.Core.SchedulerSignalerImpl', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl', N'0', N'2020-08-07 14:44:45.042100', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'2650A5E4-A7AC-48EA-B07F-623BF2A0B1E1', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz scheduler version: 3.1.0.0', N'0', N'2020-08-07 14:49:38.190300', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'2972879B-6BCB-4E0E-B5D3-367467B1D5E7', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Scheduler meta-data: Quartz Scheduler (v3.1.0.0) ''QuartzScheduler'' with instanceId ''NON_CLUSTERED''
+  Scheduler class: ''Quartz.Core.QuartzScheduler'' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool ''Quartz.Simpl.DefaultThreadPool'' - with 10 threads.
+  Using job-store ''Quartz.Simpl.RAMJobStore'' - which does not support persistence. and is not clustered.
+', N'0', N'2020-08-07 14:45:37.754200', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'29BEFFD7-5610-4B4A-81BE-32508D4004E0', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Using object serializer: Quartz.Simpl.BinaryObjectSerializer, Quartz', N'0', N'2020-08-07 14:45:22.164500', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'29D43F91-98FE-4427-BBB5-2141753CCAA6', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz Scheduler v.3.1.0.0 created.', N'0', N'2020-08-07 14:52:10.983300', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'2E88DDA0-B341-4974-BA51-A9142F4A0BC1', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz scheduler ''QuartzScheduler'' initialized', N'0', N'2020-08-07 14:46:10.936400', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'2EA765CF-AB02-497A-AF35-A1320674629B', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz Scheduler v.3.1.0.0 created.', N'0', N'2020-08-07 14:47:34.192000', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'2FD2B87D-C5DB-401A-B59E-63D5BDF56977', N'Quartz.Simpl.RAMJobStore', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'RAMJobStore initialized.', N'0', N'2020-08-07 14:47:34.222400', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'2FD739F8-EFB9-4ECA-8DEE-65CFA8B1633E', N'Quartz.Simpl.RAMJobStore', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'RAMJobStore initialized.', N'0', N'2020-08-07 14:47:47.825800', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'3079AB87-3F13-436E-A869-AE6ABA76E035', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz scheduler ''QuartzScheduler'' initialized', N'0', N'2020-08-07 14:46:00.127700', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'30F4CD9A-4E75-444A-AE05-049451F47A36', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz scheduler version: 3.1.0.0', N'0', N'2020-08-07 14:47:34.301100', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'31842DDA-1FD1-4AAA-9F71-24F44DB3D525', N'Quartz.Simpl.RAMJobStore', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'RAMJobStore initialized.', N'0', N'2020-08-07 14:44:45.099500', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'3780FA9D-BA74-489D-B3B8-88BA23F07BB0', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz scheduler ''QuartzScheduler'' initialized', N'0', N'2020-08-07 14:47:34.276500', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'40745499-8888-4236-9365-7867DFBB7AB4', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Scheduler meta-data: Quartz Scheduler (v3.1.0.0) ''QuartzScheduler'' with instanceId ''NON_CLUSTERED''
+  Scheduler class: ''Quartz.Core.QuartzScheduler'' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool ''Quartz.Simpl.DefaultThreadPool'' - with 10 threads.
+  Using job-store ''Quartz.Simpl.RAMJobStore'' - which does not support persistence. and is not clustered.
+', N'0', N'2020-08-07 14:47:34.251700', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'465FC38B-B011-423B-B1B9-5A500BEE8562', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Using object serializer: Quartz.Simpl.BinaryObjectSerializer, Quartz', N'0', N'2020-08-07 14:47:33.833200', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'48F14514-9B2A-4410-8229-195989F63C36', N'Quartz.Simpl.RAMJobStore', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'RAMJobStore initialized.', N'0', N'2020-08-07 14:49:38.114500', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'4E2A1959-82D8-4ED4-AF86-B92C4826A505', N'Quartz.Core.SchedulerSignalerImpl', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl', N'0', N'2020-08-07 14:49:19.502000', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'564841BD-A93F-4210-B7E1-C19F85AFC90B', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'JobFactory set to: Meiam.System.Tasks.JobFactory', N'0', N'2020-08-07 14:53:09.173400', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'566C1386-D2A4-4F51-9535-436EA482077F', N'Quartz.Simpl.RAMJobStore', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'RAMJobStore initialized.', N'0', N'2020-08-07 14:45:37.724700', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'56C662E0-7CA9-4853-ABF6-472FD065722D', N'Quartz.Core.SchedulerSignalerImpl', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl', N'0', N'2020-08-07 14:49:38.059200', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'56D4FC77-A312-44E1-B1E4-F381CB6805B1', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz scheduler version: 3.1.0.0', N'0', N'2020-08-07 14:49:19.628900', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'58329B9A-978D-456B-AD17-D612449A84A5', N'Quartz.Core.SchedulerSignalerImpl', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl', N'0', N'2020-08-07 14:46:00.024600', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'5A0779C5-4D9B-463B-9C9D-E2CF7039B18D', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Scheduler meta-data: Quartz Scheduler (v3.1.0.0) ''QuartzScheduler'' with instanceId ''NON_CLUSTERED''
+  Scheduler class: ''Quartz.Core.QuartzScheduler'' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool ''Quartz.Simpl.DefaultThreadPool'' - with 10 threads.
+  Using job-store ''Quartz.Simpl.RAMJobStore'' - which does not support persistence. and is not clustered.
+', N'0', N'2020-08-07 14:46:00.102600', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'5B3338E3-DE3F-4CB0-90E4-0B296863840D', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Scheduler meta-data: Quartz Scheduler (v3.1.0.0) ''QuartzScheduler'' with instanceId ''NON_CLUSTERED''
+  Scheduler class: ''Quartz.Core.QuartzScheduler'' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool ''Quartz.Simpl.DefaultThreadPool'' - with 10 threads.
+  Using job-store ''Quartz.Simpl.RAMJobStore'' - which does not support persistence. and is not clustered.
+', N'0', N'2020-08-07 14:46:10.912300', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'5C08FE58-E83F-4745-B313-584C59E90B82', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Scheduler meta-data: Quartz Scheduler (v3.1.0.0) ''QuartzScheduler'' with instanceId ''NON_CLUSTERED''
+  Scheduler class: ''Quartz.Core.QuartzScheduler'' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool ''Quartz.Simpl.DefaultThreadPool'' - with 10 threads.
+  Using job-store ''Quartz.Simpl.RAMJobStore'' - which does not support persistence. and is not clustered.
+', N'0', N'2020-08-07 14:52:11.043600', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'5D6E34E9-0EAB-4F98-B507-F49C85F8731B', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Using object serializer: Quartz.Simpl.BinaryObjectSerializer, Quartz', N'0', N'2020-08-07 14:44:44.753700', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'640A1BEA-A82E-4C7F-8B9E-2BFCA5F3E34A', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz Scheduler v.3.1.0.0 created.', N'0', N'2020-08-07 14:47:47.792900', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'68949A6C-774C-4CBF-8B51-16FED2FB9E6F', N'Quartz.Simpl.RAMJobStore', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'RAMJobStore initialized.', N'0', N'2020-08-07 14:46:10.884200', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'691BB286-D203-4057-B8E7-A69D6CE55AD0', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Scheduler QuartzScheduler_$_NON_CLUSTERED started.', N'0', N'2020-08-07 14:52:11.185500', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'6EEAE096-1FBF-4FF0-BC0C-E9AE038AA2F5', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz scheduler ''QuartzScheduler'' initialized', N'0', N'2020-08-07 14:52:11.067200', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'70941F50-C885-4D65-91C1-45E13098BB55', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz scheduler ''QuartzScheduler'' initialized', N'0', N'2020-08-07 14:45:22.661900', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'71D24BD5-E3FE-4568-A4AB-13FEF8128CD7', N'Quartz.Simpl.RAMJobStore', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'RAMJobStore initialized.', N'0', N'2020-08-07 14:53:08.998300', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'7DBD1FAF-938C-400F-900F-8537B502DD90', N'Quartz.Core.SchedulerSignalerImpl', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl', N'0', N'2020-08-07 14:48:29.801800', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'7DCED99B-5E84-483D-BE0F-C1C2E7BF4409', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz scheduler ''QuartzScheduler'' initialized', N'0', N'2020-08-07 14:45:37.779500', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'7E0F9A03-695D-4904-BF34-049960E74977', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Scheduler meta-data: Quartz Scheduler (v3.1.0.0) ''QuartzScheduler'' with instanceId ''NON_CLUSTERED''
+  Scheduler class: ''Quartz.Core.QuartzScheduler'' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool ''Quartz.Simpl.DefaultThreadPool'' - with 10 threads.
+  Using job-store ''Quartz.Simpl.RAMJobStore'' - which does not support persistence. and is not clustered.
+', N'0', N'2020-08-07 14:49:19.578800', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'81F04B6E-F800-4731-8D6C-0EA3113935D5', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz scheduler version: 3.1.0.0', N'0', N'2020-08-07 14:52:11.091300', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'8519089B-3C89-44C5-8649-4494184AAF96', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz Scheduler v.3.1.0.0 created.', N'0', N'2020-08-07 14:45:22.555100', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'86D79784-FB2E-4797-A240-7AAA4ED6019C', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Using object serializer: Quartz.Simpl.BinaryObjectSerializer, Quartz', N'0', N'2020-08-07 14:48:29.464200', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'8ACC4493-12A9-4885-99AB-89679164D416', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Using object serializer: Quartz.Simpl.BinaryObjectSerializer, Quartz', N'0', N'2020-08-07 14:52:10.542800', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'91E30A8C-8526-4C90-A446-84C51FC1A419', N'Quartz.Simpl.RAMJobStore', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'RAMJobStore initialized.', N'0', N'2020-08-07 14:45:22.587900', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'94FD4234-F4AD-4832-8B62-02E7ED979D5B', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz scheduler version: 3.1.0.0', N'0', N'2020-08-07 14:45:37.802900', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'96B982F1-8825-424A-999E-E26CCE67A8AF', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz scheduler version: 3.1.0.0', N'0', N'2020-08-07 14:46:10.960700', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'971B6004-6852-44CD-9284-82AA6431922E', N'Quartz.Core.SchedulerSignalerImpl', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl', N'0', N'2020-08-07 14:52:10.955600', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'9951AB47-AB0A-4402-BA95-750221CF711E', N'Quartz.Core.SchedulerSignalerImpl', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl', N'0', N'2020-08-07 14:45:37.668200', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'A07CF156-F330-46C3-893B-6B2E857C41F5', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz scheduler version: 3.1.0.0', N'0', N'2020-08-07 14:45:22.692900', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'A170CBB5-3CB0-4E60-A3C4-D72D9D0FB8C1', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Scheduler meta-data: Quartz Scheduler (v3.1.0.0) ''QuartzScheduler'' with instanceId ''NON_CLUSTERED''
+  Scheduler class: ''Quartz.Core.QuartzScheduler'' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool ''Quartz.Simpl.DefaultThreadPool'' - with 10 threads.
+  Using job-store ''Quartz.Simpl.RAMJobStore'' - which does not support persistence. and is not clustered.
+', N'0', N'2020-08-07 14:49:38.139800', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'A40AD544-63C7-48B9-9B0B-55B0F2B0E866', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Scheduler meta-data: Quartz Scheduler (v3.1.0.0) ''QuartzScheduler'' with instanceId ''NON_CLUSTERED''
+  Scheduler class: ''Quartz.Core.QuartzScheduler'' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool ''Quartz.Simpl.DefaultThreadPool'' - with 10 threads.
+  Using job-store ''Quartz.Simpl.RAMJobStore'' - which does not support persistence. and is not clustered.
+', N'0', N'2020-08-07 14:47:47.857900', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'A4593A75-AD76-4027-840B-5CB35D56D0C8', N'Quartz.Core.SchedulerSignalerImpl', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl', N'0', N'2020-08-07 14:47:47.766800', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'AE4CC701-4346-4656-B103-8ECA14885AB7', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz Scheduler v.3.1.0.0 created.', N'0', N'2020-08-07 14:45:37.693400', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'B007D4F9-42D6-4BB0-906A-07A26B83E888', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Scheduler QuartzScheduler_$_NON_CLUSTERED started.', N'0', N'2020-08-07 14:49:19.757000', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'B6475725-CAAE-419D-B8E5-0FFA8BDEBE86', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz scheduler ''QuartzScheduler'' initialized', N'0', N'2020-08-07 14:48:29.915600', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'B7954FE4-7684-4599-8F2C-DD21742F9CDA', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz scheduler ''QuartzScheduler'' initialized', N'0', N'2020-08-07 14:47:47.883900', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'B87C246A-DB2B-42B1-97F4-B9FAF975BF1E', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Using object serializer: Quartz.Simpl.BinaryObjectSerializer, Quartz', N'0', N'2020-08-07 14:49:37.743100', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'B896BADE-2AC5-498C-AFA9-EFFC42694941', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Scheduler meta-data: Quartz Scheduler (v3.1.0.0) ''QuartzScheduler'' with instanceId ''NON_CLUSTERED''
+  Scheduler class: ''Quartz.Core.QuartzScheduler'' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool ''Quartz.Simpl.DefaultThreadPool'' - with 10 threads.
+  Using job-store ''Quartz.Simpl.RAMJobStore'' - which does not support persistence. and is not clustered.
+', N'0', N'2020-08-07 14:45:22.620400', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'BD4FF932-7C83-442E-B3D9-A0B0A82C177E', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz Scheduler v.3.1.0.0 created.', N'0', N'2020-08-07 14:46:00.049900', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'C02F7299-A1E3-41E2-8923-FD6767CB9B51', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Using object serializer: Quartz.Simpl.BinaryObjectSerializer, Quartz', N'0', N'2020-08-07 14:49:19.173000', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'C1B4A0F0-0F2A-4C1F-A7C3-618366BF8516', N'Quartz.Simpl.RAMJobStore', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'RAMJobStore initialized.', N'0', N'2020-08-07 14:52:11.016400', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'C683EF52-896D-4B3B-B9BD-078D93D43915', N'Quartz.Simpl.RAMJobStore', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'RAMJobStore initialized.', N'0', N'2020-08-07 14:48:29.858100', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'C764A458-7383-4DC6-9B3C-B72B2C21A626', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz scheduler ''QuartzScheduler'' initialized', N'0', N'2020-08-07 14:49:38.166000', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'C784E26B-963D-4338-BEA4-66CA0FAE84DD', N'Quartz.Core.SchedulerSignalerImpl', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl', N'0', N'2020-08-07 14:47:34.167200', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'D2E3957F-7FC5-4954-98E3-7A7280166D89', N'Quartz.Simpl.RAMJobStore', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'RAMJobStore initialized.', N'0', N'2020-08-07 14:49:19.554900', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'D3F36C47-3771-4897-A465-212738723187', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Using object serializer: Quartz.Simpl.BinaryObjectSerializer, Quartz', N'0', N'2020-08-07 14:53:08.612800', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'D6F4A807-8401-4DA3-B0DD-521A2DCEC62F', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Scheduler meta-data: Quartz Scheduler (v3.1.0.0) ''QuartzScheduler'' with instanceId ''NON_CLUSTERED''
+  Scheduler class: ''Quartz.Core.QuartzScheduler'' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool ''Quartz.Simpl.DefaultThreadPool'' - with 10 threads.
+  Using job-store ''Quartz.Simpl.RAMJobStore'' - which does not support persistence. and is not clustered.
+', N'0', N'2020-08-07 14:48:29.891300', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'D773F52F-8515-498C-9589-6B885DDEE0C5', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Scheduler QuartzScheduler_$_NON_CLUSTERED started.', N'0', N'2020-08-07 14:53:09.205500', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'D8501359-7E7A-4A18-8C89-9D42CFB164EC', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Using object serializer: Quartz.Simpl.BinaryObjectSerializer, Quartz', N'0', N'2020-08-07 14:46:10.505700', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'E000B9F3-92D6-4339-918B-E76CE8BB50DA', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Scheduler QuartzScheduler_$_NON_CLUSTERED started.', N'0', N'2020-08-07 14:49:38.305100', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'E0D6F1A3-EC40-4F52-B0DE-BB7E653721DE', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz Scheduler v.3.1.0.0 created.', N'0', N'2020-08-07 14:49:38.085600', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'E1443EC5-FFA1-49A0-B74E-C5CA050A1FDB', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz Scheduler v.3.1.0.0 created.', N'0', N'2020-08-07 14:48:29.827300', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'E14768A7-EE76-4F1A-B4E6-5D58A76B31A0', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz scheduler version: 3.1.0.0', N'0', N'2020-08-07 14:48:29.939400', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'E35DE930-6E58-40DC-8750-98A7D7B9A2CB', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Scheduler meta-data: Quartz Scheduler (v3.1.0.0) ''QuartzScheduler'' with instanceId ''NON_CLUSTERED''
+  Scheduler class: ''Quartz.Core.QuartzScheduler'' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool ''Quartz.Simpl.DefaultThreadPool'' - with 10 threads.
+  Using job-store ''Quartz.Simpl.RAMJobStore'' - which does not support persistence. and is not clustered.
+', N'0', N'2020-08-07 14:53:09.018900', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'E62DCE27-B0E3-41A2-9AFF-480E4134545B', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz Scheduler v.3.1.0.0 created.', N'0', N'2020-08-07 14:53:08.969000', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'E68CFD30-3FB0-49AB-8871-592507056B67', N'Quartz.Core.SchedulerSignalerImpl', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl', N'0', N'2020-08-07 14:53:08.943300', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'E6F0A8C6-8178-49CE-945A-CAB5A87B548C', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz scheduler version: 3.1.0.0', N'0', N'2020-08-07 14:53:09.074800', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'EA85E9DD-10D5-4DFF-9D1B-BBA18A2C4AF5', N'Quartz.Simpl.RAMJobStore', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'RAMJobStore initialized.', N'0', N'2020-08-07 14:46:00.077300', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'EBAC3C14-337B-493E-9E52-81ACC3935065', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz scheduler ''QuartzScheduler'' initialized', N'0', N'2020-08-07 14:53:09.050900', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'EC31FE7B-7499-432E-A3E2-B31DDBE69999', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Using object serializer: Quartz.Simpl.BinaryObjectSerializer, Quartz', N'0', N'2020-08-07 14:47:47.419700', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'F6B2409F-0688-4C27-8137-D82F2E5F4DEF', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz scheduler version: 3.1.0.0', N'0', N'2020-08-07 14:47:47.907800', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'F6CD3EA1-266F-4100-96C6-BA9CDFD9CB62', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz scheduler version: 3.1.0.0', N'0', N'2020-08-07 14:46:00.151800', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'F93A1AE0-0FB2-4CB8-BF99-C23295032DC8', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz Scheduler v.3.1.0.0 created.', N'0', N'2020-08-07 14:44:45.071100', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'FE653997-A4B2-4660-8995-9EB2EA099CAA', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Using object serializer: Quartz.Simpl.BinaryObjectSerializer, Quartz', N'0', N'2020-08-07 14:45:59.664100', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'FED0F09A-8D7D-47B4-AABA-3BA1B156C0CD', N'Quartz.Core.QuartzScheduler', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz Scheduler v.3.1.0.0 created.', N'0', N'2020-08-07 14:49:19.526800', N'')
+GO
+GO
+INSERT INTO [dbo].[Sys_Logs] ([ID], [Logger], [Level], [Url], [Host], [Method], [UserAgent], [Cookie], [QueryString], [Body], [Message], [Elapsed], [CreateTime], [IPAddress]) VALUES (N'FEF4D319-1FBE-43DB-BD5E-8BC083503A14', N'Quartz.Impl.StdSchedulerFactory', N'INFO', N'', N'', N'', N'', N'', N'', N'', N'Quartz scheduler ''QuartzScheduler'' initialized', N'0', N'2020-08-07 14:44:45.150300', N'')
+GO
+GO
 
 -- ----------------------------
 -- Table structure for Sys_Menu
@@ -2025,18 +2385,6 @@ GO
 -- ----------------------------
 -- Records of Sys_Online
 -- ----------------------------
-INSERT INTO [dbo].[Sys_Online] ([UserID], [SessionID], [IPAddress], [LoginTime], [UpdateTime], [Source]) VALUES (N'9999', N'21E9885F-1416-42BA-8408-B84256BE3CF8', N'0.0.0.1', N'2020-06-19 13:33:56.397', N'2020-06-19 15:48:56.440', N'Web')
-GO
-GO
-INSERT INTO [dbo].[Sys_Online] ([UserID], [SessionID], [IPAddress], [LoginTime], [UpdateTime], [Source]) VALUES (N'9999', N'53372033-70D4-4346-9B22-541990C1043A', N'115.56.231.94', N'2020-06-19 11:23:24.200', N'2020-06-19 12:53:57.337', N'Web')
-GO
-GO
-INSERT INTO [dbo].[Sys_Online] ([UserID], [SessionID], [IPAddress], [LoginTime], [UpdateTime], [Source]) VALUES (N'9999', N'6128F024-806F-487F-AA76-59CDF129105C', N'0.0.0.1', N'2020-06-19 09:42:08.827', N'2020-06-19 09:50:33.070', N'Web')
-GO
-GO
-INSERT INTO [dbo].[Sys_Online] ([UserID], [SessionID], [IPAddress], [LoginTime], [UpdateTime], [Source]) VALUES (N'9999', N'DA939D9C-DA4F-44A6-89CA-99CD98A10244', N'127.0.0.1', N'2020-06-20 11:06:13.530', N'2020-06-20 11:06:13.723', N'Web')
-GO
-GO
 
 -- ----------------------------
 -- Table structure for Sys_Options
@@ -3492,7 +3840,7 @@ GO
 -- ----------------------------
 -- Records of Sys_TasksQz
 -- ----------------------------
-INSERT INTO [dbo].[Sys_TasksQz] ([ID], [Name], [JobGroup], [Cron], [AssemblyName], [ClassName], [Remark], [RunTimes], [BeginTime], [EndTime], [TriggerType], [IntervalSecond], [IsStart], [JobParams], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'E29F2D63-B1B0-4CE6-9CDC-A5F86C52B887', N'生产订单同步', N'数据同步', N'0 0 0/1 * * ? ', N'Meiam.System.Tasks', N'Job_SyncProductOrder', N'[2020-07-22 09:56:31:998] => Run Job [Id：E29F2D63-B1B0-4CE6-9CDC-A5F86C52B887，Group：数据同步]， Succeed ， Elapsed：12.9083 ms', N'746', N'2020-06-19 09:59:29.000', N'9999-12-31 00:00:00.000', N'1', N'1', N'1', null, N'2020-06-19 09:33:53.533', N'2020-06-19 15:00:45.693', N'9999', N'系统管理员', N'9999', N'系统管理员')
+INSERT INTO [dbo].[Sys_TasksQz] ([ID], [Name], [JobGroup], [Cron], [AssemblyName], [ClassName], [Remark], [RunTimes], [BeginTime], [EndTime], [TriggerType], [IntervalSecond], [IsStart], [JobParams], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'E29F2D63-B1B0-4CE6-9CDC-A5F86C52B887', N'生产订单同步', N'数据同步', N'0 0 0/1 * * ? ', N'Meiam.System.Tasks', N'Job_SyncProductOrder', N'[2020-08-07 14:53:09:478] => Run Job [Id：E29F2D63-B1B0-4CE6-9CDC-A5F86C52B887，Group：数据同步]， Succeed ， Elapsed：6.5405 ms', N'750', N'2020-06-19 09:59:29.000', N'9999-12-31 00:00:00.000', N'1', N'1', N'1', null, N'2020-06-19 09:33:53.533', N'2020-06-19 15:00:45.693', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
 
