@@ -59,6 +59,11 @@ namespace Meiam.System.Hostd.Controllers.System
         [Authorization]
         public IActionResult UpdatePassword([FromBody] UserCenterUpdatePasswordDto parm)
         {
+            if (Convert.ToBoolean(AppSettings.Configuration["AppSettings:Demo"]))
+            {
+                toResponse(StatusCodeType.Error, "当前为演示模式 , 您无权修改任何数据");
+            }
+
             var userSession = _tokenManager.GetSessionInfo();
 
             var userInfo = _usersService.GetId(userSession.UserID);
@@ -91,6 +96,11 @@ namespace Meiam.System.Hostd.Controllers.System
         public IActionResult Update([FromBody] UserCenterUpdateDto parm)
         {
             var userSession = _tokenManager.GetSessionInfo();
+
+            if (Convert.ToBoolean(AppSettings.Configuration["AppSettings:Demo"]))
+            {
+                toResponse(StatusCodeType.Error, "当前为演示模式 , 您无权修改任何数据");
+            }
 
             #region 更新用户信息
             var response = _usersService.Update(m => m.UserID == userSession.UserID, m => new Sys_Users
@@ -184,7 +194,6 @@ namespace Meiam.System.Hostd.Controllers.System
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
