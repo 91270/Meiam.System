@@ -40,19 +40,13 @@ namespace Meiam.System.Hostd.Controllers.System
         /// </summary>
         private readonly ISysUserRelationService _userRelationService;
 
-        /// <summary>
-        /// 小程序用户接口
-        /// </summary>
-        private readonly ISysMPAccountService _accountService;
-
         public AuthController(TokenManager tokenManager, ISysUsersService userService, ILogger<AuthController> logger, 
-            ISysUserRelationService userRelationService, ISysMPAccountService accountService)
+            ISysUserRelationService userRelationService)
         {
             _tokenManager = tokenManager;
             _userService = userService;
             _logger = logger;
             _userRelationService = userRelationService;
-            _accountService = accountService;
         }
 
         /// <summary>
@@ -133,37 +127,6 @@ namespace Meiam.System.Hostd.Controllers.System
             {
                 return toResponse(StatusCodeType.Error, "用户名或密码错误");
             }
-
-            if (!userInfo.Enabled)
-            {
-                return toResponse(StatusCodeType.Error, "用户未启用，请联系管理员！");
-            }
-
-            var userToken = _tokenManager.CreateSession(userInfo, SourceType.MiniProgram, Convert.ToInt32(AppSettings.Configuration["AppSettings:MiniProgramSessionExpire"]));
-
-            return toResponse(userToken);
-        }
-
-        /// <summary>
-        /// 微信小程序OpenId登录
-        /// </summary>
-        /// <returns></returns>
-        [HttpGet]
-        public IActionResult LoginMPAccount(string openId)
-        {
-            if (string.IsNullOrEmpty(openId))
-            {
-                return toResponse(StatusCodeType.Error, "openId 不能为空");
-            }
-
-            var account = _accountService.GetId(openId);
-
-            if (account == null)
-            {
-                return toResponse(StatusCodeType.Error, "此微信无任何绑定信息！");
-            }
-
-            var userInfo = _userService.GetFirst(o => o.UserID == account.UserID);
 
             if (!userInfo.Enabled)
             {

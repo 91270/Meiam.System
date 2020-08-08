@@ -157,7 +157,6 @@ namespace Meiam.System.Hostd.Controllers.Basic
                     WorkShopNo = parm.WorkShopNo,
                     WorkShopName = parm.WorkShopName,
                     Enable = parm.Enable,
-                    IsTest = parm.IsTest,
                     Remark = parm.Remark,
                     UpdateID = userSession.UserID,
                     UpdateName = userSession.UserName,

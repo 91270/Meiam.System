@@ -113,7 +113,7 @@
         </member>
         <member name="T:Meiam.System.Hostd.Controllers.Basic.EquipmentController">
             <summary>
-            设备定义
+            机台定义
             </summary>
         </member>
         <member name="F:Meiam.System.Hostd.Controllers.Basic.EquipmentController._logger">
@@ -128,7 +128,7 @@
         </member>
         <member name="F:Meiam.System.Hostd.Controllers.Basic.EquipmentController._equipmentService">
             <summary>
-            设备定义接口
+            机台定义接口
             </summary>
         </member>
         <member name="F:Meiam.System.Hostd.Controllers.Basic.EquipmentController._dataRelationService">
@@ -138,39 +138,54 @@
         </member>
         <member name="M:Meiam.System.Hostd.Controllers.Basic.EquipmentController.Query(Meiam.System.Model.Dto.EquipmentQueryDto)">
             <summary>
-            查询设备定义列表
+            查询机台定义列表
             </summary>
             <returns></returns>
         </member>
         <member name="M:Meiam.System.Hostd.Controllers.Basic.EquipmentController.Get(System.String)">
             <summary>
-            根据 Id 查询设备定义
+            根据 Id 查询机台定义
             </summary>
-            <param name="id">编码</param>
+            <param name="id">ID</param>
             <returns></returns>
         </member>
         <member name="M:Meiam.System.Hostd.Controllers.Basic.EquipmentController.GetAll(System.Nullable{System.Boolean})">
             <summary>
-            查询所有设备定义
+            查询所有机台定义
             </summary>
+            <param name="enable">是否启用（不传返回所有）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.EquipmentController.GetEquipByNo(System.String)">
+            <summary>
+            根据机台编码查询机台定义
+            </summary>
+            <param name="equipNo">编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.Basic.EquipmentController.GetEquipByLineNo(System.String,System.Nullable{System.Boolean})">
+            <summary>
+            根据设备编码查询机台定义
+            </summary>
+            <param name="lineNo"></param>
             <param name="enable">是否启用（不传返回所有）</param>
             <returns></returns>
         </member>
         <member name="M:Meiam.System.Hostd.Controllers.Basic.EquipmentController.Create(Meiam.System.Model.Dto.EquipmentCreateDto)">
             <summary>
-            添加设备定义
+            添加机台定义
             </summary>
             <returns></returns>
         </member>
         <member name="M:Meiam.System.Hostd.Controllers.Basic.EquipmentController.Update(Meiam.System.Model.Dto.EquipmentUpdateDto)">
             <summary>
-            更新设备定义
+            更新机台定义
             </summary>
             <returns></returns>
         </member>
         <member name="M:Meiam.System.Hostd.Controllers.Basic.EquipmentController.Delete(System.String)">
             <summary>
-            删除设备定义
+            删除机台定义
             </summary>
             <returns></returns>
         </member>
@@ -239,7 +254,7 @@
         </member>
         <member name="T:Meiam.System.Hostd.Controllers.Basic.ProductLineController">
             <summary>
-            产线定义
+            设备定义
             </summary>
         </member>
         <member name="F:Meiam.System.Hostd.Controllers.Basic.ProductLineController._logger">
@@ -254,7 +269,7 @@
         </member>
         <member name="F:Meiam.System.Hostd.Controllers.Basic.ProductLineController._lineService">
             <summary>
-            产线定义接口
+            设备定义接口
             </summary>
         </member>
         <member name="F:Meiam.System.Hostd.Controllers.Basic.ProductLineController._dataRelationService">
@@ -264,39 +279,39 @@
         </member>
         <member name="M:Meiam.System.Hostd.Controllers.Basic.ProductLineController.Query(Meiam.System.Model.Dto.ProductLineQueryDto)">
             <summary>
-            查询产线定义列表
+            查询设备定义列表
             </summary>
             <returns></returns>
         </member>
         <member name="M:Meiam.System.Hostd.Controllers.Basic.ProductLineController.Get(System.String)">
             <summary>
-            根据 Id 查询产线定义
+            根据 Id 查询设备定义
             </summary>
             <param name="id">编码</param>
             <returns></returns>
         </member>
         <member name="M:Meiam.System.Hostd.Controllers.Basic.ProductLineController.GetAll(System.Nullable{System.Boolean})">
             <summary>
-            查询所有产线定义
+            查询所有设备定义
             </summary>
             <param name="enable">是否启用（不传返回所有）</param>
             <returns></returns>
         </member>
         <member name="M:Meiam.System.Hostd.Controllers.Basic.ProductLineController.Create(Meiam.System.Model.Dto.ProductLineCreateDto)">
             <summary>
-            添加产线定义
+            添加设备定义
             </summary>
             <returns></returns>
         </member>
         <member name="M:Meiam.System.Hostd.Controllers.Basic.ProductLineController.Update(Meiam.System.Model.Dto.ProductLineUpdateDto)">
             <summary>
-            更新产线定义
+            更新设备定义
             </summary>
             <returns></returns>
         </member>
         <member name="M:Meiam.System.Hostd.Controllers.Basic.ProductLineController.Delete(System.String)">
             <summary>
-            删除产线定义
+            删除设备定义
             </summary>
             <returns></returns>
         </member>
@@ -446,6 +461,11 @@
             用户服务接口
             </summary>
         </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.AuthController._userRelationService">
+            <summary>
+            用户关系接口
+            </summary>
+        </member>
         <member name="M:Meiam.System.Hostd.Controllers.System.AuthController.Code">
             <summary>
             获取验证码
@@ -473,6 +493,36 @@
         <member name="M:Meiam.System.Hostd.Controllers.System.AuthController.GetUserInfo">
             <summary>
             用户信息获取
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.AuthController.GetUserCompany">
+            <summary>
+            获取用户公司
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.AuthController.GetUserFactory">
+            <summary>
+            获取用户工厂
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.AuthController.GetUserWorkShop">
+            <summary>
+            获取用户车间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.AuthController.GetUserProductProcess">
+            <summary>
+            获取用户工序
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.System.AuthController.GetUserProductLine">
+            <summary>
+            获取用户设备
             </summary>
             <returns></returns>
         </member>
