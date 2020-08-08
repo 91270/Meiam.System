@@ -38,7 +38,12 @@ namespace Meiam.System.Core
                 ConnectionString = AppSettings.Configuration["DbConnection:ConnectionString"],
                 DbType = (DbType)Convert.ToInt32(AppSettings.Configuration["DbConnection:DbType"]),
                 IsAutoCloseConnection = true,
+                IsShardSameThread = true,
                 InitKeyType = InitKeyType.Attribute,
+                ConfigureExternalServices = new ConfigureExternalServices()
+                {
+                    DataInfoCacheService = new RedisCache()
+                },
                 MoreSettings = new ConnMoreSettings()
                 {
                     IsAutoRemoveDataCache = true
@@ -56,24 +61,24 @@ namespace Meiam.System.Core
             return new DbSet<T>(Db);
         }
 
+        public DbSet<Sys_UserRelation> SysUserRelationDb => new DbSet<Sys_UserRelation>(Db);
+        public DbSet<Sys_UserRole> SysUserRoleDb => new DbSet<Sys_UserRole>(Db);
+        public DbSet<Sys_Users> SysUsersDb => new DbSet<Sys_Users>(Db);
+        public DbSet<Sys_TasksQz> SysTasksQzDb => new DbSet<Sys_TasksQz>(Db);
+        public DbSet<Base_Company> BaseCompanyDb => new DbSet<Base_Company>(Db);
+        public DbSet<Base_Equipment> BaseEquipmentDb => new DbSet<Base_Equipment>(Db);
+        public DbSet<Base_Factory> BaseFactoryDb => new DbSet<Base_Factory>(Db);
+        public DbSet<Base_ProductLine> BaseProductLineDb => new DbSet<Base_ProductLine>(Db);
+        public DbSet<Base_ProductProcess> BaseProductProcessDb => new DbSet<Base_ProductProcess>(Db);
+        public DbSet<Base_WorkShop> BaseWorkShopDb => new DbSet<Base_WorkShop>(Db);
+        public DbSet<Sys_DataRelation> SysDataRelationDb => new DbSet<Sys_DataRelation>(Db);
+        public DbSet<Sys_Logs> SysLogsDb => new DbSet<Sys_Logs>(Db);
+        public DbSet<Sys_Menu> SysMenuDb => new DbSet<Sys_Menu>(Db);
         public DbSet<Sys_Online> SysOnlineDb => new DbSet<Sys_Online>(Db);
+        public DbSet<Sys_Options> SysOptionsDb => new DbSet<Sys_Options>(Db);
         public DbSet<Sys_Power> SysPowerDb => new DbSet<Sys_Power>(Db);
         public DbSet<Sys_Role> SysRoleDb => new DbSet<Sys_Role>(Db);
         public DbSet<Sys_RolePower> SysRolePowerDb => new DbSet<Sys_RolePower>(Db);
-        public DbSet<Sys_UserRelation> SysUserRelationDb => new DbSet<Sys_UserRelation>(Db);
-        public DbSet<Base_Company> BaseCompanyDb => new DbSet<Base_Company>(Db);
-        public DbSet<Base_Factory> BaseFactoryDb => new DbSet<Base_Factory>(Db);
-        public DbSet<Base_WorkShop> BaseWorkShopDb => new DbSet<Base_WorkShop>(Db);
-        public DbSet<Base_ProductProcess> BaseProductProcessDb => new DbSet<Base_ProductProcess>(Db);
-        public DbSet<Base_ProductLine> BaseProductLineDb => new DbSet<Base_ProductLine>(Db);
-        public DbSet<Sys_Users> SysUsersDb => new DbSet<Sys_Users>(Db);
-        public DbSet<Sys_Options> SysOptionsDb => new DbSet<Sys_Options>(Db);
-        public DbSet<Sys_Menu> SysMenuDb => new DbSet<Sys_Menu>(Db);
-        public DbSet<Sys_DataRelation> SysDataRelationDb => new DbSet<Sys_DataRelation>(Db);
-        public DbSet<Sys_Logs> SysLogsDb => new DbSet<Sys_Logs>(Db);
-        public DbSet<Sys_UserRole> SysUserRoleDb => new DbSet<Sys_UserRole>(Db);
-        public DbSet<Base_Equipment> BaseEquipmentDb => new DbSet<Base_Equipment>(Db);
-        public DbSet<Sys_TasksQz> SysTasksQzDb => new DbSet<Sys_TasksQz>(Db);
 
     }
 

@@ -122,6 +122,7 @@ namespace Meiam.System.Interfaces
                     $"using System.Diagnostics;\r\n" +
                     $"using System.Linq;\r\n" +
                     $"using SqlSugar;\r\n" +
+                    $"using System;\r\n" +
                     $"\r\n" +
                     $"namespace { strNameSpace }\r\n" +
                     $"{{\r\n" +
@@ -146,7 +147,7 @@ namespace Meiam.System.Interfaces
                     $"            Db = new SqlSugarClient(new ConnectionConfig()\r\n" +
                     $"            {{\r\n" +
                     $"                ConnectionString = AppSettings.Configuration[\"DbConnection:ConnectionString\"],\r\n" +
-                    $"                DbType = (DbType)Convert.ToInt32(AppSettings.Configuration[\"DbConnection: DbType\"]),\r\n" +
+                    $"                DbType = (DbType)Convert.ToInt32(AppSettings.Configuration[\"DbConnection:DbType\"]),\r\n" +
                     $"                IsAutoCloseConnection = true,\r\n" +
                     $"                IsShardSameThread = true,\r\n" +
                     $"                InitKeyType = InitKeyType.Attribute,\r\n" +
@@ -172,7 +173,7 @@ namespace Meiam.System.Interfaces
                     $"        }}\r\n" +
                     $"\r\n";
 
-                foreach(var table in tables)
+                foreach (var table in tables)
                 {
                     classTemplate = classTemplate + $"        public DbSet<{table}> {table.Replace("_", "")}Db => new DbSet<{table}>(Db);\r\n";
                 };

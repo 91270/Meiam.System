@@ -85,7 +85,7 @@ namespace Meiam.System.Model
            /// <summary>
            /// 描述 : 执行次数 
            /// 空值 : False
-           /// 默认 : 
+           /// 默认 : 0
            /// <summary>
            [Display(Name = "执行次数")]           
            public int RunTimes {get;set;}
@@ -109,7 +109,7 @@ namespace Meiam.System.Model
            /// <summary>
            /// 描述 : 触发器类型（0、simple 1、cron） 
            /// 空值 : False
-           /// 默认 : 
+           /// 默认 : 1
            /// <summary>
            [Display(Name = "触发器类型（0、simple 1、cron）")]           
            public int TriggerType {get;set;}
