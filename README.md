@@ -83,12 +83,13 @@
 
 后台用户 9999 密码 123456
 
-### 修改 `appsettings.json` 中相关配置
+### 修改 `appsettings.json` 中相关配置 
 
 ```c#
   // 数据库连接
   "DbConnection": {
-    "ConnectionString": "Server=192.168.0.3;Database=MeiamSystem;UID=meiamsystem;Password=HApVpL8XhFFGz3Oy"
+    "ConnectionString": "Server=192.168.0.3;Database=MeiamSystem;UID=meiamsystem;Password=HApVpL8XhFFGz3Oy",
+    "DbType": 1 //<= 配置你要选用的数据库 MySql = 0, SqlServer = 1, Sqlite = 2, Oracle = 3, PostgreSQL = 4 
   },
   // REDIS 配置 ， 默认使用了 3 个 DB
   "RedisServer": {
@@ -98,9 +99,9 @@
   }, 
   // 跨域配置
   "Startup": {
-    "ApiUrls": "http://127.0.0.1:19999",
-    "CorsIPs": "http://127.0.0.1:18888",
-    "ApiName": "Meiam.System"
+    "ApiName": "Meiam.System",
+    "ApiUrls": "http://*:19999",
+    "AllowOrigins": "http://127.0.0.1:18888|http://localhost:18888"
   },
   // TOKEN 过期时间配置
   "AppSettings": {
@@ -112,30 +113,6 @@
     "AvatarDirectory": "D://wwwroot/avatars",
     "AvatarUrl": "/"
   }
-```
-
-### 如果要使用其他数据库，请修改  `Meiam.System.Core` `DbContext.cs`
-
-```c#
-        public DbContext()
-        {
-            Db = new SqlSugarClient(new ConnectionConfig()
-            {
-                ConnectionString = AppSettings.Configuration["DbConnection:ConnectionString"],
-                DbType = DbType.SqlServer,     <= 配置你要选用的数据库
-                IsAutoCloseConnection = true,
-                InitKeyType = InitKeyType.Attribute,
-                MoreSettings = new ConnMoreSettings()
-                {
-                    IsAutoRemoveDataCache = true
-                }
-            });
-            //调式代码 用来打印SQL 
-            Db.Aop.OnLogExecuting = (sql, pars) =>
-            {
-                Debug.WriteLine(sql);
-            };
-        }
 ```
 
 &nbsp;
