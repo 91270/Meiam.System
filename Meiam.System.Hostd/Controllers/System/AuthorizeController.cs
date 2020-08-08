@@ -1,4 +1,5 @@
-﻿using Mapster;
+﻿using DotNetCore.CAP;
+using Meiam.System.Core;
 using Meiam.System.Hostd.Authorization;
 using Meiam.System.Hostd.Extensions;
 using Meiam.System.Interfaces;
@@ -7,11 +8,10 @@ using Meiam.System.Model.Dto;
 using Meiam.System.Model.View;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using SqlSugar;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Meiam.System.Hostd.Controllers.System
 {
@@ -57,7 +57,7 @@ namespace Meiam.System.Hostd.Controllers.System
         private readonly IBaseWorkShopService _workShopService;
 
         /// <summary>
-        /// 产线定义接口
+        /// 设备定义接口
         /// </summary>
         private readonly IBaseProductLineService _lineService;
 
@@ -66,9 +66,11 @@ namespace Meiam.System.Hostd.Controllers.System
         /// </summary>
         private readonly IBaseProductProcessService _processService;
 
+        private readonly ICapPublisher _publisher;
+
         public AuthorizeController(ILogger<AuthorizeController> logger, TokenManager tokenManager, ISysUserRelationService userRelationService,
             ISysDataRelationService dataRelationService, IBaseCompanyService companyService, IBaseFactoryService factoryService, IBaseWorkShopService workShopService,
-            IBaseProductLineService lineService, IBaseProductProcessService processService)
+            IBaseProductLineService lineService, IBaseProductProcessService processService, ICapPublisher publisher)
         {
             _logger = logger;
             _tokenManager = tokenManager;
@@ -79,6 +81,7 @@ namespace Meiam.System.Hostd.Controllers.System
             _workShopService = workShopService;
             _lineService = lineService;
             _processService = processService;
+            _publisher = publisher;
         }
 
         /// <summary>
@@ -126,7 +129,7 @@ namespace Meiam.System.Hostd.Controllers.System
                         ParentUID = f.ID,
                         HasRelation = userRelation.Any(u => u.ObjectID == w.ID),
                         Remark = w.Remark,
-                        //生产线
+                        //生设备
                         Children = dataProcess.Where(l => dataRelation.Where(r => r.To == w.ID && r.Type == DataRelationType.Process_To_WorkShop.ToString()).Select(r => r.Form).Contains(l.ID)).Select(l => new RelationTreeVM
                         {
                             ID = l.ID,
@@ -166,22 +169,22 @@ namespace Meiam.System.Hostd.Controllers.System
             // 转化传入内容
             var relations = parm.Relation.Select(m => new Sys_UserRelation
             {
-                 ID = GetGUID,
-                 UserID = parm.UserID,
-                 ObjectID = m.ObjectID,
-                 ObjectType = m.ObjectType
+                ID = GetGUID,
+                UserID = parm.UserID,
+                ObjectID = m.ObjectID,
+                ObjectType = m.ObjectType
 
             }).ToList();
 
-            try
+            using (var trans = DbContext.Current.Db.Ado.Connection.BeginTransaction(_publisher, autoCommit: false))
             {
-                //开启事务
-                _userRelationService.BeginTran();
+                DbContext.Current.Db.Ado.Transaction = trans;
+
+
                 //清空权限
                 _userRelationService.Delete(m => m.UserID == parm.UserID);
                 //插入权限
                 _userRelationService.Add(relations);
-                _userRelationService.CommitTran();
 
                 #region 更新登录会话记录
 
@@ -189,14 +192,10 @@ namespace Meiam.System.Hostd.Controllers.System
 
                 #endregion
 
+                trans.Commit();
+
                 return toResponse(StatusCodeType.Success);
             }
-            catch (Exception ex)
-            {
-                _userRelationService.RollbackTran();
-                throw ex;
-            }
-
         }
     }
 }

@@ -59,7 +59,7 @@ namespace Meiam.System.Hostd.Controllers.System
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [Authorization(Power = "PRIV_ROLEPOWERS_VIEW")]
+        [Authorization]
         public IActionResult GetPowersGroup()
         {
             var powers = (_powerService.GetAll()).OrderBy(m => m.CreateTime);
@@ -84,7 +84,7 @@ namespace Meiam.System.Hostd.Controllers.System
         /// <param name="roleId">角色id</param>
         /// <returns></returns>
         [HttpGet]
-        [Authorization(Power = "PRIV_ROLEPOWERS_VIEW")]
+        [Authorization]
         public IActionResult GetRolePowers(string roleId)
         {
             if (string.IsNullOrEmpty(roleId))

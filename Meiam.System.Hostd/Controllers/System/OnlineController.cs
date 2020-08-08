@@ -25,6 +25,7 @@ namespace Meiam.System.Hostd.Controllers.System
         /// 会话管理接口
         /// </summary>
         private readonly TokenManager _tokenManager;
+
         /// <summary>
         /// 日志管理接口
         /// </summary>

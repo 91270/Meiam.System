@@ -48,7 +48,7 @@ namespace Meiam.System.Hostd.Controllers.System
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        [Authorization(Power = "PRIV_ROLES_VIEW")]
+        [Authorization]
         public IActionResult Query([FromBody] RolesQueryDto parm)
         {
             //开始拼装查询条件
@@ -68,7 +68,7 @@ namespace Meiam.System.Hostd.Controllers.System
         /// <param name="id">编码</param>
         /// <returns></returns>
         [HttpGet]
-        [Authorization(Power = "PRIV_ROLES_VIEW")]
+        [Authorization]
         public IActionResult Get(string id)
         {
             if(!string.IsNullOrEmpty(id))

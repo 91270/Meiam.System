@@ -54,7 +54,7 @@ namespace Meiam.System.Hostd.Controllers.Basic
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        [Authorization(Power = "PRIV_COMPANY_VIEW")]
+        [Authorization]
         public IActionResult Query([FromBody] CompanyQueryDto parm)
         {
             //开始拼装查询条件
@@ -74,7 +74,7 @@ namespace Meiam.System.Hostd.Controllers.Basic
         /// <param name="id">编码</param>
         /// <returns></returns>
         [HttpGet]
-        [Authorization(Power = "PRIV_COMPANY_VIEW")]
+        [Authorization]
         public IActionResult Get(string id = null)
         {
             if (string.IsNullOrEmpty(id))
@@ -90,7 +90,7 @@ namespace Meiam.System.Hostd.Controllers.Basic
         /// <param name="enable">是否启用（不传返回所有）</param>
         /// <returns></returns>
         [HttpGet]
-        [Authorization(Power = "PRIV_COMPANY_VIEW")]
+        [Authorization]
         public IActionResult GetAll(bool? enable = null)
         {
             var predicate = Expressionable.Create<Base_Company>();

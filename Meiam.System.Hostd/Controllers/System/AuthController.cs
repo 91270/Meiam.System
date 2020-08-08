@@ -2,7 +2,6 @@
 using Meiam.System.Common.Utilities;
 using Meiam.System.Core;
 using Meiam.System.Hostd.Authorization;
-using Meiam.System.Hostd.Common;
 using Meiam.System.Hostd.Extensions;
 using Meiam.System.Interfaces;
 using Meiam.System.Model;
@@ -11,7 +10,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Linq;
 using System;
-using System.Threading.Tasks;
 
 namespace Meiam.System.Hostd.Controllers.System
 {
@@ -26,6 +24,7 @@ namespace Meiam.System.Hostd.Controllers.System
         /// 会话管理接口
         /// </summary>
         private readonly TokenManager _tokenManager;
+
         /// <summary>
         /// 日志管理接口
         /// </summary>
@@ -36,11 +35,24 @@ namespace Meiam.System.Hostd.Controllers.System
         /// </summary>
         private readonly ISysUsersService _userService;
 
-        public AuthController(TokenManager tokenManager, ISysUsersService userService, ILogger<AuthController> logger)
+        /// <summary>
+        /// 用户关系接口
+        /// </summary>
+        private readonly ISysUserRelationService _userRelationService;
+
+        /// <summary>
+        /// 小程序用户接口
+        /// </summary>
+        private readonly ISysMPAccountService _accountService;
+
+        public AuthController(TokenManager tokenManager, ISysUsersService userService, ILogger<AuthController> logger, 
+            ISysUserRelationService userRelationService, ISysMPAccountService accountService)
         {
             _tokenManager = tokenManager;
             _userService = userService;
             _logger = logger;
+            _userRelationService = userRelationService;
+            _accountService = accountService;
         }
 
         /// <summary>
@@ -133,6 +145,37 @@ namespace Meiam.System.Hostd.Controllers.System
         }
 
         /// <summary>
+        /// 微信小程序OpenId登录
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public IActionResult LoginMPAccount(string openId)
+        {
+            if (string.IsNullOrEmpty(openId))
+            {
+                return toResponse(StatusCodeType.Error, "openId 不能为空");
+            }
+
+            var account = _accountService.GetId(openId);
+
+            if (account == null)
+            {
+                return toResponse(StatusCodeType.Error, "此微信无任何绑定信息！");
+            }
+
+            var userInfo = _userService.GetFirst(o => o.UserID == account.UserID);
+
+            if (!userInfo.Enabled)
+            {
+                return toResponse(StatusCodeType.Error, "用户未启用，请联系管理员！");
+            }
+
+            var userToken = _tokenManager.CreateSession(userInfo, SourceType.MiniProgram, Convert.ToInt32(AppSettings.Configuration["AppSettings:MiniProgramSessionExpire"]));
+
+            return toResponse(userToken);
+        }
+
+        /// <summary>
         /// 用户退出
         /// </summary>
         /// <returns></returns>
@@ -152,9 +195,62 @@ namespace Meiam.System.Hostd.Controllers.System
         [Authorization]
         public IActionResult GetUserInfo()
         {
-            var _userSession = _tokenManager.GetSessionInfo();
+            return toResponse(_tokenManager.GetSessionInfo());
+        }
 
-            return toResponse(_userSession);
+        /// <summary>
+        /// 获取用户公司
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Authorization]
+        public IActionResult GetUserCompany()
+        {
+            return toResponse(_userRelationService.GetUserCompany(_tokenManager.GetSessionInfo(), true));
+        }
+
+        /// <summary>
+        /// 获取用户工厂
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Authorization]
+        public IActionResult GetUserFactory()
+        {
+            return toResponse(_userRelationService.GetUserFactory(_tokenManager.GetSessionInfo(), true));
+        }
+
+        /// <summary>
+        /// 获取用户车间
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Authorization]
+        public IActionResult GetUserWorkShop()
+        {
+            return toResponse(_userRelationService.GetUserWorkShop(_tokenManager.GetSessionInfo(), true));
+        }
+
+        /// <summary>
+        /// 获取用户工序
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Authorization]
+        public IActionResult GetUserProductProcess()
+        {
+            return toResponse(_userRelationService.GetUserProductProcess(_tokenManager.GetSessionInfo(), true));
+        }
+
+        /// <summary>
+        /// 获取用户设备
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Authorization]
+        public IActionResult GetUserProductLine()
+        {
+            return toResponse(_userRelationService.GetUserProductLine(_tokenManager.GetSessionInfo(), true));
         }
     }
 }

@@ -55,7 +55,7 @@ namespace Meiam.System.Hostd.Controllers.Basic
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        [Authorization(Power = "PRIV_FACTORY_VIEW")]
+        [Authorization]
         public IActionResult Query([FromBody] FactoryQueryDto parm)
         {
             var response = _factoryService.QueryFactoryPages(parm);
@@ -69,7 +69,7 @@ namespace Meiam.System.Hostd.Controllers.Basic
         /// <param name="id">编码</param>
         /// <returns></returns>
         [HttpGet]
-        [Authorization(Power = "PRIV_FACTORY_VIEW")]
+        [Authorization]
         public IActionResult Get(string id = null)
         {
             if (string.IsNullOrEmpty(id))
@@ -85,7 +85,7 @@ namespace Meiam.System.Hostd.Controllers.Basic
         /// <param name="enable">是否启用（不传返回所有）</param>
         /// <returns></returns>
         [HttpGet]
-        [Authorization(Power = "PRIV_FACTORY_VIEW")]
+        [Authorization]
         public IActionResult GetAll(bool? enable = null)
         {
             return toResponse(_factoryService.GetAllFactory(enable));

@@ -54,7 +54,7 @@ namespace Meiam.System.Hostd.Controllers.System
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        [Authorization(Power = "PRIV_POWERS_VIEW")]
+        [Authorization]
         public IActionResult Query([FromBody] PowersQueryDto parm)
         {
             //开始拼装查询条件
@@ -74,7 +74,7 @@ namespace Meiam.System.Hostd.Controllers.System
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet]
-        [Authorization(Power = "PRIV_POWERS_VIEW")]
+        [Authorization]
         public IActionResult Get(string id)
         {
             if (!string.IsNullOrEmpty(id))

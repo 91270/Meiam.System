@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 namespace Meiam.System.Hostd.Controllers.Basic
 {
     /// <summary>
-    /// 设备定义
+    /// 机台定义
     /// </summary>
     [Route("api/[controller]/[action]")]
     [ApiController]
@@ -31,7 +31,7 @@ namespace Meiam.System.Hostd.Controllers.Basic
         private readonly TokenManager _tokenManager;
 
         /// <summary>
-        /// 设备定义接口
+        /// 机台定义接口
         /// </summary>
         private readonly IBaseEquipmentService _equipmentService;
         
@@ -51,11 +51,11 @@ namespace Meiam.System.Hostd.Controllers.Basic
 
 
         /// <summary>
-        /// 查询设备定义列表
+        /// 查询机台定义列表
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        [Authorization(Power = "PRIV_EQUIPMENT_VIEW")]
+        [Authorization]
         public IActionResult Query([FromBody] EquipmentQueryDto parm)
         {
             var response = _equipmentService.QueryEquipPages(parm);
@@ -64,28 +64,28 @@ namespace Meiam.System.Hostd.Controllers.Basic
 
 
         /// <summary>
-        /// 根据 Id 查询设备定义
+        /// 根据 Id 查询机台定义
         /// </summary>
-        /// <param name="id">编码</param>
+        /// <param name="id">ID</param>
         /// <returns></returns>
         [HttpGet]
-        [Authorization(Power = "PRIV_EQUIPMENT_VIEW")]
+        [Authorization]
         public IActionResult Get(string id = null)
         {
             if (string.IsNullOrEmpty(id))
             {
-                return toResponse(StatusCodeType.Error, "生设备 Id 不能为空");
+                return toResponse(StatusCodeType.Error, "生机台 Id 不能为空");
             }
             return toResponse(_equipmentService.GetEquip(id));
         }
 
         /// <summary>
-        /// 查询所有设备定义
+        /// 查询所有机台定义
         /// </summary>
         /// <param name="enable">是否启用（不传返回所有）</param>
         /// <returns></returns>
         [HttpGet]
-        [Authorization(Power = "PRIV_EQUIPMENT_VIEW")]
+        [Authorization]
         public IActionResult GetAll(bool? enable = null)
         {
             return toResponse(_equipmentService.GetAllEquip(enable));
@@ -93,7 +93,40 @@ namespace Meiam.System.Hostd.Controllers.Basic
 
 
         /// <summary>
-        /// 添加设备定义
+        /// 根据机台编码查询机台定义
+        /// </summary>
+        /// <param name="equipNo">编码</param>
+        /// <returns></returns>
+        [HttpGet]
+        [Authorization]
+        public IActionResult GetEquipByNo(string equipNo = null)
+        {
+            if (string.IsNullOrEmpty(equipNo))
+            {
+                return toResponse(StatusCodeType.Error, "机台编码不能为空");
+            }
+            return toResponse(_equipmentService.GetEquipByNo(equipNo));
+        }
+
+        /// <summary>
+        /// 根据设备编码查询机台定义
+        /// </summary>
+        /// <param name="lineNo"></param>
+        /// <param name="enable">是否启用（不传返回所有）</param>
+        /// <returns></returns>
+        [HttpGet]
+        [Authorization]
+        public IActionResult GetEquipByLineNo(string lineNo = null, bool? enable = null)
+        {
+            if (string.IsNullOrEmpty(lineNo))
+            {
+                return toResponse(StatusCodeType.Error, "设备编码不能为空");
+            }
+            return toResponse(_equipmentService.GetEquipByLine(lineNo, enable).OrderBy(m => m.EquipNo));
+        }
+
+        /// <summary>
+        /// 添加机台定义
         /// </summary>
         /// <returns></returns>
         [HttpPost]
@@ -107,7 +140,7 @@ namespace Meiam.System.Hostd.Controllers.Basic
 
                 if (_equipmentService.Any(m => m.EquipNo == parm.EquipNo))
                 {
-                    return toResponse(StatusCodeType.Error, $"添加设备编码 {parm.EquipNo} 已存在，不能重复！");
+                    return toResponse(StatusCodeType.Error, $"添加机台编码 {parm.EquipNo} 已存在，不能重复！");
                 }
 
                 //从 Dto 映射到 实体
@@ -136,7 +169,7 @@ namespace Meiam.System.Hostd.Controllers.Basic
         }
 
         /// <summary>
-        /// 更新设备定义
+        /// 更新机台定义
         /// </summary>
         /// <returns></returns>
         [HttpPost]
@@ -145,7 +178,7 @@ namespace Meiam.System.Hostd.Controllers.Basic
         {
             if (_equipmentService.Any(m => m.EquipNo == parm.EquipNo && m.ID != parm.ID))
             {
-                return toResponse(StatusCodeType.Error, $"添加设备编码 {parm.EquipNo} 已存在，不能重复！");
+                return toResponse(StatusCodeType.Error, $"添加机台编码 {parm.EquipNo} 已存在，不能重复！");
             }
 
             try
@@ -189,7 +222,7 @@ namespace Meiam.System.Hostd.Controllers.Basic
         }
 
         /// <summary>
-        /// 删除设备定义
+        /// 删除机台定义
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -198,12 +231,12 @@ namespace Meiam.System.Hostd.Controllers.Basic
         {
             if (string.IsNullOrEmpty(id))
             {
-                return toResponse(StatusCodeType.Error, "删除设备 Id 不能为空");
+                return toResponse(StatusCodeType.Error, "删除机台 Id 不能为空");
             }
 
             if (_dataRelationService.Any(m => m.To == id))
             {
-                return toResponse(StatusCodeType.Error, "该设备已被关联，无法删除，若要请先删除关联");
+                return toResponse(StatusCodeType.Error, "该机台已被关联，无法删除，若要请先删除关联");
             }
 
             try

@@ -53,7 +53,7 @@ namespace Meiam.System.Hostd.Controllers.System
         /// <param name="roleId">角色 Id</param>
         /// <returns></returns>
         [HttpGet]
-        [Authorization(Power = "PRIV_ROLEUSERS_VIEW")]
+        [Authorization]
         public IActionResult Get(string roleId)
         {
             if (string.IsNullOrEmpty(roleId))

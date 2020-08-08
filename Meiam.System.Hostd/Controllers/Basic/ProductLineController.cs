@@ -11,7 +11,7 @@ using System;
 namespace Meiam.System.Hostd.Controllers.Basic
 {
     /// <summary>
-    /// 产线定义
+    /// 设备定义
     /// </summary>
     [Route("api/[controller]/[action]")]
     [ApiController]
@@ -27,7 +27,7 @@ namespace Meiam.System.Hostd.Controllers.Basic
         private readonly TokenManager _tokenManager;
 
         /// <summary>
-        /// 产线定义接口
+        /// 设备定义接口
         /// </summary>
         private readonly IBaseProductLineService _lineService;
 
@@ -47,11 +47,11 @@ namespace Meiam.System.Hostd.Controllers.Basic
 
 
         /// <summary>
-        /// 查询产线定义列表
+        /// 查询设备定义列表
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        [Authorization(Power = "PRIV_WORKSHOP_VIEW")]
+        [Authorization]
         public IActionResult Query([FromBody] ProductLineQueryDto parm)
         {
             var response = _lineService.QueryLinePages(parm);
@@ -60,28 +60,28 @@ namespace Meiam.System.Hostd.Controllers.Basic
 
 
         /// <summary>
-        /// 根据 Id 查询产线定义
+        /// 根据 Id 查询设备定义
         /// </summary>
         /// <param name="id">编码</param>
         /// <returns></returns>
         [HttpGet]
-        [Authorization(Power = "PRIV_WORKSHOP_VIEW")]
+        [Authorization]
         public IActionResult Get(string id = null)
         {
             if (string.IsNullOrEmpty(id))
             {
-                return toResponse(StatusCodeType.Error, "生产线 Id 不能为空");
+                return toResponse(StatusCodeType.Error, "生设备 Id 不能为空");
             }
             return toResponse(_lineService.GetLine(id));
         }
 
         /// <summary>
-        /// 查询所有产线定义
+        /// 查询所有设备定义
         /// </summary>
         /// <param name="enable">是否启用（不传返回所有）</param>
         /// <returns></returns>
         [HttpGet]
-        [Authorization(Power = "PRIV_WORKSHOP_VIEW")]
+        [Authorization]
         public IActionResult GetAll(bool? enable = null)
         {
             return toResponse(_lineService.GetAllLine(enable));
@@ -89,7 +89,7 @@ namespace Meiam.System.Hostd.Controllers.Basic
 
 
         /// <summary>
-        /// 添加产线定义
+        /// 添加设备定义
         /// </summary>
         /// <returns></returns>
         [HttpPost]
@@ -103,7 +103,7 @@ namespace Meiam.System.Hostd.Controllers.Basic
 
                 if (_lineService.Any(m => m.LineNo == parm.LineNo))
                 {
-                    return toResponse(StatusCodeType.Error, $"添加产线编码 {parm.LineNo} 已存在，不能重复！");
+                    return toResponse(StatusCodeType.Error, $"添加设备编码 {parm.LineNo} 已存在，不能重复！");
                 }
 
                 //从 Dto 映射到 实体
@@ -132,7 +132,7 @@ namespace Meiam.System.Hostd.Controllers.Basic
         }
 
         /// <summary>
-        /// 更新产线定义
+        /// 更新设备定义
         /// </summary>
         /// <returns></returns>
         [HttpPost]
@@ -141,7 +141,7 @@ namespace Meiam.System.Hostd.Controllers.Basic
         {
             if (_lineService.Any(m => m.LineNo == parm.LineNo && m.ID != parm.ID))
             {
-                return toResponse(StatusCodeType.Error, $"添加产线编码 {parm.LineNo} 已存在，不能重复！");
+                return toResponse(StatusCodeType.Error, $"添加设备编码 {parm.LineNo} 已存在，不能重复！");
             }
 
             try
@@ -185,7 +185,7 @@ namespace Meiam.System.Hostd.Controllers.Basic
         }
 
         /// <summary>
-        /// 删除产线定义
+        /// 删除设备定义
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -194,12 +194,12 @@ namespace Meiam.System.Hostd.Controllers.Basic
         {
             if (string.IsNullOrEmpty(id))
             {
-                return toResponse(StatusCodeType.Error, "删除产线 Id 不能为空");
+                return toResponse(StatusCodeType.Error, "删除设备 Id 不能为空");
             }
 
             if (_dataRelationService.Any(m => m.To == id))
             {
-                return toResponse(StatusCodeType.Error, "该产线已被关联，无法删除，若要请先删除关联");
+                return toResponse(StatusCodeType.Error, "该设备已被关联，无法删除，若要请先删除关联");
             }
 
             try

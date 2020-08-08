@@ -48,7 +48,7 @@ namespace Meiam.System.Hostd.Controllers.System
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        [Authorization(Power = "PRIV_MENUS_VIEW")]
+        [Authorization]
         public IActionResult Query([FromBody] MenusQueryDto parm)
         {
             if (string.IsNullOrEmpty(parm.Name))
@@ -99,7 +99,7 @@ namespace Meiam.System.Hostd.Controllers.System
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet]
-        [Authorization(Power = "PRIV_MENUS_VIEW")]
+        [Authorization]
         public IActionResult Get(string id)
         {
             var response = _menuService.GetId(id);
