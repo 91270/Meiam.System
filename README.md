@@ -110,6 +110,7 @@
   },
   // TOKEN 过期时间配置
   "AppSettings": {
+    "Demo": true,  //<= 关闭演示模式 
     "WebSessionExpire": 24,
     "MiniProgramSessionExpire": 720
   },
