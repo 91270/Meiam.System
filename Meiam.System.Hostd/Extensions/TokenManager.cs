@@ -108,6 +108,8 @@ namespace Meiam.System.Hostd.Extensions
                 UpdateTime = DateTime.Now
             });
 
+            _usersService.Update(m => m.UserID == userInfo.UserID, m => new Sys_Users { LastLoginTime = DateTime.Now });
+
             return userSession;
         }
 
