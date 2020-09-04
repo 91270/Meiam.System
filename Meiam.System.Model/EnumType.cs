@@ -10,6 +10,7 @@
 */
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Text;
 
 namespace Meiam.System.Model
@@ -19,52 +20,17 @@ namespace Meiam.System.Model
     /// </summary>
     public static class EnumExtension
     {
-        private static Dictionary<string, Dictionary<string, string>> enumCache;
-
-        private static Dictionary<string, Dictionary<string, string>> EnumCache
-        {
-            get
-            {
-                if (enumCache == null)
-                {
-                    enumCache = new Dictionary<string, Dictionary<string, string>>();
-                }
-                return enumCache;
-            }
-            set { enumCache = value; }
-        }
-
         /// <summary>
         /// 获得枚举提示文本
         /// </summary>
-        /// <param name="en"></param>
+        /// <param name="obj"></param>
         /// <returns></returns>
-        public static string GetEnumText(this Enum en)
+        public static string GetEnumText(this Enum obj)
         {
-            string enString = string.Empty;
-            if (null == en) return enString;
-            var type = en.GetType();
-            enString = en.ToString();
-            if (!EnumCache.ContainsKey(type.FullName))
-            {
-                var fields = type.GetFields();
-                Dictionary<string, string> temp = new Dictionary<string, string>();
-                foreach (var item in fields)
-                {
-                    var attrs = item.GetCustomAttributes(typeof(TextAttribute), false);
-                    if (attrs.Length == 1)
-                    {
-                        var v = ((TextAttribute)attrs[0]).Value;
-                        temp.Add(item.Name, v);
-                    }
-                }
-                EnumCache.Add(type.FullName, temp);
-            }
-            if (EnumCache[type.FullName].ContainsKey(enString))
-            {
-                return EnumCache[type.FullName][enString];
-            }
-            return enString;
+            Type type = obj.GetType();
+            FieldInfo field = type.GetField(obj.ToString());
+            TextAttribute attribute = (TextAttribute)field.GetCustomAttribute(typeof(TextAttribute));
+            return attribute.Value;
         }
     }
 
@@ -116,11 +82,18 @@ namespace Meiam.System.Model
         /// </summary>
         [Text("Web")]
         Web,
+
         /// <summary>
         /// 微信小程序
         /// </summary>
         [Text("MiniProgram")]
-        MiniProgram
+        MiniProgram,
+
+        /// <summary>
+        /// 福利小程序
+        /// </summary>
+        [Text("Perk")]
+        Perk,
     }
 
     /// <summary>
@@ -194,6 +167,16 @@ namespace Meiam.System.Model
         /// </summary>
         [Text("Equipment_To_Line")]
         Equipment_To_Line,
+    }
 
+    /// <summary>
+    /// 单据类型
+    /// </summary>
+    public enum OrderPrefixType
+    {
+        /// <summary>
+        /// 报工单据
+        /// </summary>
+        BG,
     }
 }
