@@ -40,8 +40,8 @@ export default {
       title: defaultSettings.title,
       codeUrl: '',
       loginForm: {
-        username: '',
-        password: '',
+        username: '9999',
+        password: '123456',
         code: ''
       },
       loginRules: {
