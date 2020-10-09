@@ -19,7 +19,7 @@
 &nbsp;
 
 ## 给个星星! ⭐️
-如果你喜欢这个项目或者它帮助你, 请给 Star~（辛苦星咯）
+如果你喜欢这个项目或者它帮助你, 请给 Star~（辛苦咯）
 
 
 
@@ -136,6 +136,9 @@ dotnet Meiam.System.Hostd.dll
 
 贡献的最简单的方法之一就是是参与讨论和讨论问题（issue）。你也可以通过提交的 Pull Request 代码变更作出贡献。
 
+## 致谢
+
+[anjoy8/Blog.Core](https://github.com/anjoy8/Blog.Core) 借鉴了作者定时任务的写法
 
   [1]: https://raw.githubusercontent.com/91270/Meiam.System/master/WebAPI.png
   [2]: https://raw.githubusercontent.com/91270/Meiam.System/master/WebUI.png
