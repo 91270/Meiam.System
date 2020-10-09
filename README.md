@@ -3,8 +3,8 @@
 [![.NET CORE](https://img.shields.io/badge/.NET%20Core-3.1-d.svg)](#)
 [![VUE](https://img.shields.io/badge/VUE-2.6.10-d.svg)](#) 
 [![SqlSugar](https://img.shields.io/badge/SqlSugar-5.0-d.svg)](#)
-[![star this repo](https://githubbadges.com/star.svg?user=91270&repo=Meiam.System&style=default)](https://github.com/91270/Meiam.System)
-[![fork this repo](https://githubbadges.com/fork.svg?user=91270&repo=Meiam.System&style=default)](https://github.com/91270/Meiam.System/fork)
+[![star this repo](https://img.shields.io/github/stars/91270/Meiam.System?label=Star%20this%20repo)](https://github.com/91270/Meiam.System)
+[![fork this repo](https://img.shields.io/github/forks/91270/Meiam.System?label=Fork%20this%20repo)](https://github.com/91270/Meiam.System/fork)
 [![博客](https://img.shields.io/badge/博客-Meiam's%20Home-brightgreen.svg)](https://www.592.la/)
 
 
