@@ -139,6 +139,7 @@ dotnet Meiam.System.Hostd.dll
 ## 致谢
 
 [anjoy8/Blog.Core](https://github.com/anjoy8/Blog.Core) 借鉴了作者定时任务的写法
+[sunkaixuan/SqlSugar](https://github.com/sunkaixuan/SqlSugar)
 
   [1]: https://raw.githubusercontent.com/91270/Meiam.System/master/WebAPI.png
   [2]: https://raw.githubusercontent.com/91270/Meiam.System/master/WebUI.png
