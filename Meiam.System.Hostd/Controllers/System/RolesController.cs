@@ -24,6 +24,7 @@ namespace Meiam.System.Hostd.Controllers.System
         /// 日志管理接口
         /// </summary>
         private readonly ILogger<RolesController> _logger;
+
         /// <summary>
         /// 会话管理接口
         /// </summary>
@@ -35,11 +36,23 @@ namespace Meiam.System.Hostd.Controllers.System
         /// </summary>
         private readonly ISysRoleService _roleService;
 
-        public RolesController(TokenManager tokenManager, ISysRoleService roleService, ILogger<RolesController> logger)
+        /// <summary>
+        /// 角色权限接口
+        /// </summary>
+        private readonly ISysRolePowerService _rolePowerService;
+
+        /// <summary>
+        /// 用户角色接口
+        /// </summary>
+        private readonly ISysUserRoleService _userRoleService;
+
+        public RolesController(TokenManager tokenManager, ISysRoleService roleService, ILogger<RolesController> logger,ISysRolePowerService rolePowerService ,ISysUserRoleService userRoleService)
         {
             _tokenManager = tokenManager;
             _roleService = roleService;
             _logger = logger;
+            _rolePowerService = rolePowerService;
+            _userRoleService = userRoleService;
         }
 
 
@@ -53,6 +66,11 @@ namespace Meiam.System.Hostd.Controllers.System
         {
             //开始拼装查询条件
             var predicate = Expressionable.Create<Sys_Role>();
+
+            //判断是否是超级管理员
+            var userSession = _tokenManager.GetSessionInfo();
+
+            predicate = predicate.AndIF(!userSession.Administrator, m => m.Administrator == false);
 
             predicate = predicate.AndIF(!string.IsNullOrEmpty(parm.Name), m => m.Name.Contains(parm.Name));
 
@@ -75,7 +93,15 @@ namespace Meiam.System.Hostd.Controllers.System
             {
                 return toResponse(_roleService.GetId(id));
             }
-            return toResponse(_roleService.GetAll().OrderBy(m => m.CreateTime));
+
+            var userSession = _tokenManager.GetSessionInfo();
+
+            //开始拼装查询条件
+            var predicate = Expressionable.Create<Sys_Role>();
+
+            predicate = predicate.AndIF(!userSession.Administrator, m => m.Administrator == false);
+
+            return toResponse(_roleService.GetWhere(predicate.ToExpression()).OrderBy(m => m.CreateTime));
         }
 
 
@@ -133,6 +159,16 @@ namespace Meiam.System.Hostd.Controllers.System
             if (string.IsNullOrEmpty(id))
             {
                 return toResponse(StatusCodeType.Error, "删除角色 Id 不能为空");
+            }
+
+            if (_rolePowerService.Any(m => m.RoleUID == id))
+            {
+                return toResponse(StatusCodeType.Error, "请先删除角色关联的权限");
+            }
+
+            if (_userRoleService.Any(m => m.RoleID == id))
+            {
+                return toResponse(StatusCodeType.Error, "请先删除角色关联的用户");
             }
 
             var response = _roleService.Delete(id);
