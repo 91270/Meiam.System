@@ -30,6 +30,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Meiam.System.Common\Meiam.System.Common.csproj" />
     <ProjectReference Include="..\Meiam.System.Core\Meiam.System.Core.csproj" />
+    <ProjectReference Include="..\Meiam.System.Extensions\Meiam.System.Extensions.csproj" />
     <ProjectReference Include="..\Meiam.System.Interfaces\Meiam.System.Interfaces.csproj" />
     <ProjectReference Include="..\Meiam.System.Model\Meiam.System.Model.csproj" />
     <ProjectReference Include="..\Meiam.System.Tasks\Meiam.System.Tasks.csproj" />

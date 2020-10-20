@@ -3,6 +3,7 @@ using Autofac.Extras.DynamicProxy;
 using MapsterMapper;
 using Meiam.System.Common;
 using Meiam.System.Core;
+using Meiam.System.Extensions;
 using Meiam.System.Hostd.Authorization;
 using Meiam.System.Hostd.Common;
 using Meiam.System.Hostd.Extensions;
@@ -116,6 +117,12 @@ namespace Meiam.System.Hostd
 
             //注入 TokenManager
             services.AddScoped<TokenManager>();
+
+            //注入实体映射服务
+            services.AddScoped<IMapper, ServiceMapper>();
+
+            //注入短信服务
+            services.AddSingleton<IAliyunSmsServices, AliyunSmsServices>();
 
             //注入全局异常过滤
             services.AddControllers(options =>
