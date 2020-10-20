@@ -90,6 +90,7 @@ namespace Meiam.System.Hostd.Extensions
                 OneSession = userInfo.OneSession,
                 Source = source.ToString(),
                 KeepHours = hours,
+                Administrator = userInfo.Administrator,
                 UserPower = _usersService.GetUserPowers(userInfo.UserID),
                 UserRelation = _usersService.GetUserRelation(userInfo.UserID),
             };
@@ -205,6 +206,7 @@ namespace Meiam.System.Hostd.Extensions
                         OneSession = userInfo.OneSession,
                         Source = redisUserInfo.Source,
                         KeepHours = redisUserInfo.KeepHours,
+                        Administrator = userInfo.Administrator,
                         UserPower = _usersService.GetUserPowers(userInfo.UserID),
                         UserRelation = _usersService.GetUserRelation(userInfo.UserID),
                     };
