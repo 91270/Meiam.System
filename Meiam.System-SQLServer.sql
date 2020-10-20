@@ -2764,34 +2764,34 @@ GO
 -- ----------------------------
 -- Records of Sys_Menu
 -- ----------------------------
-INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'25041C8B-A18C-4D7C-9212-EB60F0EB7100', N'工序定义', N'app', N'productprocess', N'basic/productprocess/index', N'4', N'PRIV_PRODUCTPROCESS_VIEW', N'A2EDE2E3-CCC5-4A88-89A1-A84CDAF35DEE', null, N'0', N'0', N'0', N'0', N'2020-06-01 11:01:20.080', N'2020-06-19 16:12:01.500', N'9999', N'超威电源有限公司', N'9999', N'系统管理员')
+INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'25041C8B-A18C-4D7C-9212-EB60F0EB7100', N'工序定义', N'app', N'productprocess', N'basic/productprocess/index', N'4', N'PRIV_PRODUCTPROCESS_VIEW', N'A2EDE2E3-CCC5-4A88-89A1-A84CDAF35DEE', null, N'0', N'0', N'0', N'0', N'2020-06-01 11:01:20.080', N'2020-06-19 16:12:01.500', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'30580EEA-A24D-4B52-B35B-E6489080705D', N'字典定义', N'doc', N'options', N'system/options/index', N'3', N'PRIV_OPTIONS_VIEW', N'651BBACF-7AB6-457C-88CC-BF4223B2D390', null, N'0', N'0', N'0', N'1', N'2020-06-01 21:43:49.150', N'2020-06-06 08:53:27.323', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'30580EEA-A24D-4B52-B35B-E6489080705D', N'字典定义', N'doc', N'options', N'system/options/index', N'3', N'PRIV_OPTIONS_VIEW', N'651BBACF-7AB6-457C-88CC-BF4223B2D390', null, N'0', N'0', N'0', N'1', N'2020-06-01 21:43:49.150', N'2020-06-06 08:53:27.323', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'54F26B7C-1958-42D5-B5CA-0ED22A3976F7', N'权限定义', N'validCode', N'powers', N'system/powers/index', N'2', N'PRIV_POWERS_VIEW', N'651BBACF-7AB6-457C-88CC-BF4223B2D390', null, N'0', N'0', N'0', N'1', N'2020-06-01 11:03:03.653', N'2020-06-13 16:28:14.790', N'9999', N'超威电源有限公司', N'9999', N'系统管理员')
+INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'54F26B7C-1958-42D5-B5CA-0ED22A3976F7', N'权限定义', N'validCode', N'powers', N'system/powers/index', N'2', N'PRIV_POWERS_VIEW', N'651BBACF-7AB6-457C-88CC-BF4223B2D390', null, N'0', N'0', N'0', N'1', N'2020-06-01 11:03:03.653', N'2020-06-13 16:28:14.790', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
 INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'59081379-67BA-459B-B5F3-EB5EED51BB60', N'在线统计', N'international', N'online', N'system/online/index', N'5', N'PRIV_ONLINE_VIEW', N'651BBACF-7AB6-457C-88CC-BF4223B2D390', null, N'0', N'0', N'0', N'0', N'2020-06-11 19:20:46.740', N'2020-06-11 21:42:25.183', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'651BBACF-7AB6-457C-88CC-BF4223B2D390', N'系统管理', N'system1', N'system', null, N'99', null, null, null, N'0', N'0', N'0', N'0', N'2020-06-05 17:20:34.447', N'2020-06-05 17:20:41.913', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'651BBACF-7AB6-457C-88CC-BF4223B2D390', N'系统管理', N'system1', N'system', null, N'99', null, null, null, N'0', N'0', N'0', N'0', N'2020-06-05 17:20:34.447', N'2020-06-05 17:20:41.913', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'6F3EEB92-7AB6-4E81-AE48-135A195EAC4D', N'用户角色', N'people', N'roleusers', N'users/roleusers/index', N'4', N'PRIV_ROLEUSERS_VIEW', N'7B670227-DE9C-4457-8AA3-D14295B07530', null, N'0', N'0', N'0', N'0', N'2020-06-04 16:14:25.717', N'2020-06-09 08:42:10.453', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'6F3EEB92-7AB6-4E81-AE48-135A195EAC4D', N'用户角色', N'people', N'roleusers', N'users/roleusers/index', N'4', N'PRIV_ROLEUSERS_VIEW', N'7B670227-DE9C-4457-8AA3-D14295B07530', null, N'0', N'0', N'0', N'0', N'2020-06-04 16:14:25.717', N'2020-06-09 08:42:10.453', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'6F8FFE5E-EE0E-4A36-B96F-5F48875CFC85', N'角色定义', N'role', N'roles', N'users/roles/index', N'2', N'PRIV_ROLES_VIEW', N'7B670227-DE9C-4457-8AA3-D14295B07530', null, N'0', N'0', N'0', N'1', N'2020-05-31 11:20:55.000', N'2020-06-14 01:19:41.440', N'9999', N'超威电源有限公司', N'9999', N'系统管理员')
+INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'6F8FFE5E-EE0E-4A36-B96F-5F48875CFC85', N'角色定义', N'role', N'roles', N'users/roles/index', N'2', N'PRIV_ROLES_VIEW', N'7B670227-DE9C-4457-8AA3-D14295B07530', null, N'0', N'0', N'0', N'1', N'2020-05-31 11:20:55.000', N'2020-06-14 01:19:41.440', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'77893F2F-F8EB-4A75-B7B9-CBD28B994973', N'公司定义', N'app', N'company', N'basic/company/index', N'1', N'PRIV_COMPANY_VIEW', N'A2EDE2E3-CCC5-4A88-89A1-A84CDAF35DEE', null, N'0', N'0', N'0', N'0', N'2020-05-31 11:20:55.000', N'2020-06-19 16:11:29.310', N'9999', N'超威电源有限公司', N'9999', N'系统管理员')
+INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'77893F2F-F8EB-4A75-B7B9-CBD28B994973', N'公司定义', N'app', N'company', N'basic/company/index', N'1', N'PRIV_COMPANY_VIEW', N'A2EDE2E3-CCC5-4A88-89A1-A84CDAF35DEE', null, N'0', N'0', N'0', N'0', N'2020-05-31 11:20:55.000', N'2020-06-19 16:11:29.310', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
 INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'7B3B2EB8-45BB-458D-B4A8-0E1442531316', N'设备定义', N'app', N'equipment', N'basic/equipment/index', N'6', N'PRIV_EQUIPMENT_VIEW', N'A2EDE2E3-CCC5-4A88-89A1-A84CDAF35DEE', null, N'0', N'0', N'0', N'0', N'2020-06-16 12:59:13.750', N'2020-06-19 16:12:47.223', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'7B670227-DE9C-4457-8AA3-D14295B07530', N'用户管理', N'peoples', N'users', null, N'98', null, null, null, N'0', N'0', N'0', N'0', N'2020-06-09 08:16:22.453', N'2020-06-09 08:16:30.773', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'7B670227-DE9C-4457-8AA3-D14295B07530', N'用户管理', N'peoples', N'users', null, N'98', null, null, null, N'0', N'0', N'0', N'0', N'2020-06-09 08:16:22.453', N'2020-06-09 08:16:30.773', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
 INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'8C8F01CC-A34C-48A8-9774-01123161916B', N'系统日志', N'log', N'logger', N'system/logger/index', N'4', N'PRIV_LOGS_VIEW', N'651BBACF-7AB6-457C-88CC-BF4223B2D390', null, N'0', N'0', N'0', N'0', N'2020-06-11 13:34:51.017', N'2020-06-11 21:42:49.823', N'9999', N'系统管理员', N'9999', N'系统管理员')
@@ -2800,28 +2800,28 @@ GO
 INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'93D4E4F0-11C4-4C4C-B838-05CF3A565A81', N'个人中心', N'Steve-Jobs', N'center', N'users/center/index', N'6', null, N'7B670227-DE9C-4457-8AA3-D14295B07530', null, N'0', N'0', N'1', N'0', N'2020-06-16 22:00:17.763', N'2020-06-16 22:00:17.763', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'A2EDE2E3-CCC5-4A88-89A1-A84CDAF35DEE', N'基础信息', N'tree', N'basic', null, N'1', null, null, null, N'0', N'0', N'0', N'0', N'2020-05-31 11:20:55.000', N'2020-06-06 08:51:05.487', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'A2EDE2E3-CCC5-4A88-89A1-A84CDAF35DEE', N'基础信息', N'tree', N'basic', null, N'1', null, null, null, N'0', N'0', N'0', N'0', N'2020-05-31 11:20:55.000', N'2020-06-06 08:51:05.487', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'A86D8C2E-87CB-4BE2-B55D-A64165D1C3FE', N'角色权限', N'permission', N'rolepowers', N'users/rolepowers/index', N'3', N'PRIV_ROLEPOWERS_VIEW', N'7B670227-DE9C-4457-8AA3-D14295B07530', null, N'0', N'0', N'0', N'1', N'2020-06-01 11:06:39.710', N'2020-06-14 01:19:48.680', N'9999', N'超威电源有限公司', N'9999', N'系统管理员')
+INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'A86D8C2E-87CB-4BE2-B55D-A64165D1C3FE', N'角色权限', N'permission', N'rolepowers', N'users/rolepowers/index', N'3', N'PRIV_ROLEPOWERS_VIEW', N'7B670227-DE9C-4457-8AA3-D14295B07530', null, N'0', N'0', N'0', N'1', N'2020-06-01 11:06:39.710', N'2020-06-14 01:19:48.680', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
 INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'B11607C3-F1C5-435D-B4DF-8F2C5A487E50', N'任务调度', N'timing', N'tasks', N'system/tasks/index', N'6', N'PRIV_TASKS_VIEW', N'651BBACF-7AB6-457C-88CC-BF4223B2D390', null, N'0', N'0', N'0', N'0', N'2020-06-18 14:58:58.970', N'2020-06-18 16:37:09.133', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'B182CDE0-610A-43D8-8619-BEE44AE4C2F8', N'设备定义', N'app', N'productline', N'basic/productline/index', N'5', N'PRIV_PRODUCTLINE_VIEW', N'A2EDE2E3-CCC5-4A88-89A1-A84CDAF35DEE', null, N'0', N'0', N'0', N'0', N'2020-06-01 10:59:36.203', N'2020-06-19 16:12:39.743', N'9999', N'超威电源有限公司', N'9999', N'系统管理员')
+INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'B182CDE0-610A-43D8-8619-BEE44AE4C2F8', N'设备定义', N'app', N'productline', N'basic/productline/index', N'5', N'PRIV_PRODUCTLINE_VIEW', N'A2EDE2E3-CCC5-4A88-89A1-A84CDAF35DEE', null, N'0', N'0', N'0', N'0', N'2020-06-01 10:59:36.203', N'2020-06-19 16:12:39.743', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'C3006273-F75D-11E8-9BA4-00059A3C7A00', N'菜单管理', N'menu', N'menus', N'system/menus/index', N'1', N'PRIV_MENUS_VIEW', N'651BBACF-7AB6-457C-88CC-BF4223B2D390', null, N'0', N'0', N'0', N'1', N'2020-05-31 11:20:55.000', N'2020-06-06 08:53:19.183', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'C3006273-F75D-11E8-9BA4-00059A3C7A00', N'菜单管理', N'menu', N'menus', N'system/menus/index', N'1', N'PRIV_MENUS_VIEW', N'651BBACF-7AB6-457C-88CC-BF4223B2D390', null, N'0', N'0', N'0', N'1', N'2020-05-31 11:20:55.000', N'2020-06-06 08:53:19.183', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'E01AE23A-F75C-11E8-9BA4-00059A3C7A00', N'用户列表', N'user', N'users', N'users/users/index', N'1', N'PRIV_USERS_VIEW', N'7B670227-DE9C-4457-8AA3-D14295B07530', null, N'0', N'0', N'0', N'1', N'2020-05-31 11:20:55.000', N'2020-06-14 01:19:30.747', N'9999', N'超威电源有限公司', N'9999', N'系统管理员')
+INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'E01AE23A-F75C-11E8-9BA4-00059A3C7A00', N'用户列表', N'user', N'users', N'users/users/index', N'1', N'PRIV_USERS_VIEW', N'7B670227-DE9C-4457-8AA3-D14295B07530', null, N'0', N'0', N'0', N'1', N'2020-05-31 11:20:55.000', N'2020-06-14 01:19:30.747', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'E8716862-C10B-4A74-844C-A0F378F7D2C3', N'工厂定义', N'app', N'factory', N'basic/factory/index', N'2', N'PRIV_FACTORY_VIEW', N'A2EDE2E3-CCC5-4A88-89A1-A84CDAF35DEE', null, N'0', N'0', N'0', N'0', N'2020-05-31 11:20:55.000', N'2020-06-19 16:11:40.923', N'9999', N'超威电源有限公司', N'9999', N'系统管理员')
+INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'E8716862-C10B-4A74-844C-A0F378F7D2C3', N'工厂定义', N'app', N'factory', N'basic/factory/index', N'2', N'PRIV_FACTORY_VIEW', N'A2EDE2E3-CCC5-4A88-89A1-A84CDAF35DEE', null, N'0', N'0', N'0', N'0', N'2020-05-31 11:20:55.000', N'2020-06-19 16:11:40.923', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'F200F0E2-4B9C-4A3C-8102-8130096BF975', N'车间定义', N'app', N'workshop', N'basic/workshop/index', N'3', N'PRIV_WORKSHOP_VIEW', N'A2EDE2E3-CCC5-4A88-89A1-A84CDAF35DEE', null, N'0', N'0', N'0', N'0', N'2020-06-01 10:46:08.287', N'2020-06-19 16:12:08.960', N'9999', N'超威电源有限公司', N'9999', N'系统管理员')
+INSERT INTO [dbo].[Sys_Menu] ([ID], [Name], [Icon], [Path], [Component], [SortIndex], [ViewPower], [ParentUID], [Remark], [System], [isFrame], [Hidden], [KeepAlive], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'F200F0E2-4B9C-4A3C-8102-8130096BF975', N'车间定义', N'app', N'workshop', N'basic/workshop/index', N'3', N'PRIV_WORKSHOP_VIEW', N'A2EDE2E3-CCC5-4A88-89A1-A84CDAF35DEE', null, N'0', N'0', N'0', N'0', N'2020-06-01 10:46:08.287', N'2020-06-19 16:12:08.960', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
 
@@ -3148,34 +3148,34 @@ GO
 -- ----------------------------
 -- Records of Sys_Options
 -- ----------------------------
-INSERT INTO [dbo].[Sys_Options] ([ID], [Option], [Label], [Value], [SortIndex], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'0F2EED72-EFF0-4DD5-8E68-316F0D2CC07B', N'SYSTEM_POWER_DESCRIPTION', N'审核', N'审核', N'5', null, N'2020-06-02 17:24:01.797', N'2020-06-02 17:24:01.797', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Options] ([ID], [Option], [Label], [Value], [SortIndex], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'0F2EED72-EFF0-4DD5-8E68-316F0D2CC07B', N'SYSTEM_POWER_DESCRIPTION', N'审核', N'审核', N'5', null, N'2020-06-02 17:24:01.797', N'2020-06-02 17:24:01.797', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Options] ([ID], [Option], [Label], [Value], [SortIndex], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'2A769FEA-4D41-4D48-A7CF-CD410207B96D', N'SYSTEM_MENU_SYSTEM', N'微信小程序', N'1', N'2', null, N'2020-06-02 14:05:33.683', N'2020-06-02 14:05:41.033', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Options] ([ID], [Option], [Label], [Value], [SortIndex], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'2A769FEA-4D41-4D48-A7CF-CD410207B96D', N'SYSTEM_MENU_SYSTEM', N'微信小程序', N'1', N'2', null, N'2020-06-02 14:05:33.683', N'2020-06-02 14:05:41.033', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Options] ([ID], [Option], [Label], [Value], [SortIndex], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'35E47F7B-27A1-44BB-9924-D9F5FAB2073D', N'SYSTEM_POWER_DESCRIPTION', N'导出', N'导出', N'8', null, N'2020-06-02 17:24:55.433', N'2020-06-02 17:24:55.433', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Options] ([ID], [Option], [Label], [Value], [SortIndex], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'35E47F7B-27A1-44BB-9924-D9F5FAB2073D', N'SYSTEM_POWER_DESCRIPTION', N'导出', N'导出', N'8', null, N'2020-06-02 17:24:55.433', N'2020-06-02 17:24:55.433', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Options] ([ID], [Option], [Label], [Value], [SortIndex], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'4F2875AC-509E-45F7-B36E-0095FE4320D8', N'SYSTEM_POWER_DESCRIPTION', N'新增', N'新增', N'2', null, N'2020-06-02 17:23:18.970', N'2020-06-02 17:23:18.970', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Options] ([ID], [Option], [Label], [Value], [SortIndex], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'4F2875AC-509E-45F7-B36E-0095FE4320D8', N'SYSTEM_POWER_DESCRIPTION', N'新增', N'新增', N'2', null, N'2020-06-02 17:23:18.970', N'2020-06-02 17:23:18.970', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Options] ([ID], [Option], [Label], [Value], [SortIndex], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'518CEFB2-593A-40AB-A521-C875A74F2734', N'SYSTEM_MENU_SYSTEM', N'后台系统', N'0', N'1', null, N'2020-06-02 14:05:14.647', N'2020-06-04 20:49:40.110', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Options] ([ID], [Option], [Label], [Value], [SortIndex], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'518CEFB2-593A-40AB-A521-C875A74F2734', N'SYSTEM_MENU_SYSTEM', N'后台系统', N'0', N'1', null, N'2020-06-02 14:05:14.647', N'2020-06-04 20:49:40.110', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Options] ([ID], [Option], [Label], [Value], [SortIndex], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'5EC52E51-8E96-4B90-BF8E-3917A47A2B85', N'SYSTEM_POWER_DESCRIPTION', N'撤销', N'撤销', N'6', null, N'2020-06-02 17:24:20.193', N'2020-06-02 17:24:20.193', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Options] ([ID], [Option], [Label], [Value], [SortIndex], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'5EC52E51-8E96-4B90-BF8E-3917A47A2B85', N'SYSTEM_POWER_DESCRIPTION', N'撤销', N'撤销', N'6', null, N'2020-06-02 17:24:20.193', N'2020-06-02 17:24:20.193', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Options] ([ID], [Option], [Label], [Value], [SortIndex], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'5F811745-CB10-489C-B392-1067EDE802E2', N'SYSTEM_POWER_DESCRIPTION', N'冲销', N'冲销', N'7', null, N'2020-06-02 17:24:41.450', N'2020-06-02 17:24:41.450', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Options] ([ID], [Option], [Label], [Value], [SortIndex], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'5F811745-CB10-489C-B392-1067EDE802E2', N'SYSTEM_POWER_DESCRIPTION', N'冲销', N'冲销', N'7', null, N'2020-06-02 17:24:41.450', N'2020-06-02 17:24:41.450', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Options] ([ID], [Option], [Label], [Value], [SortIndex], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'68B49C70-21FB-49E8-921C-BCA641794588', N'SYSTEM_POWER_DESCRIPTION', N'删除', N'删除', N'4', null, N'2020-06-02 17:23:51.187', N'2020-06-02 17:23:51.187', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Options] ([ID], [Option], [Label], [Value], [SortIndex], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'68B49C70-21FB-49E8-921C-BCA641794588', N'SYSTEM_POWER_DESCRIPTION', N'删除', N'删除', N'4', null, N'2020-06-02 17:23:51.187', N'2020-06-02 17:23:51.187', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Options] ([ID], [Option], [Label], [Value], [SortIndex], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'89C043F5-9230-4D27-8C1A-6B900586AD5A', N'SYSTEM_POWER_DESCRIPTION', N'浏览', N'浏览', N'1', null, N'2020-06-02 17:22:44.983', N'2020-06-02 17:22:44.983', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Options] ([ID], [Option], [Label], [Value], [SortIndex], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'89C043F5-9230-4D27-8C1A-6B900586AD5A', N'SYSTEM_POWER_DESCRIPTION', N'浏览', N'浏览', N'1', null, N'2020-06-02 17:22:44.983', N'2020-06-02 17:22:44.983', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Options] ([ID], [Option], [Label], [Value], [SortIndex], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'97D59D40-5BAE-4BC0-8772-C2CBECDD5418', N'SYSTEM_POWER_DESCRIPTION', N'编辑', N'编辑', N'3', null, N'2020-06-02 17:23:35.830', N'2020-06-02 17:23:35.830', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Options] ([ID], [Option], [Label], [Value], [SortIndex], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'97D59D40-5BAE-4BC0-8772-C2CBECDD5418', N'SYSTEM_POWER_DESCRIPTION', N'编辑', N'编辑', N'3', null, N'2020-06-02 17:23:35.830', N'2020-06-02 17:23:35.830', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
 
@@ -3373,25 +3373,25 @@ GO
 INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'023091F4-5F0E-468C-B019-B39103AE5956', N'PRIV_COMPANY_UPDATE', N'公司定义', N'编辑', null, N'2020-06-09 13:39:53.447', N'2020-06-09 13:39:53.447', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'036BBC7E-6F06-4CE9-BD91-D50B0D63355C', N'PRIV_USERS_VIEW', N'用户管理', N'浏览', null, N'2020-05-31 11:20:18.000', N'2020-05-31 11:20:55.000', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'036BBC7E-6F06-4CE9-BD91-D50B0D63355C', N'PRIV_USERS_VIEW', N'用户管理', N'浏览', null, N'2020-05-31 11:20:18.000', N'2020-05-31 11:20:55.000', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
 INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'0613AC75-0849-42AB-9324-8F66AA7CF87F', N'PRIV_WORKSHOP_DELETE', N'车间定义', N'删除', null, N'2020-06-10 09:07:40.303', N'2020-06-10 09:07:40.303', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'07B70D40-89DF-43C3-BDF6-2725677522F8', N'PRIV_POWERS_VIEW', N'权限定义', N'浏览', null, N'2020-05-31 11:12:11.000', N'2020-05-31 11:20:55.000', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'07B70D40-89DF-43C3-BDF6-2725677522F8', N'PRIV_POWERS_VIEW', N'权限定义', N'浏览', null, N'2020-05-31 11:12:11.000', N'2020-05-31 11:20:55.000', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
 INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'0E2C14EA-870E-41BD-B229-D06427313DC2', N'PRIV_LOGS_VIEW', N'查看日志', N'浏览', null, N'2020-06-11 13:36:42.047', N'2020-06-11 13:36:42.047', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'0F61A3CE-2F7F-4594-97EE-70A008B2A767', N'PRIV_ROLEPOWERS_VIEW', N'角色权限', N'浏览', null, N'2020-05-31 11:13:09.000', N'2020-05-31 11:20:55.000', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'0F61A3CE-2F7F-4594-97EE-70A008B2A767', N'PRIV_ROLEPOWERS_VIEW', N'角色权限', N'浏览', null, N'2020-05-31 11:13:09.000', N'2020-05-31 11:20:55.000', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'15BECF0F-6F81-4117-9427-CA8C98618D88', N'PRIV_ROLEPOWERS_UPDATE', N'角色权限', N'编辑', null, N'2020-05-31 11:13:10.000', N'2020-05-31 11:20:55.000', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'15BECF0F-6F81-4117-9427-CA8C98618D88', N'PRIV_ROLEPOWERS_UPDATE', N'角色权限', N'编辑', null, N'2020-05-31 11:13:10.000', N'2020-05-31 11:20:55.000', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'16B7F104-BADD-4B61-B81E-034651BC20D5', N'PRIV_OPTIONS_UPDATE', N'字典定义', N'编辑', null, N'2020-05-02 13:40:28.707', N'2020-06-02 13:40:05.707', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'16B7F104-BADD-4B61-B81E-034651BC20D5', N'PRIV_OPTIONS_UPDATE', N'字典定义', N'编辑', null, N'2020-05-02 13:40:28.707', N'2020-06-02 13:40:05.707', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
 INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'2AB67949-470B-4D54-814E-490D046DE392', N'PRIV_WORKSHOP_VIEW', N'车间定义', N'浏览', null, N'2020-06-10 09:06:50.753', N'2020-06-10 09:06:50.753', N'9999', N'系统管理员', N'9999', N'系统管理员')
@@ -3400,16 +3400,16 @@ GO
 INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'2E78189A-F7B0-4954-B90C-679606BBCA21', N'PRIV_FACTORY_CREATE', N'工厂定义', N'新增', null, N'2020-06-09 15:16:55.193', N'2020-06-09 15:16:55.193', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'30A06F2A-1270-4F1B-B7E1-B07663499450', N'PRIV_MENUS_UPDATE', N'菜单管理', N'编辑', null, N'2020-05-31 11:10:03.000', N'2020-05-31 11:20:55.000', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'30A06F2A-1270-4F1B-B7E1-B07663499450', N'PRIV_MENUS_UPDATE', N'菜单管理', N'编辑', null, N'2020-05-31 11:10:03.000', N'2020-05-31 11:20:55.000', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
 INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'359506E3-1335-41AA-8C86-36E2294D195F', N'PRIV_TASKS_DELETE', N'计划任务', N'删除', null, N'2020-06-18 15:03:44.180', N'2020-06-18 15:03:44.180', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'3639F31F-6F68-40C6-AC12-74FB387B8960', N'PRIV_USERS_DELETE', N'用户管理', N'删除', null, N'2020-05-31 11:20:19.000', N'2020-05-31 11:20:55.000', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'3639F31F-6F68-40C6-AC12-74FB387B8960', N'PRIV_USERS_DELETE', N'用户管理', N'删除', null, N'2020-05-31 11:20:19.000', N'2020-05-31 11:20:55.000', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'364F325B-B927-471C-A89D-DCB91B823B2C', N'PRIV_MENUS_CREATE', N'菜单管理', N'新增', null, N'2020-05-31 11:10:02.000', N'2020-05-31 11:20:55.000', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'364F325B-B927-471C-A89D-DCB91B823B2C', N'PRIV_MENUS_CREATE', N'菜单管理', N'新增', null, N'2020-05-31 11:10:02.000', N'2020-05-31 11:20:55.000', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
 INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'3F8D1153-E456-446F-9D61-3AFFAFF07F3C', N'PRIV_FACTORY_DELETE', N'工厂定义', N'删除', null, N'2020-06-09 15:17:24.903', N'2020-06-09 15:17:24.903', N'9999', N'系统管理员', N'9999', N'系统管理员')
@@ -3430,7 +3430,7 @@ GO
 INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'520D7B3D-4AC5-41B1-A9FD-7436DC17935C', N'PRIV_PRODUCTPROCESS_UPDATE', N'工序定义', N'编辑', null, N'2020-06-10 20:08:03.447', N'2020-06-10 20:08:03.447', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'52D8FA71-7252-44B5-9B17-FFC0640D631D', N'PRIV_OPTIONS_DELETE', N'字典定义', N'删除', null, N'2020-05-02 13:40:29.660', N'2020-06-02 13:40:21.660', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'52D8FA71-7252-44B5-9B17-FFC0640D631D', N'PRIV_OPTIONS_DELETE', N'字典定义', N'删除', null, N'2020-05-02 13:40:29.660', N'2020-06-02 13:40:21.660', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
 INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'52DB0AA1-6D36-4AD4-9036-0533C096B740', N'PRIV_TASKS_VIEW', N'计划任务', N'浏览', null, N'2020-06-18 15:02:31.927', N'2020-06-18 15:02:31.927', N'9999', N'系统管理员', N'9999', N'系统管理员')
@@ -3445,25 +3445,25 @@ GO
 INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'5D4FE5C0-D927-4689-9481-B3D8BECA68DE', N'PRIV_EQUIPMENT_VIEW', N'设备定义', N'浏览', null, N'2020-06-16 13:01:20.503', N'2020-06-16 13:01:20.503', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'602A7D4E-4299-43B1-B6DD-EB7FCE409609', N'PRIV_ROLES_VIEW', N'角色定义', N'浏览', null, N'2020-05-31 11:11:05.000', N'2020-05-31 11:20:55.000', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'602A7D4E-4299-43B1-B6DD-EB7FCE409609', N'PRIV_ROLES_VIEW', N'角色定义', N'浏览', null, N'2020-05-31 11:11:05.000', N'2020-05-31 11:20:55.000', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
 INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'60E6CA5B-9B96-41CE-8E7F-C84C514D1DFD', N'PRIV_PRODUCTLINE_UPDATE', N'产线定义', N'编辑', null, N'2020-06-10 09:47:36.977', N'2020-06-10 09:47:36.977', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'61DF6DFD-6D26-448C-8D80-00341535617D', N'PRIV_MENUS_VIEW', N'菜单管理', N'浏览', null, N'2020-05-31 11:10:01.000', N'2020-05-31 11:20:55.000', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'61DF6DFD-6D26-448C-8D80-00341535617D', N'PRIV_MENUS_VIEW', N'菜单管理', N'浏览', null, N'2020-05-31 11:10:01.000', N'2020-05-31 11:20:55.000', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
 INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'6649B278-C5D2-4601-98E1-57FE4A531A74', N'PRIV_COMPANY_CREATE', N'公司定义', N'新增', null, N'2020-06-09 13:38:25.437', N'2020-06-09 13:38:25.437', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'66B84E36-F2D0-4847-97A9-2ACFFC9EE6FE', N'PRIV_POWERS_UPDATE', N'权限定义', N'编辑', null, N'2020-05-31 11:12:13.000', N'2020-05-31 11:20:55.000', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'66B84E36-F2D0-4847-97A9-2ACFFC9EE6FE', N'PRIV_POWERS_UPDATE', N'权限定义', N'编辑', null, N'2020-05-31 11:12:13.000', N'2020-05-31 11:20:55.000', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'67D7CDCE-CC5E-41B3-B9F6-55A4D2DCC8D8', N'PRIV_ROLES_UPDATE', N'角色定义', N'编辑', null, N'2020-05-31 11:11:07.000', N'2020-05-31 11:20:55.000', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'67D7CDCE-CC5E-41B3-B9F6-55A4D2DCC8D8', N'PRIV_ROLES_UPDATE', N'角色定义', N'编辑', null, N'2020-05-31 11:11:07.000', N'2020-05-31 11:20:55.000', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'6999B413-3C9B-471C-B1EF-48AA2D4DE794', N'PRIV_USERS_RESETPASSWD', N'用户管理', N'重置密码', null, N'2020-05-31 11:20:20.000', N'2020-05-31 11:20:55.000', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'6999B413-3C9B-471C-B1EF-48AA2D4DE794', N'PRIV_USERS_RESETPASSWD', N'用户管理', N'重置密码', null, N'2020-05-31 11:20:20.000', N'2020-05-31 11:20:55.000', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
 INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'7E1350CF-765A-41E9-AF80-84C5CBFC7E5C', N'PRIV_TASKS_UPDATE', N'计划任务', N'编辑', null, N'2020-06-18 15:03:07.823', N'2020-06-18 15:03:07.823', N'9999', N'系统管理员', N'9999', N'系统管理员')
@@ -3472,19 +3472,19 @@ GO
 INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'80F773D3-2E05-41C2-B33F-64880A63264D', N'PRIV_EQUIPMENT_CREATE', N'设备定义', N'新增', null, N'2020-06-16 13:01:50.803', N'2020-06-16 13:01:50.803', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'8291C9BB-04B7-4DAE-BB81-F1CB3368A292', N'PRIV_MENUS_DELETE', N'菜单管理', N'删除', null, N'2020-05-31 11:10:04.000', N'2020-05-31 11:20:55.000', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'8291C9BB-04B7-4DAE-BB81-F1CB3368A292', N'PRIV_MENUS_DELETE', N'菜单管理', N'删除', null, N'2020-05-31 11:10:04.000', N'2020-05-31 11:20:55.000', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'85DD7A0C-D06F-427D-8450-D95ED2D308CA', N'PRIV_ROLES_CREATE', N'角色定义', N'新增', null, N'2020-05-31 11:11:06.000', N'2020-05-31 11:20:55.000', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'85DD7A0C-D06F-427D-8450-D95ED2D308CA', N'PRIV_ROLES_CREATE', N'角色定义', N'新增', null, N'2020-05-31 11:11:06.000', N'2020-05-31 11:20:55.000', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
 INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'8660B6E2-2A99-4C6B-9E96-0C1CF2CA0D63', N'PRIV_PRODUCTLINE_CREATE', N'产线定义', N'新增', null, N'2020-06-10 09:47:22.787', N'2020-06-10 09:47:22.787', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'875A2C25-25BC-4766-9609-703942573AB0', N'PRIV_POWERS_CREATE', N'权限定义', N'新增', null, N'2020-05-31 11:12:12.000', N'2020-05-31 11:20:55.000', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'875A2C25-25BC-4766-9609-703942573AB0', N'PRIV_POWERS_CREATE', N'权限定义', N'新增', null, N'2020-05-31 11:12:12.000', N'2020-05-31 11:20:55.000', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'886906DC-BC49-4BE9-B8DD-7DAF4BD103CB', N'PRIV_ROLEUSERS_DELETE', N'用户角色', N'删除', null, N'2020-05-31 11:13:23.000', N'2020-05-31 11:20:55.000', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'886906DC-BC49-4BE9-B8DD-7DAF4BD103CB', N'PRIV_ROLEUSERS_DELETE', N'用户角色', N'删除', null, N'2020-05-31 11:13:23.000', N'2020-05-31 11:20:55.000', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
 INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'96C5BD50-B365-48A1-BDA7-6703DC1A3049', N'PRIV_PRODUCTPROCESS_DELETE', N'工序定义', N'删除', null, N'2020-06-10 20:08:15.350', N'2020-06-10 20:08:15.350', N'9999', N'系统管理员', N'9999', N'系统管理员')
@@ -3493,16 +3493,16 @@ GO
 INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'96DB4CA9-9F93-4ED1-BE55-DC12B467F778', N'PRIV_FACTORY_UPDATE', N'工厂定义', N'编辑', null, N'2020-06-09 15:17:09.520', N'2020-06-09 15:17:09.520', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'A3641961-3EB9-46C9-91E6-4AE0C7D3467E', N'PRIV_OPTIONS_CREATE', N'字典定义', N'新增', null, N'2020-05-02 13:39:27.830', N'2020-06-02 13:39:48.830', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'A3641961-3EB9-46C9-91E6-4AE0C7D3467E', N'PRIV_OPTIONS_CREATE', N'字典定义', N'新增', null, N'2020-05-02 13:39:27.830', N'2020-06-02 13:39:48.830', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'A388DB44-82BD-458D-A0FA-E54FCAEE91B7', N'PRIV_ROLEUSERS_CREATE', N'用户角色', N'新增', null, N'2020-05-31 11:13:22.000', N'2020-05-31 11:20:55.000', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'A388DB44-82BD-458D-A0FA-E54FCAEE91B7', N'PRIV_ROLEUSERS_CREATE', N'用户角色', N'新增', null, N'2020-05-31 11:13:22.000', N'2020-05-31 11:20:55.000', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'A8ED6E2E-57BC-47FA-A1E0-D2E109AA8E42', N'PRIV_USERS_UPDATE', N'用户管理', N'编辑', null, N'2020-05-31 11:20:17.000', N'2020-05-31 11:20:55.000', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'A8ED6E2E-57BC-47FA-A1E0-D2E109AA8E42', N'PRIV_USERS_UPDATE', N'用户管理', N'编辑', null, N'2020-05-31 11:20:17.000', N'2020-05-31 11:20:55.000', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'B1D2FF18-089F-4138-92DC-DF280F50BE87', N'PRIV_POWERS_DELETE', N'权限定义', N'删除', null, N'2020-05-31 11:12:14.000', N'2020-05-31 11:20:55.000', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'B1D2FF18-089F-4138-92DC-DF280F50BE87', N'PRIV_POWERS_DELETE', N'权限定义', N'删除', null, N'2020-05-31 11:12:14.000', N'2020-05-31 11:20:55.000', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
 INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'B240D13D-C29E-4A38-8888-F77BDD527FD7', N'PRIV_COMPANY_VIEW', N'公司定义', N'浏览', null, N'2020-06-09 13:40:19.087', N'2020-06-09 13:40:19.087', N'9999', N'系统管理员', N'9999', N'系统管理员')
@@ -3514,10 +3514,10 @@ GO
 INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'B551C6A4-2987-470D-B33B-BDB7488FD65E', N'PRIV_WORKSHOP_UPDATE', N'车间定义', N'编辑', null, N'2020-06-10 09:07:27.753', N'2020-06-10 09:07:27.753', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'BDE4354E-766B-4A55-A0DD-05A4740191DA', N'PRIV_ONLINE_DELETE', N'在线统计', N'删除', null, N'2020-05-31 11:20:25.000', N'2020-05-31 11:20:55.000', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'BDE4354E-766B-4A55-A0DD-05A4740191DA', N'PRIV_ONLINE_DELETE', N'在线统计', N'删除', null, N'2020-05-31 11:20:25.000', N'2020-05-31 11:20:55.000', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'C00F0F28-8FDC-43F6-84FD-560D65A8D256', N'PRIV_ROLEUSERS_VIEW', N'用户角色', N'浏览', null, N'2020-05-31 11:13:21.000', N'2020-05-31 11:20:55.000', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'C00F0F28-8FDC-43F6-84FD-560D65A8D256', N'PRIV_ROLEUSERS_VIEW', N'用户角色', N'浏览', null, N'2020-05-31 11:13:21.000', N'2020-05-31 11:20:55.000', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
 INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'C814983F-3700-49A3-A53D-53ECFC7A2B4A', N'PRIV_PRODUCTPROCESS_VIEW', N'工序定义', N'浏览', null, N'2020-06-10 20:07:33.373', N'2020-06-10 20:07:33.373', N'9999', N'系统管理员', N'9999', N'系统管理员')
@@ -3526,16 +3526,16 @@ GO
 INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'C8E8AAE1-2177-4EDE-9E44-D24DADD2FF6E', N'PRIV_WORKSHOP_CREATE', N'车间定义', N'新增', null, N'2020-06-10 09:07:05.593', N'2020-06-10 09:07:05.593', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'CB127108-AA42-42A4-9CD0-2E194BC0C83B', N'PRIV_ONLINE_VIEW', N'在线统计', N'浏览', null, N'2020-05-31 11:20:24.000', N'2020-05-31 11:20:55.000', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'CB127108-AA42-42A4-9CD0-2E194BC0C83B', N'PRIV_ONLINE_VIEW', N'在线统计', N'浏览', null, N'2020-05-31 11:20:24.000', N'2020-05-31 11:20:55.000', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'CEE73221-EE0C-442A-B53D-31021DC8836E', N'PRIV_USERS_CREATE', N'用户管理', N'新增', null, N'2020-05-31 11:20:16.000', N'2020-05-31 11:20:55.000', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'CEE73221-EE0C-442A-B53D-31021DC8836E', N'PRIV_USERS_CREATE', N'用户管理', N'新增', null, N'2020-05-31 11:20:16.000', N'2020-05-31 11:20:55.000', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'E702C145-BF21-4896-92CD-447936C680C3', N'PRIV_OPTIONS_VIEW', N'字典定义', N'浏览', null, N'2020-05-02 13:39:26.360', N'2020-06-02 13:39:33.360', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'E702C145-BF21-4896-92CD-447936C680C3', N'PRIV_OPTIONS_VIEW', N'字典定义', N'浏览', null, N'2020-05-02 13:39:26.360', N'2020-06-02 13:39:33.360', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
-INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'EADF9CB3-A81C-42D7-9E88-15FAD08AED00', N'PRIV_ROLES_DELETE', N'角色定义', N'删除', null, N'2020-05-31 11:11:08.000', N'2020-05-31 11:20:55.000', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司')
+INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'EADF9CB3-A81C-42D7-9E88-15FAD08AED00', N'PRIV_ROLES_DELETE', N'角色定义', N'删除', null, N'2020-05-31 11:11:08.000', N'2020-05-31 11:20:55.000', N'9999', N'系统管理员', N'9999', N'系统管理员')
 GO
 GO
 INSERT INTO [dbo].[Sys_Power] ([ID], [Name], [Page], [Description], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName]) VALUES (N'F4EB78E0-9783-45F0-BA53-A0F18263228C', N'PRIV_PRODUCTLINE_DELETE', N'产线定义', N'删除', null, N'2020-06-10 09:47:51.867', N'2020-06-10 09:47:51.867', N'9999', N'系统管理员', N'9999', N'系统管理员')
@@ -3718,7 +3718,7 @@ GO
 -- ----------------------------
 -- Records of Sys_Role
 -- ----------------------------
-INSERT INTO [dbo].[Sys_Role] ([ID], [Name], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName], [Administrator]) VALUES (N'20813EA9-8252-4F0F-BCE7-49D2637DC457', N'系统管理员', N'系统内置', N'2020-05-31 10:20:55.000', N'2020-06-04 20:52:52.133', N'9999', N'超威电源有限公司', N'9999', N'超威电源有限公司', N'1')
+INSERT INTO [dbo].[Sys_Role] ([ID], [Name], [Remark], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName], [Administrator]) VALUES (N'20813EA9-8252-4F0F-BCE7-49D2637DC457', N'系统管理员', N'系统内置', N'2020-05-31 10:20:55.000', N'2020-06-04 20:52:52.133', N'9999', N'系统管理员', N'9999', N'系统管理员', N'1')
 GO
 GO
 
@@ -5077,7 +5077,7 @@ GO
 -- ----------------------------
 -- Records of Sys_Users
 -- ----------------------------
-INSERT INTO [dbo].[Sys_Users] ([UserID], [UserName], [NickName], [Email], [Password], [Sex], [AvatarUrl], [QQ], [Phone], [ProvinceID], [Province], [CityID], [City], [CountyID], [County], [Address], [Remark], [IdentityCard], [Birthday], [LastLoginTime], [Enabled], [OneSession], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName], [Administrator]) VALUES (N'9999', N'系统管理员', N'许祖豪', N'91270@QQ.COM', N'FC4509EFEA3AC97ED753F53DFA601161', N'男', N'/static/avatars/20200619/637281528723366669.png', N'91270', N'13344445555', null, null, null, null, null, null, null, null, null, N'2020-06-18 16:00:00.000', N'2020-01-07 16:30:02.270', N'1', N'0', N'2020-05-31 10:20:55.000', N'2020-06-19 08:41:12.340', N'9999', N'超威电源有限公司', N'9999', N'系统管理员', N'1')
+INSERT INTO [dbo].[Sys_Users] ([UserID], [UserName], [NickName], [Email], [Password], [Sex], [AvatarUrl], [QQ], [Phone], [ProvinceID], [Province], [CityID], [City], [CountyID], [County], [Address], [Remark], [IdentityCard], [Birthday], [LastLoginTime], [Enabled], [OneSession], [CreateTime], [UpdateTime], [CreateID], [CreateName], [UpdateID], [UpdateName], [Administrator]) VALUES (N'9999', N'系统管理员', N'系统管理员', N'91270@QQ.COM', N'FC4509EFEA3AC97ED753F53DFA601161', N'男', N'/static/avatars/20200619/637281528723366669.png', N'91270', N'13344445555', null, null, null, null, null, null, null, null, null, N'2020-06-18 16:00:00.000', N'2020-01-07 16:30:02.270', N'1', N'0', N'2020-05-31 10:20:55.000', N'2020-06-19 08:41:12.340', N'9999', N'系统管理员', N'9999', N'系统管理员', N'1')
 GO
 GO
 

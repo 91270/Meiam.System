@@ -518,26 +518,26 @@ CREATE TABLE `Sys_Menu` (
 -- ----------------------------
 -- Records of Sys_Menu
 -- ----------------------------
-INSERT INTO `Sys_Menu` VALUES ('25041C8B-A18C-4D7C-9212-EB60F0EB7100', '工序定义', 'app', 'productprocess', 'basic/productprocess/index', '4', 'PRIV_PRODUCTPROCESS_VIEW', 'A2EDE2E3-CCC5-4A88-89A1-A84CDAF35DEE', null, '0', '0', '0', '0', '2020-06-01 11:01:20', '2020-06-19 16:12:01', '9999', '超威电源有限公司', '9999', '系统管理员');
-INSERT INTO `Sys_Menu` VALUES ('30580EEA-A24D-4B52-B35B-E6489080705D', '字典定义', 'doc', 'options', 'system/options/index', '3', 'PRIV_OPTIONS_VIEW', '651BBACF-7AB6-457C-88CC-BF4223B2D390', null, '0', '0', '0', '1', '2020-06-01 21:43:49', '2020-06-06 08:53:27', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
-INSERT INTO `Sys_Menu` VALUES ('54F26B7C-1958-42D5-B5CA-0ED22A3976F7', '权限定义', 'validCode', 'powers', 'system/powers/index', '2', 'PRIV_POWERS_VIEW', '651BBACF-7AB6-457C-88CC-BF4223B2D390', null, '0', '0', '0', '1', '2020-06-01 11:03:03', '2020-06-13 16:28:14', '9999', '超威电源有限公司', '9999', '系统管理员');
+INSERT INTO `Sys_Menu` VALUES ('25041C8B-A18C-4D7C-9212-EB60F0EB7100', '工序定义', 'app', 'productprocess', 'basic/productprocess/index', '4', 'PRIV_PRODUCTPROCESS_VIEW', 'A2EDE2E3-CCC5-4A88-89A1-A84CDAF35DEE', null, '0', '0', '0', '0', '2020-06-01 11:01:20', '2020-06-19 16:12:01', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Menu` VALUES ('30580EEA-A24D-4B52-B35B-E6489080705D', '字典定义', 'doc', 'options', 'system/options/index', '3', 'PRIV_OPTIONS_VIEW', '651BBACF-7AB6-457C-88CC-BF4223B2D390', null, '0', '0', '0', '1', '2020-06-01 21:43:49', '2020-06-06 08:53:27', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Menu` VALUES ('54F26B7C-1958-42D5-B5CA-0ED22A3976F7', '权限定义', 'validCode', 'powers', 'system/powers/index', '2', 'PRIV_POWERS_VIEW', '651BBACF-7AB6-457C-88CC-BF4223B2D390', null, '0', '0', '0', '1', '2020-06-01 11:03:03', '2020-06-13 16:28:14', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Menu` VALUES ('59081379-67BA-459B-B5F3-EB5EED51BB60', '在线统计', 'international', 'online', 'system/online/index', '5', 'PRIV_ONLINE_VIEW', '651BBACF-7AB6-457C-88CC-BF4223B2D390', null, '0', '0', '0', '0', '2020-06-11 19:20:46', '2020-06-11 21:42:25', '9999', '系统管理员', '9999', '系统管理员');
-INSERT INTO `Sys_Menu` VALUES ('651BBACF-7AB6-457C-88CC-BF4223B2D390', '系统管理', 'system1', 'system', null, '99', null, null, null, '0', '0', '0', '0', '2020-06-05 17:20:34', '2020-06-05 17:20:41', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
-INSERT INTO `Sys_Menu` VALUES ('6F3EEB92-7AB6-4E81-AE48-135A195EAC4D', '用户角色', 'people', 'roleusers', 'users/roleusers/index', '4', 'PRIV_ROLEUSERS_VIEW', '7B670227-DE9C-4457-8AA3-D14295B07530', null, '0', '0', '0', '0', '2020-06-04 16:14:25', '2020-06-09 08:42:10', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
-INSERT INTO `Sys_Menu` VALUES ('6F8FFE5E-EE0E-4A36-B96F-5F48875CFC85', '角色定义', 'role', 'roles', 'users/roles/index', '2', 'PRIV_ROLES_VIEW', '7B670227-DE9C-4457-8AA3-D14295B07530', null, '0', '0', '0', '1', '2020-05-31 11:20:55', '2020-06-14 01:19:41', '9999', '超威电源有限公司', '9999', '系统管理员');
-INSERT INTO `Sys_Menu` VALUES ('77893F2F-F8EB-4A75-B7B9-CBD28B994973', '公司定义', 'app', 'company', 'basic/company/index', '1', 'PRIV_COMPANY_VIEW', 'A2EDE2E3-CCC5-4A88-89A1-A84CDAF35DEE', null, '0', '0', '0', '0', '2020-05-31 11:20:55', '2020-06-19 16:11:29', '9999', '超威电源有限公司', '9999', '系统管理员');
+INSERT INTO `Sys_Menu` VALUES ('651BBACF-7AB6-457C-88CC-BF4223B2D390', '系统管理', 'system1', 'system', null, '99', null, null, null, '0', '0', '0', '0', '2020-06-05 17:20:34', '2020-06-05 17:20:41', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Menu` VALUES ('6F3EEB92-7AB6-4E81-AE48-135A195EAC4D', '用户角色', 'people', 'roleusers', 'users/roleusers/index', '4', 'PRIV_ROLEUSERS_VIEW', '7B670227-DE9C-4457-8AA3-D14295B07530', null, '0', '0', '0', '0', '2020-06-04 16:14:25', '2020-06-09 08:42:10', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Menu` VALUES ('6F8FFE5E-EE0E-4A36-B96F-5F48875CFC85', '角色定义', 'role', 'roles', 'users/roles/index', '2', 'PRIV_ROLES_VIEW', '7B670227-DE9C-4457-8AA3-D14295B07530', null, '0', '0', '0', '1', '2020-05-31 11:20:55', '2020-06-14 01:19:41', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Menu` VALUES ('77893F2F-F8EB-4A75-B7B9-CBD28B994973', '公司定义', 'app', 'company', 'basic/company/index', '1', 'PRIV_COMPANY_VIEW', 'A2EDE2E3-CCC5-4A88-89A1-A84CDAF35DEE', null, '0', '0', '0', '0', '2020-05-31 11:20:55', '2020-06-19 16:11:29', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Menu` VALUES ('7B3B2EB8-45BB-458D-B4A8-0E1442531316', '设备定义', 'app', 'equipment', 'basic/equipment/index', '6', 'PRIV_EQUIPMENT_VIEW', 'A2EDE2E3-CCC5-4A88-89A1-A84CDAF35DEE', null, '0', '0', '0', '0', '2020-06-16 12:59:13', '2020-06-19 16:12:47', '9999', '系统管理员', '9999', '系统管理员');
-INSERT INTO `Sys_Menu` VALUES ('7B670227-DE9C-4457-8AA3-D14295B07530', '用户管理', 'peoples', 'users', null, '98', null, null, null, '0', '0', '0', '0', '2020-06-09 08:16:22', '2020-06-09 08:16:30', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
+INSERT INTO `Sys_Menu` VALUES ('7B670227-DE9C-4457-8AA3-D14295B07530', '用户管理', 'peoples', 'users', null, '98', null, null, null, '0', '0', '0', '0', '2020-06-09 08:16:22', '2020-06-09 08:16:30', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Menu` VALUES ('8C8F01CC-A34C-48A8-9774-01123161916B', '系统日志', 'log', 'logger', 'system/logger/index', '4', 'PRIV_LOGS_VIEW', '651BBACF-7AB6-457C-88CC-BF4223B2D390', null, '0', '0', '0', '0', '2020-06-11 13:34:51', '2020-06-11 21:42:49', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Menu` VALUES ('93D4E4F0-11C4-4C4C-B838-05CF3A565A81', '个人中心', 'Steve-Jobs', 'center', 'users/center/index', '6', null, '7B670227-DE9C-4457-8AA3-D14295B07530', null, '0', '0', '1', '0', '2020-06-16 22:00:17', '2020-06-16 22:00:17', '9999', '系统管理员', '9999', '系统管理员');
-INSERT INTO `Sys_Menu` VALUES ('A2EDE2E3-CCC5-4A88-89A1-A84CDAF35DEE', '基础信息', 'tree', 'basic', null, '1', null, null, null, '0', '0', '0', '0', '2020-05-31 11:20:55', '2020-06-06 08:51:05', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
-INSERT INTO `Sys_Menu` VALUES ('A86D8C2E-87CB-4BE2-B55D-A64165D1C3FE', '角色权限', 'permission', 'rolepowers', 'users/rolepowers/index', '3', 'PRIV_ROLEPOWERS_VIEW', '7B670227-DE9C-4457-8AA3-D14295B07530', null, '0', '0', '0', '1', '2020-06-01 11:06:39', '2020-06-14 01:19:48', '9999', '超威电源有限公司', '9999', '系统管理员');
+INSERT INTO `Sys_Menu` VALUES ('A2EDE2E3-CCC5-4A88-89A1-A84CDAF35DEE', '基础信息', 'tree', 'basic', null, '1', null, null, null, '0', '0', '0', '0', '2020-05-31 11:20:55', '2020-06-06 08:51:05', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Menu` VALUES ('A86D8C2E-87CB-4BE2-B55D-A64165D1C3FE', '角色权限', 'permission', 'rolepowers', 'users/rolepowers/index', '3', 'PRIV_ROLEPOWERS_VIEW', '7B670227-DE9C-4457-8AA3-D14295B07530', null, '0', '0', '0', '1', '2020-06-01 11:06:39', '2020-06-14 01:19:48', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Menu` VALUES ('B11607C3-F1C5-435D-B4DF-8F2C5A487E50', '任务调度', 'timing', 'tasks', 'system/tasks/index', '6', 'PRIV_TASKS_VIEW', '651BBACF-7AB6-457C-88CC-BF4223B2D390', null, '0', '0', '0', '0', '2020-06-18 14:58:58', '2020-06-18 16:37:09', '9999', '系统管理员', '9999', '系统管理员');
-INSERT INTO `Sys_Menu` VALUES ('B182CDE0-610A-43D8-8619-BEE44AE4C2F8', '设备定义', 'app', 'productline', 'basic/productline/index', '5', 'PRIV_PRODUCTLINE_VIEW', 'A2EDE2E3-CCC5-4A88-89A1-A84CDAF35DEE', null, '0', '0', '0', '0', '2020-06-01 10:59:36', '2020-06-19 16:12:39', '9999', '超威电源有限公司', '9999', '系统管理员');
-INSERT INTO `Sys_Menu` VALUES ('C3006273-F75D-11E8-9BA4-00059A3C7A00', '菜单管理', 'menu', 'menus', 'system/menus/index', '1', 'PRIV_MENUS_VIEW', '651BBACF-7AB6-457C-88CC-BF4223B2D390', null, '0', '0', '0', '1', '2020-05-31 11:20:55', '2020-06-06 08:53:19', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
-INSERT INTO `Sys_Menu` VALUES ('E01AE23A-F75C-11E8-9BA4-00059A3C7A00', '用户列表', 'user', 'users', 'users/users/index', '1', 'PRIV_USERS_VIEW', '7B670227-DE9C-4457-8AA3-D14295B07530', null, '0', '0', '0', '1', '2020-05-31 11:20:55', '2020-06-14 01:19:30', '9999', '超威电源有限公司', '9999', '系统管理员');
-INSERT INTO `Sys_Menu` VALUES ('E8716862-C10B-4A74-844C-A0F378F7D2C3', '工厂定义', 'app', 'factory', 'basic/factory/index', '2', 'PRIV_FACTORY_VIEW', 'A2EDE2E3-CCC5-4A88-89A1-A84CDAF35DEE', null, '0', '0', '0', '0', '2020-05-31 11:20:55', '2020-06-19 16:11:40', '9999', '超威电源有限公司', '9999', '系统管理员');
-INSERT INTO `Sys_Menu` VALUES ('F200F0E2-4B9C-4A3C-8102-8130096BF975', '车间定义', 'app', 'workshop', 'basic/workshop/index', '3', 'PRIV_WORKSHOP_VIEW', 'A2EDE2E3-CCC5-4A88-89A1-A84CDAF35DEE', null, '0', '0', '0', '0', '2020-06-01 10:46:08', '2020-06-19 16:12:08', '9999', '超威电源有限公司', '9999', '系统管理员');
+INSERT INTO `Sys_Menu` VALUES ('B182CDE0-610A-43D8-8619-BEE44AE4C2F8', '设备定义', 'app', 'productline', 'basic/productline/index', '5', 'PRIV_PRODUCTLINE_VIEW', 'A2EDE2E3-CCC5-4A88-89A1-A84CDAF35DEE', null, '0', '0', '0', '0', '2020-06-01 10:59:36', '2020-06-19 16:12:39', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Menu` VALUES ('C3006273-F75D-11E8-9BA4-00059A3C7A00', '菜单管理', 'menu', 'menus', 'system/menus/index', '1', 'PRIV_MENUS_VIEW', '651BBACF-7AB6-457C-88CC-BF4223B2D390', null, '0', '0', '0', '1', '2020-05-31 11:20:55', '2020-06-06 08:53:19', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Menu` VALUES ('E01AE23A-F75C-11E8-9BA4-00059A3C7A00', '用户列表', 'user', 'users', 'users/users/index', '1', 'PRIV_USERS_VIEW', '7B670227-DE9C-4457-8AA3-D14295B07530', null, '0', '0', '0', '1', '2020-05-31 11:20:55', '2020-06-14 01:19:30', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Menu` VALUES ('E8716862-C10B-4A74-844C-A0F378F7D2C3', '工厂定义', 'app', 'factory', 'basic/factory/index', '2', 'PRIV_FACTORY_VIEW', 'A2EDE2E3-CCC5-4A88-89A1-A84CDAF35DEE', null, '0', '0', '0', '0', '2020-05-31 11:20:55', '2020-06-19 16:11:40', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Menu` VALUES ('F200F0E2-4B9C-4A3C-8102-8130096BF975', '车间定义', 'app', 'workshop', 'basic/workshop/index', '3', 'PRIV_WORKSHOP_VIEW', 'A2EDE2E3-CCC5-4A88-89A1-A84CDAF35DEE', null, '0', '0', '0', '0', '2020-06-01 10:46:08', '2020-06-19 16:12:08', '9999', '系统管理员', '9999', '系统管理员');
 
 -- ----------------------------
 -- Table structure for Sys_Online
@@ -581,16 +581,16 @@ CREATE TABLE `Sys_Options` (
 -- ----------------------------
 -- Records of Sys_Options
 -- ----------------------------
-INSERT INTO `Sys_Options` VALUES ('0F2EED72-EFF0-4DD5-8E68-316F0D2CC07B', 'SYSTEM_POWER_DESCRIPTION', '审核', '审核', '5', null, '2020-06-02 17:24:01', '2020-06-02 17:24:01', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
-INSERT INTO `Sys_Options` VALUES ('2A769FEA-4D41-4D48-A7CF-CD410207B96D', 'SYSTEM_MENU_SYSTEM', '微信小程序', '1', '2', null, '2020-06-02 14:05:33', '2020-06-02 14:05:41', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
-INSERT INTO `Sys_Options` VALUES ('35E47F7B-27A1-44BB-9924-D9F5FAB2073D', 'SYSTEM_POWER_DESCRIPTION', '导出', '导出', '8', null, '2020-06-02 17:24:55', '2020-06-02 17:24:55', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
-INSERT INTO `Sys_Options` VALUES ('4F2875AC-509E-45F7-B36E-0095FE4320D8', 'SYSTEM_POWER_DESCRIPTION', '新增', '新增', '2', null, '2020-06-02 17:23:18', '2020-06-02 17:23:18', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
-INSERT INTO `Sys_Options` VALUES ('518CEFB2-593A-40AB-A521-C875A74F2734', 'SYSTEM_MENU_SYSTEM', '后台系统', '0', '1', null, '2020-06-02 14:05:14', '2020-06-04 20:49:40', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
-INSERT INTO `Sys_Options` VALUES ('5EC52E51-8E96-4B90-BF8E-3917A47A2B85', 'SYSTEM_POWER_DESCRIPTION', '撤销', '撤销', '6', null, '2020-06-02 17:24:20', '2020-06-02 17:24:20', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
-INSERT INTO `Sys_Options` VALUES ('5F811745-CB10-489C-B392-1067EDE802E2', 'SYSTEM_POWER_DESCRIPTION', '冲销', '冲销', '7', null, '2020-06-02 17:24:41', '2020-06-02 17:24:41', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
-INSERT INTO `Sys_Options` VALUES ('68B49C70-21FB-49E8-921C-BCA641794588', 'SYSTEM_POWER_DESCRIPTION', '删除', '删除', '4', null, '2020-06-02 17:23:51', '2020-06-02 17:23:51', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
-INSERT INTO `Sys_Options` VALUES ('89C043F5-9230-4D27-8C1A-6B900586AD5A', 'SYSTEM_POWER_DESCRIPTION', '浏览', '浏览', '1', null, '2020-06-02 17:22:44', '2020-06-02 17:22:44', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
-INSERT INTO `Sys_Options` VALUES ('97D59D40-5BAE-4BC0-8772-C2CBECDD5418', 'SYSTEM_POWER_DESCRIPTION', '编辑', '编辑', '3', null, '2020-06-02 17:23:35', '2020-06-02 17:23:35', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
+INSERT INTO `Sys_Options` VALUES ('0F2EED72-EFF0-4DD5-8E68-316F0D2CC07B', 'SYSTEM_POWER_DESCRIPTION', '审核', '审核', '5', null, '2020-06-02 17:24:01', '2020-06-02 17:24:01', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Options` VALUES ('2A769FEA-4D41-4D48-A7CF-CD410207B96D', 'SYSTEM_MENU_SYSTEM', '微信小程序', '1', '2', null, '2020-06-02 14:05:33', '2020-06-02 14:05:41', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Options` VALUES ('35E47F7B-27A1-44BB-9924-D9F5FAB2073D', 'SYSTEM_POWER_DESCRIPTION', '导出', '导出', '8', null, '2020-06-02 17:24:55', '2020-06-02 17:24:55', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Options` VALUES ('4F2875AC-509E-45F7-B36E-0095FE4320D8', 'SYSTEM_POWER_DESCRIPTION', '新增', '新增', '2', null, '2020-06-02 17:23:18', '2020-06-02 17:23:18', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Options` VALUES ('518CEFB2-593A-40AB-A521-C875A74F2734', 'SYSTEM_MENU_SYSTEM', '后台系统', '0', '1', null, '2020-06-02 14:05:14', '2020-06-04 20:49:40', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Options` VALUES ('5EC52E51-8E96-4B90-BF8E-3917A47A2B85', 'SYSTEM_POWER_DESCRIPTION', '撤销', '撤销', '6', null, '2020-06-02 17:24:20', '2020-06-02 17:24:20', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Options` VALUES ('5F811745-CB10-489C-B392-1067EDE802E2', 'SYSTEM_POWER_DESCRIPTION', '冲销', '冲销', '7', null, '2020-06-02 17:24:41', '2020-06-02 17:24:41', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Options` VALUES ('68B49C70-21FB-49E8-921C-BCA641794588', 'SYSTEM_POWER_DESCRIPTION', '删除', '删除', '4', null, '2020-06-02 17:23:51', '2020-06-02 17:23:51', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Options` VALUES ('89C043F5-9230-4D27-8C1A-6B900586AD5A', 'SYSTEM_POWER_DESCRIPTION', '浏览', '浏览', '1', null, '2020-06-02 17:22:44', '2020-06-02 17:22:44', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Options` VALUES ('97D59D40-5BAE-4BC0-8772-C2CBECDD5418', 'SYSTEM_POWER_DESCRIPTION', '编辑', '编辑', '3', null, '2020-06-02 17:23:35', '2020-06-02 17:23:35', '9999', '系统管理员', '9999', '系统管理员');
 
 -- ----------------------------
 -- Table structure for Sys_Power
@@ -615,61 +615,61 @@ CREATE TABLE `Sys_Power` (
 -- Records of Sys_Power
 -- ----------------------------
 INSERT INTO `Sys_Power` VALUES ('023091F4-5F0E-468C-B019-B39103AE5956', 'PRIV_COMPANY_UPDATE', '公司定义', '编辑', null, '2020-06-09 13:39:53', '2020-06-09 13:39:53', '9999', '系统管理员', '9999', '系统管理员');
-INSERT INTO `Sys_Power` VALUES ('036BBC7E-6F06-4CE9-BD91-D50B0D63355C', 'PRIV_USERS_VIEW', '用户管理', '浏览', null, '2020-05-31 11:20:18', '2020-05-31 11:20:55', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
+INSERT INTO `Sys_Power` VALUES ('036BBC7E-6F06-4CE9-BD91-D50B0D63355C', 'PRIV_USERS_VIEW', '用户管理', '浏览', null, '2020-05-31 11:20:18', '2020-05-31 11:20:55', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Power` VALUES ('0613AC75-0849-42AB-9324-8F66AA7CF87F', 'PRIV_WORKSHOP_DELETE', '车间定义', '删除', null, '2020-06-10 09:07:40', '2020-06-10 09:07:40', '9999', '系统管理员', '9999', '系统管理员');
-INSERT INTO `Sys_Power` VALUES ('07B70D40-89DF-43C3-BDF6-2725677522F8', 'PRIV_POWERS_VIEW', '权限定义', '浏览', null, '2020-05-31 11:12:11', '2020-05-31 11:20:55', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
+INSERT INTO `Sys_Power` VALUES ('07B70D40-89DF-43C3-BDF6-2725677522F8', 'PRIV_POWERS_VIEW', '权限定义', '浏览', null, '2020-05-31 11:12:11', '2020-05-31 11:20:55', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Power` VALUES ('0E2C14EA-870E-41BD-B229-D06427313DC2', 'PRIV_LOGS_VIEW', '查看日志', '浏览', null, '2020-06-11 13:36:42', '2020-06-11 13:36:42', '9999', '系统管理员', '9999', '系统管理员');
-INSERT INTO `Sys_Power` VALUES ('0F61A3CE-2F7F-4594-97EE-70A008B2A767', 'PRIV_ROLEPOWERS_VIEW', '角色权限', '浏览', null, '2020-05-31 11:13:09', '2020-05-31 11:20:55', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
-INSERT INTO `Sys_Power` VALUES ('15BECF0F-6F81-4117-9427-CA8C98618D88', 'PRIV_ROLEPOWERS_UPDATE', '角色权限', '编辑', null, '2020-05-31 11:13:10', '2020-05-31 11:20:55', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
-INSERT INTO `Sys_Power` VALUES ('16B7F104-BADD-4B61-B81E-034651BC20D5', 'PRIV_OPTIONS_UPDATE', '字典定义', '编辑', null, '2020-05-02 13:40:28', '2020-06-02 13:40:05', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
+INSERT INTO `Sys_Power` VALUES ('0F61A3CE-2F7F-4594-97EE-70A008B2A767', 'PRIV_ROLEPOWERS_VIEW', '角色权限', '浏览', null, '2020-05-31 11:13:09', '2020-05-31 11:20:55', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Power` VALUES ('15BECF0F-6F81-4117-9427-CA8C98618D88', 'PRIV_ROLEPOWERS_UPDATE', '角色权限', '编辑', null, '2020-05-31 11:13:10', '2020-05-31 11:20:55', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Power` VALUES ('16B7F104-BADD-4B61-B81E-034651BC20D5', 'PRIV_OPTIONS_UPDATE', '字典定义', '编辑', null, '2020-05-02 13:40:28', '2020-06-02 13:40:05', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Power` VALUES ('2AB67949-470B-4D54-814E-490D046DE392', 'PRIV_WORKSHOP_VIEW', '车间定义', '浏览', null, '2020-06-10 09:06:50', '2020-06-10 09:06:50', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Power` VALUES ('2E78189A-F7B0-4954-B90C-679606BBCA21', 'PRIV_FACTORY_CREATE', '工厂定义', '新增', null, '2020-06-09 15:16:55', '2020-06-09 15:16:55', '9999', '系统管理员', '9999', '系统管理员');
-INSERT INTO `Sys_Power` VALUES ('30A06F2A-1270-4F1B-B7E1-B07663499450', 'PRIV_MENUS_UPDATE', '菜单管理', '编辑', null, '2020-05-31 11:10:03', '2020-05-31 11:20:55', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
+INSERT INTO `Sys_Power` VALUES ('30A06F2A-1270-4F1B-B7E1-B07663499450', 'PRIV_MENUS_UPDATE', '菜单管理', '编辑', null, '2020-05-31 11:10:03', '2020-05-31 11:20:55', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Power` VALUES ('359506E3-1335-41AA-8C86-36E2294D195F', 'PRIV_TASKS_DELETE', '计划任务', '删除', null, '2020-06-18 15:03:44', '2020-06-18 15:03:44', '9999', '系统管理员', '9999', '系统管理员');
-INSERT INTO `Sys_Power` VALUES ('3639F31F-6F68-40C6-AC12-74FB387B8960', 'PRIV_USERS_DELETE', '用户管理', '删除', null, '2020-05-31 11:20:19', '2020-05-31 11:20:55', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
-INSERT INTO `Sys_Power` VALUES ('364F325B-B927-471C-A89D-DCB91B823B2C', 'PRIV_MENUS_CREATE', '菜单管理', '新增', null, '2020-05-31 11:10:02', '2020-05-31 11:20:55', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
+INSERT INTO `Sys_Power` VALUES ('3639F31F-6F68-40C6-AC12-74FB387B8960', 'PRIV_USERS_DELETE', '用户管理', '删除', null, '2020-05-31 11:20:19', '2020-05-31 11:20:55', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Power` VALUES ('364F325B-B927-471C-A89D-DCB91B823B2C', 'PRIV_MENUS_CREATE', '菜单管理', '新增', null, '2020-05-31 11:10:02', '2020-05-31 11:20:55', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Power` VALUES ('3F8D1153-E456-446F-9D61-3AFFAFF07F3C', 'PRIV_FACTORY_DELETE', '工厂定义', '删除', null, '2020-06-09 15:17:24', '2020-06-09 15:17:24', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Power` VALUES ('449A124A-92C5-4872-8BEE-D71F894EDA0F', 'PRIV_PRODUCTLINE_VIEW', '产线定义', '浏览', null, '2020-06-10 09:47:09', '2020-06-10 09:47:09', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Power` VALUES ('45665B2E-5AE3-4692-8B80-03D2CBDE876C', 'PRIV_TASKS_CREATE', '计划任务', '新增', null, '2020-06-18 15:02:48', '2020-06-18 15:02:48', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Power` VALUES ('477DE876-4D91-49CD-B209-996FE605279D', 'PRIV_COMPANY_DELETE', '公司定义', '删除', null, '2020-06-09 13:40:39', '2020-06-09 13:40:39', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Power` VALUES ('4E2A1592-ED10-4A18-9C37-876D7CAF6727', 'PRIV_EQUIPMENT_UPDATE', '设备定义', '编辑', null, '2020-06-16 13:02:12', '2020-06-16 13:02:12', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Power` VALUES ('520D7B3D-4AC5-41B1-A9FD-7436DC17935C', 'PRIV_PRODUCTPROCESS_UPDATE', '工序定义', '编辑', null, '2020-06-10 20:08:03', '2020-06-10 20:08:03', '9999', '系统管理员', '9999', '系统管理员');
-INSERT INTO `Sys_Power` VALUES ('52D8FA71-7252-44B5-9B17-FFC0640D631D', 'PRIV_OPTIONS_DELETE', '字典定义', '删除', null, '2020-05-02 13:40:29', '2020-06-02 13:40:21', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
+INSERT INTO `Sys_Power` VALUES ('52D8FA71-7252-44B5-9B17-FFC0640D631D', 'PRIV_OPTIONS_DELETE', '字典定义', '删除', null, '2020-05-02 13:40:29', '2020-06-02 13:40:21', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Power` VALUES ('52DB0AA1-6D36-4AD4-9036-0533C096B740', 'PRIV_TASKS_VIEW', '计划任务', '浏览', null, '2020-06-18 15:02:31', '2020-06-18 15:02:31', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Power` VALUES ('553089CD-882F-47C6-8EB4-74A28C7AECC0', 'PRIV_PRODUCTPROCESS_CREATE', '工序定义', '新增', null, '2020-06-10 20:07:52', '2020-06-10 20:07:52', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Power` VALUES ('5D2F0A1D-8C79-4253-BB35-4D304AC70ED2', 'PRIV_FACTORY_VIEW', '工厂定义', '浏览', null, '2020-06-09 15:16:36', '2020-06-09 15:16:36', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Power` VALUES ('5D4FE5C0-D927-4689-9481-B3D8BECA68DE', 'PRIV_EQUIPMENT_VIEW', '设备定义', '浏览', null, '2020-06-16 13:01:20', '2020-06-16 13:01:20', '9999', '系统管理员', '9999', '系统管理员');
-INSERT INTO `Sys_Power` VALUES ('602A7D4E-4299-43B1-B6DD-EB7FCE409609', 'PRIV_ROLES_VIEW', '角色定义', '浏览', null, '2020-05-31 11:11:05', '2020-05-31 11:20:55', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
+INSERT INTO `Sys_Power` VALUES ('602A7D4E-4299-43B1-B6DD-EB7FCE409609', 'PRIV_ROLES_VIEW', '角色定义', '浏览', null, '2020-05-31 11:11:05', '2020-05-31 11:20:55', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Power` VALUES ('60E6CA5B-9B96-41CE-8E7F-C84C514D1DFD', 'PRIV_PRODUCTLINE_UPDATE', '产线定义', '编辑', null, '2020-06-10 09:47:36', '2020-06-10 09:47:36', '9999', '系统管理员', '9999', '系统管理员');
-INSERT INTO `Sys_Power` VALUES ('61DF6DFD-6D26-448C-8D80-00341535617D', 'PRIV_MENUS_VIEW', '菜单管理', '浏览', null, '2020-05-31 11:10:01', '2020-05-31 11:20:55', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
+INSERT INTO `Sys_Power` VALUES ('61DF6DFD-6D26-448C-8D80-00341535617D', 'PRIV_MENUS_VIEW', '菜单管理', '浏览', null, '2020-05-31 11:10:01', '2020-05-31 11:20:55', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Power` VALUES ('6649B278-C5D2-4601-98E1-57FE4A531A74', 'PRIV_COMPANY_CREATE', '公司定义', '新增', null, '2020-06-09 13:38:25', '2020-06-09 13:38:25', '9999', '系统管理员', '9999', '系统管理员');
-INSERT INTO `Sys_Power` VALUES ('66B84E36-F2D0-4847-97A9-2ACFFC9EE6FE', 'PRIV_POWERS_UPDATE', '权限定义', '编辑', null, '2020-05-31 11:12:13', '2020-05-31 11:20:55', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
-INSERT INTO `Sys_Power` VALUES ('67D7CDCE-CC5E-41B3-B9F6-55A4D2DCC8D8', 'PRIV_ROLES_UPDATE', '角色定义', '编辑', null, '2020-05-31 11:11:07', '2020-05-31 11:20:55', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
-INSERT INTO `Sys_Power` VALUES ('6999B413-3C9B-471C-B1EF-48AA2D4DE794', 'PRIV_USERS_RESETPASSWD', '用户管理', '重置密码', null, '2020-05-31 11:20:20', '2020-05-31 11:20:55', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
+INSERT INTO `Sys_Power` VALUES ('66B84E36-F2D0-4847-97A9-2ACFFC9EE6FE', 'PRIV_POWERS_UPDATE', '权限定义', '编辑', null, '2020-05-31 11:12:13', '2020-05-31 11:20:55', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Power` VALUES ('67D7CDCE-CC5E-41B3-B9F6-55A4D2DCC8D8', 'PRIV_ROLES_UPDATE', '角色定义', '编辑', null, '2020-05-31 11:11:07', '2020-05-31 11:20:55', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Power` VALUES ('6999B413-3C9B-471C-B1EF-48AA2D4DE794', 'PRIV_USERS_RESETPASSWD', '用户管理', '重置密码', null, '2020-05-31 11:20:20', '2020-05-31 11:20:55', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Power` VALUES ('7E1350CF-765A-41E9-AF80-84C5CBFC7E5C', 'PRIV_TASKS_UPDATE', '计划任务', '编辑', null, '2020-06-18 15:03:07', '2020-06-18 15:03:07', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Power` VALUES ('80F773D3-2E05-41C2-B33F-64880A63264D', 'PRIV_EQUIPMENT_CREATE', '设备定义', '新增', null, '2020-06-16 13:01:50', '2020-06-16 13:01:50', '9999', '系统管理员', '9999', '系统管理员');
-INSERT INTO `Sys_Power` VALUES ('8291C9BB-04B7-4DAE-BB81-F1CB3368A292', 'PRIV_MENUS_DELETE', '菜单管理', '删除', null, '2020-05-31 11:10:04', '2020-05-31 11:20:55', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
-INSERT INTO `Sys_Power` VALUES ('85DD7A0C-D06F-427D-8450-D95ED2D308CA', 'PRIV_ROLES_CREATE', '角色定义', '新增', null, '2020-05-31 11:11:06', '2020-05-31 11:20:55', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
+INSERT INTO `Sys_Power` VALUES ('8291C9BB-04B7-4DAE-BB81-F1CB3368A292', 'PRIV_MENUS_DELETE', '菜单管理', '删除', null, '2020-05-31 11:10:04', '2020-05-31 11:20:55', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Power` VALUES ('85DD7A0C-D06F-427D-8450-D95ED2D308CA', 'PRIV_ROLES_CREATE', '角色定义', '新增', null, '2020-05-31 11:11:06', '2020-05-31 11:20:55', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Power` VALUES ('8660B6E2-2A99-4C6B-9E96-0C1CF2CA0D63', 'PRIV_PRODUCTLINE_CREATE', '产线定义', '新增', null, '2020-06-10 09:47:22', '2020-06-10 09:47:22', '9999', '系统管理员', '9999', '系统管理员');
-INSERT INTO `Sys_Power` VALUES ('875A2C25-25BC-4766-9609-703942573AB0', 'PRIV_POWERS_CREATE', '权限定义', '新增', null, '2020-05-31 11:12:12', '2020-05-31 11:20:55', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
-INSERT INTO `Sys_Power` VALUES ('886906DC-BC49-4BE9-B8DD-7DAF4BD103CB', 'PRIV_ROLEUSERS_DELETE', '用户角色', '删除', null, '2020-05-31 11:13:23', '2020-05-31 11:20:55', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
+INSERT INTO `Sys_Power` VALUES ('875A2C25-25BC-4766-9609-703942573AB0', 'PRIV_POWERS_CREATE', '权限定义', '新增', null, '2020-05-31 11:12:12', '2020-05-31 11:20:55', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Power` VALUES ('886906DC-BC49-4BE9-B8DD-7DAF4BD103CB', 'PRIV_ROLEUSERS_DELETE', '用户角色', '删除', null, '2020-05-31 11:13:23', '2020-05-31 11:20:55', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Power` VALUES ('96C5BD50-B365-48A1-BDA7-6703DC1A3049', 'PRIV_PRODUCTPROCESS_DELETE', '工序定义', '删除', null, '2020-06-10 20:08:15', '2020-06-10 20:08:15', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Power` VALUES ('96DB4CA9-9F93-4ED1-BE55-DC12B467F778', 'PRIV_FACTORY_UPDATE', '工厂定义', '编辑', null, '2020-06-09 15:17:09', '2020-06-09 15:17:09', '9999', '系统管理员', '9999', '系统管理员');
-INSERT INTO `Sys_Power` VALUES ('A3641961-3EB9-46C9-91E6-4AE0C7D3467E', 'PRIV_OPTIONS_CREATE', '字典定义', '新增', null, '2020-05-02 13:39:27', '2020-06-02 13:39:48', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
-INSERT INTO `Sys_Power` VALUES ('A388DB44-82BD-458D-A0FA-E54FCAEE91B7', 'PRIV_ROLEUSERS_CREATE', '用户角色', '新增', null, '2020-05-31 11:13:22', '2020-05-31 11:20:55', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
-INSERT INTO `Sys_Power` VALUES ('A8ED6E2E-57BC-47FA-A1E0-D2E109AA8E42', 'PRIV_USERS_UPDATE', '用户管理', '编辑', null, '2020-05-31 11:20:17', '2020-05-31 11:20:55', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
-INSERT INTO `Sys_Power` VALUES ('B1D2FF18-089F-4138-92DC-DF280F50BE87', 'PRIV_POWERS_DELETE', '权限定义', '删除', null, '2020-05-31 11:12:14', '2020-05-31 11:20:55', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
+INSERT INTO `Sys_Power` VALUES ('A3641961-3EB9-46C9-91E6-4AE0C7D3467E', 'PRIV_OPTIONS_CREATE', '字典定义', '新增', null, '2020-05-02 13:39:27', '2020-06-02 13:39:48', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Power` VALUES ('A388DB44-82BD-458D-A0FA-E54FCAEE91B7', 'PRIV_ROLEUSERS_CREATE', '用户角色', '新增', null, '2020-05-31 11:13:22', '2020-05-31 11:20:55', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Power` VALUES ('A8ED6E2E-57BC-47FA-A1E0-D2E109AA8E42', 'PRIV_USERS_UPDATE', '用户管理', '编辑', null, '2020-05-31 11:20:17', '2020-05-31 11:20:55', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Power` VALUES ('B1D2FF18-089F-4138-92DC-DF280F50BE87', 'PRIV_POWERS_DELETE', '权限定义', '删除', null, '2020-05-31 11:12:14', '2020-05-31 11:20:55', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Power` VALUES ('B240D13D-C29E-4A38-8888-F77BDD527FD7', 'PRIV_COMPANY_VIEW', '公司定义', '浏览', null, '2020-06-09 13:40:19', '2020-06-09 13:40:19', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Power` VALUES ('B54EBA59-D23B-4BE6-B3E4-6BCC5B6D13FE', 'PRIV_EQUIPMENT_DELETE', '设备定义', '删除', null, '2020-06-16 13:02:37', '2020-06-16 13:02:37', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Power` VALUES ('B551C6A4-2987-470D-B33B-BDB7488FD65E', 'PRIV_WORKSHOP_UPDATE', '车间定义', '编辑', null, '2020-06-10 09:07:27', '2020-06-10 09:07:27', '9999', '系统管理员', '9999', '系统管理员');
-INSERT INTO `Sys_Power` VALUES ('BDE4354E-766B-4A55-A0DD-05A4740191DA', 'PRIV_ONLINE_DELETE', '在线统计', '删除', null, '2020-05-31 11:20:25', '2020-05-31 11:20:55', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
-INSERT INTO `Sys_Power` VALUES ('C00F0F28-8FDC-43F6-84FD-560D65A8D256', 'PRIV_ROLEUSERS_VIEW', '用户角色', '浏览', null, '2020-05-31 11:13:21', '2020-05-31 11:20:55', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
+INSERT INTO `Sys_Power` VALUES ('BDE4354E-766B-4A55-A0DD-05A4740191DA', 'PRIV_ONLINE_DELETE', '在线统计', '删除', null, '2020-05-31 11:20:25', '2020-05-31 11:20:55', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Power` VALUES ('C00F0F28-8FDC-43F6-84FD-560D65A8D256', 'PRIV_ROLEUSERS_VIEW', '用户角色', '浏览', null, '2020-05-31 11:13:21', '2020-05-31 11:20:55', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Power` VALUES ('C814983F-3700-49A3-A53D-53ECFC7A2B4A', 'PRIV_PRODUCTPROCESS_VIEW', '工序定义', '浏览', null, '2020-06-10 20:07:33', '2020-06-10 20:07:33', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Power` VALUES ('C8E8AAE1-2177-4EDE-9E44-D24DADD2FF6E', 'PRIV_WORKSHOP_CREATE', '车间定义', '新增', null, '2020-06-10 09:07:05', '2020-06-10 09:07:05', '9999', '系统管理员', '9999', '系统管理员');
-INSERT INTO `Sys_Power` VALUES ('CB127108-AA42-42A4-9CD0-2E194BC0C83B', 'PRIV_ONLINE_VIEW', '在线统计', '浏览', null, '2020-05-31 11:20:24', '2020-05-31 11:20:55', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
-INSERT INTO `Sys_Power` VALUES ('CEE73221-EE0C-442A-B53D-31021DC8836E', 'PRIV_USERS_CREATE', '用户管理', '新增', null, '2020-05-31 11:20:16', '2020-05-31 11:20:55', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
-INSERT INTO `Sys_Power` VALUES ('E702C145-BF21-4896-92CD-447936C680C3', 'PRIV_OPTIONS_VIEW', '字典定义', '浏览', null, '2020-05-02 13:39:26', '2020-06-02 13:39:33', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
-INSERT INTO `Sys_Power` VALUES ('EADF9CB3-A81C-42D7-9E88-15FAD08AED00', 'PRIV_ROLES_DELETE', '角色定义', '删除', null, '2020-05-31 11:11:08', '2020-05-31 11:20:55', '9999', '超威电源有限公司', '9999', '超威电源有限公司');
+INSERT INTO `Sys_Power` VALUES ('CB127108-AA42-42A4-9CD0-2E194BC0C83B', 'PRIV_ONLINE_VIEW', '在线统计', '浏览', null, '2020-05-31 11:20:24', '2020-05-31 11:20:55', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Power` VALUES ('CEE73221-EE0C-442A-B53D-31021DC8836E', 'PRIV_USERS_CREATE', '用户管理', '新增', null, '2020-05-31 11:20:16', '2020-05-31 11:20:55', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Power` VALUES ('E702C145-BF21-4896-92CD-447936C680C3', 'PRIV_OPTIONS_VIEW', '字典定义', '浏览', null, '2020-05-02 13:39:26', '2020-06-02 13:39:33', '9999', '系统管理员', '9999', '系统管理员');
+INSERT INTO `Sys_Power` VALUES ('EADF9CB3-A81C-42D7-9E88-15FAD08AED00', 'PRIV_ROLES_DELETE', '角色定义', '删除', null, '2020-05-31 11:11:08', '2020-05-31 11:20:55', '9999', '系统管理员', '9999', '系统管理员');
 INSERT INTO `Sys_Power` VALUES ('F4EB78E0-9783-45F0-BA53-A0F18263228C', 'PRIV_PRODUCTLINE_DELETE', '产线定义', '删除', null, '2020-06-10 09:47:51', '2020-06-10 09:47:51', '9999', '系统管理员', '9999', '系统管理员');
 
 -- ----------------------------
@@ -693,7 +693,7 @@ CREATE TABLE `Sys_Role` (
 -- ----------------------------
 -- Records of Sys_Role
 -- ----------------------------
-INSERT INTO `Sys_Role` VALUES ('20813EA9-8252-4F0F-BCE7-49D2637DC457', '系统管理员', '系统内置', '2020-05-31 10:20:55', '2020-06-04 20:52:52', '9999', '超威电源有限公司', '9999', '超威电源有限公司', '1');
+INSERT INTO `Sys_Role` VALUES ('20813EA9-8252-4F0F-BCE7-49D2637DC457', '系统管理员', '系统内置', '2020-05-31 10:20:55', '2020-06-04 20:52:52', '9999', '系统管理员', '9999', '系统管理员', '1');
 
 -- ----------------------------
 -- Table structure for Sys_RolePower
@@ -925,4 +925,4 @@ CREATE TABLE `Sys_Users` (
 -- ----------------------------
 -- Records of Sys_Users
 -- ----------------------------
-INSERT INTO `Sys_Users` VALUES ('9999', '系统管理员', '许祖豪', '91270@QQ.COM', 'FC4509EFEA3AC97ED753F53DFA601161', '男', '/static/avatars/20200619/637281528723366669.png', '91270', '13344445555', null, null, null, null, null, null, null, null, null, '2020-06-18 16:00:00', '2020-10-20 20:42:12', '1', '0', '2020-05-31 10:20:55', '2020-06-19 08:41:12', '9999', '超威电源有限公司', '9999', '系统管理员', '1');
+INSERT INTO `Sys_Users` VALUES ('9999', '系统管理员', '系统管理员', '91270@QQ.COM', 'FC4509EFEA3AC97ED753F53DFA601161', '男', '/static/avatars/20200619/637281528723366669.png', '91270', '13344445555', null, null, null, null, null, null, null, null, null, '2020-06-18 16:00:00', '2020-10-20 20:42:12', '1', '0', '2020-05-31 10:20:55', '2020-06-19 08:41:12', '9999', '系统管理员', '9999', '系统管理员', '1');
