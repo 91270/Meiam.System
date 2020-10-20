@@ -21,7 +21,7 @@ namespace Meiam.System.Model.View
         /// 描述 : 工厂UID 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "工厂UID")]
         public string FactoryUID { get; set; }
 
@@ -29,7 +29,7 @@ namespace Meiam.System.Model.View
         /// 描述 : 工厂编码 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "工厂编码")]
         public string FactoryNo { get; set; }
 
@@ -37,7 +37,7 @@ namespace Meiam.System.Model.View
         /// 描述 : 工厂名称 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "工厂名称")]
         public string FactoryName { get; set; }
     }

@@ -21,7 +21,7 @@ namespace Meiam.System.Model.View
         /// 描述 : 公司UID 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "公司UID")]
         public string CompanyUID { get; set; }
 
@@ -29,7 +29,7 @@ namespace Meiam.System.Model.View
         /// 描述 : 公司编码 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "公司编码")]
         public string CompanyNo { get; set; }
 
@@ -37,7 +37,7 @@ namespace Meiam.System.Model.View
         /// 描述 : 公司名称 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "公司名称")]
         public string CompanyName { get; set; }
     }

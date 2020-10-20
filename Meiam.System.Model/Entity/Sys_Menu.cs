@@ -29,7 +29,7 @@ namespace Meiam.System.Model
            /// 描述 : UUID 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "UUID")]           
            [SugarColumn(IsPrimaryKey=true)]
            public string ID {get;set;}
@@ -38,7 +38,7 @@ namespace Meiam.System.Model
            /// 描述 : 菜单名称 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "菜单名称")]           
            public string Name {get;set;}
 
@@ -46,7 +46,7 @@ namespace Meiam.System.Model
            /// 描述 : 图标 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "图标")]           
            public string Icon {get;set;}
 
@@ -54,7 +54,7 @@ namespace Meiam.System.Model
            /// 描述 : 路由地址 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "路由地址")]           
            public string Path {get;set;}
 
@@ -62,7 +62,7 @@ namespace Meiam.System.Model
            /// 描述 : 组件路径 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "组件路径")]           
            public string Component {get;set;}
 
@@ -70,7 +70,7 @@ namespace Meiam.System.Model
            /// 描述 : 默认排序 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "默认排序")]           
            public int SortIndex {get;set;}
 
@@ -78,7 +78,7 @@ namespace Meiam.System.Model
            /// 描述 : 浏览权限 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "浏览权限")]           
            public string ViewPower {get;set;}
 
@@ -86,7 +86,7 @@ namespace Meiam.System.Model
            /// 描述 : 上级菜单 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "上级菜单")]           
            public string ParentUID {get;set;}
 
@@ -94,7 +94,7 @@ namespace Meiam.System.Model
            /// 描述 : 备注 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "备注")]           
            public string Remark {get;set;}
 
@@ -102,7 +102,7 @@ namespace Meiam.System.Model
            /// 描述 : 可用系统(0-PC，1-Wx) 
            /// 空值 : False
            /// 默认 : 0
-           /// <summary>
+           /// </summary>
            [Display(Name = "可用系统(0-PC，1-Wx)")]           
            public int System {get;set;}
 
@@ -110,7 +110,7 @@ namespace Meiam.System.Model
            /// 描述 : 是否外链 
            /// 空值 : False
            /// 默认 : 0
-           /// <summary>
+           /// </summary>
            [Display(Name = "是否外链")]           
            public bool isFrame {get;set;}
 
@@ -118,7 +118,7 @@ namespace Meiam.System.Model
            /// 描述 : 是否可见 
            /// 空值 : False
            /// 默认 : 0
-           /// <summary>
+           /// </summary>
            [Display(Name = "是否可见")]           
            public bool Hidden {get;set;}
 
@@ -126,7 +126,7 @@ namespace Meiam.System.Model
            /// 描述 : 是否缓存 
            /// 空值 : False
            /// 默认 : 0
-           /// <summary>
+           /// </summary>
            [Display(Name = "是否缓存")]           
            public bool KeepAlive {get;set;}
 
@@ -134,7 +134,7 @@ namespace Meiam.System.Model
            /// 描述 : 创建时间 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "创建时间")]           
            public DateTime CreateTime {get;set;}
 
@@ -142,7 +142,7 @@ namespace Meiam.System.Model
            /// 描述 : 最后更新时间 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "最后更新时间")]           
            public DateTime UpdateTime {get;set;}
 
@@ -150,7 +150,7 @@ namespace Meiam.System.Model
            /// 描述 : 创建人编码 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "创建人编码")]           
            public string CreateID {get;set;}
 
@@ -158,7 +158,7 @@ namespace Meiam.System.Model
            /// 描述 : 创建人 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "创建人")]           
            public string CreateName {get;set;}
 
@@ -166,7 +166,7 @@ namespace Meiam.System.Model
            /// 描述 : 更新人编码 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "更新人编码")]           
            public string UpdateID {get;set;}
 
@@ -174,7 +174,7 @@ namespace Meiam.System.Model
            /// 描述 : 更新人 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "更新人")]           
            public string UpdateName {get;set;}
 

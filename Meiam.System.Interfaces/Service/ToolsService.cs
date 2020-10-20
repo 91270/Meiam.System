@@ -67,7 +67,7 @@ namespace Meiam.System.Interfaces
                     $"           /// 描述 : {{PropertyDescription}} \r\n" +
                     $"           /// 空值 : {{IsNullable}}\r\n" +
                     $"           /// 默认 : {{DefaultValue}}\r\n" +
-                    $"           /// <summary>\r\n" +
+                    $"           /// </summary>\r\n" +
                     $"           [Display(Name = \"{{PropertyDescription}}\")]";
 
 

@@ -29,7 +29,7 @@ namespace Meiam.System.Model
            /// 描述 : ID 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "ID")]           
            [SugarColumn(IsPrimaryKey=true)]
            public string ID {get;set;}
@@ -38,7 +38,7 @@ namespace Meiam.System.Model
            /// 描述 : 日志类型 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "日志类型")]           
            public string Logger {get;set;}
 
@@ -46,7 +46,7 @@ namespace Meiam.System.Model
            /// 描述 : 日志等级 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "日志等级")]           
            public string Level {get;set;}
 
@@ -54,7 +54,7 @@ namespace Meiam.System.Model
            /// 描述 : 日志来源 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "日志来源")]           
            public string Url {get;set;}
 
@@ -62,7 +62,7 @@ namespace Meiam.System.Model
            /// 描述 : 主机地址 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "主机地址")]           
            public string Host {get;set;}
 
@@ -70,7 +70,7 @@ namespace Meiam.System.Model
            /// 描述 : 请求方式 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "请求方式")]           
            public string Method {get;set;}
 
@@ -78,7 +78,7 @@ namespace Meiam.System.Model
            /// 描述 : 浏览器标识 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "浏览器标识")]           
            public string UserAgent {get;set;}
 
@@ -86,7 +86,7 @@ namespace Meiam.System.Model
            /// 描述 : Cookie 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "Cookie")]           
            public string Cookie {get;set;}
 
@@ -94,7 +94,7 @@ namespace Meiam.System.Model
            /// 描述 : URL参数 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "URL参数")]           
            public string QueryString {get;set;}
 
@@ -102,7 +102,7 @@ namespace Meiam.System.Model
            /// 描述 : 请求内容 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "请求内容")]           
            public string Body {get;set;}
 
@@ -110,7 +110,7 @@ namespace Meiam.System.Model
            /// 描述 : 日志信息 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "日志信息")]           
            public string Message {get;set;}
 
@@ -118,7 +118,7 @@ namespace Meiam.System.Model
            /// 描述 : 请求耗时 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "请求耗时")]           
            public int? Elapsed {get;set;}
 
@@ -126,7 +126,7 @@ namespace Meiam.System.Model
            /// 描述 : 创建时间 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "创建时间")]           
            public DateTime? CreateTime {get;set;}
 
@@ -134,7 +134,7 @@ namespace Meiam.System.Model
            /// 描述 : 用户来源 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "用户来源")]           
            public string IPAddress {get;set;}
 

@@ -23,7 +23,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 公司定义 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "公司定义")]
         public string QueryText { get; set; }
 
@@ -38,7 +38,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 公司编码 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "公司编码")]
         [Required(ErrorMessage = "请填写公司编码")]
         public string CompanyNo { get; set; }
@@ -47,7 +47,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 公司名称 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "公司名称")]
         [Required(ErrorMessage = "请填写公司名称")]
         public string CompanyName { get; set; }
@@ -56,7 +56,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 备注 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "备注")]
         public string Remark { get; set; }
 
@@ -64,7 +64,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 是否启用 
         /// 空值 : False
         /// 默认 : 1
-        /// <summary>
+        /// </summary>
         [Display(Name = "是否启用")]
         [Required(ErrorMessage = "请设置是否启用")]
         public bool Enable { get; set; }
@@ -79,7 +79,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : UUID 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "UUID")]
         [Required(ErrorMessage = "更新公司定义不能为空")]
         public string ID { get; set; }
@@ -88,7 +88,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 公司编码 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "公司编码")]
         [Required(ErrorMessage = "请填写公司编码")]
         public string CompanyNo { get; set; }
@@ -97,7 +97,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 公司名称 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "公司名称")]
         [Required(ErrorMessage = "请填写公司名称")]
         public string CompanyName { get; set; }
@@ -106,7 +106,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 备注 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "备注")]
         public string Remark { get; set; }
 
@@ -114,7 +114,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 是否启用 
         /// 空值 : False
         /// 默认 : 1
-        /// <summary>
+        /// </summary>
         [Display(Name = "是否启用")]
         [Required(ErrorMessage = "请设置是否启用")]
         public bool Enable { get; set; }

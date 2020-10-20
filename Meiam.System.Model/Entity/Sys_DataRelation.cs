@@ -29,7 +29,7 @@ namespace Meiam.System.Model
            /// 描述 : UID 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "UID")]           
            [SugarColumn(IsPrimaryKey=true)]
            public string ID {get;set;}
@@ -38,7 +38,7 @@ namespace Meiam.System.Model
            /// 描述 : 来源ID 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "来源ID")]           
            public string Form {get;set;}
 
@@ -46,7 +46,7 @@ namespace Meiam.System.Model
            /// 描述 : 对应ID 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "对应ID")]           
            public string To {get;set;}
 
@@ -54,7 +54,7 @@ namespace Meiam.System.Model
            /// 描述 :  
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "")]           
            public string Type {get;set;}
 

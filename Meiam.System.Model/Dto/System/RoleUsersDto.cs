@@ -21,7 +21,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 角色id 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "角色id")]
         [Required(ErrorMessage = "roleId 不能为空")]
         public string RoleId { get; set; }
@@ -30,7 +30,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 用户编码 [1,2,3,4] 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "用户编码 [1,2,3,4]")]
         public List<string> UserIds { get; set; }
     }
@@ -41,7 +41,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 角色id 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "角色id")]
         [Required(ErrorMessage = "roleId 不能为空")]
         public string RoleId { get; set; }
@@ -50,7 +50,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 权限编码 [1,2,3,4] 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "权限编码 [1,2,3,4]")]
         public List<string> UserIds { get; set; }
     }

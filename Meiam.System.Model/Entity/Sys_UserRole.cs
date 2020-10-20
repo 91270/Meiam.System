@@ -29,7 +29,7 @@ namespace Meiam.System.Model
            /// 描述 : UUID 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "UUID")]           
            [SugarColumn(IsPrimaryKey=true)]
            public string ID {get;set;}
@@ -38,7 +38,7 @@ namespace Meiam.System.Model
            /// 描述 : 用户ID 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "用户ID")]           
            public string UserID {get;set;}
 
@@ -46,7 +46,7 @@ namespace Meiam.System.Model
            /// 描述 : 角色ID 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "角色ID")]           
            public string RoleID {get;set;}
 

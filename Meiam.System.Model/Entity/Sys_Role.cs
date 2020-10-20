@@ -29,7 +29,7 @@ namespace Meiam.System.Model
            /// 描述 : ID 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "ID")]           
            [SugarColumn(IsPrimaryKey=true)]
            public string ID {get;set;}
@@ -38,7 +38,7 @@ namespace Meiam.System.Model
            /// 描述 : 角色名称 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "角色名称")]           
            public string Name {get;set;}
 
@@ -46,7 +46,7 @@ namespace Meiam.System.Model
            /// 描述 : 备注 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "备注")]           
            public string Remark {get;set;}
 
@@ -54,7 +54,7 @@ namespace Meiam.System.Model
            /// 描述 : 创建时间 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "创建时间")]           
            public DateTime CreateTime {get;set;}
 
@@ -62,7 +62,7 @@ namespace Meiam.System.Model
            /// 描述 : 最后更新时间 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "最后更新时间")]           
            public DateTime UpdateTime {get;set;}
 
@@ -70,7 +70,7 @@ namespace Meiam.System.Model
            /// 描述 : 创建人编码 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "创建人编码")]           
            public string CreateID {get;set;}
 
@@ -78,7 +78,7 @@ namespace Meiam.System.Model
            /// 描述 : 创建人 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "创建人")]           
            public string CreateName {get;set;}
 
@@ -86,7 +86,7 @@ namespace Meiam.System.Model
            /// 描述 : 更新人编码 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "更新人编码")]           
            public string UpdateID {get;set;}
 
@@ -94,9 +94,17 @@ namespace Meiam.System.Model
            /// 描述 : 更新人 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "更新人")]           
            public string UpdateName {get;set;}
+
+           /// <summary>
+           /// 描述 : 超级管理员可见 
+           /// 空值 : False
+           /// 默认 : 0
+           /// </summary>
+           [Display(Name = "超级管理员可见")]           
+           public bool Administrator {get;set;}
 
     }
 }

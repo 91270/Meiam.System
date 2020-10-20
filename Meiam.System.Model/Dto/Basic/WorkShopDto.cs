@@ -22,7 +22,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 车间定义 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "车间定义")]
         public string QueryText { get; set; }
 
@@ -37,7 +37,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 车间编码 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "车间编码")]
         [Required(ErrorMessage = "请填写车间编码")]
         public string WorkShopNo { get; set; }
@@ -46,7 +46,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 车间名称 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "车间名称")]
         [Required(ErrorMessage = "请填写车间名称")]
         public string WorkShopName { get; set; }
@@ -55,7 +55,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 备注 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "备注")]
         public string Remark { get; set; }
 
@@ -63,7 +63,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 是否启用 
         /// 空值 : False
         /// 默认 : 1
-        /// <summary>
+        /// </summary>
         [Display(Name = "是否启用")]
         [Required(ErrorMessage = "请设置是否启用")]
         public bool Enable { get; set; }
@@ -72,7 +72,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 公司UID 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "工厂UID")]
         [Required(ErrorMessage = "所属工厂ID不能为空")]
         public string FactoryUID { get; set; }
@@ -87,7 +87,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : UUID 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "UUID")]
         [Required(ErrorMessage = "车间ID不能为空")]
         public string ID { get; set; }
@@ -96,7 +96,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 车间编码 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "车间编码")]
         [Required(ErrorMessage = "请填写车间编码")]
         public string WorkShopNo { get; set; }
@@ -105,7 +105,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 车间名称 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "车间名称")]
         [Required(ErrorMessage = "请填写车间名称")]
         public string WorkShopName { get; set; }
@@ -114,7 +114,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 备注 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "备注")]
         public string Remark { get; set; }
 
@@ -122,7 +122,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 是否启用 
         /// 空值 : False
         /// 默认 : 1
-        /// <summary>
+        /// </summary>
         [Display(Name = "是否启用")]
         [Required(ErrorMessage = "请设置是否启用")]
         public bool Enable { get; set; }
@@ -131,7 +131,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 公司UID 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "工厂UID")]
         [Required(ErrorMessage = "所属工厂ID不能为空")]
         public string FactoryUID { get; set; }

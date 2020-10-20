@@ -29,7 +29,7 @@ namespace Meiam.System.Model
            /// 描述 : 用户账号 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "用户账号")]           
            [SugarColumn(IsPrimaryKey=true)]
            public string UserID {get;set;}
@@ -38,7 +38,7 @@ namespace Meiam.System.Model
            /// 描述 : 用户名称 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "用户名称")]           
            public string UserName {get;set;}
 
@@ -46,7 +46,7 @@ namespace Meiam.System.Model
            /// 描述 : 用户昵称 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "用户昵称")]           
            public string NickName {get;set;}
 
@@ -54,7 +54,7 @@ namespace Meiam.System.Model
            /// 描述 : 邮箱 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "邮箱")]           
            public string Email {get;set;}
 
@@ -62,7 +62,7 @@ namespace Meiam.System.Model
            /// 描述 : 密码 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "密码")]           
            public string Password {get;set;}
 
@@ -70,7 +70,7 @@ namespace Meiam.System.Model
            /// 描述 : 性别 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "性别")]           
            public string Sex {get;set;}
 
@@ -78,7 +78,7 @@ namespace Meiam.System.Model
            /// 描述 : 头像地址 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "头像地址")]           
            public string AvatarUrl {get;set;}
 
@@ -86,7 +86,7 @@ namespace Meiam.System.Model
            /// 描述 : QQ 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "QQ")]           
            public string QQ {get;set;}
 
@@ -94,7 +94,7 @@ namespace Meiam.System.Model
            /// 描述 : 手机号码 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "手机号码")]           
            public string Phone {get;set;}
 
@@ -102,7 +102,7 @@ namespace Meiam.System.Model
            /// 描述 : 用户所在省份编码 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "用户所在省份编码")]           
            public string ProvinceID {get;set;}
 
@@ -110,7 +110,7 @@ namespace Meiam.System.Model
            /// 描述 : 用户所在省份 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "用户所在省份")]           
            public string Province {get;set;}
 
@@ -118,7 +118,7 @@ namespace Meiam.System.Model
            /// 描述 : 用户所在城市编码 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "用户所在城市编码")]           
            public string CityID {get;set;}
 
@@ -126,7 +126,7 @@ namespace Meiam.System.Model
            /// 描述 : 用户所在城市 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "用户所在城市")]           
            public string City {get;set;}
 
@@ -134,7 +134,7 @@ namespace Meiam.System.Model
            /// 描述 : 用户所在县/区编码 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "用户所在县/区编码")]           
            public string CountyID {get;set;}
 
@@ -142,7 +142,7 @@ namespace Meiam.System.Model
            /// 描述 : 用户所在县/区 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "用户所在县/区")]           
            public string County {get;set;}
 
@@ -150,7 +150,7 @@ namespace Meiam.System.Model
            /// 描述 : 地址 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "地址")]           
            public string Address {get;set;}
 
@@ -158,7 +158,7 @@ namespace Meiam.System.Model
            /// 描述 : 备注 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "备注")]           
            public string Remark {get;set;}
 
@@ -166,7 +166,7 @@ namespace Meiam.System.Model
            /// 描述 : 身份证 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "身份证")]           
            public string IdentityCard {get;set;}
 
@@ -174,7 +174,7 @@ namespace Meiam.System.Model
            /// 描述 : 生日 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "生日")]           
            public DateTime? Birthday {get;set;}
 
@@ -182,7 +182,7 @@ namespace Meiam.System.Model
            /// 描述 : 上次登录时间 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "上次登录时间")]           
            public DateTime? LastLoginTime {get;set;}
 
@@ -190,7 +190,7 @@ namespace Meiam.System.Model
            /// 描述 : 是否启用 
            /// 空值 : False
            /// 默认 : 1
-           /// <summary>
+           /// </summary>
            [Display(Name = "是否启用")]           
            public bool Enabled {get;set;}
 
@@ -198,7 +198,7 @@ namespace Meiam.System.Model
            /// 描述 : 单用户模式 
            /// 空值 : False
            /// 默认 : 0
-           /// <summary>
+           /// </summary>
            [Display(Name = "单用户模式")]           
            public bool OneSession {get;set;}
 
@@ -206,7 +206,7 @@ namespace Meiam.System.Model
            /// 描述 : 创建时间 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "创建时间")]           
            public DateTime CreateTime {get;set;}
 
@@ -214,7 +214,7 @@ namespace Meiam.System.Model
            /// 描述 : 最后更新时间 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "最后更新时间")]           
            public DateTime UpdateTime {get;set;}
 
@@ -222,7 +222,7 @@ namespace Meiam.System.Model
            /// 描述 : 创建人编码 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "创建人编码")]           
            public string CreateID {get;set;}
 
@@ -230,7 +230,7 @@ namespace Meiam.System.Model
            /// 描述 : 创建人 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "创建人")]           
            public string CreateName {get;set;}
 
@@ -238,7 +238,7 @@ namespace Meiam.System.Model
            /// 描述 : 更新人编码 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "更新人编码")]           
            public string UpdateID {get;set;}
 
@@ -246,9 +246,17 @@ namespace Meiam.System.Model
            /// 描述 : 更新人 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "更新人")]           
            public string UpdateName {get;set;}
+
+           /// <summary>
+           /// 描述 : 超级管理员 
+           /// 空值 : False
+           /// 默认 : 0
+           /// </summary>
+           [Display(Name = "超级管理员")]           
+           public bool Administrator {get;set;}
 
     }
 }

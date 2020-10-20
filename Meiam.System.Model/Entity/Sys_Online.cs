@@ -29,7 +29,7 @@ namespace Meiam.System.Model
            /// 描述 : 用户 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "用户")]           
            public string UserID {get;set;}
 
@@ -37,7 +37,7 @@ namespace Meiam.System.Model
            /// 描述 : 会话 
            /// 空值 : False
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "会话")]           
            [SugarColumn(IsPrimaryKey=true)]
            public string SessionID {get;set;}
@@ -46,7 +46,7 @@ namespace Meiam.System.Model
            /// 描述 : IP地址 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "IP地址")]           
            public string IPAddress {get;set;}
 
@@ -54,7 +54,7 @@ namespace Meiam.System.Model
            /// 描述 : 登录时间 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "登录时间")]           
            public DateTime? LoginTime {get;set;}
 
@@ -62,7 +62,7 @@ namespace Meiam.System.Model
            /// 描述 : 最后操作时间 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "最后操作时间")]           
            public DateTime? UpdateTime {get;set;}
 
@@ -70,7 +70,7 @@ namespace Meiam.System.Model
            /// 描述 : 来源 
            /// 空值 : True
            /// 默认 : 
-           /// <summary>
+           /// </summary>
            [Display(Name = "来源")]           
            public string Source {get;set;}
 

@@ -25,7 +25,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 查询字符串 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "查询字符串")]
         public string QueryText { get; set; }
 
@@ -40,7 +40,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 用户账号 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "用户账号")]
         [Required(ErrorMessage = "用户账号不能为空")]
         public string UserID { get; set; }
@@ -49,7 +49,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 用户名称 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "用户名称")]
         [Required(ErrorMessage = "用户名称不能为空")]
         public string UserName { get; set; }
@@ -58,7 +58,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 用户昵称 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "用户昵称")]
         public string NickName { get; set; }
 
@@ -66,7 +66,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 邮箱 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "邮箱")]
         public string Email { get; set; }
 
@@ -74,7 +74,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 密码 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "密码")]
         [Required(ErrorMessage = "用户密码不能为空")]
         public string Password { get; set; }
@@ -83,7 +83,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 性别 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "性别")]
         [Required(ErrorMessage = "用户性别不能为空")]
         public string Sex { get; set; }
@@ -92,7 +92,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 头像地址 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "头像地址")]
         public string AvatarUrl { get; set; }
 
@@ -100,7 +100,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : QQ 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "QQ")]
         public string QQ { get; set; }
 
@@ -108,7 +108,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 手机号码 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "手机号码")]
         public string Phone { get; set; }
 
@@ -116,7 +116,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 用户所在省份编码 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "用户所在省份编码")]
         public string ProvinceID { get; set; }
 
@@ -124,7 +124,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 用户所在省份 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "用户所在省份")]
         public string Province { get; set; }
 
@@ -132,7 +132,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 用户所在城市编码 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "用户所在城市编码")]
         public string CityID { get; set; }
 
@@ -140,7 +140,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 用户所在城市 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "用户所在城市")]
         public string City { get; set; }
 
@@ -148,7 +148,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 用户所在县/区编码 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "用户所在县/区编码")]
         public string CountyID { get; set; }
 
@@ -156,7 +156,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 用户所在县/区 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "用户所在县/区")]
         public string County { get; set; }
 
@@ -164,7 +164,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 地址 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "地址")]
         public string Address { get; set; }
 
@@ -172,7 +172,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 备注 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "备注")]
         public string Remark { get; set; }
 
@@ -180,7 +180,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 身份证 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "身份证")]
         public string IdentityCard { get; set; }
 
@@ -188,7 +188,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 生日 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "生日")]
         public DateTime? Birthday { get; set; }
 
@@ -196,7 +196,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 是否启用 
         /// 空值 : False
         /// 默认 : 1
-        /// <summary>
+        /// </summary>
         [Display(Name = "是否启用")]
         public bool Enabled { get; set; } = true;
 
@@ -204,7 +204,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 单用户模式 
         /// 空值 : False
         /// 默认 : 0
-        /// <summary>
+        /// </summary>
         [Display(Name = "单用户模式")]
         public bool OneSession { get; set; } = true;
     }
@@ -218,7 +218,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 用户账号 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "用户账号")]
         [Required(ErrorMessage = "用户账号不能为空")]
         public string UserID { get; set; }
@@ -227,7 +227,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 用户名称 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "用户名称")]
         [Required(ErrorMessage = "用户名称不能为空")]
         public string UserName { get; set; }
@@ -236,7 +236,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 用户昵称 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "用户昵称")]
         public string NickName { get; set; }
 
@@ -244,7 +244,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 邮箱 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "邮箱")]
         public string Email { get; set; }
 
@@ -252,7 +252,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 性别 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "性别")]
         [Required(ErrorMessage = "用户性别不能为空")]
         public string Sex { get; set; }
@@ -261,7 +261,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 头像地址 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "头像地址")]
         public string AvatarUrl { get; set; }
 
@@ -269,7 +269,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : QQ 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "QQ")]
         public string QQ { get; set; }
 
@@ -277,7 +277,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 手机号码 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "手机号码")]
         public string Phone { get; set; }
 
@@ -285,7 +285,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 用户所在省份编码 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "用户所在省份编码")]
         public string ProvinceID { get; set; }
 
@@ -293,7 +293,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 用户所在省份 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "用户所在省份")]
         public string Province { get; set; }
 
@@ -301,7 +301,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 用户所在城市编码 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "用户所在城市编码")]
         public string CityID { get; set; }
 
@@ -309,7 +309,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 用户所在城市 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "用户所在城市")]
         public string City { get; set; }
 
@@ -317,7 +317,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 用户所在县/区编码 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "用户所在县/区编码")]
         public string CountyID { get; set; }
 
@@ -325,7 +325,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 用户所在县/区 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "用户所在县/区")]
         public string County { get; set; }
 
@@ -333,7 +333,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 地址 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "地址")]
         public string Address { get; set; }
 
@@ -341,7 +341,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 备注 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "备注")]
         public string Remark { get; set; }
 
@@ -349,7 +349,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 身份证 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "身份证")]
         public string IdentityCard { get; set; }
 
@@ -357,7 +357,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 生日 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "生日")]
         public DateTime? Birthday { get; set; }
 
@@ -365,7 +365,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 是否启用 
         /// 空值 : False
         /// 默认 : 1
-        /// <summary>
+        /// </summary>
         [Display(Name = "是否启用")]
         public bool Enabled { get; set; }
 
@@ -373,7 +373,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 单用户模式 
         /// 空值 : False
         /// 默认 : 0
-        /// <summary>
+        /// </summary>
         [Display(Name = "单用户模式")]
         public bool OneSession { get; set; }
     }
@@ -388,7 +388,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 删除用户数组 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "删除用户数组")]
         public List<string> UserIds { get; set; }
     }
@@ -403,7 +403,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 启用禁用用户
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "启用禁用用户")]
         public List<string> UserIds { get; set; }
 
@@ -411,7 +411,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 禁用/启用
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "禁用/启用")]
         public bool Status { get; set; }
     }
@@ -423,7 +423,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 用户账号 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "用户账号")]
         [Required(ErrorMessage = "用户账号不能为空")]
         public string UserID { get; set; }
@@ -432,7 +432,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 新密码 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "新密码")]
         [Required(ErrorMessage = "新密码不能为空")]
         public string ConfirmPassword { get; set; }

@@ -888,6 +888,16 @@
             角色定义接口
             </summary>
         </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.RolesController._rolePowerService">
+            <summary>
+            角色权限接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.RolesController._userRoleService">
+            <summary>
+            用户角色接口
+            </summary>
+        </member>
         <member name="M:Meiam.System.Hostd.Controllers.System.RolesController.Query(Meiam.System.Model.Dto.RolesQueryDto)">
             <summary>
             查询角色定义列表

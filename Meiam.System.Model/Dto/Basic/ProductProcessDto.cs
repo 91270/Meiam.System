@@ -26,7 +26,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 工序定义 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "工序定义")]
         public string QueryText { get; set; }
 
@@ -41,7 +41,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 工序编码 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "工序编码")]
         [Required(ErrorMessage = "请填写工序编码")]
         public string ProcessNo { get; set; }
@@ -50,7 +50,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 工序名称 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "工序名称")]
         [Required(ErrorMessage = "请填写工序名称")]
         public string ProcessName { get; set; }
@@ -59,7 +59,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 备注 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "备注")]
         public string Remark { get; set; }
 
@@ -67,7 +67,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 是否启用 
         /// 空值 : False
         /// 默认 : 1
-        /// <summary>
+        /// </summary>
         [Display(Name = "是否启用")]
         [Required(ErrorMessage = "请设置是否启用")]
         public bool Enable { get; set; }
@@ -76,7 +76,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 车间UID 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "工厂UID")]
         [Required(ErrorMessage = "所属车间ID不能为空")]
         public string WorkShopUID { get; set; }
@@ -91,7 +91,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : UUID 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "UUID")]
         [Required(ErrorMessage = "工序ID不能为空")]
         public string ID { get; set; }
@@ -100,7 +100,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 工序编码 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "工序编码")]
         [Required(ErrorMessage = "请填写工序编码")]
         public string ProcessNo { get; set; }
@@ -109,7 +109,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 工序名称 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "工序名称")]
         [Required(ErrorMessage = "请填写工序名称")]
         public string ProcessName { get; set; }
@@ -118,7 +118,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 备注 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "备注")]
         public string Remark { get; set; }
 
@@ -126,7 +126,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 是否启用 
         /// 空值 : False
         /// 默认 : 1
-        /// <summary>
+        /// </summary>
         [Display(Name = "是否启用")]
         [Required(ErrorMessage = "请设置是否启用")]
         public bool Enable { get; set; }
@@ -135,7 +135,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 车间UID 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "车间UID")]
         [Required(ErrorMessage = "所属车间ID不能为空")]
         public string WorkShopUID { get; set; }

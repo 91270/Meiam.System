@@ -23,7 +23,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 角色定义 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "角色定义")]
         public string Name { get; set; }
 
@@ -39,7 +39,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 角色定义 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "角色定义")]
         [Required(ErrorMessage = "请填写角色定义命名规则（RRIV_功能_操作）")]
         public string Name { get; set; }
@@ -48,7 +48,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 备注 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "备注")]
         public string Remark { get; set; }
     }
@@ -62,7 +62,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : UUID 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "UUID")]
         [Required(ErrorMessage = "更新角色定义不能为空")]
         public string ID { get; set; }
@@ -71,7 +71,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 角色定义 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "角色定义")]
         [Required(ErrorMessage = "请填写角色定义命名规则（RRIV_功能_操作）")]
         public string Name { get; set; }
@@ -80,7 +80,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 备注 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "备注")]
         public string Remark { get; set; }
     }

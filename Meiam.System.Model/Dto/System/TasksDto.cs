@@ -25,7 +25,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 查询字符串 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "查询字符串")]
         public string QueryText { get; set; }
 
@@ -40,7 +40,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 任务名称 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "任务名称")]
         [Required(ErrorMessage = "任务名称不能为空")]
         public string Name { get; set; }
@@ -49,7 +49,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 任务分组 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "任务分组")]
         [Required(ErrorMessage = "任务分组不能为空")]
         public string JobGroup { get; set; }
@@ -58,7 +58,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 运行时间表达式 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "运行时间表达式")]
         public string Cron { get; set; }
 
@@ -66,7 +66,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 程序集名称 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "程序集名称")]
         [Required(ErrorMessage = "程序集名称不能为空")]
         public string AssemblyName { get; set; }
@@ -75,7 +75,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 任务所在类 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "任务所在类")]
         [Required(ErrorMessage = "任务所在类不能为空")]
         public string ClassName { get; set; }
@@ -84,7 +84,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 任务描述 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "任务描述")]
         public string Remark { get; set; }
 
@@ -92,7 +92,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 开始时间 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "开始时间")]
         public DateTime? BeginTime { get; set; }
 
@@ -100,7 +100,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 结束时间 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "结束时间")]
         public DateTime? EndTime { get; set; }
 
@@ -108,7 +108,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 触发器类型（0、simple 1、cron） 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "触发器类型（0、simple 1、cron）")]
         public int TriggerType { get; set; }
 
@@ -116,7 +116,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 执行间隔时间(单位:秒) 
         /// 空值 : False
         /// 默认 : 0
-        /// <summary>
+        /// </summary>
         [Display(Name = "执行间隔时间(单位:秒)")]
         public int IntervalSecond { get; set; }
 
@@ -124,7 +124,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 传入参数 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "传入参数")]
         public string JobParams { get; set; }
     }
@@ -138,7 +138,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : UID 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "UID")]
         [Required(ErrorMessage = "UID不能为空")]
         public string ID { get; set; }
@@ -147,7 +147,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 任务名称 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "任务名称")]
         [Required(ErrorMessage = "任务名称不能为空")]
         public string Name { get; set; }
@@ -156,7 +156,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 任务分组 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "任务分组")]
         [Required(ErrorMessage = "任务分组不能为空")]
         public string JobGroup { get; set; }
@@ -165,7 +165,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 运行时间表达式 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "运行时间表达式")]
         public string Cron { get; set; }
 
@@ -173,7 +173,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 程序集名称 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "程序集名称")]
         [Required(ErrorMessage = "程序集名称不能为空")]
         public string AssemblyName { get; set; }
@@ -182,7 +182,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 任务所在类 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "任务所在类")]
         [Required(ErrorMessage = "任务所在类不能为空")]
         public string ClassName { get; set; }
@@ -191,7 +191,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 任务描述 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "任务描述")]
         public string Remark { get; set; }
 
@@ -199,7 +199,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 开始时间 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "开始时间")]
         public DateTime? BeginTime { get; set; }
 
@@ -207,7 +207,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 结束时间 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "结束时间")]
         public DateTime? EndTime { get; set; }
 
@@ -215,7 +215,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 触发器类型（0、simple 1、cron） 
         /// 空值 : False
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "触发器类型（0、simple 1、cron）")]
         public int TriggerType { get; set; }
 
@@ -223,7 +223,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 执行间隔时间(单位:秒) 
         /// 空值 : False
         /// 默认 : 0
-        /// <summary>
+        /// </summary>
         [Display(Name = "执行间隔时间(单位:秒)")]
         public int IntervalSecond { get; set; }
 
@@ -231,7 +231,7 @@ namespace Meiam.System.Model.Dto
         /// 描述 : 传入参数 
         /// 空值 : True
         /// 默认 : 
-        /// <summary>
+        /// </summary>
         [Display(Name = "传入参数")]
         public string JobParams { get; set; }
     }
