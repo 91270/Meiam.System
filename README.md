@@ -90,7 +90,7 @@
 
 项目默认使用的是 SQLServer, 备份文件 Meiam.System.sql，当然你也可以使用MYSQL 。
 
-### 修改 `appsettings.json` 中相关配置 
+### 修改 `appsettings.json`  `Nlog.Config ` 中相关配置 ，以及数据库连接
 
 ```c#
   // 数据库连接
