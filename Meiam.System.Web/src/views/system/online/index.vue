@@ -4,12 +4,6 @@
     <el-row v-if="searchToggle" :gutter="20">
       <el-col>
         <el-form ref="queryForm" :model="queryParams" :inline="true" @submit.native.prevent>
-          <el-form-item>
-            <el-date-picker v-model="queryParams.beginDate" :editable="false" :clearable="false" type="date" placeholder="开始时间" value-format="yyyy-MM-dd" @change="handleQuery" />
-          </el-form-item>
-          <el-form-item>
-            <el-date-picker v-model="queryParams.endDate" :editable="false" :clearable="false" type="date" placeholder="结束时间" value-format="yyyy-MM-dd" @change="handleQuery" />
-          </el-form-item>
           <el-form-item prop="queryText">
             <el-input v-model="queryParams.queryText" placeholder="请输入用户编号" clearable prefix-icon="el-icon-search" @keyup.enter.native="handleQuery" @clear="handleQuery" />
           </el-form-item>
@@ -51,7 +45,6 @@
 
 <script>
 import { queryOnline, deleteOnline } from '@/api/system/online'
-import { formatDate } from '@/utils/index'
 export default {
   name: 'online',
   data() {
@@ -77,8 +70,6 @@ export default {
       // 查询参数
       queryParams: {
         queryText: undefined,
-        beginDate: formatDate(-7),
-        endDate: formatDate(),
         pageSize: 10,
         orderby: 'loginTime',
         sort: 'descending'

@@ -55,7 +55,6 @@ namespace Meiam.System.Hostd.Controllers.System
             //开始拼装查询条件
             var predicate = Expressionable.Create<Sys_Online>();
 
-            predicate = predicate.And(m => m.LoginTime >= parm.BeginDate && m.LoginTime < parm.EndDate.AddDays(1));
             predicate = predicate.AndIF(!string.IsNullOrEmpty(parm.QueryText), m => m.UserID.Contains(parm.QueryText) || m.SessionID.Contains(parm.QueryText) || m.IPAddress.Contains(parm.QueryText));
 
             var response = _onlineService.GetPages(predicate.ToExpression(), parm);

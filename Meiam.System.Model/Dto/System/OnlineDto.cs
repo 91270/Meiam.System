@@ -21,24 +21,6 @@ namespace Meiam.System.Model.Dto
     public class OnlineQueryDto : PageParm
     {
         /// <summary>
-        /// 描述 : 开始时间 
-        /// 空值 : False
-        /// 默认 : 
-        /// </summary>
-        [Display(Name = "开始时间")]
-        [Required(ErrorMessage = "开始时间不能为空")]
-        public DateTime BeginDate { get; set; }
-
-        /// <summary>
-        /// 描述 : 结束时间 
-        /// 空值 : False
-        /// 默认 : 
-        /// </summary>
-        [Display(Name = "结束时间")]
-        [Required(ErrorMessage = "结束时间不能为空")]
-        public DateTime EndDate { get; set; }
-
-        /// <summary>
         /// 描述 : 查询字符串 
         /// 空值 : False
         /// 默认 : 
