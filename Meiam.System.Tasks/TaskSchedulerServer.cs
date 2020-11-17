@@ -178,9 +178,9 @@ namespace Meiam.System.Tasks
                     Message = $"启动计划任务:【{tasksQz.Name}】成功！",
                 };
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                throw;
             }
         }
 

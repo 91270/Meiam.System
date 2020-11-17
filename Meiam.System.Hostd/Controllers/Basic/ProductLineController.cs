@@ -124,10 +124,10 @@ namespace Meiam.System.Hostd.Controllers.Basic
 
                 return toResponse(response);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 _dataRelationService.RollbackTran();
-                throw ex;
+                throw;
             }
         }
 
@@ -177,10 +177,10 @@ namespace Meiam.System.Hostd.Controllers.Basic
 
                 return toResponse(response);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 _dataRelationService.RollbackTran();
-                throw ex;
+                throw;
             }
         }
 
@@ -211,10 +211,10 @@ namespace Meiam.System.Hostd.Controllers.Basic
 
                 return toResponse(response);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 _dataRelationService.RollbackTran();
-                throw ex;
+                throw;
             }
         }
     }

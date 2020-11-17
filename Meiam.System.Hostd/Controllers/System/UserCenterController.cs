@@ -192,9 +192,9 @@ namespace Meiam.System.Hostd.Controllers.System
 
                 return toResponse(avatarUrl);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                throw;
             }
         }
     }

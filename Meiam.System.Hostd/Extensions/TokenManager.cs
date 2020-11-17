@@ -124,7 +124,7 @@ namespace Meiam.System.Hostd.Extensions
 
             DateTime lastUpdateTime = _memoryCache.Get<DateTime>(userSession);
 
-            if (lastUpdateTime == null || (Convert.ToDateTime(lastUpdateTime).AddMinutes(2) < DateTime.Now))
+            if (Convert.ToDateTime(lastUpdateTime).AddMinutes(2) < DateTime.Now)
             {
                 // 记录本次更新时间
 

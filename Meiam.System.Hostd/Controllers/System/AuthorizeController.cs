@@ -191,10 +191,10 @@ namespace Meiam.System.Hostd.Controllers.System
 
                 return toResponse(StatusCodeType.Success);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 _userRelationService.RollbackTran();
-                throw ex;
+                throw;
             }
 
         }

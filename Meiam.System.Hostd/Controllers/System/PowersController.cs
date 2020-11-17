@@ -152,10 +152,10 @@ namespace Meiam.System.Hostd.Controllers.System
                 return toResponse(StatusCodeType.Success);
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 _rolePowerService.RollbackTran();
-                throw ex;
+                throw;
             }
         }
     }
