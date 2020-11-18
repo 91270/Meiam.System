@@ -14,9 +14,14 @@
 
 &nbsp;
 
+分支说明
+
+master -  .NET 5
+netcore31 - .NET Core 3.1
+
 ###  演示地址:   https://demo.meiam.top/
 
-运行环境 ： CENTOS7 + MYSQL  -  后台用户 9999 密码 123456
+运行环境 ： CENTOS7 / .NET 5 / MYSQL  -  后台用户 9999 密码 123456
 
 
 &nbsp;
