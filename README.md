@@ -16,8 +16,7 @@
 
 分支说明
 
-master -  .NET 5
-netcore31 - .NET Core 3.1
+master -  .NET 5    /   netcore31 - .NET Core 3.1
 
 ###  演示地址:   https://demo.meiam.top/
 
