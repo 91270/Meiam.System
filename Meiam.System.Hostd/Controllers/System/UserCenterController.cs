@@ -137,6 +137,11 @@ namespace Meiam.System.Hostd.Controllers.System
             try
             {
 
+                if (Convert.ToBoolean(AppSettings.Configuration["AppSettings:Demo"]))
+                {
+                    return toResponse(StatusCodeType.Error, "当前为演示模式 , 您无权修改任何数据");
+                }
+
                 var fileExtName = Path.GetExtension(file.FileName).ToLower();
 
                 var fileName = DateTime.Now.Ticks.ToString() + fileExtName;
