@@ -19,7 +19,7 @@ using System.Threading.Tasks;
 
 namespace Meiam.System.Interfaces
 {
-    public class ToolsService: DbContext, IToolsService
+    public class ToolsService : DbContext, IToolsService
     {
         /// <summary>
         /// 根据数据库表生产Model层
@@ -47,10 +47,10 @@ namespace Meiam.System.Interfaces
                     $"\r\n" +
                     $"using System.ComponentModel.DataAnnotations;\r\n" +
                     $"{{using}}\r\n" +
-                    $"\r\n" +                   
+                    $"\r\n" +
                     $"namespace { strNameSpace }\r\n" +
                     $"{{\r\n" +
-                    $"{{ClassDescription}}{{SugarTable}}{(blnSerializable ? "[Serializable]":"")}\r\n" +
+                    $"{{ClassDescription}}{{SugarTable}}{(blnSerializable ? "[Serializable]" : "")}\r\n" +
                     $"    public class {{ClassName}}{(string.IsNullOrEmpty(strInterface) ? "" : (" : " + strInterface))}\r\n" +
                     $"    {{\r\n" +
                     $"          public {{ClassName}}()\r\n" +
@@ -134,11 +134,26 @@ namespace Meiam.System.Interfaces
                     $"\r\n" +
                     $"        public SqlSugarClient Db;   //用来处理事务多表查询和复杂的操作\r\n" +
                     $"\r\n" +
-                    $"        public static DbContext Current\r\n" +
+                    $"        public static SqlSugarClient Current\r\n" +
                     $"        {{\r\n" +
                     $"            get\r\n" +
                     $"            {{\r\n" +
-                    $"                return new DbContext();\r\n" +
+                    $"                return new SqlSugarClient(new ConnectionConfig()\r\n" +
+                    $"                {{\r\n" +
+                    $"                    ConnectionString = AppSettings.Configuration[\"DbConnection:ConnectionString\"],\r\n" +
+                    $"                    DbType = (DbType)Convert.ToInt32(AppSettings.Configuration[\"DbConnection:DbType\"]),\r\n" +
+                    $"                    IsAutoCloseConnection = false,\r\n" +
+                    $"                    IsShardSameThread = true,\r\n" +
+                    $"                    InitKeyType = InitKeyType.Attribute,\r\n" +
+                    $"                    ConfigureExternalServices = new ConfigureExternalServices()\r\n" +
+                    $"                    {{\r\n" +
+                    $"                        DataInfoCacheService = new RedisCache()\r\n" +
+                    $"                    }},\r\n" +
+                    $"                    MoreSettings = new ConnMoreSettings()\r\n" +
+                    $"                    {{\r\n" +
+                    $"                        IsAutoRemoveDataCache = true\r\n" +
+                    $"                    }}\r\n" +
+                    $"                }});\r\n" +
                     $"            }}\r\n" +
                     $"        }}\r\n" +
                     $"\r\n" +
@@ -254,7 +269,7 @@ namespace Meiam.System.Interfaces
                     $"    {{\r\n" +
                     $"\r\n" +
                     $"        #region CustomInterface \r\n" +
-                    $"{(string.IsNullOrWhiteSpace(value) ? "":value)}" +
+                    $"{(string.IsNullOrWhiteSpace(value) ? "" : value)}" +
                     $"        #endregion\r\n" +
                     $"\r\n" +
                     $"    }}\r\n" +
@@ -316,6 +331,7 @@ namespace Meiam.System.Interfaces
                     $"using Meiam.System.Model.View;\r\n" +
                     $"using System.Collections.Generic;\r\n" +
                     $"using System.Threading.Tasks;\r\n" +
+                    $"using SqlSugar;\r\n" +
                     $"using System.Linq;\r\n" +
                     $"\r\n" +
                     $"namespace {strNameSpace}\r\n" +

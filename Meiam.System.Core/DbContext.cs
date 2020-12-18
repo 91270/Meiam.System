@@ -23,11 +23,26 @@ namespace Meiam.System.Core
 
         public SqlSugarClient Db;   //用来处理事务多表查询和复杂的操作
 
-        public static DbContext Current
+        public static SqlSugarClient Current
         {
             get
             {
-                return new DbContext();
+                return new SqlSugarClient(new ConnectionConfig()
+                {
+                    ConnectionString = AppSettings.Configuration["DbConnection:ConnectionString"],
+                    DbType = (DbType)Convert.ToInt32(AppSettings.Configuration["DbConnection:DbType"]),
+                    IsAutoCloseConnection = false,
+                    IsShardSameThread = true,
+                    InitKeyType = InitKeyType.Attribute,
+                    ConfigureExternalServices = new ConfigureExternalServices()
+                    {
+                        DataInfoCacheService = new RedisCache()
+                    },
+                    MoreSettings = new ConnMoreSettings()
+                    {
+                        IsAutoRemoveDataCache = true
+                    }
+                });
             }
         }
 
@@ -61,10 +76,6 @@ namespace Meiam.System.Core
             return new DbSet<T>(Db);
         }
 
-        public DbSet<Sys_UserRelation> SysUserRelationDb => new DbSet<Sys_UserRelation>(Db);
-        public DbSet<Sys_UserRole> SysUserRoleDb => new DbSet<Sys_UserRole>(Db);
-        public DbSet<Sys_Users> SysUsersDb => new DbSet<Sys_Users>(Db);
-        public DbSet<Sys_TasksQz> SysTasksQzDb => new DbSet<Sys_TasksQz>(Db);
         public DbSet<Base_Company> BaseCompanyDb => new DbSet<Base_Company>(Db);
         public DbSet<Base_Equipment> BaseEquipmentDb => new DbSet<Base_Equipment>(Db);
         public DbSet<Base_Factory> BaseFactoryDb => new DbSet<Base_Factory>(Db);
@@ -79,6 +90,10 @@ namespace Meiam.System.Core
         public DbSet<Sys_Power> SysPowerDb => new DbSet<Sys_Power>(Db);
         public DbSet<Sys_Role> SysRoleDb => new DbSet<Sys_Role>(Db);
         public DbSet<Sys_RolePower> SysRolePowerDb => new DbSet<Sys_RolePower>(Db);
+        public DbSet<Sys_TasksQz> SysTasksQzDb => new DbSet<Sys_TasksQz>(Db);
+        public DbSet<Sys_UserRelation> SysUserRelationDb => new DbSet<Sys_UserRelation>(Db);
+        public DbSet<Sys_UserRole> SysUserRoleDb => new DbSet<Sys_UserRole>(Db);
+        public DbSet<Sys_Users> SysUsersDb => new DbSet<Sys_Users>(Db);
 
     }
 

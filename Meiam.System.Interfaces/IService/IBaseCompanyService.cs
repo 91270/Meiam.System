@@ -10,6 +10,7 @@ using Meiam.System.Model.Dto;
 using Meiam.System.Model.View;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using SqlSugar;
 using System.Linq;
 
 namespace Meiam.System.Interfaces
