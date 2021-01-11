@@ -1,4 +1,5 @@
 ﻿using Meiam.System.Interfaces;
+using Meiam.System.Tools.Tasks;
 using System;
 using System.IO;
 
@@ -9,21 +10,38 @@ namespace Meiam.System.Tools
 
         static void Main(string[] args)
         {
-
-            var allTables = new ToolsService().GetAllTables();
-            foreach(var table in allTables)
+            do
             {
-                Console.Write($"生成[{ table }]表 模型: ");
-                Console.WriteLine(new ToolsService().CreateModels("..\\..\\..\\..\\Meiam.System.Model\\Entity", "Meiam.System.Model", table, ""));
-                Console.Write($"生成[{ table }]表 服务: ");
-                Console.WriteLine(new ToolsService().CreateServices("..\\..\\..\\..\\Meiam.System.Interfaces\\Service", "Meiam.System.Interfaces", table));
-                Console.Write($"生成[{ table }]表 接口: ");
-                Console.WriteLine(new ToolsService().CreateIServices("..\\..\\..\\..\\Meiam.System.Interfaces\\IService", "Meiam.System.Interfaces", table));
-            }
+                try
+                {
+                    Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
+                    Console.WriteLine("=============================================================================");
+                    Console.WriteLine("*            1      -      生成模型");
+                    Console.WriteLine("=============================================================================");
+                    Console.Write("请选择要执行的程序 : ");
+                    Console.ResetColor();
 
-            Console.Write($"生成DbContext: ");
-            Console.WriteLine(new ToolsService().CreateDbContext("..\\..\\..\\..\\Meiam.System.Core\\DbContext.cs", "Meiam.System.Core"));
-            Console.ReadKey();
+                    switch (Int32.Parse(Console.ReadLine()))
+                    {
+                        case 1:
+
+                            #region  生成模型
+                            Task001.Execute();
+                            #endregion
+
+                            Console.ReadKey();
+
+                            break;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    Console.ReadKey();
+                }
+            } while (true);
         }
+
     }
 }

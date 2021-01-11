@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using SqlSugar;
 using System.Linq;
+using System;
 
 namespace Meiam.System.Interfaces
 {

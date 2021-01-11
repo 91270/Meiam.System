@@ -25,11 +25,11 @@ namespace Meiam.System.Interfaces
         /// 根据数据库表生产Model层
         /// </summary>
         /// <param name="strPath">实体类存放路径</param>
-        /// <param name="strNameSpace">命名空间</param>
+        /// <param name="strSolutionName">项目名称</param>
         /// <param name="tableName">生产指定的表</param>
         /// <param name="strInterface">实现接口</param>
         /// <param name="blnSerializable">是否序列化</param>
-        public bool CreateModels(string strPath, string strNameSpace, string tableName, string strInterface, bool blnSerializable = false)
+        public bool CreateModels(string strPath, string strSolutionName, string tableName, string strInterface, bool blnSerializable = false)
         {
 
             try
@@ -48,7 +48,7 @@ namespace Meiam.System.Interfaces
                     $"using System.ComponentModel.DataAnnotations;\r\n" +
                     $"{{using}}\r\n" +
                     $"\r\n" +
-                    $"namespace { strNameSpace }\r\n" +
+                    $"namespace { strSolutionName }.Model\r\n" +
                     $"{{\r\n" +
                     $"{{ClassDescription}}{{SugarTable}}{(blnSerializable ? "[Serializable]" : "")}\r\n" +
                     $"    public class {{ClassName}}{(string.IsNullOrEmpty(strInterface) ? "" : (" : " + strInterface))}\r\n" +
@@ -83,7 +83,7 @@ namespace Meiam.System.Interfaces
                 IDbFirst.IsCreateDefaultValue().IsCreateAttribute()
                     .SettingClassTemplate(p => p = classTemplate)
                     .SettingPropertyDescriptionTemplate(p => p = descriptionTemplate)
-                     .CreateClassFile(strPath, strNameSpace);
+                     .CreateClassFile(strPath, $"{ strSolutionName }.Model");
 
                 return true;
             }
@@ -99,8 +99,8 @@ namespace Meiam.System.Interfaces
         /// 生成DbContext.cs文件
         /// </summary>
         /// <param name="strPath">存放路径</param>
-        /// <param name="strNameSpace">命名空间</param>
-        public bool CreateDbContext(string strPath, string strNameSpace)
+        /// <param name="strSolutionName">项目名称</param>
+        public bool CreateDbContext(string strPath, string strSolutionName)
         {
             try
             {
@@ -117,14 +117,14 @@ namespace Meiam.System.Interfaces
                     $"// </auto-generated>\r\n" +
                     $"//------------------------------------------------------------------------------\r\n" +
                     $"\r\n" +
-                    $"using Meiam.System.Common;\r\n" +
-                    $"using Meiam.System.Model;\r\n" +
+                    $"using { strSolutionName }.Common;\r\n" +
+                    $"using { strSolutionName }.Model;\r\n" +
                     $"using System.Diagnostics;\r\n" +
                     $"using System.Linq;\r\n" +
                     $"using SqlSugar;\r\n" +
                     $"using System;\r\n" +
                     $"\r\n" +
-                    $"namespace { strNameSpace }\r\n" +
+                    $"namespace { strSolutionName }.Core\r\n" +
                     $"{{\r\n" +
                     $"        /// <summary>\r\n" +
                     $"        /// 数据库上下文\r\n" +
@@ -222,7 +222,14 @@ namespace Meiam.System.Interfaces
             }
         }
 
-        public bool CreateServices(string strPath, string strNameSpace, string tableName)
+        /// <summary>
+        /// 生成Service服务层
+        /// </summary>
+        /// <param name="strPath">存放路径</param>
+        /// <param name="strSolutionName">项目名称</param>
+        /// <param name="tableName">生产指定的表</param>
+        /// <returns></returns>
+        public bool CreateServices(string strPath, string strSolutionName, string tableName)
         {
             try
             {
@@ -255,15 +262,16 @@ namespace Meiam.System.Interfaces
                     $"//     author MEIAM\r\n" +
                     $"// </auto-generated>\r\n" +
                     $"//------------------------------------------------------------------------------\r\n" +
-                    $"using Meiam.System.Model;\r\n" +
-                    $"using Meiam.System.Model.Dto;\r\n" +
-                    $"using Meiam.System.Model.View;\r\n" +
+                    $"using { strSolutionName }.Model;\r\n" +
+                    $"using { strSolutionName }.Model.Dto;\r\n" +
+                    $"using { strSolutionName }.Model.View;\r\n" +
                     $"using System.Collections.Generic;\r\n" +
                     $"using System.Threading.Tasks;\r\n" +
                     $"using SqlSugar;\r\n" +
                     $"using System.Linq;\r\n" +
+                    $"using System;\r\n" +
                     $"\r\n" +
-                    $"namespace {strNameSpace}\r\n" +
+                    $"namespace { strSolutionName }.Interfaces\r\n" +
                     $"{{\r\n" +
                     $"    public class {tableName.Replace("_", "")}Service : BaseService<{tableName}>, I{tableName.Replace("_", "")}Service\r\n" +
                     $"    {{\r\n" +
@@ -289,11 +297,11 @@ namespace Meiam.System.Interfaces
         /// <summary>
         /// 生成IService服务层
         /// </summary>
-        /// <param name="strPath">实体类存放路径</param>
-        /// <param name="strNameSpace">命名空间</param>
+        /// <param name="strPath">存放路径</param>
+        /// <param name="strSolutionName">项目名称</param>
         /// <param name="tableName">生产指定的表</param>
         /// <returns></returns>
-        public bool CreateIServices(string strPath, string strNameSpace, string tableName)
+        public bool CreateIServices(string strPath, string strSolutionName, string tableName)
         {
             try
             {
@@ -326,15 +334,16 @@ namespace Meiam.System.Interfaces
                     $"//     author MEIAM\r\n" +
                     $"// </auto-generated>\r\n" +
                     $"//------------------------------------------------------------------------------\r\n" +
-                    $"using Meiam.System.Model;\r\n" +
-                    $"using Meiam.System.Model.Dto;\r\n" +
-                    $"using Meiam.System.Model.View;\r\n" +
+                    $"using { strSolutionName }.Model;\r\n" +
+                    $"using { strSolutionName }.Model.Dto;\r\n" +
+                    $"using { strSolutionName }.Model.View;\r\n" +
                     $"using System.Collections.Generic;\r\n" +
                     $"using System.Threading.Tasks;\r\n" +
                     $"using SqlSugar;\r\n" +
                     $"using System.Linq;\r\n" +
+                    $"using System;\r\n" +
                     $"\r\n" +
-                    $"namespace {strNameSpace}\r\n" +
+                    $"namespace { strSolutionName }.Interfaces\r\n" +
                     $"{{\r\n" +
                     $"    public interface I{tableName.Replace("_", "")}Service : IBaseService<{tableName}>\r\n" +
                     $"    {{\r\n" +
