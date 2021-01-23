@@ -88,7 +88,10 @@
 
 ### 导入数据库文件 
 
-项目默认使用的是 SQLServer, 备份文件 Meiam.System.sql，当然你也可以使用MYSQL 。
+项目默认使用的是 SQLServer, 请导入备份文件 [Meiam.System-SQLServer.sql] 。
+
+如果你使用 MySQL 数据， 请选择对应的备份文件 [Meiam.System-MySQL.sql] 
+复制 [NLog-MySQL.config] Meiam.System.Hostd 目录重命名为 NLog.config
 
 ### 修改 `appsettings.json`  `Nlog.Config ` 中相关配置 ，以及数据库连接
 
