@@ -48,7 +48,7 @@ namespace Meiam.System.Model
         /// <summary>
         /// 接口返回值
         /// </summary>
-        public T Data;
+        public T Data { get; set; }
 
     }
 
