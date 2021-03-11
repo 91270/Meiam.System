@@ -51,10 +51,6 @@ namespace Meiam.System.Hostd
             });
             #endregion
 
-            #region 自动映射
-            services.AddScoped<IMapper, ServiceMapper>();
-            #endregion
-
             #region 说明文档
             services.AddSwaggerGen(c =>
             {
