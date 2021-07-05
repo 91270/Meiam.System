@@ -6,8 +6,8 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="5.0.0" />
-    <PackageReference Include="NLog" Version="4.7.6" />
-    <PackageReference Include="Quartz" Version="3.2.3" />
+    <PackageReference Include="NLog" Version="4.7.10" />
+    <PackageReference Include="Quartz" Version="3.3.2" />
   </ItemGroup>
 
   <ItemGroup>

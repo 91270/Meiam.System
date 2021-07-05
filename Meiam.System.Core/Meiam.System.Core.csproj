@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CSRedisCore" Version="3.6.5" />
-    <PackageReference Include="sqlSugarCore" Version="5.0.1.7" />
+    <PackageReference Include="CSRedisCore" Version="3.6.6" />
+    <PackageReference Include="SqlSugarCore.MySqlConnector" Version="5.0.3" />
   </ItemGroup>
 
   <ItemGroup>

@@ -32,7 +32,6 @@ namespace Meiam.System.Core
                     ConnectionString = AppSettings.Configuration["DbConnection:ConnectionString"],
                     DbType = (DbType)Convert.ToInt32(AppSettings.Configuration["DbConnection:DbType"]),
                     IsAutoCloseConnection = false,
-                    IsShardSameThread = true,
                     InitKeyType = InitKeyType.Attribute,
                     ConfigureExternalServices = new ConfigureExternalServices()
                     {
@@ -53,7 +52,6 @@ namespace Meiam.System.Core
                 ConnectionString = AppSettings.Configuration["DbConnection:ConnectionString"],
                 DbType = (DbType)Convert.ToInt32(AppSettings.Configuration["DbConnection:DbType"]),
                 IsAutoCloseConnection = true,
-                IsShardSameThread = true,
                 InitKeyType = InitKeyType.Attribute,
                 ConfigureExternalServices = new ConfigureExternalServices()
                 {
@@ -94,6 +92,8 @@ namespace Meiam.System.Core
         public DbSet<Sys_UserRelation> SysUserRelationDb => new DbSet<Sys_UserRelation>(Db);
         public DbSet<Sys_UserRole> SysUserRoleDb => new DbSet<Sys_UserRole>(Db);
         public DbSet<Sys_Users> SysUsersDb => new DbSet<Sys_Users>(Db);
+        public DbSet<Test_Cap01> TestCap01Db => new DbSet<Test_Cap01>(Db);
+        public DbSet<Test_Cap02> TestCap02Db => new DbSet<Test_Cap02>(Db);
 
     }
 

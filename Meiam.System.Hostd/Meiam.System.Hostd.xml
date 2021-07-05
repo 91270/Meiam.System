@@ -1159,6 +1159,18 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Meiam.System.Hostd.Controllers.TestController.Success">
+            <summary>
+            Success
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meiam.System.Hostd.Controllers.TestController.Error">
+            <summary>
+            Error
+            </summary>
+            <returns></returns>
+        </member>
         <member name="F:Meiam.System.Hostd.Extensions.TokenManager._memoryCache">
             <summary>
             缓存组件
