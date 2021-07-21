@@ -18,9 +18,14 @@
 
 master -  .NET 5    /   netcore31 - .NET Core 3.1
 
-###  演示地址:   https://demo.meiam.top/
 
-运行环境 ： CENTOS7 / .NET 5 / MYSQL  -  后台用户 9999 密码 123456
+###  演示地址:   https://demo.meiam.top
+
+运行环境 ： CENTOS7 / .NET 5 / MYSQL
+
+后台用户 9999 密码 123456
+
+
 
 
 &nbsp;
@@ -93,12 +98,13 @@ master -  .NET 5    /   netcore31 - .NET Core 3.1
 
 ### 导入数据库文件 
 
-项目默认使用的是 SQLServer, 请导入备份文件 [Meiam.System-SQLServer.sql] 。
+根据你选用的数据库, 导入 [Meiam.System-SQLServer.sql] 或 [Meiam.System-MySQL.sql] 数据库文件备份
 
-如果你使用 MySQL 数据， 请选择对应的备份文件 [Meiam.System-MySQL.sql] 
-复制 [NLog-MySQL.config] Meiam.System.Hostd 目录重命名为 NLog.config
+### 替换日志配置文件
 
-### 修改 `appsettings.json`  `Nlog.Config ` 中相关配置 ，以及数据库连接
+根据你选用的数据库, 复制 [NLog-SQLServer.config] 或 [NLog-MySQL.config] 到 Meiam.System.Hostd 目录，并重命名为 NLog.config
+
+### 修改 `appsettings.json`  `Nlog.Config ` 中相关配置数  (数据库 REDIS 密码 等信息)
 
 
 ```c#
