@@ -32,9 +32,7 @@ namespace Meiam.System.Core
                     ConnectionString = AppSettings.Configuration["DbConnection:ConnectionString"],
                     DbType = (DbType)Convert.ToInt32(AppSettings.Configuration["DbConnection:DbType"]),
                     IsAutoCloseConnection = false,
-#pragma warning disable CS0618 // 类型或成员已过时
                     IsShardSameThread = true,
-#pragma warning restore CS0618 // 类型或成员已过时
                     InitKeyType = InitKeyType.Attribute,
                     ConfigureExternalServices = new ConfigureExternalServices()
                     {
@@ -55,9 +53,7 @@ namespace Meiam.System.Core
                 ConnectionString = AppSettings.Configuration["DbConnection:ConnectionString"],
                 DbType = (DbType)Convert.ToInt32(AppSettings.Configuration["DbConnection:DbType"]),
                 IsAutoCloseConnection = true,
-#pragma warning disable CS0618 // 类型或成员已过时
                 IsShardSameThread = true,
-#pragma warning restore CS0618 // 类型或成员已过时
                 InitKeyType = InitKeyType.Attribute,
                 ConfigureExternalServices = new ConfigureExternalServices()
                 {
