@@ -4,7 +4,7 @@
       <el-col>
         <el-form :inline="true" @submit.native.prevent>
           <el-form-item>
-            <el-input v-model="queryParams.queryText" placeholder="请输入产线名称" clearable prefix-icon="el-icon-search" @keyup.enter.native="handleQuery" @clear="handleQuery" />
+            <el-input v-model="queryParams.queryText" placeholder="请输入设备名称" clearable prefix-icon="el-icon-search" @keyup.enter.native="handleQuery" @clear="handleQuery" />
           </el-form-item>
           <el-form-item>
             <el-button type="primary" icon="el-icon-search" @click="handleQuery">搜索</el-button>
@@ -14,7 +14,7 @@
       </el-col>
     </el-row>
     <el-row type="flex" class="mb8">
-      <el-button type="success" icon="el-icon-plus" size="mini" @click="handleCreate">新增产线</el-button>
+      <el-button type="success" icon="el-icon-plus" size="mini" @click="handleCreate">新增设备</el-button>
       <el-button-group style="margin-left: auto;">
         <el-button size="mini" plain type="info" icon="el-icon-search" @click="handleSearch" />
         <el-button size="mini" icon="el-icon-refresh" @click="handleQuery" />
@@ -23,8 +23,8 @@
     <el-row>
       <el-table ref="productline" v-loading="loading" :data="dataProductline" row-key="id" stripe border :height="tableHeight*0.65" :default-sort="{prop: queryParams.orderby, order: queryParams.sort}" @sort-change="handleSortable">
         <el-table-column type="index" :index="handleIndexCalc" label="#" align="center" />
-        <el-table-column sortable prop="lineNo" align="center" :show-overflow-tooltip="true" label="产线编号" width="120" />
-        <el-table-column sortable prop="lineName" :show-overflow-tooltip="true" align="center" label="产线名称" />
+        <el-table-column sortable prop="[lineNo]" align="center" :show-overflow-tooltip="true" label="设备编号" width="120" />
+        <el-table-column sortable prop="lineName" :show-overflow-tooltip="true" align="center" label="设备名称" />
         <el-table-column sortable prop="processName" :show-overflow-tooltip="true" align="center" label="所属工序" />
         <el-table-column sortable prop="workShopName" :show-overflow-tooltip="true" align="center" label="所属车间" />
         <el-table-column sortable prop="factoryName" :show-overflow-tooltip="true" align="center" label="所属工厂" />
@@ -51,13 +51,13 @@
       <el-form ref="form" :model="form" :rules="rules" label-width="80px">
         <el-row>
           <el-col :span="24">
-            <el-form-item label="产线编号" maxlength="50" prop="lineNo">
-              <el-input v-model="form.lineNo" placeholder="请输入产线编号" />
+            <el-form-item label="设备编号" maxlength="50" prop="lineNo">
+              <el-input v-model="form.lineNo" placeholder="请输入设备编号" />
             </el-form-item>
           </el-col>
           <el-col :span="24">
-            <el-form-item label="产线名称" prop="lineName">
-              <el-input v-model="form.lineName" placeholder="请输入产线名称" />
+            <el-form-item label="设备名称" prop="lineName">
+              <el-input v-model="form.lineName" placeholder="请输入设备名称" />
             </el-form-item>
           </el-col>
           <el-col :span="24">
@@ -82,8 +82,8 @@
             </el-form-item>
           </el-col>
           <el-col :span="24">
-            <el-form-item label="产线备注" prop="remark">
-              <el-input v-model="form.remark" type="textarea" :autosize="{minRows:2}" maxlength="100" show-word-limit placeholder="请输入产线备注" />
+            <el-form-item label="设备备注" prop="remark">
+              <el-input v-model="form.remark" type="textarea" :autosize="{minRows:2}" maxlength="100" show-word-limit placeholder="请输入设备备注" />
             </el-form-item>
           </el-col>
           <el-col :span="6">
@@ -135,18 +135,18 @@ export default {
         queryText: undefined,
         pageIndex: 1,
         pageSize: 10,
-        orderby: 'lineNo',
+        orderby: '[lineNo]',
         sort: 'descending'
       },
-      // 产线列表
+      // 设备列表
       dataProductline: [],
       // 表单校验
       rules: {
         lineNo: [
-          { required: true, message: '产线编号不能为空', trigger: 'blur' }
+          { required: true, message: '设备编号不能为空', trigger: 'blur' }
         ],
         lineName: [
-          { required: true, message: '产线名称不能为空', trigger: 'blur' }
+          { required: true, message: '设备名称不能为空', trigger: 'blur' }
         ],
         workShopUID: [
           { required: true, message: '所属车间不能为空', trigger: 'blur' }
@@ -179,7 +179,7 @@ export default {
     })
   },
   methods: {
-    /** 查询产线列表 */
+    /** 查询设备列表 */
     getList() {
       this.loading = true
       queryProductline(this.queryParams).then(response => {
@@ -200,18 +200,18 @@ export default {
     handleCreate() {
       this.reset()
       this.open = true
-      this.title = '添加产线'
+      this.title = '添加设备'
     },
     /** 修改按钮操作 */
     handleUpdate(row) {
       this.reset()
       this.form = row
       this.open = true
-      this.title = '修改产线'
+      this.title = '修改设备'
     },
     /** 删除按钮操作 */
     handleDelete(row) {
-      this.$confirm('是否确认删除名称为"' + row.lineName + '"的产线?', '警告', {
+      this.$confirm('是否确认删除名称为"' + row.lineName + '"的设备?', '警告', {
         confirmButtonText: '确定',
         cancelButtonText: '取消',
         type: 'warning'
@@ -313,7 +313,7 @@ export default {
     filterWorkshop(data, search) {
       return data.filter(m => m.factoryUID === search)
     },
-    // 过滤产线
+    // 过滤设备
     filterProcess(data, search) {
       return data.filter(m => m.workShopUID === search)
     }

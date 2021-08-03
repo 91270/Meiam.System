@@ -58,8 +58,7 @@ namespace Meiam.System.Interfaces
                 CreateName = a.CreateName,
                 UpdateID = a.UpdateID,
                 UpdateName = a.UpdateName
-            })
-            .MergeTable();
+            }).MergeTable();
 
             return source.ToPage(new PageParm { PageIndex = parm.PageIndex, PageSize = parm.PageSize, OrderBy = parm.OrderBy, Sort = parm.Sort });
         }
