@@ -19,6 +19,10 @@ namespace Meiam.System.Interfaces
     public class SysPowerService : BaseService<Sys_Power>, ISysPowerService
     {
 
+        public SysPowerService(IUnitOfWork unitOfWork) : base(unitOfWork)
+        {
+        }
+
         #region CustomInterface 
         #endregion
 

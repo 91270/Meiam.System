@@ -19,6 +19,10 @@ namespace Meiam.System.Interfaces
     public class SysUserRelationService : BaseService<Sys_UserRelation>, ISysUserRelationService
     {
 
+        public SysUserRelationService(IUnitOfWork unitOfWork) : base(unitOfWork)
+        {
+        }
+
         #region CustomInterface 
         /// <summary>
         /// 获取用户拥有公司

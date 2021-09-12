@@ -19,6 +19,10 @@ namespace Meiam.System.Interfaces
     public class TestCap02Service : BaseService<Test_Cap02>, ITestCap02Service
     {
 
+        public TestCap02Service(IUnitOfWork unitOfWork) : base(unitOfWork)
+        {
+        }
+
         #region CustomInterface 
         #endregion
 

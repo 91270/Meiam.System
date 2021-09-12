@@ -19,6 +19,10 @@ namespace Meiam.System.Interfaces
     public class BaseFactoryService : BaseService<Base_Factory>, IBaseFactoryService
     {
 
+        public BaseFactoryService(IUnitOfWork unitOfWork) : base(unitOfWork)
+        {
+        }
+
         #region CustomInterface 
         /// <summary>
         /// 查询工厂（分页）

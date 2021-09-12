@@ -19,6 +19,10 @@ namespace Meiam.System.Interfaces
     public class SysOnlineService : BaseService<Sys_Online>, ISysOnlineService
     {
 
+        public SysOnlineService(IUnitOfWork unitOfWork) : base(unitOfWork)
+        {
+        }
+
         #region CustomInterface 
         #endregion
 

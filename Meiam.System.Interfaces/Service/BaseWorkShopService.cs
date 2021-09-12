@@ -19,6 +19,10 @@ namespace Meiam.System.Interfaces
     public class BaseWorkShopService : BaseService<Base_WorkShop>, IBaseWorkShopService
     {
 
+        public BaseWorkShopService(IUnitOfWork unitOfWork) : base(unitOfWork)
+        {
+        }
+
         #region CustomInterface 
         /// <summary>
         /// 查询车间（分页）

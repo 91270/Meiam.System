@@ -58,11 +58,11 @@ namespace Meiam.System.Tasks.HostedService
 				RemoveExpiredSession(SourceType.Web.ToString(), Convert.ToInt32(AppSettings.Configuration["AppSettings:WebSessionExpire"]));
 				RemoveExpiredSession(SourceType.MiniProgram.ToString(), Convert.ToInt32(AppSettings.Configuration["AppSettings:MiniProgramSessionExpire"]));
 
-				_logger.LogDebug("Run RemoveExpiredSession Succeed.");
+				_logger.LogInformation("Run RemoveExpiredSession Succeed.");
 			}
 			catch (Exception ex)
 			{
-				_logger.LogDebug($"Run RemoveExpiredSession Fail.   Message : {ex.Message}.");
+				_logger.LogError($"Run RemoveExpiredSession Fail.   Message : {ex.Message}.");
 			}
 		}
 

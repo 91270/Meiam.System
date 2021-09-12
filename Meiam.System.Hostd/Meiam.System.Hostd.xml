@@ -136,6 +136,11 @@
             数据关系接口
             </summary>
         </member>
+        <member name="F:Meiam.System.Hostd.Controllers.Basic.EquipmentController._unitOfWork">
+            <summary>
+            工作单元接口
+            </summary>
+        </member>
         <member name="M:Meiam.System.Hostd.Controllers.Basic.EquipmentController.Query(Meiam.System.Model.Dto.EquipmentQueryDto)">
             <summary>
             查询机台定义列表
@@ -214,6 +219,11 @@
             数据关系接口
             </summary>
         </member>
+        <member name="F:Meiam.System.Hostd.Controllers.Basic.FactoryController._unitOfWork">
+            <summary>
+            工作单元接口
+            </summary>
+        </member>
         <member name="M:Meiam.System.Hostd.Controllers.Basic.FactoryController.Query(Meiam.System.Model.Dto.FactoryQueryDto)">
             <summary>
             查询工厂定义列表
@@ -275,6 +285,11 @@
         <member name="F:Meiam.System.Hostd.Controllers.Basic.ProductLineController._dataRelationService">
             <summary>
             数据关系接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.Basic.ProductLineController._unitOfWork">
+            <summary>
+            工作单元接口
             </summary>
         </member>
         <member name="M:Meiam.System.Hostd.Controllers.Basic.ProductLineController.Query(Meiam.System.Model.Dto.ProductLineQueryDto)">
@@ -340,6 +355,11 @@
             数据关系接口
             </summary>
         </member>
+        <member name="F:Meiam.System.Hostd.Controllers.Basic.ProductProcessController._unitOfWork">
+            <summary>
+            工作单元接口
+            </summary>
+        </member>
         <member name="M:Meiam.System.Hostd.Controllers.Basic.ProductProcessController.Query(Meiam.System.Model.Dto.ProductProcessQueryDto)">
             <summary>
             查询工序定义列表
@@ -401,6 +421,11 @@
         <member name="F:Meiam.System.Hostd.Controllers.Basic.WorkShopController._dataRelationService">
             <summary>
             数据关系接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.Basic.WorkShopController._unitOfWork">
+            <summary>
+            工作单元接口
             </summary>
         </member>
         <member name="M:Meiam.System.Hostd.Controllers.Basic.WorkShopController.Query(Meiam.System.Model.Dto.WorkShopQueryDto)">
@@ -574,6 +599,11 @@
         <member name="F:Meiam.System.Hostd.Controllers.System.AuthorizeController._processService">
             <summary>
             工序定义接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.AuthorizeController._unitOfWork">
+            <summary>
+            工作单元接口
             </summary>
         </member>
         <member name="M:Meiam.System.Hostd.Controllers.System.AuthorizeController.GetRelationTree(System.String)">
@@ -787,6 +817,11 @@
             角色权限接口
             </summary>
         </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.PowersController._unitOfWork">
+            <summary>
+            工作单元接口
+            </summary>
+        </member>
         <member name="M:Meiam.System.Hostd.Controllers.System.PowersController.Query(Meiam.System.Model.Dto.PowersQueryDto)">
             <summary>
             查询权限定义列表
@@ -831,6 +866,11 @@
         <member name="F:Meiam.System.Hostd.Controllers.System.RolePowersController._tokenManager">
             <summary>
             会话管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.System.RolePowersController._unitOfWork">
+            <summary>
+            工作单元接口
             </summary>
         </member>
         <member name="F:Meiam.System.Hostd.Controllers.System.RolePowersController._rolePowerService">
@@ -1158,6 +1198,11 @@
             重置密码
             </summary>
             <returns></returns>
+        </member>
+        <member name="F:Meiam.System.Hostd.Controllers.TestController._unitOfWork">
+            <summary>
+            工作单元接口
+            </summary>
         </member>
         <member name="M:Meiam.System.Hostd.Controllers.TestController.Success">
             <summary>

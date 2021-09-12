@@ -24,27 +24,6 @@ namespace Meiam.System.Interfaces
     public interface IBaseService<T> where T : class
     {
 
-        #region 事务
-
-        /// <summary>
-        /// 启用事务
-        /// </summary>
-        void BeginTran();
-
-
-        /// <summary>
-        /// 提交事务
-        /// </summary>
-        void CommitTran();
-
-
-        /// <summary>
-        /// 回滚事务
-        /// </summary>
-        void RollbackTran();
-
-        #endregion
-
         #region 添加操作
         /// <summary>
         /// 添加一条数据

@@ -30,6 +30,11 @@ namespace Meiam.System.Hostd.Controllers.System
         private readonly TokenManager _tokenManager;
 
         /// <summary>
+        /// 工作单元接口
+        /// </summary>
+        private readonly IUnitOfWork _unitOfWork;
+
+        /// <summary>
         /// 角色权限接口
         /// </summary>
         private readonly ISysRolePowerService _rolePowerService;
@@ -45,10 +50,12 @@ namespace Meiam.System.Hostd.Controllers.System
         private readonly ISysUserRoleService _userRoleService;
 
 
-        public RolePowersController(ILogger<RolePowersController> logger, TokenManager tokenManager,  ISysRolePowerService rolePowerService , ISysPowerService powerService, ISysUserRoleService userRoleService)
+        public RolePowersController(ILogger<RolePowersController> logger, TokenManager tokenManager, IUnitOfWork unitOfWork, 
+            ISysRolePowerService rolePowerService , ISysPowerService powerService, ISysUserRoleService userRoleService)
         {
             _logger = logger;
             _tokenManager = tokenManager;
+            _unitOfWork = unitOfWork;
             _rolePowerService = rolePowerService;
             _powerService = powerService;
             _userRoleService = userRoleService;
@@ -124,12 +131,12 @@ namespace Meiam.System.Hostd.Controllers.System
             //执行更新过程
             try
             {
-                _rolePowerService.BeginTran();
+                _unitOfWork.BeginTran();
                 // 先删除角色对应的权限
                 _rolePowerService.Delete(o => o.RoleUID == parm.RoleId);
                 // 再插入传递进来的权限
                 _rolePowerService.Add(rolePowers);
-                _rolePowerService.CommitTran();
+                _unitOfWork.CommitTran();
 
 
                 //更新登录会话记录
@@ -145,7 +152,7 @@ namespace Meiam.System.Hostd.Controllers.System
             }
             catch (Exception)
             {
-                _rolePowerService.RollbackTran();
+                _unitOfWork.RollbackTran();
                 throw;
             }
         }

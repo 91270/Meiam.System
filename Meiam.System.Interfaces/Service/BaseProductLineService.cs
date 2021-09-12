@@ -19,6 +19,10 @@ namespace Meiam.System.Interfaces
     public class BaseProductLineService : BaseService<Base_ProductLine>, IBaseProductLineService
     {
 
+        public BaseProductLineService(IUnitOfWork unitOfWork) : base(unitOfWork)
+        {
+        }
+
         #region CustomInterface 
         /// <summary>
         /// 查询产线（分页）

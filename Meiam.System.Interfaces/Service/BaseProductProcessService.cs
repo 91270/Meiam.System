@@ -19,6 +19,10 @@ namespace Meiam.System.Interfaces
     public class BaseProductProcessService : BaseService<Base_ProductProcess>, IBaseProductProcessService
     {
 
+        public BaseProductProcessService(IUnitOfWork unitOfWork) : base(unitOfWork)
+        {
+        }
+
         #region CustomInterface 
         /// <summary>
         /// 查询工序（分页）

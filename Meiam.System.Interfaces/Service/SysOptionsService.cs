@@ -19,6 +19,10 @@ namespace Meiam.System.Interfaces
     public class SysOptionsService : BaseService<Sys_Options>, ISysOptionsService
     {
 
+        public SysOptionsService(IUnitOfWork unitOfWork) : base(unitOfWork)
+        {
+        }
+
         #region CustomInterface 
         #endregion
 

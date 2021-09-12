@@ -14,7 +14,6 @@ namespace Meiam.System.Hostd
 
         public static void Main(string[] args)
         {
-
             var logger = NLogBuilder.ConfigureNLog("NLog.config").GetCurrentClassLogger();
             try
             {

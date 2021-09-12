@@ -66,9 +66,14 @@ namespace Meiam.System.Hostd.Controllers.System
         /// </summary>
         private readonly IBaseProductProcessService _processService;
 
+        /// <summary>
+        /// 工作单元接口
+        /// </summary>
+        private readonly IUnitOfWork _unitOfWork;
+
         public AuthorizeController(ILogger<AuthorizeController> logger, TokenManager tokenManager, ISysUserRelationService userRelationService,
             ISysDataRelationService dataRelationService, IBaseCompanyService companyService, IBaseFactoryService factoryService, IBaseWorkShopService workShopService,
-            IBaseProductLineService lineService, IBaseProductProcessService processService)
+            IBaseProductLineService lineService, IBaseProductProcessService processService,IUnitOfWork unitOfWork)
         {
             _logger = logger;
             _tokenManager = tokenManager;
@@ -79,6 +84,7 @@ namespace Meiam.System.Hostd.Controllers.System
             _workShopService = workShopService;
             _lineService = lineService;
             _processService = processService;
+            _unitOfWork = unitOfWork;
         }
 
         /// <summary>
@@ -176,12 +182,12 @@ namespace Meiam.System.Hostd.Controllers.System
             try
             {
                 //开启事务
-                _userRelationService.BeginTran();
+                _unitOfWork.BeginTran();
                 //清空权限
                 _userRelationService.Delete(m => m.UserID == parm.UserID);
                 //插入权限
                 _userRelationService.Add(relations);
-                _userRelationService.CommitTran();
+                _unitOfWork.CommitTran();
 
                 #region 更新登录会话记录
 
@@ -193,7 +199,7 @@ namespace Meiam.System.Hostd.Controllers.System
             }
             catch (Exception)
             {
-                _userRelationService.RollbackTran();
+                _unitOfWork.RollbackTran();
                 throw;
             }
 

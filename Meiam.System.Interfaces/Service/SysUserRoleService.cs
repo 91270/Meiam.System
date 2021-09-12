@@ -19,6 +19,10 @@ namespace Meiam.System.Interfaces
     public class SysUserRoleService : BaseService<Sys_UserRole>, ISysUserRoleService
     {
 
+        public SysUserRoleService(IUnitOfWork unitOfWork) : base(unitOfWork)
+        {
+        }
+
         #region CustomInterface 
         /// <summary>
         /// 获取具有角色的用户列表

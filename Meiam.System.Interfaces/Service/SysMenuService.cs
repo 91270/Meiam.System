@@ -19,6 +19,10 @@ namespace Meiam.System.Interfaces
     public class SysMenuService : BaseService<Sys_Menu>, ISysMenuService
     {
 
+        public SysMenuService(IUnitOfWork unitOfWork) : base(unitOfWork)
+        {
+        }
+
         #region CustomInterface 
         #endregion
 

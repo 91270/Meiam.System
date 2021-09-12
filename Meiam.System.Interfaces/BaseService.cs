@@ -8,14 +8,11 @@
 *
 * ==============================================================================
 */
-using Meiam.System.Core;
 using Meiam.System.Model;
 using SqlSugar;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
-using System.Reflection.Metadata.Ecma335;
-using System.Threading.Tasks;
 
 namespace Meiam.System.Interfaces
 {
@@ -23,35 +20,22 @@ namespace Meiam.System.Interfaces
     /// 基础服务定义
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class BaseService<T> : DbContext, IBaseService<T> where T : class, new()
+    public class BaseService<T> : IBaseService<T> where T : class, new()
     {
-        #region 事务
+        private readonly IUnitOfWork _unitOfWork;
 
-        /// <summary>
-        /// 启用事务
-        /// </summary>
-        public void BeginTran()
+        private SqlSugarClient _currentDb;
+
+        public ISqlSugarClient Db
         {
-            Db.Ado.BeginTran();
+            get { return _currentDb; }
         }
 
-        /// <summary>
-        /// 提交事务
-        /// </summary>
-        public void CommitTran()
+        public BaseService(IUnitOfWork unitOfWork)
         {
-            Db.Ado.CommitTran();
+            _unitOfWork = unitOfWork;
+            _currentDb = _unitOfWork.CurrentDb();
         }
-
-        /// <summary>
-        /// 回滚事务
-        /// </summary>
-        public void RollbackTran()
-        {
-            Db.Ado.RollbackTran();
-        }
-
-        #endregion
 
         #region 添加操作
         /// <summary>

@@ -15,14 +15,22 @@ namespace Meiam.System.Hostd.Controllers
     public class TestController : BaseController
     {
 
-        public TestController(ITestCap01Service testCap01Service, ITestCap02Service testCap02Service)
+        public ITestCap01Service _testCap01Service { get; }
+        public ITestCap02Service _testCap02Service { get; }
+
+        /// <summary>
+        /// 工作单元接口
+        /// </summary>
+        private readonly IUnitOfWork _unitOfWork;
+
+        public TestController(ITestCap01Service testCap01Service, ITestCap02Service testCap02Service,IUnitOfWork unitOfWork)
         {
             _testCap01Service = testCap01Service;
             _testCap02Service = testCap02Service;
+            _unitOfWork = unitOfWork;
         }
 
-        public ITestCap01Service _testCap01Service { get; }
-        public ITestCap02Service _testCap02Service { get; }
+
 
         /// <summary>
         /// Success
@@ -34,7 +42,7 @@ namespace Meiam.System.Hostd.Controllers
             var id = GetGUID;
             try
             {
-                _testCap01Service.BeginTran();
+                _unitOfWork.BeginTran();
                 _testCap01Service.Add(new Test_Cap01
                 {
                     ID = id
@@ -45,13 +53,13 @@ namespace Meiam.System.Hostd.Controllers
                     ID = id
                 });
 
-                _testCap01Service.CommitTran();
+                _unitOfWork.CommitTran();
 
                 return toResponse(StatusCodeType.Success);
             }
             catch (Exception)
             {
-                _testCap01Service.RollbackTran();
+                _unitOfWork.RollbackTran();
                 throw;
 
             }
@@ -68,7 +76,7 @@ namespace Meiam.System.Hostd.Controllers
             var id = GetGUID;
             try
             {
-                _testCap01Service.BeginTran();
+                _unitOfWork.BeginTran();
                 _testCap01Service.Add(new Test_Cap01
                 {
                     ID = id
@@ -79,13 +87,13 @@ namespace Meiam.System.Hostd.Controllers
                     ID = "111111111111111111111111111111111111111111111111111111111111111111111111111"
                 });
 
-                _testCap01Service.CommitTran();
+                _unitOfWork.CommitTran();
 
                 return toResponse(StatusCodeType.Success);
             }
             catch (Exception)
             {
-                _testCap01Service.RollbackTran();
+                _unitOfWork.RollbackTran();
                 throw;
 
             }

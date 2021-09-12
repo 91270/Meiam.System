@@ -36,13 +36,19 @@ namespace Meiam.System.Hostd.Controllers.Basic
         /// </summary>
         private readonly ISysDataRelationService _dataRelationService;
 
+        /// <summary>
+        /// 工作单元接口
+        /// </summary>
+        private readonly IUnitOfWork _unitOfWork;
 
-        public ProductLineController(ILogger<ProductLineController> logger, TokenManager tokenManager, IBaseProductLineService lineService, ISysDataRelationService dataRelationService)
+
+        public ProductLineController(ILogger<ProductLineController> logger, TokenManager tokenManager, IBaseProductLineService lineService, ISysDataRelationService dataRelationService,IUnitOfWork unitOfWork)
         {
             _logger = logger;
             _tokenManager = tokenManager;
             _lineService = lineService;
             _dataRelationService = dataRelationService;
+            _unitOfWork = unitOfWork;
         }
 
 
@@ -107,7 +113,7 @@ namespace Meiam.System.Hostd.Controllers.Basic
                 }
 
                 //从 Dto 映射到 实体
-                _dataRelationService.BeginTran();
+                _unitOfWork.BeginTran();
 
                 var response = _lineService.Add(line);
 
@@ -120,13 +126,13 @@ namespace Meiam.System.Hostd.Controllers.Basic
                     Type = DataRelationType.Line_To_Process.ToString()
                 });
 
-                _dataRelationService.CommitTran();
+                _unitOfWork.CommitTran();
 
                 return toResponse(response);
             }
             catch (Exception)
             {
-                _dataRelationService.RollbackTran();
+                _unitOfWork.RollbackTran();
                 throw;
             }
         }
@@ -146,7 +152,7 @@ namespace Meiam.System.Hostd.Controllers.Basic
 
             try
             {
-                _dataRelationService.BeginTran();
+                _unitOfWork.BeginTran();
 
                 var userSession = _tokenManager.GetSessionInfo();
 
@@ -173,13 +179,13 @@ namespace Meiam.System.Hostd.Controllers.Basic
                     Type = DataRelationType.Line_To_Process.ToString()
                 });
 
-                _dataRelationService.CommitTran();
+                _unitOfWork.CommitTran();
 
                 return toResponse(response);
             }
             catch (Exception)
             {
-                _dataRelationService.RollbackTran();
+                _unitOfWork.RollbackTran();
                 throw;
             }
         }
@@ -204,16 +210,16 @@ namespace Meiam.System.Hostd.Controllers.Basic
 
             try
             {
-                _dataRelationService.BeginTran();
+                _unitOfWork.BeginTran();
                 _dataRelationService.Delete(m => m.Form == id && m.Type == DataRelationType.Line_To_Process.ToString());
                 var response = _lineService.Delete(id);
-                _dataRelationService.CommitTran();
+                _unitOfWork.CommitTran();
 
                 return toResponse(response);
             }
             catch (Exception)
             {
-                _dataRelationService.RollbackTran();
+                _unitOfWork.RollbackTran();
                 throw;
             }
         }

@@ -19,6 +19,10 @@ namespace Meiam.System.Interfaces
     public class BaseCompanyService : BaseService<Base_Company>, IBaseCompanyService
     {
 
+        public BaseCompanyService(IUnitOfWork unitOfWork) : base(unitOfWork)
+        {
+        }
+
         #region CustomInterface 
         #endregion
 

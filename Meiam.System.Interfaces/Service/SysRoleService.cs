@@ -19,6 +19,10 @@ namespace Meiam.System.Interfaces
     public class SysRoleService : BaseService<Sys_Role>, ISysRoleService
     {
 
+        public SysRoleService(IUnitOfWork unitOfWork) : base(unitOfWork)
+        {
+        }
+
         #region CustomInterface 
         #endregion
 

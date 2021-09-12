@@ -19,6 +19,10 @@ namespace Meiam.System.Interfaces
     public class BaseEquipmentService : BaseService<Base_Equipment>, IBaseEquipmentService
     {
 
+        public BaseEquipmentService(IUnitOfWork unitOfWork) : base(unitOfWork)
+        {
+        }
+
         #region CustomInterface 
         /// <summary>
         /// 查询设备（分页）

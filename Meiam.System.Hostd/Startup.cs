@@ -5,13 +5,15 @@ using Meiam.System.Common;
 using Meiam.System.Core;
 using Meiam.System.Extensions;
 using Meiam.System.Hostd.Authorization;
-using Meiam.System.Hostd.Common;
 using Meiam.System.Hostd.Extensions;
 using Meiam.System.Hostd.Global;
 using Meiam.System.Hostd.Middleware;
+using Meiam.System.Hostd.Setup;
+using Meiam.System.Interfaces;
+using Meiam.System.Tasks;
+using Meiam.System.Tasks.HostedService;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -38,72 +40,17 @@ namespace Meiam.System.Hostd
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            #region 跨域设置
-            services.AddCors(c =>
-            {
-                c.AddPolicy("LimitRequests", policy =>
-                {
-                    policy
-                    .WithOrigins(AppSettings.Configuration["Startup:AllowOrigins"].Split('|'))
-                    .AllowAnyHeader()//Ensures that the policy allows any header.
-                    .AllowAnyMethod();
-                });
-            });
-            #endregion
 
-            #region 说明文档
-            services.AddSwaggerGen(c =>
-            {
+            #region 服务注入
 
-                c.SwaggerDoc("v1", new OpenApiInfo
-                {
-                    Version = "v1",
-                    Title = $"{AppSettings.Configuration["Startup:ApiName"]} 接口文档",
-                    Description = $"{AppSettings.Configuration["Startup:ApiName"]} HTTP API "
-                });
+            //启用数据库链接
+            services.AddSqlsugarSetup();
 
-                try
-                {
-                    //就是这里
-                    var xmlPath = Path.Combine(AppContext.BaseDirectory, "Meiam.System.Hostd.xml");//这个就是刚刚配置的xml文件名
-                    c.IncludeXmlComments(xmlPath, true);//默认的第二个参数是false，这个是controller的注释，记得修改
+            //跨域设置
+            services.AddCorsSetup();
 
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Xml 文件丢失，请检查并拷贝。\n{ ex.Message}");
-                }
-
-                // 开启加权小锁
-                c.OperationFilter<AppendAuthorizeFilter>();
-
-            });
-            #endregion
-
-            #region 配置Json格式
-            services.AddMvc().AddNewtonsoftJson(options =>
-            {
-                // 忽略循环引用
-                options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
-                // 不使用驼峰
-                //options.SerializerSettings.ContractResolver = new DefaultContractResolver();
-                // 设置时间格式
-                options.SerializerSettings.DateFormatString = "yyyy-MM-dd HH:mm:ss";
-                // 如字段为null值，该字段不会返回到前端
-                //options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
-            });
-            #endregion
-
-            #region 获取客户端 IP
-            services.Configure<ForwardedHeadersOptions>(options =>
-            {
-                options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
-                options.KnownNetworks.Clear();
-                options.KnownProxies.Clear();
-            });
-            #endregion
-
-            #region 加载项
+            //说明文档
+            services.AddSwaggerSetup();
 
             //注入缓存
             services.AddMemoryCache();
@@ -120,6 +67,36 @@ namespace Meiam.System.Hostd
             //注入短信服务
             services.AddSingleton<IAliyunSmsServices, AliyunSmsServices>();
 
+            //注册REDIS 服务
+            RedisServer.Initalize();
+
+            //开启计划任务
+            services.AddTaskSchedulers();
+
+            #endregion
+
+            #region 全局设置
+            //配置Json格式
+            services.AddMvc().AddNewtonsoftJson(options =>
+            {
+                // 忽略循环引用
+                options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+                // 不使用驼峰
+                //options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+                // 设置时间格式
+                options.SerializerSettings.DateFormatString = "yyyy-MM-dd HH:mm:ss";
+                // 如字段为null值，该字段不会返回到前端
+                //options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
+            });
+
+            //获取客户端 IP
+            services.Configure<ForwardedHeadersOptions>(options =>
+            {
+                options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+                options.KnownNetworks.Clear();
+                options.KnownProxies.Clear();
+            });
+
             //注入全局异常过滤
             services.AddControllers(options =>
             {
@@ -135,18 +112,14 @@ namespace Meiam.System.Hostd
                 options.SuppressModelStateInvalidFilter = true;  
             });
 
-            //开启计划任务
-            services.AddTaskSchedulers();
-
-            //注册REDIS 服务
-            RedisServer.Initalize();
-
             #endregion
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ISysTasksQzService tasksQzService , ITaskSchedulerServer schedulerServer)
         {
+
             #region 开发错误提示
 
             if (env.IsDevelopment())
@@ -155,23 +128,11 @@ namespace Meiam.System.Hostd
             };
             #endregion
 
-            #region 跨域设置
-            app.UseCors("LimitRequests");
-            #endregion
-
-            #region 说明文档
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
-            {
-                var ApiName = AppSettings.Configuration["Startup:ApiName"];
-
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1");
-                c.RoutePrefix = string.Empty; 
-            });
-            #endregion
-
-            #region 加载项
-
+            #region 服务注入
+            //跨域设置
+            app.UseCorsSetup();
+            //说明文档
+            app.UseSwaggerSetup();
             // 请求日志监控
             app.UseMiddleware<RequestMiddleware>();
             // 使用静态文件
@@ -182,17 +143,19 @@ namespace Meiam.System.Hostd
             app.UseCookiePolicy();
             // 使用Routing
             app.UseRouting();
-
+            // 使用相应缓存中间件
             app.UseResponseCaching();
-
-            // 恢复任务
-            app.UseAddTaskSchedulers();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+
+            // 恢复任务
+            app.UseAddTaskSchedulers(tasksQzService, schedulerServer);
+
             #endregion
+
         }
 
         #region 自动注入服务

@@ -19,6 +19,10 @@ namespace Meiam.System.Interfaces
     public class SysTasksQzService : BaseService<Sys_TasksQz>, ISysTasksQzService
     {
 
+        public SysTasksQzService(IUnitOfWork unitOfWork) : base(unitOfWork)
+        {
+        }
+
         #region CustomInterface 
         #endregion
 

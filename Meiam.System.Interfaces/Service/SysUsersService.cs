@@ -19,6 +19,10 @@ namespace Meiam.System.Interfaces
     public class SysUsersService : BaseService<Sys_Users>, ISysUsersService
     {
 
+        public SysUsersService(IUnitOfWork unitOfWork) : base(unitOfWork)
+        {
+        }
+
         #region CustomInterface 
 
         /// <summary>

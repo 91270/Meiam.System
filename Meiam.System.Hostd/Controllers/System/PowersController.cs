@@ -40,12 +40,18 @@ namespace Meiam.System.Hostd.Controllers.System
         /// </summary>
         private readonly ISysRolePowerService _rolePowerService;
 
-        public PowersController(TokenManager tokenManager, ISysPowerService powerService, ISysRolePowerService rolePowerService, ILogger<PowersController> logger)
+        /// <summary>
+        /// 工作单元接口
+        /// </summary>
+        private readonly IUnitOfWork _unitOfWork;
+
+        public PowersController(TokenManager tokenManager, ISysPowerService powerService, ISysRolePowerService rolePowerService, ILogger<PowersController> logger, IUnitOfWork unitOfWork)
         {
             _tokenManager = tokenManager;
             _powerService = powerService;
             _rolePowerService = rolePowerService;
             _logger = logger;
+            _unitOfWork = unitOfWork;
         }
 
 
@@ -145,16 +151,16 @@ namespace Meiam.System.Hostd.Controllers.System
 
             try
             {
-                _rolePowerService.BeginTran();
+                _unitOfWork.BeginTran();
                 _rolePowerService.Delete(o => o.PowerUID == id);
                 _powerService.Delete(id);
-                _rolePowerService.CommitTran();
+                _unitOfWork.CommitTran();
                 return toResponse(StatusCodeType.Success);
 
             }
             catch (Exception)
             {
-                _rolePowerService.RollbackTran();
+                _unitOfWork.RollbackTran();
                 throw;
             }
         }

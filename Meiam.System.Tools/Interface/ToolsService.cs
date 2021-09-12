@@ -8,7 +8,9 @@
 *
 * ==============================================================================
 */
+using Meiam.System.Common;
 using Meiam.System.Core;
+using SqlSugar;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -17,10 +19,28 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace Meiam.System.Interfaces
+namespace Meiam.System.Tools
 {
-    public class ToolsService : DbContext, IToolsService
+    public class ToolsService
     {
+        public SqlSugarClient Db = new SqlSugarClient(new ConnectionConfig()
+        {
+            ConnectionString = AppSettings.Configuration["DbConnection:ConnectionString"],
+            DbType = (DbType)Convert.ToInt32(AppSettings.Configuration["DbConnection:DbType"]),
+            IsAutoCloseConnection = true,
+            InitKeyType = InitKeyType.Attribute,
+            ConfigureExternalServices = new ConfigureExternalServices()
+            {
+                DataInfoCacheService = new RedisCache()
+            },
+            MoreSettings = new ConnMoreSettings()
+            {
+                IsAutoRemoveDataCache = true
+            }
+        });
+
+
+
         /// <summary>
         /// 根据数据库表生产Model层
         /// </summary>
@@ -275,6 +295,10 @@ namespace Meiam.System.Interfaces
                     $"{{\r\n" +
                     $"    public class {tableName.Replace("_", "")}Service : BaseService<{tableName}>, I{tableName.Replace("_", "")}Service\r\n" +
                     $"    {{\r\n" +
+                    $"\r\n" +
+                    $"        public {tableName.Replace("_", "")}Service(IUnitOfWork unitOfWork) : base(unitOfWork)\r\n" +
+                    $"        {{\r\n" +
+                    $"        }}\r\n" +
                     $"\r\n" +
                     $"        #region CustomInterface \r\n" +
                     $"{(string.IsNullOrWhiteSpace(value) ? "" : value)}" +

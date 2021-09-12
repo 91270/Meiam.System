@@ -53,5 +53,10 @@ namespace Meiam.System.Tasks
 
             return jobHistory;
         }
+
+        public static string logWrite(string message)
+        {
+            return $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss:fff}] => {message}";
+        }
     }
 }

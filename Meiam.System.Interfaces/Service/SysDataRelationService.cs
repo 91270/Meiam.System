@@ -19,6 +19,10 @@ namespace Meiam.System.Interfaces
     public class SysDataRelationService : BaseService<Sys_DataRelation>, ISysDataRelationService
     {
 
+        public SysDataRelationService(IUnitOfWork unitOfWork) : base(unitOfWork)
+        {
+        }
+
         #region CustomInterface 
         #endregion
 

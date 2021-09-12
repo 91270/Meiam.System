@@ -19,6 +19,10 @@ namespace Meiam.System.Interfaces
     public class SysLogsService : BaseService<Sys_Logs>, ISysLogsService
     {
 
+        public SysLogsService(IUnitOfWork unitOfWork) : base(unitOfWork)
+        {
+        }
+
         #region CustomInterface 
         #endregion
 

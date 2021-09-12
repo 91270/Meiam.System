@@ -34,8 +34,8 @@ namespace Meiam.System.Tools.Tasks
                 Console.WriteLine(new ToolsService().CreateIServices($"..\\..\\..\\..\\{ solutionName }.Interfaces\\IService", solutionName, table));
             }
 
-            Console.Write($"生成DbContext: ");
-            Console.WriteLine(new ToolsService().CreateDbContext($"..\\..\\..\\..\\{ solutionName }.Core\\DbContext.cs", solutionName));
+            //Console.Write($"生成DbContext: ");
+            //Console.WriteLine(new ToolsService().CreateDbContext($"..\\..\\..\\..\\{ solutionName }.Core\\DbContext.cs", solutionName));
         }
     }
 }
