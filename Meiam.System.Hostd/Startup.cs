@@ -52,6 +52,9 @@ namespace Meiam.System.Hostd
             //说明文档
             services.AddSwaggerSetup();
 
+            //注入Cap (EventBus) 按需引入
+            //services.AddCapSetup();
+
             //注入缓存
             services.AddMemoryCache();
 

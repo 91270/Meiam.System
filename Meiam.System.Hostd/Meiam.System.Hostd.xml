@@ -1216,6 +1216,12 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Meiam.System.Hostd.Controllers.TestController.UseCAPTransaction">
+            <summary>
+            Test02
+            </summary>
+            <returns></returns>
+        </member>
         <member name="F:Meiam.System.Hostd.Extensions.TokenManager._memoryCache">
             <summary>
             缓存组件
@@ -1318,6 +1324,22 @@
             <summary>
             日志接口
             </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Queue.SubscriberService._logger">
+            <summary>
+            日志管理接口
+            </summary>
+        </member>
+        <member name="F:Meiam.System.Hostd.Queue.SubscriberService._smsServices">
+            <summary>
+            阿里云短信接口
+            </summary>
+        </member>
+        <member name="M:Meiam.System.Hostd.Queue.SubscriberService.QueueSMSCaptcha(Meiam.System.Model.QueueSMSCaptchaDto)">
+            <summary>
+            发送短信队列
+            </summary>
+            <param name="captcha"></param>
         </member>
     </members>
 </doc>
