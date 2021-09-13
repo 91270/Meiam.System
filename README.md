@@ -60,7 +60,7 @@ master -  .NET 5    /   netcore31 - .NET Core 3.1
 - [x] 支持跨方法事务方案,把事务提取到逻辑层进行统一事务提交,让你的代码更加漂亮
 - [x] 支持多种数据库 Sqlite/SqlServer/MySql/PostgreSQL/Oracle 自由切换
 - [x] 支持数据库 读写分离 和 多库 操作 
-- [ ] 计划 RabbitMQ 消息列队集成
+- [x] 计划 RabbitMQ 消息列队集成
 - [ ] 计划 ImCore 及时通讯组件集成
 
 
