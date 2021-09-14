@@ -7,7 +7,7 @@ using NLog.Web;
 using Quartz.Spi;
 using System;
 
-namespace Meiam.System.Hostd.Setup
+namespace Meiam.System.Hostd.Extensions
 {
     public static class SetupTasks
     {

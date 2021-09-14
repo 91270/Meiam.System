@@ -132,9 +132,9 @@ namespace Meiam.System.Hostd
             #endregion
 
             #region 服务注入
-            //跨域设置
+            // 跨域设置
             app.UseCorsSetup();
-            //说明文档
+            // 说明文档
             app.UseSwaggerSetup();
             // 请求日志监控
             app.UseMiddleware<RequestMiddleware>();
