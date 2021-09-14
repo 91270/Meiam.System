@@ -1,27 +1,20 @@
 using Autofac;
 using Autofac.Extras.DynamicProxy;
 using MapsterMapper;
-using Meiam.System.Common;
 using Meiam.System.Core;
 using Meiam.System.Extensions;
-using Meiam.System.Hostd.Authorization;
 using Meiam.System.Hostd.Extensions;
 using Meiam.System.Hostd.Global;
 using Meiam.System.Hostd.Middleware;
-using Meiam.System.Hostd.Setup;
 using Meiam.System.Interfaces;
 using Meiam.System.Tasks;
-using Meiam.System.Tasks.HostedService;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
-using System;
-using System.IO;
 using System.Reflection;
 
 namespace Meiam.System.Hostd
