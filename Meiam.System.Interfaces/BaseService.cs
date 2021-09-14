@@ -8,11 +8,15 @@
 *
 * ==============================================================================
 */
+using Meiam.System.Core;
 using Meiam.System.Model;
 using SqlSugar;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq.Expressions;
+using System.Reflection.Metadata.Ecma335;
+using System.Threading.Tasks;
 
 namespace Meiam.System.Interfaces
 {
@@ -58,49 +62,6 @@ namespace Meiam.System.Interfaces
             return Db.Insertable(parm).RemoveDataCache().ExecuteCommand();
         }
 
-        /// <summary>
-        /// 添加或更新数据
-        /// </summary>
-        /// <param name="parm">List<T></param>
-        /// <returns></returns>
-        public T Saveable(T parm, Expression<Func<T, object>> uClumns = null, Expression<Func<T, object>> iColumns = null)
-        {
-            var command = Db.Saveable(parm);
-
-            if (uClumns != null)
-            {
-                command = command.UpdateIgnoreColumns(uClumns);
-            }
-
-            if (iColumns != null)
-            {
-                command = command.InsertIgnoreColumns(iColumns);
-            }
-
-            return command.ExecuteReturnEntity();
-        }
-
-        /// <summary>
-        /// 批量添加或更新数据
-        /// </summary>
-        /// <param name="parm">List<T></param>
-        /// <returns></returns>
-        public List<T> Saveable(List<T> parm, Expression<Func<T, object>> uClumns = null, Expression<Func<T, object>> iColumns = null)
-        {
-            var command = Db.Saveable(parm);
-
-            if (uClumns != null)
-            {
-                command = command.UpdateIgnoreColumns(uClumns);
-            }
-
-            if (iColumns != null)
-            {
-                command = command.InsertIgnoreColumns(iColumns);
-            }
-
-            return command.ExecuteReturnList();
-        }
         #endregion
 
         #region 查询操作
@@ -194,9 +155,20 @@ namespace Meiam.System.Interfaces
         /// <returns></returns>
         public PagedInfo<T> GetPages(Expression<Func<T, bool>> where, PageParm parm)
         {
-            var source = Db.Queryable<T>().Where(where);
+            PagedInfo<T> page = new PagedInfo<T>();
 
-            return source.ToPage(parm);
+            int  totalCount = 0, totalPages = 0;
+
+            page.DataSource = Db.Queryable<T>().Where(where)
+                .OrderByIF(!string.IsNullOrEmpty(parm.Sort), $"{ parm.OrderBy } {(parm.Sort == "descending" ? "desc" : "asc")}")
+                .ToPageList(parm.PageIndex, parm.PageSize, ref totalCount ,ref totalPages);
+
+            page.PageSize = parm.PageSize;
+            page.PageIndex = parm.PageIndex;
+            page.TotalCount = totalCount;
+            page.TotalPages = totalPages;
+
+            return page;
         }
 
 
@@ -237,6 +209,16 @@ namespace Meiam.System.Interfaces
         }
 
         /// <summary>
+        /// 修改一条数据
+        /// </summary>
+        /// <param name="parm">T</param>
+        /// <returns></returns>
+        public int Update(T parm, Expression<Func<T, object>> columns)
+        {
+            return Db.Updateable(parm).WhereColumns(columns).RemoveDataCache().ExecuteCommand();
+        }
+
+        /// <summary>
         /// 批量修改
         /// </summary>
         /// <param name="parm">T</param>
@@ -244,6 +226,16 @@ namespace Meiam.System.Interfaces
         public int Update(List<T> parm)
         {
             return Db.Updateable(parm).RemoveDataCache().ExecuteCommand();
+        }
+
+        /// <summary>
+        /// 批量修改
+        /// </summary>
+        /// <param name="parm">T</param>
+        /// <returns></returns>
+        public int Update(List<T> parm, Expression<Func<T, object>> columns)
+        {
+            return Db.Updateable(parm).WhereColumns(columns).RemoveDataCache().ExecuteCommand();
         }
 
         /// <summary>
@@ -289,6 +281,84 @@ namespace Meiam.System.Interfaces
         public int Delete(Expression<Func<T, bool>> where)
         {
             return Db.Deleteable<T>().Where(where).RemoveDataCache().ExecuteCommand();
+        }
+
+        public StorageableResult<T> Saveable(List<T> parm, Expression<Func<T, object>> where)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
+
+        #region 添加或更新
+
+        /// <summary>
+        /// 添加或更新数据
+        /// </summary>
+        /// <param name="parm">List<T></param>
+        /// <returns></returns>
+        public T Saveable(T parm, Expression<Func<T, object>> uClumns = null, Expression<Func<T, object>> iColumns = null)
+        {
+            var command = Db.Saveable(parm);
+
+            if (uClumns != null)
+            {
+                command = command.UpdateIgnoreColumns(uClumns);
+            }
+
+            if (iColumns != null)
+            {
+                command = command.InsertIgnoreColumns(iColumns);
+            }
+
+            return command.RemoveDataCache().ExecuteReturnEntity();
+        }
+
+        /// <summary>
+        /// 批量添加或更新数据
+        /// </summary>
+        /// <param name="parm">List<T></param>
+        /// <returns></returns>
+        public List<T> Saveable(List<T> parm, Expression<Func<T, object>> uClumns = null, Expression<Func<T, object>> iColumns = null)
+        {
+            var command = Db.Saveable(parm);
+
+            if (uClumns != null)
+            {
+                command = command.UpdateIgnoreColumns(uClumns);
+            }
+
+            if (iColumns != null)
+            {
+                command = command.InsertIgnoreColumns(iColumns);
+            }
+
+            return command.RemoveDataCache().ExecuteReturnList();
+        }
+
+        /// <summary>
+        /// 无主键添加或更新数据 (切记该表若有缓存，请执行 RemoveDataCache())
+        /// </summary>
+        /// <param name="parm"></param>
+        /// <param name="where"></param>
+        /// <returns></returns>
+        public StorageableResult<T> Storageable(T parm, Expression<Func<T, object>> where)
+        {
+            var command = Db.Storageable(parm).WhereColumns(where).ToStorage();
+
+            return command;
+        }
+
+        /// <summary>
+        /// 无主键添加或更新数据 (切记该表若有缓存，请执行 RemoveDataCache())
+        /// </summary>
+        /// <param name="parm"></param>
+        /// <param name="where"></param>
+        /// <returns></returns>
+        public StorageableResult<T> Storageable(List<T> parm, Expression<Func<T, object>> where)
+        {
+            var command = Db.Storageable(parm).WhereColumns(where).ToStorage();
+
+            return command;
         }
         #endregion
 

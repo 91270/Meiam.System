@@ -12,6 +12,7 @@ using Meiam.System.Model;
 using SqlSugar;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
@@ -21,7 +22,7 @@ namespace Meiam.System.Interfaces
     /// 基础服务定义
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public interface IBaseService<T> where T : class
+    public interface IBaseService<T> where T : class, new()
     {
 
         #region 添加操作
@@ -38,22 +39,6 @@ namespace Meiam.System.Interfaces
         /// <param name="parm">List<T></param>
         /// <returns></returns>
         int Add(List<T> parm);
-
-        /// <summary>
-        /// 添加或更新数据
-        /// </summary>
-        /// <param name="parm"><T></param>
-        /// <returns></returns>
-        T Saveable(T parm, Expression<Func<T, object>> uClumns = null, Expression<Func<T, object>> iColumns = null);
-
-        /// <summary>
-        /// 批量添加或更新数据
-        /// </summary>
-        /// <param name="parm">List<T></param>
-        /// <returns></returns>
-        List<T> Saveable(List<T> parm, Expression<Func<T, object>> uClumns = null, Expression<Func<T, object>> iColumns = null);
-
-
 
         #endregion
 
@@ -154,6 +139,13 @@ namespace Meiam.System.Interfaces
         /// <returns></returns>
         int Update(T parm);
 
+        /// <summary>
+        /// 修改一条数据
+        /// </summary>
+        /// <param name="parm"></param>
+        /// <param name="columns"></param>
+        /// <returns></returns>
+        int Update(T parm, Expression<Func<T, object>> columns);
 
         /// <summary>
         /// 批量修改
@@ -162,7 +154,14 @@ namespace Meiam.System.Interfaces
         /// <returns></returns>
         int Update(List<T> parm);
 
-
+        /// <summary>
+        /// 批量修改
+        /// </summary>
+        /// <param name="parm"></param>
+        /// <param name="columns"></param>
+        /// <returns></returns>
+        int Update(List<T> parm, Expression<Func<T, object>> columns);
+        
         /// <summary>
         /// 按查询条件更新
         /// </summary>
@@ -197,6 +196,38 @@ namespace Meiam.System.Interfaces
         /// <param name="where">过滤条件</param>
         /// <returns></returns>
         int Delete(Expression<Func<T, bool>> where);
+        #endregion
+
+        #region 添加或更新
+        /// <summary>
+        /// 添加或更新数据
+        /// </summary>
+        /// <param name="parm"><T></param>
+        /// <returns></returns>
+        T Saveable(T parm, Expression<Func<T, object>> uClumns = null, Expression<Func<T, object>> iColumns = null);
+
+        /// <summary>
+        /// 批量添加或更新数据
+        /// </summary>
+        /// <param name="parm">List<T></param>
+        /// <returns></returns>
+        List<T> Saveable(List<T> parm, Expression<Func<T, object>> uClumns = null, Expression<Func<T, object>> iColumns = null);
+
+        /// <summary>
+        /// 无主键添加或更新数据 (切记该表若有缓存，请执行 RemoveDataCache())
+        /// </summary>
+        /// <param name="parm"></param>
+        /// <param name="where"></param>
+        /// <returns></returns>
+        StorageableResult<T> Storageable(T parm, Expression<Func<T, object>> where);
+
+        /// <summary>
+        /// 无主键添加或更新数据 (切记该表若有缓存，请执行 RemoveDataCache())
+        /// </summary>
+        /// <param name="parm"></param>
+        /// <param name="where"></param>
+        /// <returns></returns>
+        StorageableResult<T> Storageable(List<T> parm, Expression<Func<T, object>> where);
         #endregion
 
     }
