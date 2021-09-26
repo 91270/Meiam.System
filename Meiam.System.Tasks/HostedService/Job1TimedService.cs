@@ -13,6 +13,7 @@ using Meiam.System.Common.Helpers;
 using Meiam.System.Core;
 using Meiam.System.Interfaces;
 using Meiam.System.Model;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
@@ -25,33 +26,33 @@ namespace Meiam.System.Tasks.HostedService
     /// <summary>
     /// 清除过期会话
     /// </summary>
-    public class Job1TimedService : IHostedService, IDisposable
-    {
+    public class Job1TimedService : BackgroundService
+	{
 		private Timer _timer;
-
-		/// <summary>
-		/// 在线统计接口
-		/// </summary>
-		private readonly ISysOnlineService _onlineService;
 
 		/// <summary>
 		/// 日志管理接口
 		/// </summary>
 		private readonly ILogger<Job1TimedService> _logger;
 
-		public Job1TimedService(ILogger<Job1TimedService> logger, ISysOnlineService onlineService)
+		private readonly IServiceProvider _serviceProvider;
+
+		public Job1TimedService(ILogger<Job1TimedService> logger, IServiceProvider serviceProvider)
 		{
 			_logger = logger;
-			_onlineService = onlineService;
+			_serviceProvider = serviceProvider;
 		}
 
-		public Task StartAsync(CancellationToken cancellationToken)
+		protected override async Task ExecuteAsync(CancellationToken stoppingToken)
 		{
-			_timer = new Timer(new TimerCallback(DoWork), null, TimeSpan.Zero, TimeSpan.FromSeconds(5 * 60));
-			return Task.CompletedTask;
+			while (!stoppingToken.IsCancellationRequested)
+			{
+				await Task.Delay(1 * 60 * 1000, stoppingToken);
+				Execute();
+			}
 		}
 
-		private void DoWork(object state)
+		private void Execute()
 		{
 			try
 			{
@@ -66,32 +67,27 @@ namespace Meiam.System.Tasks.HostedService
 			}
 		}
 
-		public Task StopAsync(CancellationToken cancellationToken)
-		{
-			_timer?.Change(Timeout.Infinite, 0);
-			return Task.CompletedTask;
-		}
-
-		public void Dispose()
-		{
-			_timer?.Dispose();
-		}
-
 		private void RemoveExpiredSession(string source, int hours)
-        {
-			DateTime expireTime = DateTime.Now.AddHours(-hours);
-			var usersExpired = _onlineService.GetWhere(m => m.UpdateTime < expireTime && m.Source == source);
-
-			foreach (var session in usersExpired)
+		{
+			using (var scope = _serviceProvider.CreateScope())
 			{
-				//删除 Session 
-				RedisServer.Session.Del(session.SessionID);
+				var _onlineService = scope.ServiceProvider.GetService<ISysOnlineService>();
 
-				//删除用户 Session 列表中的 Session
-				RedisServer.Session.HDel(session.UserID, session.SessionID);
+				DateTime expireTime = DateTime.Now.AddHours(-hours);
+				var usersExpired = _onlineService.GetWhere(m => m.UpdateTime < expireTime && m.Source == source);
 
-				_onlineService.Delete(session.SessionID);
+				foreach (var session in usersExpired)
+				{
+					//删除 Session 
+					RedisServer.Session.Del(session.SessionID);
+
+					//删除用户 Session 列表中的 Session
+					RedisServer.Session.HDel(session.UserID, session.SessionID);
+
+					_onlineService.Delete(session.SessionID);
+				}
 			}
 		}
+
 	}
 }
