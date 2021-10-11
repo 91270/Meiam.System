@@ -22,7 +22,7 @@ export default {
   },
   methods: {
     click() {
-      if (!screenfull.enabled) {
+      if (!screenfull.isEnabled) {
         this.$message({
           message: 'you browser can not work',
           type: 'warning'
@@ -52,7 +52,7 @@ export default {
 .screenfull-svg {
   display: inline-block;
   cursor: pointer;
-  fill: #5a5e66;;
+  fill: #5a5e66;
   width: 20px;
   height: 20px;
   vertical-align: 10px;
