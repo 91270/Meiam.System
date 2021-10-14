@@ -11,6 +11,7 @@ const getters = {
   userInfo: state => state.user.userInfo,
   loadMenus: state => state.user.loadMenus,
   routers: state => state.routers.routers,
-  addRouters: state => state.routers.addRouters
+  addRouters: state => state.routers.addRouters,
+  sidebarRouters: state => state.routers.sidebarRouters
 }
 export default getters
