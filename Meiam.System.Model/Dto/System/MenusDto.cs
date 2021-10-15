@@ -27,6 +27,9 @@ namespace Meiam.System.Model.Dto
         /// </summary>
         [Display(Name = "菜单名称")]
         public string Name { get; set; }
+
+        [Display(Name = "所属系统")]
+        public int System { get; set; }
     }
 
     /// <summary>
@@ -34,6 +37,15 @@ namespace Meiam.System.Model.Dto
     /// </summary>
     public class MenusCreateDto
     {
+
+        /// <summary>
+        /// 描述 : 菜单类型 
+        /// 空值 : False
+        /// 默认 : 
+        /// </summary>
+        [Display(Name = "菜单类型")]
+        [Required(ErrorMessage = "请选择菜单类型")]
+        public int Type { get; set; }
 
         /// <summary>
         /// 描述 : 菜单名称 
@@ -162,6 +174,15 @@ namespace Meiam.System.Model.Dto
         [Display(Name = "菜单名称")]
         [Required(ErrorMessage = "请填写菜单名称")]
         public string Name { get; set; }
+
+        /// <summary>
+        /// 描述 : 菜单类型 
+        /// 空值 : False
+        /// 默认 : 
+        /// </summary>
+        [Display(Name = "菜单类型")]
+        [Required(ErrorMessage = "请选择菜单类型")]
+        public int Type { get; set; }
 
         /// <summary>
         /// 描述 : 图标 

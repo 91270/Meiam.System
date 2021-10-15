@@ -18,6 +18,10 @@ namespace Meiam.System.Model.View
 {
     public class UserMenusVM
     {
+        [Display(Name = "始终显示")]
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public bool? alwaysShow { get; set; }
+
         [Display(Name = "菜单标题")]
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public string name { get; set; }

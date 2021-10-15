@@ -4,6 +4,11 @@
       <el-col>
         <el-form :inline="true" @submit.native.prevent>
           <el-form-item>
+            <el-select v-model="queryParams.system" filterable placeholder="请选择系统" style="width:100%" @change="handleSelectSystem">
+              <el-option v-for="item in systemOptions" :key="item.value" clearable :label="item.label" :value="item.value" />
+            </el-select>
+          </el-form-item>
+          <el-form-item>
             <el-input v-model="queryParams.name" placeholder="请输入菜单名称" clearable prefix-icon="el-icon-search" @keyup.enter.native="handleQuery" @clear="handleQuery" />
           </el-form-item>
           <el-form-item>
@@ -52,6 +57,14 @@
       <el-form ref="form" :model="form" :rules="rules" label-width="80px">
         <el-row>
           <el-col :span="24">
+            <el-form-item label="菜单类型" prop="type">
+              <el-radio-group v-model="form.type">
+                <el-radio-button :label="0">目录</el-radio-button>
+                <el-radio-button :label="1">菜单</el-radio-button>
+              </el-radio-group>
+            </el-form-item>
+          </el-col>
+          <el-col :span="24">
             <el-form-item label="上级菜单">
               <treeselect v-model="form.parentUID" :class="size" :load-options="loadOptions" :options="menuOptions" :normalizer="normalizer" :show-count="true" no-results-text="没有查询到菜单" placeholder="选择上级菜单" />
             </el-form-item>
@@ -82,25 +95,18 @@
               <el-input v-model="form.path" maxlength="50" placeholder="请输入路由地址" />
             </el-form-item>
           </el-col>
-          <el-col :span="12">
+          <el-col v-if="form.type == 1" :span="12">
             <el-form-item label="组件路径" prop="component">
               <el-input v-model="form.component" maxlength="255" placeholder="请输入组件路径" />
             </el-form-item>
           </el-col>
-          <el-col :span="12">
+          <el-col v-if="form.type == 1" :span="12">
             <el-form-item label="权限标识" prop="viewPower">
               <el-autocomplete v-model="form.viewPower" value-key="name" :maxlength="50" :fetch-suggestions="handlePowerSearch" placeholder="请选择权限标识" style="width:100%">
                 <template slot-scope="{ item }">
                   {{ item.name }} | {{ item.description }}
                 </template>
               </el-autocomplete>
-            </el-form-item>
-          </el-col>
-          <el-col :span="12">
-            <el-form-item label="归属系统" prop="system">
-              <el-select v-model="form.system" placeholder="请选择归属系统" style="width:100%">
-                <el-option v-for="item in systemOptions" :key="item.value" :label="item.label" :value="parseInt(item.value)" />
-              </el-select>
             </el-form-item>
           </el-col>
           <el-col :span="12">
@@ -170,7 +176,8 @@ export default {
       systemOptions: [],
       // 查询参数
       queryParams: {
-        name: undefined
+        name: undefined,
+        system: '0'
       },
       // 表单参数
       form: {},
@@ -194,7 +201,7 @@ export default {
     }
   },
   created() {
-    getOption('SYSTEM_MENU_SYSTEM').then(response => {
+    getOption('SYSTEM_MENU_SYSTEM').then((response) => {
       this.systemOptions = response.data
     })
     this.getList()
@@ -212,7 +219,7 @@ export default {
     /** 查询菜单列表 */
     getList() {
       this.loading = true
-      queryMenu(this.queryParams).then(response => {
+      queryMenu(this.queryParams).then((response) => {
         this.menuList = response.data
         this.loading = false
       })
@@ -230,7 +237,7 @@ export default {
     },
     /** 查询菜单下拉树结构 */
     getTreeselect() {
-      queryMenu({}).then(response => {
+      queryMenu(this.queryParams).then((response) => {
         this.menuOptions = []
         const menu = {
           id: '-1',
@@ -252,6 +259,7 @@ export default {
     reset() {
       this.form = {
         id: undefined,
+        type: 0,
         parentUID: '-1',
         name: undefined,
         icon: undefined,
@@ -259,7 +267,7 @@ export default {
         isFrame: false,
         hidden: false,
         keepAlive: false,
-        system: 0
+        system: '0'
       }
     },
     /** 重置按钮操作 */
@@ -289,11 +297,13 @@ export default {
       this.title = '修改菜单'
     },
     /** 提交按钮 */
-    submitForm: function() {
-      this.$refs['form'].validate(valid => {
+    submitForm() {
+      this.$refs['form'].validate((valid) => {
         if (valid) {
+          debugger
+          this.form.system = this.queryParams.system
           if (this.form.id !== undefined) {
-            updateMenu(this.form).then(response => {
+            updateMenu(this.form).then((response) => {
               if (response.statusCode === 200) {
                 this.$message({
                   message: '修改成功',
@@ -304,7 +314,7 @@ export default {
               }
             })
           } else {
-            createMenu(this.form).then(response => {
+            createMenu(this.form).then((response) => {
               if (response.statusCode === 200) {
                 this.$message({
                   message: '新增成功',
@@ -324,19 +334,17 @@ export default {
         confirmButtonText: '确定',
         cancelButtonText: '取消',
         type: 'warning'
-      })
-        .then(() => {
-          deleteMenu(row.id).then(response => {
-            if (response.statusCode === 200) {
-              this.getList()
-              this.$message({
-                message: '删除成功',
-                type: 'success'
-              })
-            }
-          })
+      }).then(() => {
+        deleteMenu(row.id).then((response) => {
+          if (response.statusCode === 200) {
+            this.getList()
+            this.$message({
+              message: '删除成功',
+              type: 'success'
+            })
+          }
         })
-        .catch(function() {})
+      })
     },
     // 转化表格内容是否为外链
     isFrameformat(row, column) {
@@ -364,9 +372,15 @@ export default {
     },
 
     handlePowerSearch(queryString, cb) {
-      queryPower({ name: queryString }).then(response => {
+      queryPower({ name: queryString }).then((response) => {
         cb(response.data.dataSource)
       })
+    },
+    // 选择用户层级
+    handleSelectSystem(e) {
+      console.log(e)
+      this.queryParams.system = e
+      this.getList()
     }
   }
 }

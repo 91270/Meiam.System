@@ -69,8 +69,9 @@ namespace Meiam.System.Hostd.Controllers
         #endregion
 
         #region 生成菜单树
+
         /// <summary>
-        /// 生成系统菜单树
+        /// 生成 Vue Router
         /// </summary>
         /// <param name="menus"></param>
         /// <param name="parentId"></param>
@@ -85,16 +86,17 @@ namespace Meiam.System.Hostd.Controllers
 
                 UserMenusVM menusVM = new UserMenusVM
                 {
+                    alwaysShow = menu.Type == 0 ? true : null,
                     name = menu.Name,
-                    path = parentId == null ? "/" + menu.Path : menu.Path,
+                    path = menu.Type == 0 && menu.ParentUID == null ? "/" + menu.Path : menu.Path,
                     hidden = menu.Hidden,
-                    component = menu.Component ?? "Layout",
-                    redirect = parentId == null ? "noredirect" : null,
+                    component = menu.Type == 0 ? menu.ParentUID == null ? "Layout" : "LayoutSub" : menu.Component,
+                    redirect = menu.Type == 0 ? "noredirect" : null,
                     meta = new MenuMetaVM() { title = menu.Name, icon = menu.Icon, path = menu.Path, keepAlive = menu.KeepAlive },
                     children = childrenMenu.Count == 0 ? null : childrenMenu
                 };
-                
-                if (childrenMenu.Count == 0 && menu.Component == null)
+
+                if (childrenMenu.Count == 0 && menu.Type == 0)
                 {
                     continue;
                 }
@@ -107,7 +109,7 @@ namespace Meiam.System.Hostd.Controllers
         }
 
         /// <summary>
-        /// 生成 Vue Router
+        /// 生成系统菜单树
         /// </summary>
         /// <param name="menus"></param>
         /// <param name="parentId"></param>
@@ -124,6 +126,7 @@ namespace Meiam.System.Hostd.Controllers
                 {
                     ID = menu.ID,
                     Name = menu.Name,
+                    Type = menu.Type,
                     Icon = menu.Icon,
                     Path = menu.Path,
                     Component = menu.Component,

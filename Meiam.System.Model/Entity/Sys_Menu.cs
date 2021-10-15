@@ -43,6 +43,14 @@ namespace Meiam.System.Model
            public string Name {get;set;}
 
            /// <summary>
+           /// 描述 : 菜单类型 
+           /// 空值 : True
+           /// 默认 : 
+           /// </summary>
+           [Display(Name = "菜单类型")]           
+           public int Type {get;set;}
+
+           /// <summary>
            /// 描述 : 图标 
            /// 空值 : True
            /// 默认 : 

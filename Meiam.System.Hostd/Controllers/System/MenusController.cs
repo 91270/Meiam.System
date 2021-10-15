@@ -1,4 +1,4 @@
-﻿using Mapster;
+using Mapster;
 using Meiam.System.Hostd.Authorization;
 using Meiam.System.Hostd.Extensions;
 using Meiam.System.Interfaces;
@@ -35,7 +35,7 @@ namespace Meiam.System.Hostd.Controllers.System
         /// </summary>
         private readonly ISysMenuService _menuService;
 
-        public MenusController(TokenManager tokenManager, ISysMenuService menuService, ILogger<MenusController> logger)
+        public MenusController(IUnitOfWork unitOfWork,TokenManager tokenManager, ISysMenuService menuService, ILogger<MenusController> logger)
         {
             _tokenManager = tokenManager;
             _menuService = menuService;
@@ -54,7 +54,7 @@ namespace Meiam.System.Hostd.Controllers.System
             if (string.IsNullOrEmpty(parm.Name))
             {
                 //获取系统所有菜单
-                var allMenus = _menuService.GetAll();
+                var allMenus = _menuService.GetWhere(m => m.System == parm.System);
 
                 return toResponse(ResolveMenuTree(allMenus));
             }
@@ -64,11 +64,14 @@ namespace Meiam.System.Hostd.Controllers.System
 
             predicate = predicate.And(m => m.Name.Contains(parm.Name));
 
+            predicate = predicate.And(m => m.System == parm.System);
+
             //获取系统所有菜单
-            var serachMenus = (_menuService.GetWhere(predicate.ToExpression(), m => m.SortIndex)).Select(m => new MenuListVM
+            var serachMenus = _menuService.GetWhere(predicate.ToExpression(), m => m.SortIndex).Select(m => new MenuListVM
             {
                 ID = m.ID,
                 Name = m.Name,
+                Type = m.Type,
                 Icon = m.Icon,
                 Path = m.Path,
                 Component = m.Component,
@@ -141,6 +144,7 @@ namespace Meiam.System.Hostd.Controllers.System
             return toResponse(_menuService.Update(m => m.ID == parm.ID, m => new Sys_Menu()
             {
                 Name = parm.Name,
+                Type = parm.Type,
                 Icon = parm.Icon,
                 Path = parm.Path,
                 Component = parm.Component,

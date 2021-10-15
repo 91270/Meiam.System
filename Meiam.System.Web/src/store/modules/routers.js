@@ -14,7 +14,7 @@ const routers = {
       state.routers = constantRouterMap.concat(routers)
     },
     SET_SIDEBAR_ROUTERS: (state, routers) => {
-      state.sidebarRouters = routers
+      state.sidebarRouters = constantRouterMap.concat(routers)
     }
   },
   actions: {
@@ -27,9 +27,9 @@ const routers = {
   }
 }
 
-export const filterAsyncRouter = (routers, isRewrite = false) => { // 遍历后台传来的路由字符串，转换为组件对象
+export const filterAsyncRouter = (routers, lastRouter = false, type = false) => { // 遍历后台传来的路由字符串，转换为组件对象
   return routers.filter(router => {
-    if (isRewrite && router.children) {
+    if (type && router.children) {
       router.children = filterChildren(router.children)
     }
     if (router.component) {
@@ -42,14 +42,17 @@ export const filterAsyncRouter = (routers, isRewrite = false) => { // 遍历后�
         router.component = loadView(component)
       }
     }
-    if (router.children && router.children.length) {
-      router.children = filterAsyncRouter(router.children, router, isRewrite)
+    if (router.children != null && router.children && router.children.length) {
+      router.children = filterAsyncRouter(router.children, router, type)
+    } else {
+      delete router['children']
+      delete router['redirect']
     }
     return true
   })
 }
 
-function filterChildren(childrenMap) {
+function filterChildren(childrenMap, lastRouter = false) {
   var children = []
   childrenMap.forEach((el, index) => {
     if (el.children && el.children.length) {
@@ -62,9 +65,11 @@ function filterChildren(childrenMap) {
           }
           children.push(c)
         })
-        childrenMap.splice(index, 1)
         return
       }
+    }
+    if (lastRouter) {
+      el.path = lastRouter.path + '/' + el.path
     }
     children = children.concat(el)
   })
