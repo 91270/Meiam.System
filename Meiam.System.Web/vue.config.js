@@ -34,6 +34,10 @@ module.exports = {
       alias: {
         '@': resolve('src')
       }
+    },
+    performance:{
+      maxEntrypointSize: 10000000,
+      maxAssetSize: 30000000
     }
   },
   chainWebpack(config) {

@@ -64,6 +64,8 @@
     "vue-splitpane": "^1.0.6",
     "vuedraggable": "^2.24.3",
     "vuex": "^3.6.2",
+    "vxe-table": "^3.3.12",
+    "xe-utils": "^3.4.0",
     "xlsx": "^0.17.2"
   },
   "devDependencies": {
