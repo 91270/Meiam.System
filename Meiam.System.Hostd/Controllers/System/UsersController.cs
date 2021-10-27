@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Mapster;
+﻿using Mapster;
 using Meiam.System.Common.Utilities;
 using Meiam.System.Hostd.Authorization;
 using Meiam.System.Hostd.Extensions;
 using Meiam.System.Interfaces;
 using Meiam.System.Model;
 using Meiam.System.Model.Dto;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using SqlSugar;
+using System;
 
 namespace Meiam.System.Hostd.Controllers.System
 {
@@ -62,7 +58,7 @@ namespace Meiam.System.Hostd.Controllers.System
             //开始拼装查询条件
             var predicate = Expressionable.Create<Sys_Users>();
 
-            predicate = predicate.AndIF(!string.IsNullOrEmpty(parm.QueryText), m => m.UserID.Contains(parm.QueryText)  || m.UserName.Contains(parm.QueryText));
+            predicate = predicate.AndIF(!string.IsNullOrEmpty(parm.QueryText), m => m.UserID.Contains(parm.QueryText) || m.UserName.Contains(parm.QueryText));
 
             var response = _usersService.GetPages(predicate.ToExpression(), parm);
 
@@ -122,7 +118,7 @@ namespace Meiam.System.Hostd.Controllers.System
             #region 更新用户信息
             #endregion
 
-            var response = _usersService.Update(m => m.UserID == parm.UserID, m =>  new Sys_Users
+            var response = _usersService.Update(m => m.UserID == parm.UserID, m => new Sys_Users
             {
                 UserID = parm.UserID,
                 UserName = parm.UserName,
@@ -167,7 +163,7 @@ namespace Meiam.System.Hostd.Controllers.System
         [Authorization(Power = "PRIV_USERS_DELETE")]
         public IActionResult Delete([FromBody] UsersDeleteDto parm)
         {
-            if (parm.UserIds.Count <=0)
+            if (parm.UserIds.Count <= 0)
             {
                 return toResponse(StatusCodeType.Error, "删除角色 Id 不能为空");
             }

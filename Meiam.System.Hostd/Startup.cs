@@ -105,7 +105,7 @@ namespace Meiam.System.Hostd
             .ConfigureApiBehaviorOptions(options =>
             {
                 //抑制系统自带模型验证
-                options.SuppressModelStateInvalidFilter = true;  
+                options.SuppressModelStateInvalidFilter = true;
             });
 
             #endregion
@@ -113,7 +113,7 @@ namespace Meiam.System.Hostd
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ISysTasksQzService tasksQzService , ITaskSchedulerServer schedulerServer)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ISysTasksQzService tasksQzService, ITaskSchedulerServer schedulerServer)
         {
 
             #region 开发错误提示

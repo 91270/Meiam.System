@@ -1,6 +1,5 @@
 ﻿using Meiam.System.Common;
 using Meiam.System.Hostd.Extensions;
-using Meiam.System.Interfaces;
 using Meiam.System.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;

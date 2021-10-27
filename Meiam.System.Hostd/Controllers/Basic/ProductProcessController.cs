@@ -6,10 +6,7 @@ using Meiam.System.Model;
 using Meiam.System.Model.Dto;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using SqlSugar;
 using System;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Meiam.System.Hostd.Controllers.Basic
 {
@@ -45,8 +42,8 @@ namespace Meiam.System.Hostd.Controllers.Basic
         private readonly IUnitOfWork _unitOfWork;
 
 
-        public ProductProcessController(ILogger<ProductProcessController> logger, TokenManager tokenManager, IBaseProductProcessService processService, 
-            ISysDataRelationService dataRelationService,IUnitOfWork unitOfWork)
+        public ProductProcessController(ILogger<ProductProcessController> logger, TokenManager tokenManager, IBaseProductProcessService processService,
+            ISysDataRelationService dataRelationService, IUnitOfWork unitOfWork)
         {
             _logger = logger;
             _tokenManager = tokenManager;

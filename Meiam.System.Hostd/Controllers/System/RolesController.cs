@@ -9,7 +9,6 @@ using Microsoft.Extensions.Logging;
 using SqlSugar;
 using System;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Meiam.System.Hostd.Controllers.System
 {
@@ -46,7 +45,7 @@ namespace Meiam.System.Hostd.Controllers.System
         /// </summary>
         private readonly ISysUserRoleService _userRoleService;
 
-        public RolesController(TokenManager tokenManager, ISysRoleService roleService, ILogger<RolesController> logger,ISysRolePowerService rolePowerService ,ISysUserRoleService userRoleService)
+        public RolesController(TokenManager tokenManager, ISysRoleService roleService, ILogger<RolesController> logger, ISysRolePowerService rolePowerService, ISysUserRoleService userRoleService)
         {
             _tokenManager = tokenManager;
             _roleService = roleService;
@@ -89,7 +88,7 @@ namespace Meiam.System.Hostd.Controllers.System
         [Authorization]
         public IActionResult Get(string id)
         {
-            if(!string.IsNullOrEmpty(id))
+            if (!string.IsNullOrEmpty(id))
             {
                 return toResponse(_roleService.GetId(id));
             }
@@ -139,7 +138,8 @@ namespace Meiam.System.Hostd.Controllers.System
 
             var userSession = _tokenManager.GetSessionInfo();
 
-            return toResponse(_roleService.Update(m => m.ID == parm.ID, m => new Sys_Role() {
+            return toResponse(_roleService.Update(m => m.ID == parm.ID, m => new Sys_Role()
+            {
                 Name = parm.Name,
                 Remark = parm.Remark,
                 UpdateID = userSession.UserID,

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Meiam.System.Common;
+﻿using Meiam.System.Common;
 using Meiam.System.Common.Utilities;
 using Meiam.System.Hostd.Authorization;
 using Meiam.System.Hostd.Extensions;
@@ -11,9 +6,11 @@ using Meiam.System.Interfaces;
 using Meiam.System.Model;
 using Meiam.System.Model.Dto;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System;
+using System.IO;
+using System.Linq;
 
 namespace Meiam.System.Hostd.Controllers.System
 {
@@ -186,7 +183,7 @@ namespace Meiam.System.Hostd.Controllers.System
                     UpdateID = userSession.UserID,
                     UpdateName = userSession.UserName,
                     UpdateTime = DateTime.Now
-                }); 
+                });
                 #endregion
 
                 #region 更新登录会话记录

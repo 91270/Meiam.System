@@ -37,7 +37,7 @@ namespace Meiam.System.Hostd.Queue
                 SignName = "测试模板",
                 TemplateCode = "SMS_196975003",
                 TemplateParam = $"{{\"code\":\"{ captcha.Code }\"}}"
-            });         
+            });
         }
 
     }

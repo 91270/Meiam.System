@@ -1,18 +1,13 @@
 ﻿using Meiam.System.Core;
-using Meiam.System.Hostd.Common;
 using Meiam.System.Interfaces;
 using Meiam.System.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Caching.Memory;
-using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Meiam.System.Hostd.Extensions
 {
-    public  class TokenManager
+    public class TokenManager
     {
         /// <summary>
         /// 缓存组件
@@ -300,7 +295,7 @@ namespace Meiam.System.Hostd.Extensions
                     _onlineService.Delete(m => m.SessionID == GetSysToken);
                 }
                 else
-                {                 
+                {
                     UpdateSession(GetSysToken);
                     return true;
                 }

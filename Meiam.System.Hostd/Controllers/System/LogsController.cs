@@ -1,16 +1,11 @@
-﻿using Mapster;
-using Meiam.System.Hostd.Authorization;
+﻿using Meiam.System.Hostd.Authorization;
 using Meiam.System.Hostd.Extensions;
 using Meiam.System.Interfaces;
 using Meiam.System.Model;
 using Meiam.System.Model.Dto;
-using Meiam.System.Model.View;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using SqlSugar;
-using System;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Meiam.System.Hostd.Controllers.System
 {
@@ -35,7 +30,7 @@ namespace Meiam.System.Hostd.Controllers.System
         /// </summary>
         private readonly ISysLogsService _logsService;
 
-        public LogsController(ILogger<LogsController> logger, TokenManager tokenManager,  ISysLogsService logsService)
+        public LogsController(ILogger<LogsController> logger, TokenManager tokenManager, ISysLogsService logsService)
         {
             _logger = logger;
             _tokenManager = tokenManager;
@@ -54,9 +49,9 @@ namespace Meiam.System.Hostd.Controllers.System
             //开始拼装查询条件
             var predicate = Expressionable.Create<Sys_Logs>();
 
-            predicate = predicate.And(m => m.CreateTime >= parm.BeginDate && m.CreateTime  < parm.EndDate.AddDays(1));
+            predicate = predicate.And(m => m.CreateTime >= parm.BeginDate && m.CreateTime < parm.EndDate.AddDays(1));
             predicate = predicate.AndIF(!string.IsNullOrEmpty(parm.Level), m => m.Level == parm.Level);
-            predicate = predicate.AndIF(!string.IsNullOrEmpty(parm.QueryText), m => m.Message.Contains(parm.QueryText) || m.Url.Contains(parm.QueryText)  || m.IPAddress.Contains(parm.QueryText));
+            predicate = predicate.AndIF(!string.IsNullOrEmpty(parm.QueryText), m => m.Message.Contains(parm.QueryText) || m.Url.Contains(parm.QueryText) || m.IPAddress.Contains(parm.QueryText));
 
             var response = _logsService.GetPages(predicate.ToExpression(), parm);
 

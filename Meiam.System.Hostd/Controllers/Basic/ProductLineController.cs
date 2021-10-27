@@ -42,7 +42,7 @@ namespace Meiam.System.Hostd.Controllers.Basic
         private readonly IUnitOfWork _unitOfWork;
 
 
-        public ProductLineController(ILogger<ProductLineController> logger, TokenManager tokenManager, IBaseProductLineService lineService, ISysDataRelationService dataRelationService,IUnitOfWork unitOfWork)
+        public ProductLineController(ILogger<ProductLineController> logger, TokenManager tokenManager, IBaseProductLineService lineService, ISysDataRelationService dataRelationService, IUnitOfWork unitOfWork)
         {
             _logger = logger;
             _tokenManager = tokenManager;

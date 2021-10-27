@@ -1,5 +1,4 @@
-﻿using Mapster;
-using Meiam.System.Hostd.Authorization;
+﻿using Meiam.System.Hostd.Authorization;
 using Meiam.System.Hostd.Extensions;
 using Meiam.System.Interfaces;
 using Meiam.System.Model;
@@ -7,11 +6,9 @@ using Meiam.System.Model.Dto;
 using Meiam.System.Model.View;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using SqlSugar;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Meiam.System.Hostd.Controllers.System
 {
@@ -73,7 +70,7 @@ namespace Meiam.System.Hostd.Controllers.System
 
         public AuthorizeController(ILogger<AuthorizeController> logger, TokenManager tokenManager, ISysUserRelationService userRelationService,
             ISysDataRelationService dataRelationService, IBaseCompanyService companyService, IBaseFactoryService factoryService, IBaseWorkShopService workShopService,
-            IBaseProductLineService lineService, IBaseProductProcessService processService,IUnitOfWork unitOfWork)
+            IBaseProductLineService lineService, IBaseProductProcessService processService, IUnitOfWork unitOfWork)
         {
             _logger = logger;
             _tokenManager = tokenManager;

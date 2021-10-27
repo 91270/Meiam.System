@@ -6,10 +6,8 @@ using Meiam.System.Model;
 using Meiam.System.Model.Dto;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using SqlSugar;
 using System;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Meiam.System.Hostd.Controllers.Basic
 {
@@ -34,7 +32,7 @@ namespace Meiam.System.Hostd.Controllers.Basic
         /// 机台定义接口
         /// </summary>
         private readonly IBaseEquipmentService _equipmentService;
-        
+
         /// <summary>
         /// 数据关系接口
         /// </summary>

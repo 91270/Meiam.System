@@ -8,8 +8,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using SqlSugar;
 using System;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Meiam.System.Hostd.Controllers.System
 {
@@ -100,7 +98,7 @@ namespace Meiam.System.Hostd.Controllers.System
         {
             if (_powerService.Any(m => m.Name == parm.Name))
             {
-                return toResponse(StatusCodeType.Error, $"添加 {parm.Name} 失败，该数据已存在，不能重复！"); 
+                return toResponse(StatusCodeType.Error, $"添加 {parm.Name} 失败，该数据已存在，不能重复！");
             }
 
             //从 Dto 映射到 实体

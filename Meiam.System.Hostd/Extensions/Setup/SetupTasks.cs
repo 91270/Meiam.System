@@ -36,8 +36,8 @@ namespace Meiam.System.Hostd.Extensions
 
             foreach (var task in tasks)
             {
-               var result =  schedulerServer.AddTaskScheduleAsync(task).Result;
-               logger.Debug(result.Message);
+                var result = schedulerServer.AddTaskScheduleAsync(task).Result;
+                logger.Debug(result.Message);
             }
 
             return app;

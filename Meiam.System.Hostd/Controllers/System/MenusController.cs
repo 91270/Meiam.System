@@ -10,7 +10,6 @@ using Microsoft.Extensions.Logging;
 using SqlSugar;
 using System;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Meiam.System.Hostd.Controllers.System
 {
@@ -35,7 +34,7 @@ namespace Meiam.System.Hostd.Controllers.System
         /// </summary>
         private readonly ISysMenuService _menuService;
 
-        public MenusController(IUnitOfWork unitOfWork,TokenManager tokenManager, ISysMenuService menuService, ILogger<MenusController> logger)
+        public MenusController(IUnitOfWork unitOfWork, TokenManager tokenManager, ISysMenuService menuService, ILogger<MenusController> logger)
         {
             _tokenManager = tokenManager;
             _menuService = menuService;
@@ -179,7 +178,7 @@ namespace Meiam.System.Hostd.Controllers.System
 
             if (hasChildren)
             {
-                return toResponse(StatusCodeType.Error , "检测到下级含有子菜单，请先删除子菜单！");
+                return toResponse(StatusCodeType.Error, "检测到下级含有子菜单，请先删除子菜单！");
             }
 
             var response = _menuService.Delete(id);

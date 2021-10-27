@@ -1,16 +1,11 @@
-﻿using Mapster;
-using Meiam.System.Hostd.Authorization;
+﻿using Meiam.System.Hostd.Authorization;
 using Meiam.System.Hostd.Extensions;
 using Meiam.System.Interfaces;
 using Meiam.System.Model;
 using Meiam.System.Model.Dto;
-using Meiam.System.Model.View;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using SqlSugar;
-using System;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Meiam.System.Hostd.Controllers.System
 {
@@ -70,7 +65,7 @@ namespace Meiam.System.Hostd.Controllers.System
         [Authorization(Power = "PRIV_ONLINE_DELETE")]
         public IActionResult Delete([FromBody] OnlineDeleteDto parm)
         {
-            foreach(var session in parm.SessionIds)
+            foreach (var session in parm.SessionIds)
             {
                 _tokenManager.RemoveSession(session);
             }

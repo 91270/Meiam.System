@@ -34,7 +34,7 @@
         </member>
         <member name="M:Meiam.System.Hostd.Controllers.BaseController.ResolveUserMenuTree(System.Collections.Generic.List{Meiam.System.Model.Sys_Menu},System.String)">
             <summary>
-            生成系统菜单树
+            生成 Vue Router
             </summary>
             <param name="menus"></param>
             <param name="parentId"></param>
@@ -42,7 +42,7 @@
         </member>
         <member name="M:Meiam.System.Hostd.Controllers.BaseController.ResolveMenuTree(System.Collections.Generic.List{Meiam.System.Model.Sys_Menu},System.String)">
             <summary>
-            生成 Vue Router
+            生成系统菜单树
             </summary>
             <param name="menus"></param>
             <param name="parentId"></param>

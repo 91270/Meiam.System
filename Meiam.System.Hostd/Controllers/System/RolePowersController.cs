@@ -8,7 +8,6 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Meiam.System.Hostd.Controllers.System
 {
@@ -50,8 +49,8 @@ namespace Meiam.System.Hostd.Controllers.System
         private readonly ISysUserRoleService _userRoleService;
 
 
-        public RolePowersController(ILogger<RolePowersController> logger, TokenManager tokenManager, IUnitOfWork unitOfWork, 
-            ISysRolePowerService rolePowerService , ISysPowerService powerService, ISysUserRoleService userRoleService)
+        public RolePowersController(ILogger<RolePowersController> logger, TokenManager tokenManager, IUnitOfWork unitOfWork,
+            ISysRolePowerService rolePowerService, ISysPowerService powerService, ISysUserRoleService userRoleService)
         {
             _logger = logger;
             _tokenManager = tokenManager;
@@ -74,12 +73,13 @@ namespace Meiam.System.Hostd.Controllers.System
             var response = powers.GroupBy(m => m.Page).Select(m => new
             {
                 Page = m.Key,
-                Powers = powers.Where(p => p.Page == m.Key).OrderBy(m => m.CreateTime).Select(m => new { 
+                Powers = powers.Where(p => p.Page == m.Key).OrderBy(m => m.CreateTime).Select(m => new
+                {
                     m.ID,
                     m.Name,
                     m.Description,
                     Checked = false
-                }),          
+                }),
             });
 
             return toResponse(response);
@@ -118,13 +118,13 @@ namespace Meiam.System.Hostd.Controllers.System
 
             //生成插入对象
             List<Sys_RolePower> rolePowers = new List<Sys_RolePower>();
-            foreach(var power in parm.PowerIds)
+            foreach (var power in parm.PowerIds)
             {
                 rolePowers.Add(new Sys_RolePower
                 {
-                     ID = GetGUID,
-                     PowerUID = power,
-                     RoleUID = parm.RoleId
+                    ID = GetGUID,
+                    PowerUID = power,
+                    RoleUID = parm.RoleId
                 });
             }
 
@@ -140,7 +140,7 @@ namespace Meiam.System.Hostd.Controllers.System
 
 
                 //更新登录会话记录
-                var userIds =  _userRoleService.GetWhere(m => m.RoleID == parm.RoleId).Select(m => m.UserID);
+                var userIds = _userRoleService.GetWhere(m => m.RoleID == parm.RoleId).Select(m => m.UserID);
 
                 foreach (var userId in userIds)
                 {

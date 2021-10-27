@@ -62,7 +62,7 @@ namespace Meiam.System.Hostd.Controllers
         {
             get
             {
-               return Guid.NewGuid().ToString().ToUpper();
+                return Guid.NewGuid().ToString().ToUpper();
             }
         }
 

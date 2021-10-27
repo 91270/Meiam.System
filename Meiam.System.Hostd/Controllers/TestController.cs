@@ -2,12 +2,8 @@
 using Meiam.System.Interfaces;
 using Meiam.System.Model;
 using Microsoft.AspNetCore.Mvc;
-using SqlSugar;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Meiam.System.Hostd.Controllers
 {
@@ -25,7 +21,7 @@ namespace Meiam.System.Hostd.Controllers
         private readonly IUnitOfWork _unitOfWork;
         private readonly ICapPublisher _publisher;
 
-        public TestController(ITestCap01Service testCap01Service, ITestCap02Service testCap02Service,IUnitOfWork unitOfWork, ICapPublisher publisher)
+        public TestController(ITestCap01Service testCap01Service, ITestCap02Service testCap02Service, IUnitOfWork unitOfWork, ICapPublisher publisher)
         {
             _testCap01Service = testCap01Service;
             _testCap02Service = testCap02Service;

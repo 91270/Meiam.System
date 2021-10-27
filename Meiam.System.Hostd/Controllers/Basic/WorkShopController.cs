@@ -6,10 +6,7 @@ using Meiam.System.Model;
 using Meiam.System.Model.Dto;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using SqlSugar;
 using System;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Meiam.System.Hostd.Controllers.Basic
 {
@@ -45,7 +42,7 @@ namespace Meiam.System.Hostd.Controllers.Basic
         private readonly IUnitOfWork _unitOfWork;
 
 
-        public WorkShopController(ILogger<WorkShopController> logger, TokenManager tokenManager, IBaseWorkShopService workShopService, ISysDataRelationService dataRelationService,IUnitOfWork unitOfWork)
+        public WorkShopController(ILogger<WorkShopController> logger, TokenManager tokenManager, IBaseWorkShopService workShopService, ISysDataRelationService dataRelationService, IUnitOfWork unitOfWork)
         {
             _logger = logger;
             _tokenManager = tokenManager;

@@ -8,8 +8,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using SqlSugar;
 using System;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Meiam.System.Hostd.Controllers.Basic
 {
@@ -37,7 +35,7 @@ namespace Meiam.System.Hostd.Controllers.Basic
         /// <summary>
         /// 数据关系接口
         /// </summary>
-        private readonly ISysDataRelationService  _dataRelationService;
+        private readonly ISysDataRelationService _dataRelationService;
 
 
         public CompanyController(ILogger<CompanyController> logger, TokenManager tokenManager, IBaseCompanyService companyService, ISysDataRelationService dataRelationService)
@@ -79,7 +77,7 @@ namespace Meiam.System.Hostd.Controllers.Basic
         {
             if (string.IsNullOrEmpty(id))
             {
-                return toResponse(StatusCodeType.Error,"公司 Id 不能为空");
+                return toResponse(StatusCodeType.Error, "公司 Id 不能为空");
             }
             return toResponse(_companyService.GetId(id));
         }
