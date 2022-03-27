@@ -1,14 +1,21 @@
-﻿using Meiam.System.Interfaces;
-using Meiam.System.Tools.Tasks;
-using System;
-using System.IO;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Meiam.System.Tools
 {
-    class ToolsMain
+    public class App
     {
+        private readonly IToolsService _toolsService;
 
-        static void Main(string[] args)
+        public App(IToolsService toolsService)
+        {
+            _toolsService = toolsService;
+        }
+
+        public void Run()
         {
             do
             {
@@ -27,7 +34,7 @@ namespace Meiam.System.Tools
                         case 1:
 
                             #region  生成模型
-                            Task001.Execute();
+                            _toolsService.Run();
                             #endregion
 
                             Console.ReadKey();
@@ -42,6 +49,5 @@ namespace Meiam.System.Tools
                 }
             } while (true);
         }
-
     }
 }

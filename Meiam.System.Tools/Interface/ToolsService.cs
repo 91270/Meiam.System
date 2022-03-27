@@ -15,14 +15,38 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace Meiam.System.Tools
 {
-    public class ToolsService
+
+    public interface IToolsService
     {
+        void Run();
+    }
+
+    public class ToolsService: IToolsService
+    {
+
+        public void Run()
+        {
+            var allTables = new ToolsService().GetAllTables();
+
+            var solutionName = "Meiam.System";
+
+            foreach (var table in allTables)
+            {
+                Console.Write($"生成[{ table }]表 模型: ");
+                Console.WriteLine(new ToolsService().CreateModels($"..\\..\\..\\..\\{ solutionName }.Model\\Entity", solutionName, table, ""));
+                Console.Write($"生成[{ table }]表 服务: ");
+                Console.WriteLine(new ToolsService().CreateServices($"..\\..\\..\\..\\{ solutionName }.Interfaces\\Service", solutionName, table));
+                Console.Write($"生成[{ table }]表 接口: ");
+                Console.WriteLine(new ToolsService().CreateIServices($"..\\..\\..\\..\\{ solutionName }.Interfaces\\IService", solutionName, table));
+            }
+        }
+
+        #region 核心方法
+
         public SqlSugarClient Db = new SqlSugarClient(new ConnectionConfig()
         {
             ConnectionString = AppSettings.Configuration["DbConnection:ConnectionString"],
@@ -425,5 +449,7 @@ namespace Meiam.System.Tools
                 GetFiles(dd.FullName, list);
             }
         }
+        #endregion
+
     }
 }
