@@ -46,17 +46,22 @@ export default {
         $scrollWrapper.scrollLeft = $scrollWrapper.scrollWidth - $containerWidth
       } else {
         // find preTag and nextTag
-        const currentIndex = tagList.findIndex(item => item === currentTag)
+        const currentIndex = tagList.findIndex((item) => item === currentTag)
         const prevTag = tagList[currentIndex - 1]
         const nextTag = tagList[currentIndex + 1]
 
         // the tag's offsetLeft after of nextTag
-        const afterNextTagOffsetLeft = nextTag.$el.offsetLeft + nextTag.$el.offsetWidth + tagAndTagSpacing
+        const afterNextTagOffsetLeft =
+          nextTag.$el.offsetLeft + nextTag.$el.offsetWidth + tagAndTagSpacing
 
         // the tag's offsetLeft before of prevTag
-        const beforePrevTagOffsetLeft = prevTag.$el.offsetLeft - tagAndTagSpacing
+        const beforePrevTagOffsetLeft =
+          prevTag.$el.offsetLeft - tagAndTagSpacing
 
-        if (afterNextTagOffsetLeft > $scrollWrapper.scrollLeft + $containerWidth) {
+        if (
+          afterNextTagOffsetLeft >
+          $scrollWrapper.scrollLeft + $containerWidth
+        ) {
           $scrollWrapper.scrollLeft = afterNextTagOffsetLeft - $containerWidth
         } else if (beforePrevTagOffsetLeft < $scrollWrapper.scrollLeft) {
           $scrollWrapper.scrollLeft = beforePrevTagOffsetLeft
@@ -73,7 +78,7 @@ export default {
   position: relative;
   overflow: hidden;
   width: 100%;
-  /deep/ {
+  ::v-deep {
     .el-scrollbar__bar {
       bottom: 0px;
     }

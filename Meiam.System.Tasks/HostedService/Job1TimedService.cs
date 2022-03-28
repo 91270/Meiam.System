@@ -28,8 +28,6 @@ namespace Meiam.System.Tasks.HostedService
     /// </summary>
     public class Job1TimedService : BackgroundService
 	{
-		private Timer _timer;
-
 		/// <summary>
 		/// 日志管理接口
 		/// </summary>
