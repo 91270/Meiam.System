@@ -1,14 +1,12 @@
 {
   "name": "meiam.system.web",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "description": "Meiam.System.Web",
   "author": "MEIAM",
   "license": "Apache-2.0",
   "scripts": {
     "dev": "vue-cli-service serve --open",
-    "build:prod": "vue-cli-service build",
-    "build:stage": "vue-cli-service build --mode staging",
-    "preview": "node build/index.js --preview",
+    "build": "vue-cli-service build",
     "lint": "eslint --fix --ext .js,.vue src",
     "test:unit": "jest --clearCache && vue-cli-service test:unit",
     "svgo": "svgo -f src/assets/icons/svg --config=src/assets/icons/svgo.yml",
@@ -50,6 +48,7 @@
     "vue": "^2.6.14",
     "vue-qriously": "^1.1.1",
     "vue-router": "^3.5.2",
+    "vue-template-compiler": "^2.6.14",
     "vuedraggable": "^2.24.3",
     "vuex": "^3.6.2",
     "vxe-table": "^3.3.12",
@@ -79,12 +78,11 @@
     "script-ext-html-webpack-plugin": "^2.1.5",
     "script-loader": "0.7.2",
     "serve-static": "^1.13.2",
-    "svg-sprite-loader": "^6.0.9",
-    "svgo": "^2.6.1"
+    "svg-sprite-loader": "^6.0.9"
   },
   "engines": {
-    "node": ">=8.9",
-    "npm": ">= 3.0.0"
+    "node": ">=14.19",
+    "npm": ">= 6.14.0"
   },
   "browserslist": [
     "> 1%",

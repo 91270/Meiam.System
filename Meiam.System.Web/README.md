@@ -2,6 +2,9 @@
 
 Meiam.System 前端源码
 
+[![NODE](https://img.shields.io/badge/NODE-14.x.x-d.svg)](#)
+[![NPM](https://img.shields.io/badge/NPM-6.14.x-d.svg)](#)
+
 #### 前端模板
 
 初始模板基于： [https://github.com/elunez/eladmin-web](https://github.com/elunez/eladmin-web)
