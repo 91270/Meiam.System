@@ -1,7 +1,7 @@
-### Meiam.System - .NET 5 / .NET Core 3.1 WebAPI + Vue 2.0 + RBAC 企业级前后端分离权限框架
+### Meiam.System - .NET 7 / .NET 5 WebAPI + Vue 2.0 + RBAC 企业级前后端分离权限框架
 
+[![.NET 7](https://img.shields.io/badge/.NET-7.0-d.svg)](#)
 [![.NET 5](https://img.shields.io/badge/.NET-5.0-d.svg)](#)
-[![.NET CORE](https://img.shields.io/badge/.NET%20Core-3.1-d.svg)](#)
 [![VUE](https://img.shields.io/badge/VUE-2.6.10-d.svg)](#) 
 [![SqlSugar](https://img.shields.io/badge/SqlSugar-5.0-d.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20Win%20%7C%20OSX-brightgreen.svg)](#)
@@ -16,7 +16,7 @@
 
 分支说明
 
-master -  .NET 5    /   netcore31 - .NET Core 3.1
+master -  .NET 7    /   netcore31 - .NET Core 3.1
 
 
 ###  演示地址:   https://demo.meiam.top
