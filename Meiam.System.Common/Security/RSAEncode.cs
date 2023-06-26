@@ -101,9 +101,9 @@ namespace Meiam.System.Common.Security
         {
             //从字符串中取得Hash描述   
             byte[] Buffer;
-            HashAlgorithm MD5 = HashAlgorithm.Create("MD5");
+            var md5 = MD5.Create();
             Buffer = Encoding.GetEncoding("GB2312").GetBytes(m_strSource);
-            HashData = MD5.ComputeHash(Buffer);
+            HashData = md5.ComputeHash(Buffer);
 
             return true;
         }
@@ -115,9 +115,9 @@ namespace Meiam.System.Common.Security
             //从字符串中取得Hash描述   
             byte[] Buffer;
             byte[] HashData;
-            HashAlgorithm MD5 = HashAlgorithm.Create("MD5");
+            var md5 = MD5.Create();
             Buffer = Encoding.GetEncoding("GB2312").GetBytes(m_strSource);
-            HashData = MD5.ComputeHash(Buffer);
+            HashData = md5.ComputeHash(Buffer);
 
             strHashData = Convert.ToBase64String(HashData);
             return true;
@@ -129,8 +129,8 @@ namespace Meiam.System.Common.Security
         {
 
             //从文件中取得Hash描述   
-            HashAlgorithm MD5 = HashAlgorithm.Create("MD5");
-            HashData = MD5.ComputeHash(objFile);
+            var md5 = MD5.Create();
+            HashData = md5.ComputeHash(objFile);
             objFile.Close();
 
             return true;
@@ -143,8 +143,8 @@ namespace Meiam.System.Common.Security
 
             //从文件中取得Hash描述   
             byte[] HashData;
-            HashAlgorithm MD5 = HashAlgorithm.Create("MD5");
-            HashData = MD5.ComputeHash(objFile);
+            var md5 = MD5.Create();
+            HashData = md5.ComputeHash(objFile);
             objFile.Close();
 
             strHashData = Convert.ToBase64String(HashData);

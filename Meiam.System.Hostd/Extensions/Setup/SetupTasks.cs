@@ -3,6 +3,7 @@ using Meiam.System.Tasks;
 using Meiam.System.Tasks.HostedService;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using NLog;
 using NLog.Web;
 using Quartz.Spi;
 using System;
@@ -30,7 +31,7 @@ namespace Meiam.System.Hostd.Extensions
 
         public static IApplicationBuilder UseAddTaskSchedulers(this IApplicationBuilder app, ISysTasksQzService tasksQzService, ITaskSchedulerServer schedulerServer)
         {
-            var logger = NLogBuilder.ConfigureNLog("NLog.config").GetCurrentClassLogger();
+            var logger = NLog.LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
 
             var tasks = tasksQzService.GetWhere(m => m.IsStart);
 

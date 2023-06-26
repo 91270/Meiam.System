@@ -296,21 +296,11 @@ namespace Meiam.System.Interfaces
         /// </summary>
         /// <param name="parm">List<T></param>
         /// <returns></returns>
-        public T Saveable(T parm, Expression<Func<T, object>> uClumns = null, Expression<Func<T, object>> iColumns = null)
+        public int Storageable(T parm)
         {
-            var command = Db.Saveable(parm);
+            var command = Db.Storageable(parm);
 
-            if (uClumns != null)
-            {
-                command = command.UpdateIgnoreColumns(uClumns);
-            }
-
-            if (iColumns != null)
-            {
-                command = command.InsertIgnoreColumns(iColumns);
-            }
-
-            return command.RemoveDataCache().ExecuteReturnEntity();
+            return command.ExecuteCommand();
         }
 
         /// <summary>
@@ -318,21 +308,11 @@ namespace Meiam.System.Interfaces
         /// </summary>
         /// <param name="parm">List<T></param>
         /// <returns></returns>
-        public List<T> Saveable(List<T> parm, Expression<Func<T, object>> uClumns = null, Expression<Func<T, object>> iColumns = null)
+        public int Saveable(List<T> parm)
         {
-            var command = Db.Saveable(parm);
+            var command = Db.Storageable(parm);
 
-            if (uClumns != null)
-            {
-                command = command.UpdateIgnoreColumns(uClumns);
-            }
-
-            if (iColumns != null)
-            {
-                command = command.InsertIgnoreColumns(iColumns);
-            }
-
-            return command.RemoveDataCache().ExecuteReturnList();
+            return command.ExecuteCommand();
         }
 
         /// <summary>

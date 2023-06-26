@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <UserSecretsId>c9e72231-4bcd-4514-aff9-136878e12628</UserSecretsId>
   </PropertyGroup>
 
@@ -12,24 +12,32 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
-    <PackageReference Include="Autofac.Extras.DynamicProxy" Version="6.0.0" />
-    <PackageReference Include="CSRedisCore" Version="3.6.6" />
-    <PackageReference Include="DotNetCore.CAP" Version="5.1.3" />
-    <PackageReference Include="DotNetCore.CAP.Dashboard" Version="5.1.3" />
-    <PackageReference Include="DotNetCore.CAP.RabbitMQ" Version="5.1.3" />
-    <PackageReference Include="DotNetCore.CAP.SqlServer" Version="5.1.3" />
-    <PackageReference Include="Mapster" Version="7.2.0" />
+    <Content Remove="NLog.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Administrator\.nuget\packages\nlog.config\4.7.11\contentFiles\any\any\NLog.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Autofac.Extras.DynamicProxy" Version="7.0.0" />
+    <PackageReference Include="CSRedisCore" Version="3.8.670" />
+    <PackageReference Include="DotNetCore.CAP" Version="7.1.4" />
+    <PackageReference Include="DotNetCore.CAP.Dashboard" Version="7.1.4" />
+    <PackageReference Include="DotNetCore.CAP.RabbitMQ" Version="7.1.4" />
+    <PackageReference Include="DotNetCore.CAP.SqlServer" Version="7.1.4" />
+    <PackageReference Include="Mapster" Version="7.3.0" />
     <PackageReference Include="Mapster.DependencyInjection" Version="1.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.9" />
-    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="5.0.1" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
-    <PackageReference Include="NLog" Version="4.7.11" />
-    <PackageReference Include="NLog.Config" Version="4.7.11" />
-    <PackageReference Include="NLog.Extensions.Logging" Version="1.7.4" />
-    <PackageReference Include="NLog.Web.AspNetCore" Version="4.14.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.1" />
-    <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="7.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.8" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="7.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.7" />
+    <PackageReference Include="NLog" Version="5.2.0" />
+    <PackageReference Include="NLog.Database" Version="5.2.0" />
+    <PackageReference Include="NLog.Extensions.Logging" Version="5.3.0" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="5.3.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="7.0.6" />
   </ItemGroup>
 
   <ItemGroup>
@@ -53,9 +61,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="NLog.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <None Include="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" properties_4launchsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>

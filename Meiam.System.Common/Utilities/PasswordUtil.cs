@@ -56,11 +56,8 @@ namespace Meiam.System.Common.Utilities
         #region 私有函数
         private static string CreateMD5(string pwd)
         {
-            MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
-            string t2 = BitConverter.ToString(md5.ComputeHash(Encoding.Default.GetBytes(pwd)));
-            t2 = t2.Replace("-", "");
-            t2 = t2.ToUpper();
-            return t2;
+            var md5 = MD5.Create();
+            return BitConverter.ToString(md5.ComputeHash(Encoding.Default.GetBytes(pwd))).Replace("-", "").ToUpper();
         }
 
         #endregion

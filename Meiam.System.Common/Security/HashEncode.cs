@@ -44,7 +44,7 @@ namespace Meiam.System.Common.Security
             byte[] Value;
             UnicodeEncoding Code = new UnicodeEncoding();
             byte[] Message = Code.GetBytes(Security);
-            SHA512Managed Arithmetic = new SHA512Managed();
+            var Arithmetic = SHA512.Create();
             Value = Arithmetic.ComputeHash(Message);
             Security = "";
             foreach (byte o in Value)

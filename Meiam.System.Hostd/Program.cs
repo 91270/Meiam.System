@@ -6,6 +6,7 @@ using Microsoft.Extensions.Logging;
 using NLog;
 using NLog.Web;
 using System;
+using System.IO;
 
 namespace Meiam.System.Hostd
 {
@@ -14,7 +15,7 @@ namespace Meiam.System.Hostd
 
         public static void Main(string[] args)
         {
-            var logger = NLogBuilder.ConfigureNLog("NLog.config").GetCurrentClassLogger();
+            var logger = NLog.LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
             try
             {
                 CreateHostBuilder(args).Build().Run();

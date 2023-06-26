@@ -58,7 +58,7 @@ namespace Meiam.System.Hostd.Controllers.System
         {
             if (Convert.ToBoolean(AppSettings.Configuration["AppSettings:Demo"]))
             {
-                toResponse(StatusCodeType.Error, "当前为演示模式 , 您无权修改任何数据");
+                return toResponse(StatusCodeType.Error, "当前为演示模式 , 您无权修改任何数据");
             }
 
             var userSession = _tokenManager.GetSessionInfo();

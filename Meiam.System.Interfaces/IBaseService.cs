@@ -204,14 +204,14 @@ namespace Meiam.System.Interfaces
         /// </summary>
         /// <param name="parm"><T></param>
         /// <returns></returns>
-        T Saveable(T parm, Expression<Func<T, object>> uClumns = null, Expression<Func<T, object>> iColumns = null);
+        int Storageable(T parm);
 
         /// <summary>
         /// 批量添加或更新数据
         /// </summary>
         /// <param name="parm">List<T></param>
         /// <returns></returns>
-        List<T> Saveable(List<T> parm, Expression<Func<T, object>> uClumns = null, Expression<Func<T, object>> iColumns = null);
+        int Saveable(List<T> parm);
 
         /// <summary>
         /// 无主键添加或更新数据 (切记该表若有缓存，请执行 RemoveDataCache())
