@@ -69,15 +69,17 @@ namespace Meiam.System.Common.Utilities
             SKColor[] c = { SKColors.Black, SKColors.Red, SKColors.DarkBlue, SKColors.Green, SKColors.Orange, SKColors.Brown, SKColors.DarkCyan, SKColors.Purple };
 
             //验证码字体集合
-            string[] fonts = { "Verdana", "Microsoft Sans Serif", "Comic Sans MS", "Arial" };
+            string[] fonts = { "Verdana", "Arial" };
+
+            //定义图像的大小，生成图像的实例
+
 
             //定义图像的大小，生成图像的实例
             var image = new SKBitmap(width == 0 ? captchaCode.Length * 25 : width, height);
-
-            var g =  new SKCanvas(image);
+            var canvas = new SKCanvas(image);
 
             //背景设为白色
-            g.Clear(SKColors.White);
+            canvas.Clear(SKColors.White);
 
             var random = new Random();
 
@@ -86,10 +88,7 @@ namespace Meiam.System.Common.Utilities
                 var x = random.Next(image.Width);
                 var y = random.Next(image.Height);
 
-                var rect = SKRect.Create(x, y, 1, 1);
-                var paint = new SKPaint { Style = SKPaintStyle.Fill, Color = SKColors.LightGray };
-
-                g.DrawRect(rect, paint);
+                canvas.DrawRect(new SKRect(x, y, x + 2, y + 2), new SKPaint { Color = SKColors.LightGray });
             }
 
             //验证码绘制在g中  
@@ -102,30 +101,34 @@ namespace Meiam.System.Common.Utilities
                 var findex = random.Next(fonts.Length);
 
 
-                var paint = new SKPaint { 
-                    Color = c[cindex], 
-                    IsAntialias = true, 
-                    Style = SKPaintStyle.Fill, 
-                    TextAlign = SKTextAlign.Left, 
-                    TextSize = 15, 
-                    TextEncoding = SKTextEncoding.Utf8, 
-                    Typeface = SKTypeface.FromFamilyName(fonts[findex], SKFontStyleWeight.SemiBold, SKFontStyleWidth.ExtraCondensed, SKFontStyleSlant.Upright), 
-                    StrokeWidth = 3 
-                };
+                //颜色
+                var color = c[cindex];
+
+                //字体
+                var fontFamily = SKTypeface.FromFamilyName(fonts[findex], SKFontStyleWeight.Bold, SKFontStyleWidth.Normal, SKFontStyleSlant.Upright);
+                var fontSize = 20;
+
+                var paint = new SKPaint {  Color = color , Typeface = fontFamily, TextSize = fontSize };
 
                 var ii = 4;
                 if ((i + 1) % 2 == 0)
                     ii = 2;
 
-                //绘制一个验证字符  
-                g.DrawText(captchaCode.Substring(i, 1), 17 + (i * 17), ii ,paint);
+                //绘制一个验证字符
+                canvas.DrawText(captchaCode.Substring(i, 1), 17 + (i * 17), ii + fontSize, paint);
 
             }
 
             var ms = new MemoryStream();
-            image.Encode(SKEncodedImageFormat.Png, 100).SaveTo(ms);
 
-            g.Dispose();
+            using (var captchaImage = SKImage.FromBitmap(image))
+            {
+                captchaImage.Encode(SKEncodedImageFormat.Png, 100).SaveTo(ms);
+            }
+            
+
+
+            canvas.Dispose();
             image.Dispose();
 
             return new CaptchaResult { CaptchaGUID = Guid.NewGuid().ToString().ToUpper(),  CaptchaCode = captchaCode, CaptchaMemoryStream = ms, Timestamp = DateTime.Now };
