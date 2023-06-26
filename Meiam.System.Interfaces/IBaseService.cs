@@ -200,20 +200,6 @@ namespace Meiam.System.Interfaces
 
         #region 添加或更新
         /// <summary>
-        /// 添加或更新数据
-        /// </summary>
-        /// <param name="parm"><T></param>
-        /// <returns></returns>
-        int Storageable(T parm);
-
-        /// <summary>
-        /// 批量添加或更新数据
-        /// </summary>
-        /// <param name="parm">List<T></param>
-        /// <returns></returns>
-        int Saveable(List<T> parm);
-
-        /// <summary>
         /// 无主键添加或更新数据 (切记该表若有缓存，请执行 RemoveDataCache())
         /// </summary>
         /// <param name="parm"></param>
