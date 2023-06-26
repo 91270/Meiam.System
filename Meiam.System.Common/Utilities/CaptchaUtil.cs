@@ -83,6 +83,7 @@ namespace Meiam.System.Common.Utilities
 
             var random = new Random();
 
+            //绘制噪点
             for (var i = 0; i < 100; i++)
             {
                 var x = random.Next(image.Width);
@@ -91,7 +92,7 @@ namespace Meiam.System.Common.Utilities
                 canvas.DrawRect(new SKRect(x, y, x + 2, y + 2), new SKPaint { Color = SKColors.LightGray });
             }
 
-            //验证码绘制在g中  
+            //验证码绘制  
             for (var i = 0; i < captchaCode.Length; i++)
             {
                 //随机颜色索引值 
@@ -117,6 +118,13 @@ namespace Meiam.System.Common.Utilities
                 //绘制一个验证字符
                 canvas.DrawText(captchaCode.Substring(i, 1), 17 + (i * 17), ii + fontSize, paint);
 
+            }
+
+            //随机画5条线
+            for (int i = 0; i < 5; i++)
+            {
+                canvas.DrawLine(new SKPoint(random.Next(image.Width), random.Next(image.Height)), new SKPoint(random.Next(image.Width), random.Next(image.Height)),
+                    new SKPaint() { Color = SKColor.FromHsv(random.Next(0, 256), random.Next(0, 256), random.Next(0, 256)) });
             }
 
             var ms = new MemoryStream();
