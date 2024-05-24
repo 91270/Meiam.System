@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29920.165
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meiam.System.Core", "Meiam.System.Core\Meiam.System.Core.csproj", "{489388ED-503E-4030-A53B-DD21D346F3F8}"
 EndProject
@@ -28,6 +28,15 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meiam.System.Interfaces", "Meiam.System.Interfaces\Meiam.System.Interfaces.csproj", "{7D3E2392-0072-48AA-9962-B888C633E8BB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meiam.System.Tools", "Meiam.System.Tools\Meiam.System.Tools.csproj", "{5728D6F3-E4D9-4E06-B753-90D51999E3F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06.Solution Items", "06.Solution Items", "{1B177DF0-946A-4622-A1AC-E45D78DACC7E}"
+	ProjectSection(SolutionItems) = preProject
+		Meiam.System-MySQL.sql = Meiam.System-MySQL.sql
+		Meiam.System-SQLServer.sql = Meiam.System-SQLServer.sql
+		NLog-MySQL.config = NLog-MySQL.config
+		NLog-SQLServer.config = NLog-SQLServer.config
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
