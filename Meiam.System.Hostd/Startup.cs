@@ -6,6 +6,7 @@ using Meiam.System.Extensions;
 using Meiam.System.Hostd.Extensions;
 using Meiam.System.Hostd.Global;
 using Meiam.System.Hostd.Middleware;
+using Meiam.System.Hostd.Setup;
 using Meiam.System.Interfaces;
 using Meiam.System.Tasks;
 using Microsoft.AspNetCore.Builder;

@@ -8,7 +8,7 @@ using NLog.Web;
 using Quartz.Spi;
 using System;
 
-namespace Meiam.System.Hostd.Extensions
+namespace Meiam.System.Hostd.Setup
 {
     public static class SetupTasks
     {
@@ -31,7 +31,7 @@ namespace Meiam.System.Hostd.Extensions
 
         public static IApplicationBuilder UseAddTaskSchedulers(this IApplicationBuilder app, ISysTasksQzService tasksQzService, ITaskSchedulerServer schedulerServer)
         {
-            var logger = NLog.LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
+            var logger = LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
 
             var tasks = tasksQzService.GetWhere(m => m.IsStart);
 

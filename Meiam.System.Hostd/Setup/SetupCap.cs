@@ -3,7 +3,7 @@ using Meiam.System.Hostd.Queue;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
-namespace Meiam.System.Hostd.Extensions
+namespace Meiam.System.Hostd.Setup
 {
     public static class SetupCap
     {
@@ -16,6 +16,7 @@ namespace Meiam.System.Hostd.Extensions
 
             services.AddCap(x =>
             {
+                
                 //如果你使用的ADO.NET，根据数据库选择进行配置：
                 x.UseSqlServer(AppSettings.Configuration["DbConnection:ConnectionString"]);
 

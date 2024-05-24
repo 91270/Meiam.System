@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
-namespace Meiam.System.Hostd.Extensions
+namespace Meiam.System.Hostd.Setup
 {
     public static class SetupCors
     {

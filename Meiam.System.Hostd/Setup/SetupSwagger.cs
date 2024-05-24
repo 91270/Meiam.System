@@ -6,7 +6,7 @@ using Microsoft.OpenApi.Models;
 using System;
 using System.IO;
 
-namespace Meiam.System.Hostd.Extensions
+namespace Meiam.System.Hostd.Setup
 {
     public static class SetupSwagger
     {
@@ -33,7 +33,7 @@ namespace Meiam.System.Hostd.Extensions
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Xml 文件丢失，请检查并拷贝。\n{ ex.Message}");
+                    Console.WriteLine($"Xml 文件丢失，请检查并拷贝。\n{ex.Message}");
                 }
 
                 // 开启加权小锁

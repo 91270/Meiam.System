@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using SqlSugar;
 using System;
 
-namespace Meiam.System.Hostd.Extensions
+namespace Meiam.System.Hostd.Setup
 {
     public static class SetupSqlSugar
     {
@@ -14,10 +14,11 @@ namespace Meiam.System.Hostd.Extensions
 
             services.AddScoped<ISqlSugarClient>(x =>
             {
+
                 return new SqlSugarClient(new ConnectionConfig()
                 {
                     ConnectionString = AppSettings.Configuration["DbConnection:ConnectionString"],
-                    DbType = (DbType)Convert.ToInt32(AppSettings.Configuration["DbConnection:DbType"]),
+                    DbType = (DbType)Convert.ToInt32(AppSettings.Configuration["DbConnection:DbType"]),                  
                     IsAutoCloseConnection = true,
                     InitKeyType = InitKeyType.Attribute,
                     ConfigureExternalServices = new ConfigureExternalServices()

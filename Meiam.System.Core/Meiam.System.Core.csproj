@@ -1,17 +1,27 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CSRedisCore" Version="3.8.670" />
-    <PackageReference Include="SqlSugarCore" Version="5.1.4.86" />
+	  <PackageReference Include="CSRedisCore" Version="3.8.803" />
+	  <PackageReference Include="DotNetCore.CAP.SqlServer" Version="8.1.2" />
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	  <PackageReference Include="SqlSugarCore" Version="5.1.4.156" />
+	  <PackageReference Include="DotNetCore.CAP" Version="8.1.2" />
+	  <PackageReference Include="DotNetCore.CAP.Dashboard" Version="8.1.2" />
+	  <PackageReference Include="DotNetCore.CAP.RabbitMQ" Version="8.1.2" />
+	  <PackageReference Include="Mapster" Version="7.4.0" />
+	  <PackageReference Include="Mapster.DependencyInjection" Version="1.0.1" />
+	  <PackageReference Include="NLog" Version="5.3.2" />
+	  <PackageReference Include="NLog.Database" Version="5.3.2" />
+	  <PackageReference Include="NLog.Extensions.Logging" Version="5.3.11" />
+	  <PackageReference Include="NLog.Web.AspNetCore" Version="5.3.11" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Meiam.System.Common\Meiam.System.Common.csproj" />
-    <ProjectReference Include="..\Meiam.System.Model\Meiam.System.Model.csproj" />
   </ItemGroup>
 
 </Project>
