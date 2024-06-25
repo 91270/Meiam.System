@@ -36,6 +36,17 @@ master -  .NET 8    /   net5 - .NET 5
 
 &nbsp;
 
+## 广告时间
+
+搬瓦工 $99 年付, 建站神器冲出江湖，THE PLAN V1 传家宝套餐，18机房随意切换  
+
+循环优惠码：BWHCCNCXVV（6.77%）
+
+[直达通道(传家宝套餐)](https://bwh88.net/aff.php?aff=117&pid=147)
+
+
+&nbsp;
+
 ## 框架介绍
 
 
