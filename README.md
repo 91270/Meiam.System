@@ -10,13 +10,11 @@
 [![博客](https://img.shields.io/badge/博客-Meiam's%20Home-brightgreen.svg)](https://www.592.la/)
 
 
-
 &nbsp;
 
 分支说明
 
 master -  .NET 8    /   net5 - .NET 5
-
 
 ###  演示地址:   https://demo.meiam.top
 
@@ -24,26 +22,25 @@ master -  .NET 8    /   net5 - .NET 5
 
 后台用户 9999 密码 123456
 
-
-
-
 &nbsp;
+
 
 ## 给个星星! ⭐️
+
 如果你喜欢这个项目或者它帮助你, 请给 Star~（辛苦咯）
 
-
+如果你能赞助稳定 Google Drive 团队盘用于媒体库插件测试, 请于我联系 91270#QQ.COM 
 
 &nbsp;
 
-## 广告时间
 
-搬瓦工 $99 年付, 建站神器冲出江湖，THE PLAN V1 传家宝套餐，18机房随意切换  
+## 广告时间 📣
+
+搬瓦工 $99 年付, 建站神器重出江湖，THE PLAN V1 传家宝套餐，18机房随意切换  
 
 循环优惠码：BWHCCNCXVV（6.77%）
 
 [直达通道(传家宝套餐)](https://bwh88.net/aff.php?aff=117&pid=147)
-
 
 &nbsp;
 
